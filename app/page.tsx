@@ -233,10 +233,10 @@ function CategoriesGrid() {
 
 /* ── Review Badges ──────────────────────────────────────────────── */
 const reviewBadges = [
-  { platform: 'Google', count: '150+', logo: '/assets/reviews/rgoogle.png', href: 'https://g.page/r/CQIUtbofVlUoEBM/' },
-  { platform: 'Clutch', count: '50+', logo: '/assets/reviews/rclutch.png', href: 'https://clutch.co/profile/quantum-it-innovation-0' },
-  { platform: 'GoodFirms', count: '60+', logo: '/assets/reviews/rgoodfirms.png', href: 'https://www.goodfirms.co/company/quantum-it-innovation' },
-  { platform: 'Sortlist', count: '110+', logo: '/assets/reviews/sortlistlight.png', href: 'https://www.sortlist.com/agency/quantum-it-innovation' },
+  { platform: 'Google', count: '150+', logo: '/assets/reviews/rgoogle.png', href: 'https://share.google/THrR3FaoU9IJ7h73Y' },
+  { platform: 'Clutch', count: '50+', logo: '/assets/reviews/rclutch.png' },
+  { platform: 'GoodFirms', count: '60+', logo: '/assets/reviews/rgoodfirms.png' },
+  { platform: 'Sortlist', count: '110+', logo: '/assets/reviews/sortlistlight.png' },
 ]
 
 function ReviewBadges() {
@@ -244,25 +244,39 @@ function ReviewBadges() {
     <section className="py-12 bg-black border-y border-[#1a1a1a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {reviewBadges.map(badge => (
-            <a
-              key={badge.platform}
-              href={badge.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center justify-center text-center group hover:scale-105 transition-transform"
-            >
-              <img
-                src={badge.logo}
-                alt={`${badge.platform} logo`}
-                className="h-10 sm:h-12 w-auto object-contain mb-3"
-              />
-              <div className="flex gap-0.5 mb-1 text-[#EDB451] text-base">
-                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          {reviewBadges.map(badge => {
+            const content = (
+              <>
+                <img
+                  src={badge.logo}
+                  alt={`${badge.platform} logo`}
+                  className="h-10 sm:h-12 w-auto object-contain mb-3"
+                />
+                <div className="flex gap-0.5 mb-1 text-[#EDB451] text-base">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <p className="text-lg font-bold text-white tracking-wide">{badge.count}</p>
+              </>
+            )
+            return badge.href ? (
+              <a
+                key={badge.platform}
+                href={badge.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center justify-center text-center group hover:scale-105 transition-transform"
+              >
+                {content}
+              </a>
+            ) : (
+              <div
+                key={badge.platform}
+                className="flex flex-col items-center justify-center text-center group hover:scale-105 transition-transform cursor-default"
+              >
+                {content}
               </div>
-              <p className="text-lg font-bold text-white tracking-wide">{badge.count}</p>
-            </a>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>
@@ -270,13 +284,13 @@ function ReviewBadges() {
 }
 
 const awardLogos = [
-  { alt: 'Good Firms Award', src: '/assets/about/award2.png', href: 'https://www.goodfirms.co/company/quantum-it-innovation' },
-  { alt: 'Google Review', src: '/assets/socials/googlepartner.png', href: 'https://g.page/r/CQIUtbofVlUoEBM/' },
-  { alt: 'Sortlist', src: 'https://sortlist-public-ui-manual-upload-production.s3.eu-west-1.amazonaws.com/badges/certified-primary-500.svg', href: 'https://www.sortlist.com/agency/quantum-it-innovation' },
-  { alt: 'Clutch SEO', src: '/assets/home/cluctch-Rpa.jpg', href: 'https://clutch.co/profile/quantum-it-innovation-0' },
-  { alt: 'Top Mobile App Development Company on GoodFirms', src: 'https://assets.goodfirms.co/badges/color-badge/app-development.svg', href: 'https://www.goodfirms.co/company/quantum-it-innovation' },
-  { alt: 'Top Software Developers in the USA', src: '/assets/home/tech-reviewer.jpeg', href: 'https://techreviewer.co/companies/quantum-it-innovation-1390db21-b417-43b3-967c-8c8ccb1b88df' },
-  { alt: 'Top Generative AI Development Companies', src: '/assets/home/tech-reviewer-2.jpeg', href: 'https://techreviewer.co/companies/quantum-it-innovation-1390db21-b417-43b3-967c-8c8ccb1b88df' },
+  { alt: 'Good Firms Award', src: '/assets/about/award2.png' },
+  { alt: 'Google Review', src: '/assets/socials/googlepartner.png', href: 'https://share.google/THrR3FaoU9IJ7h73Y' },
+  { alt: 'Sortlist', src: 'https://sortlist-public-ui-manual-upload-production.s3.eu-west-1.amazonaws.com/badges/certified-primary-500.svg' },
+  { alt: 'Clutch SEO', src: '/assets/home/cluctch-Rpa.jpg' },
+  { alt: 'Top Mobile App Development Company on GoodFirms', src: 'https://assets.goodfirms.co/badges/color-badge/app-development.svg' },
+  { alt: 'Top Software Developers in the USA', src: '/assets/home/tech-reviewer.jpeg' },
+  { alt: 'Top Generative AI Development Companies', src: '/assets/home/tech-reviewer-2.jpeg' },
 ]
 
 function CollaborationBanner() {
@@ -294,6 +308,7 @@ function CollaborationBanner() {
     <section className="py-20 bg-black overflow-hidden border-t border-[#1a1a1a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* ... Left Column ... */}
           <div>
             <div className="section-label">
               <span className="w-6 h-px bg-blue-400 inline-block" />
@@ -325,27 +340,38 @@ function CollaborationBanner() {
                 className="flex transition-transform duration-500 ease-in-out h-full w-full"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
               >
-                {awardLogos.map((logo, idx) => (
-                  <div
-                    key={idx}
-                    className="w-full flex-shrink-0 flex justify-center items-center h-full px-4"
-                  >
-                    <a
-                      href={logo.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="relative w-full h-full flex justify-center items-center hover:scale-105 transition-transform"
+                {awardLogos.map((logo, idx) => {
+                  const content = (
+                    <div className="relative w-[160px] h-[160px]">
+                      <img
+                        src={logo.src}
+                        alt={logo.alt}
+                        className="object-contain w-full h-full"
+                      />
+                    </div>
+                  )
+                  return (
+                    <div
+                      key={idx}
+                      className="w-full flex-shrink-0 flex justify-center items-center h-full px-4"
                     >
-                      <div className="relative w-[160px] h-[160px]">
-                        <img
-                          src={logo.src}
-                          alt={logo.alt}
-                          className="object-contain w-full h-full"
-                        />
-                      </div>
-                    </a>
-                  </div>
-                ))}
+                      {logo.href ? (
+                        <a
+                          href={logo.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="relative w-full h-full flex justify-center items-center hover:scale-105 transition-transform"
+                        >
+                          {content}
+                        </a>
+                      ) : (
+                        <div className="relative w-full h-full flex justify-center items-center hover:scale-105 transition-transform cursor-default">
+                          {content}
+                        </div>
+                      )}
+                    </div>
+                  )
+                })}
               </div>
             </div>
 
@@ -1146,36 +1172,39 @@ interface BlogItem {
 function getBlogImage(title: string, originalImage: string): string {
   const lower = title.toLowerCase();
   if (lower.includes('shipping') || lower.includes('delivery')) {
-    return 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&auto=format&fit=crop&q=60';
+    return '/assets/blogs/shipping.jpg';
   }
-  if (lower.includes('walmart') || lower.includes('marketplace') || lower.includes('ecommerce')) {
-    return 'https://images.unsplash.com/photo-1563013544-824ae1d704d3?w=600&auto=format&fit=crop&q=60';
+  if (lower.includes('walmart') || lower.includes('ecommerce')) {
+    return '/assets/blogs/ecommerce.jpg';
+  }
+  if (lower.includes('marketplace') || lower.includes('buying') || lower.includes('selling')) {
+    return '/assets/blogs/marketplace.jpg';
   }
   if (lower.includes('instacart') || lower.includes('shopper') || lower.includes('grocery')) {
-    return 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=60';
+    return '/assets/blogs/grocery.jpg';
   }
   if (lower.includes('chatgpt') || lower.includes('ai') || lower.includes('dopple') || lower.includes('quillbot') || lower.includes('generative')) {
-    return 'https://images.unsplash.com/photo-1677442136019-21780efad99a?w=600&auto=format&fit=crop&q=60';
+    return '/assets/blogs/tech.jpg';
   }
   if (lower.includes('zigbee') || lower.includes('z-wave') || lower.includes('smart home') || lower.includes('iot')) {
-    return 'https://images.unsplash.com/photo-1558002038-1055907df827?w=600&auto=format&fit=crop&q=60';
+    return '/assets/blogs/smart-home.jpg';
   }
   if (lower.includes('web 2.0') || lower.includes('web 3.0') || lower.includes('blockchain')) {
-    return 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&auto=format&fit=crop&q=60';
+    return '/assets/blogs/web3.jpg';
   }
   if (lower.includes('azure') || lower.includes('aws') || lower.includes('google cloud') || lower.includes('cloud')) {
-    return 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop&q=60';
+    return '/assets/blogs/cloud.jpg';
   }
   if (lower.includes('youtube') || lower.includes('shorts') || lower.includes('video')) {
-    return 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&auto=format&fit=crop&q=60';
+    return '/assets/blogs/video.jpg';
   }
   if (lower.includes('canva') || lower.includes('photo') || lower.includes('design') || lower.includes('chub')) {
-    return 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&auto=format&fit=crop&q=60';
+    return '/assets/blogs/design.jpg';
   }
   if (originalImage && originalImage.startsWith('http')) {
     return originalImage;
   }
-  return 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=60';
+  return '/assets/blogs/default.jpg';
 }
 
 function RecentBlogsSection() {

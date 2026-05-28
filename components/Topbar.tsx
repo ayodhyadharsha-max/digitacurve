@@ -8,14 +8,9 @@ export default function Topbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Contact Numbers with Flags */}
         <div className="flex items-center gap-4">
-          <a href="tel:+919717998517" className="flex items-center gap-2 hover:underline">
+          <a href="tel:+917572094201" className="flex items-center gap-2 hover:underline">
             <img src="/assets/contact/india.png" alt="India Flag" className="h-3.5 w-5 object-cover" />
-            <span>+91 971 799 8517</span>
-          </a>
-          <span className="text-white/30">|</span>
-          <a href="tel:+18778773644" className="flex items-center gap-2 hover:underline">
-            <img src="/assets/contact/usa.png" alt="USA Flag" className="h-3.5 w-5 object-cover" />
-            <span>+1 877 877 3644</span>
+            <span>+91 7572094201</span>
           </a>
         </div>
 

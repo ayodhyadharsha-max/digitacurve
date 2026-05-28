@@ -26,13 +26,9 @@ export default function Footer() {
                   <Phone size={14} />
                 </div>
                 <div className="space-y-1.5 pt-0.5">
-                  <a href="tel:+919717998517" className="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors">
+                  <a href="tel:+917572094201" className="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors">
                     <img src="/assets/contact/india.png" alt="India Flag" className="h-3 w-4.5 object-cover" />
-                    <span>+91 971 799 8517</span>
-                  </a>
-                  <a href="tel:+18778773644" className="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors">
-                    <img src="/assets/contact/usa.png" alt="USA Flag" className="h-3 w-4.5 object-cover" />
-                    <span>+1 877 877 3644</span>
+                    <span>+91 7572094201</span>
                   </a>
                 </div>
               </div>
