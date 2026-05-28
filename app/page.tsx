@@ -1331,9 +1331,6 @@ export default function HomePage() {
         <ServicesGrid />
       </RevealSection>
       <RevealSection>
-        <TestimonialsSection videoTestimonials={true} />
-      </RevealSection>
-      <RevealSection>
         <StatsBar />
       </RevealSection>
       <RevealSection>
