@@ -83,7 +83,7 @@ export default function InteractiveCard({ children, className = '', href }: Inte
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`relative rounded-2xl border border-[#2a2a2a] bg-[#0a0a0a] ${className}`}
+      className={`relative rounded-2xl border border-[#2a2a2a] bg-[#0a0a0a] h-full ${className}`}
       style={cardStyle}
     >
       {/* Conic neon glowing border on hover */}
