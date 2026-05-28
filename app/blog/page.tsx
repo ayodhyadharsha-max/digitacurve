@@ -19,7 +19,7 @@ const blogPosts = [
     accentColor: 'from-violet-500/20 to-fuchsia-500/10',
     borderColor: 'hover:border-violet-500/30',
     tagColor: 'text-violet-400 border-violet-500/30 bg-violet-500/5',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?w=600&auto=format&fit=crop&q=60',
+    image: '/assets/blogs/tech.jpg',
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const blogPosts = [
     accentColor: 'from-purple-500/20 to-pink-500/10',
     borderColor: 'hover:border-purple-500/30',
     tagColor: 'text-purple-400 border-purple-500/30 bg-purple-500/5',
-    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&auto=format&fit=crop&q=60',
+    image: '/assets/blogs/design.jpg',
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ const blogPosts = [
     accentColor: 'from-teal-500/20 to-blue-500/10',
     borderColor: 'hover:border-teal-500/30',
     tagColor: 'text-teal-400 border-teal-500/30 bg-teal-500/5',
-    image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&auto=format&fit=crop&q=60',
+    image: '/assets/blogs/cloud.jpg',
   },
   {
     id: 4,
@@ -55,7 +55,7 @@ const blogPosts = [
     accentColor: 'from-orange-500/20 to-yellow-500/10',
     borderColor: 'hover:border-orange-500/30',
     tagColor: 'text-orange-400 border-orange-500/30 bg-orange-500/5',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=60',
+    image: '/assets/blogs/marketplace.jpg',
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ const blogPosts = [
     accentColor: 'from-blue-500/20 to-indigo-500/10',
     borderColor: 'hover:border-blue-500/30',
     tagColor: 'text-blue-400 border-blue-500/30 bg-blue-500/5',
-    image: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=600&auto=format&fit=crop&q=60',
+    image: '/assets/blogs/smart-home.jpg',
   },
   {
     id: 6,
@@ -79,7 +79,7 @@ const blogPosts = [
     accentColor: 'from-red-500/20 to-orange-500/10',
     borderColor: 'hover:border-red-500/30',
     tagColor: 'text-red-400 border-red-500/30 bg-red-500/5',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop&q=60',
+    image: '/assets/blogs/ecommerce.jpg',
   },
 ]
 
