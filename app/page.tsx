@@ -612,9 +612,34 @@ function FeaturedProjects() {
 /* ── Office Locations ───────────────────────────────────────────── */
 const locations = [
   {
+    country: 'United States',
+    address: '173 E Columbine LN, Westfield, Indiana 46074',
+    skyline: '/assets/locations/USA.svg',
+  },
+  {
     country: 'India',
     address: 'H-11, First Floor, Sector 62, Noida, Uttar Pradesh 201301',
     skyline: '/assets/locations/INDIA.svg',
+  },
+  {
+    country: 'Australia',
+    address: '10 Suffolk Place Aintree, Victoria, Australia 3336',
+    skyline: '/assets/locations/AUSTRALIA.svg',
+  },
+  {
+    country: 'Ontario, Canada',
+    address: '6-425 Hespeler Road, Cambridge, Unit 303, N1R8J6',
+    skyline: '/assets/locations/CANADA.svg',
+  },
+  {
+    country: 'United Kingdom',
+    address: 'United Kingdom Office',
+    skyline: '/assets/locations/UK.svg',
+  },
+  {
+    country: 'Ireland',
+    address: '5 Gleann Dara, Tully, Ballinamore Co Leitrim, Ireland',
+    skyline: '/assets/locations/Dublin.png',
   },
 ]
 
@@ -624,12 +649,13 @@ function OfficeLocations() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-2">
-            Our Location
+            Our Locations
           </h2>
         </div>
 
+        {/* 6 Country Grid */}
         <RevealStaggerContainer>
-          <div className="flex flex-col items-center justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-24">
             {locations.map((loc, idx) => (
               <RevealStaggerItem key={loc.country} index={idx}>
                 <div className="text-center flex flex-col items-center">
@@ -641,12 +667,29 @@ function OfficeLocations() {
                     />
                   </div>
                   <h4 className="text-white font-bold text-lg mb-3">{loc.country}</h4>
-                  <p className="text-gray-500 text-sm leading-relaxed max-w-xs text-center">{loc.address}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed max-w-xs">{loc.address}</p>
                 </div>
               </RevealStaggerItem>
             ))}
           </div>
         </RevealStaggerContainer>
+
+        {/* UAE separate banner */}
+        <div className="border-t border-[#2a2a2a]/40 pt-16 text-center">
+          <div className="max-w-4xl mx-auto">
+            <div className="w-full h-40 flex items-center justify-center mb-6">
+              <img
+                src="/assets/locations/UAE.svg"
+                alt="UAE Skyline"
+                className="max-h-full max-w-full object-contain filter brightness-90"
+              />
+            </div>
+            <h3 className="text-white font-bold text-2xl mb-6">UAE</h3>
+            <p className="text-gray-400 text-sm md:text-base leading-relaxed text-justify md:text-center max-w-3xl mx-auto font-medium">
+              Digitacurve is a global technology company that offers a wide array of services focused on moving companies into the digital age. Our operations span the USA, UK, Canada, Australia, Middle-East, Ireland, and India, and across the globe. We excel in the fields of web development, SEO, PPC, social media management, and digital consulting. Our web development services include the design of dynamic, sophisticated, and high-end CMS websites with the use of advanced technologies. Also, our digital marketing campaigns with SEO, SMO and Paid ads are designed to deliver results by maximizing conversion rates.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   )

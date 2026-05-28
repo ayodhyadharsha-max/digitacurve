@@ -5,11 +5,46 @@ import { MapPin, Mail, Phone, ArrowRight, CheckCircle2 } from 'lucide-react'
 
 const offices = [
   {
+    country: 'United States',
+    role: 'Main Office',
+    address: '1001 Avenida Pico Suite C -256, San Clemente, CA 92673',
+    phone: '+1 213 341 0248 Ext - 101',
+    flag: '🇺🇸',
+  },
+  {
+    country: 'United States',
+    role: 'Branch Office',
+    address: '173 E Columbine LN, Westfield, Indiana 46074-9741',
+    phone: '+1 213 341 0348',
+    flag: '🇺🇸',
+  },
+  {
     country: 'India',
     role: 'Corporate Office',
     address: 'H-11, First Floor, Sector 62, Noida, Uttar Pradesh 201301',
     phone: '+91 7572094201',
     flag: '🇮🇳',
+  },
+  {
+    country: 'Ontario, Canada',
+    role: 'Canada Office',
+    address: '6-425 Hespeler Road, Cambridge, Unit 303, N1R8J6',
+    phone: '+1 587 603 6054 Ext - 101',
+    flag: '🇨🇦',
+  },
+  {
+    country: 'Melbourne, Australia',
+    role: 'Australia Office',
+    address: '10 Suffolk Place Aintree, Victoria, Australia - 3336',
+    phone: '+61 370 424 786',
+    flag: '🇦🇺',
+  },
+  {
+    country: 'Ireland',
+    role: 'Ireland Office',
+    address: '5 Gleann Dara, Tully, Ballinamore Co Leitrim, Ireland',
+    phone: '+353 5740472',
+    flag: '🇮🇪',
   },
 ]
 

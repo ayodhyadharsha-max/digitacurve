@@ -249,6 +249,15 @@ export default function BlogDetailPage() {
     setSubscribed(true)
   }
 
+  // Rebranding replacement logic
+  const getRebrandedContent = (htmlContent: string) => {
+    if (!htmlContent) return ''
+    return htmlContent
+      .replace(/Quantum IT Innovation/gi, 'Digitacurve')
+      .replace(/Quantum IT/gi, 'Digitacurve')
+      .replace(/quantumitinnovation\.com/gi, 'digitacurve.com')
+  }
+
   if (loading) {
     return (
       <div className="bg-black text-white min-h-screen flex items-center justify-center">
@@ -277,6 +286,64 @@ export default function BlogDetailPage() {
 
   return (
     <main className="bg-black text-white min-h-screen pb-20">
+      {/* Dynamic Style Override for editor inline black colors */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        .blog-rich-text * {
+          color: #d1d5db !important;
+          background-color: transparent !important;
+        }
+        .blog-rich-text h1,
+        .blog-rich-text h2,
+        .blog-rich-text h3,
+        .blog-rich-text h4,
+        .blog-rich-text h5,
+        .blog-rich-text h6,
+        .blog-rich-text strong,
+        .blog-rich-text b {
+          color: #ffffff !important;
+          font-weight: 800 !important;
+        }
+        .blog-rich-text h2 {
+          font-size: 1.5rem !important;
+          margin-top: 2.5rem !important;
+          margin-bottom: 1.25rem !important;
+          display: block !important;
+        }
+        .blog-rich-text h3 {
+          font-size: 1.25rem !important;
+          margin-top: 2rem !important;
+          margin-bottom: 1rem !important;
+          display: block !important;
+        }
+        .blog-rich-text p {
+          margin-bottom: 1.25rem !important;
+          line-height: 1.8 !important;
+          display: block !important;
+        }
+        .blog-rich-text ul {
+          margin-left: 1.75rem !important;
+          margin-bottom: 1.25rem !important;
+          list-style-type: disc !important;
+          display: block !important;
+        }
+        .blog-rich-text ol {
+          margin-left: 1.75rem !important;
+          margin-bottom: 1.25rem !important;
+          list-style-type: decimal !important;
+          display: block !important;
+        }
+        .blog-rich-text li {
+          margin-bottom: 0.5rem !important;
+          line-height: 1.6 !important;
+          display: list-item !important;
+        }
+        .blog-rich-text a {
+          color: #3b82f6 !important;
+          text-decoration: underline !important;
+          font-weight: 600 !important;
+        }
+      `}} />
+
       {/* Article Hero */}
       <section className="relative pt-32 pb-16 bg-gradient-to-b from-blue-950/20 via-black to-black overflow-hidden border-b border-[#1a1a1a]">
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none" />
@@ -339,7 +406,7 @@ export default function BlogDetailPage() {
 
           {/* HTML Render Body */}
           <article className="prose prose-invert max-w-none prose-headings:font-bold prose-headings:text-white prose-p:text-gray-300 prose-p:leading-relaxed prose-li:text-gray-300 blog-rich-text">
-            <div dangerouslySetInnerHTML={{ __html: blog.description }} />
+            <div dangerouslySetInnerHTML={{ __html: getRebrandedContent(blog.description) }} />
           </article>
         </div>
       </section>
