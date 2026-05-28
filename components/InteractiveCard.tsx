@@ -83,17 +83,22 @@ export default function InteractiveCard({ children, className = '', href }: Inte
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`relative overflow-hidden rounded-2xl border border-[#2a2a2a] bg-[#0a0a0a] ${className}`}
+      className={`relative rounded-2xl border border-[#2a2a2a] bg-[#0a0a0a] glow-card-active ${className}`}
       style={cardStyle}
     >
-      <div
-        className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300"
-        style={{
-          opacity: isHovered ? 1 : 0,
-          background: `radial-gradient(350px circle at ${coords.x}px ${coords.y}px, rgba(59, 130, 246, 0.15), transparent 80%)`,
-        }}
-      />
-      <div style={{ transform: 'translateZ(0px)', transformStyle: 'preserve-3d', height: '100%', width: '100%' }}>
+      {/* Inner overflow-hidden container for clipping the mouse light glow */}
+      <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none z-0">
+        <div
+          className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300"
+          style={{
+            opacity: isHovered ? 1 : 0,
+            background: `radial-gradient(350px circle at ${coords.x}px ${coords.y}px, rgba(59, 130, 246, 0.15), transparent 80%)`,
+          }}
+        />
+      </div>
+
+      {/* Content wrapper */}
+      <div className="relative z-10 h-full w-full" style={{ transform: 'translateZ(0px)', transformStyle: 'preserve-3d' }}>
         {href ? (
           <Link href={href} className="block no-underline h-full w-full">
             {children}

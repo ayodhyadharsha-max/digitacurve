@@ -8,7 +8,7 @@ import {
   Clock, MapPin, Mail, Phone, CheckCircle2
 } from 'lucide-react'
 import InteractiveCard from '@/components/InteractiveCard'
-import ParticleBackground from '@/components/ParticleBackground'
+import CyberGrid from '@/components/CyberGrid'
 
 /* ── Hero Slider ───────────────────────────────────────────────── */
 const slides = [
@@ -96,7 +96,7 @@ function HeroSlider() {
       <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-purple-600/10 rounded-full blur-3xl pointer-events-none animate-pulse-slow" />
 
       {/* Interactive 3D Particles Background */}
-      <ParticleBackground />
+      <CyberGrid />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
@@ -112,7 +112,7 @@ function HeroSlider() {
           {/* Heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight mb-6 max-w-4xl">
             <span className="text-white">{slide.title} </span>
-            <span className={`bg-gradient-to-r ${slide.accentColor} bg-clip-text text-transparent`}>
+            <span className="gradient-text-shimmer">
               {slide.titleAccent}
             </span>
             {slide.titleEnd && <span className="text-white"> {slide.titleEnd}</span>}
@@ -330,7 +330,7 @@ function CollaborationBanner() {
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-6">
               Creating pathways for{' '}
-              <span className="gradient-text">seamless collaboration</span>{' '}
+              <span className="gradient-text-shimmer">seamless collaboration</span>{' '}
               among businesses
             </h2>
             <p className="text-gray-400 text-base leading-relaxed mb-8 max-w-lg">
@@ -575,7 +575,7 @@ function FeaturedProjects() {
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-white">
               Our{' '}
-              <span className="gradient-text">Successful Projects</span>
+              <span className="gradient-text-shimmer">Successful Projects</span>
             </h2>
           </div>
           <Link
