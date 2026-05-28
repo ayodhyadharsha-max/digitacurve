@@ -7,6 +7,8 @@ import {
   Globe, Smartphone, TrendingUp, Cpu, Users, Briefcase, Award,
   Clock, MapPin, Mail, Phone, CheckCircle2
 } from 'lucide-react'
+import InteractiveCard from '@/components/InteractiveCard'
+import ParticleBackground from '@/components/ParticleBackground'
 
 /* ── Hero Slider ───────────────────────────────────────────────── */
 const slides = [
@@ -90,8 +92,11 @@ function HeroSlider() {
       />
 
       {/* Glowing orbs */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-purple-600/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none animate-float-slow" />
+      <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-purple-600/10 rounded-full blur-3xl pointer-events-none animate-pulse-slow" />
+
+      {/* Interactive 3D Particles Background */}
+      <ParticleBackground />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
@@ -199,17 +204,23 @@ function CategoriesGrid() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {categories.map((cat, idx) => (
               <RevealStaggerItem key={cat.title} index={idx} className="h-full">
-                <Link
+                <InteractiveCard
                   href={cat.href}
-                  className="group relative flex flex-col items-center justify-center p-8 rounded-2xl border border-[#2a2a2a] bg-[#0a0a0a] category-card h-full"
+                  className="p-8 group flex flex-col items-center justify-center category-card h-full"
                 >
                   {/* Corner Arrow rotated 325 degrees */}
-                  <div className="absolute top-3 right-3 text-secondary text-gray-500 group-hover:text-white transition-colors">
+                  <div 
+                    className="absolute top-3 right-3 text-secondary text-gray-500 group-hover:text-white transition-all duration-300"
+                    style={{ transform: 'translateZ(35px)' }}
+                  >
                     <ArrowRight size={16} className="rotate-[325deg]" />
                   </div>
                   
                   {/* Centered webp image inside a circular outline */}
-                  <div className="w-16 h-16 rounded-full border border-blue-500/30 flex items-center justify-center mb-4 bg-blue-500/5 group-hover:border-blue-500/60 transition-all">
+                  <div 
+                    className="w-16 h-16 rounded-full border border-blue-500/30 flex items-center justify-center mb-4 bg-blue-500/5 group-hover:border-blue-500/60 transition-all duration-300"
+                    style={{ transform: 'translateZ(25px)' }}
+                  >
                     <img
                       src={cat.image}
                       alt={cat.title}
@@ -218,10 +229,13 @@ function CategoriesGrid() {
                   </div>
                   
                   {/* Title */}
-                  <p className="text-white font-semibold text-sm tracking-wide text-center">
+                  <p 
+                    className="text-white font-semibold text-sm tracking-wide text-center"
+                    style={{ transform: 'translateZ(15px)' }}
+                  >
                     {cat.title}
                   </p>
-                </Link>
+                </InteractiveCard>
               </RevealStaggerItem>
             ))}
           </div>
@@ -448,11 +462,15 @@ function ServicesGrid() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8">
             {services.map((svc, idx) => (
               <RevealStaggerItem key={idx} index={idx} className="h-full">
-                <div
-                  className="service-card p-6 flex flex-col items-center justify-center text-center h-full border border-transparent hover:border-[#2a2a2a] bg-[#0a0a0a]/20 dark:bg-transparent rounded-2xl transition-all duration-300"
+                <InteractiveCard
+                  href={svc.href}
+                  className="p-6 flex flex-col items-center justify-center text-center service-card h-full border border-transparent hover:border-[#2a2a2a] bg-[#0a0a0a]/20 dark:bg-transparent rounded-2xl"
                 >
-                  <Link href={svc.href} className="no-underline flex flex-col items-center text-white">
-                    <div className="image my-3 flex items-center justify-center h-14">
+                  <div className="flex flex-col items-center text-white w-full h-full justify-between" style={{ transformStyle: 'preserve-3d' }}>
+                    <div 
+                      className="image my-3 flex items-center justify-center h-14"
+                      style={{ transform: 'translateZ(25px)' }}
+                    >
                       <img
                         src={svc.image}
                         alt={svc.title}
@@ -460,14 +478,20 @@ function ServicesGrid() {
                         loading="lazy"
                       />
                     </div>
-                    <div className="title my-3">
+                    <div 
+                      className="title my-3"
+                      style={{ transform: 'translateZ(20px)' }}
+                    >
                       <h4>{svc.title}</h4>
                     </div>
-                    <div className="description max-w-sm">
-                      <p>{svc.desc}</p>
+                    <div 
+                      className="description max-w-sm flex-1 flex items-center justify-center"
+                      style={{ transform: 'translateZ(12px)' }}
+                    >
+                      <p className="text-sm text-gray-400">{svc.desc}</p>
                     </div>
-                  </Link>
-                </div>
+                  </div>
+                </InteractiveCard>
               </RevealStaggerItem>
             ))}
           </div>
@@ -565,43 +589,43 @@ function FeaturedProjects() {
 
         <div className="projects-section">
           {/* Left Side: Tall Vertical Card */}
-          <Link
+          <InteractiveCard
             href="/app-development"
-            className="relative flex-1 rounded-2xl overflow-hidden project-sec-one project-one"
+            className="flex-1 project-sec-one project-one"
           >
-            <div className="project-one-details">
-              <h3 className="project-title text-white mb-2">AMPS App Design</h3>
-              <p className="decs text-gray-300 max-w-md">
+            <div className="project-one-details" style={{ transformStyle: 'preserve-3d', transform: 'translateZ(20px)' }}>
+              <h3 className="project-title text-white mb-2" style={{ transform: 'translateZ(15px)' }}>AMPS App Design</h3>
+              <p className="decs text-gray-300 max-w-md" style={{ transform: 'translateZ(10px)' }}>
                 We provided app development services for The AMPS Institute, delivering a platform tailored to support its programs focused on the Roadmap to Entrepreneurship Excellence.
               </p>
             </div>
-          </Link>
+          </InteractiveCard>
 
           {/* Right Side: Stacked Horizontal Cards */}
-          <div className="flex-1 flex flex-col gap-4 justify-between h-full">
-            <Link
+          <div className="flex-1 flex flex-col gap-4 justify-between h-full" style={{ transformStyle: 'preserve-3d' }}>
+            <InteractiveCard
               href="/app-development"
-              className="relative flex-1 rounded-2xl overflow-hidden project-sec-two project-two"
+              className="flex-1 project-sec-two project-two"
             >
-              <div className="project-two-details">
-                <h3 className="project-title text-white mb-2">MainHaus Website Design</h3>
-                <p className="decs text-gray-300">
+              <div className="project-two-details" style={{ transformStyle: 'preserve-3d', transform: 'translateZ(20px)' }}>
+                <h3 className="project-title text-white mb-2" style={{ transform: 'translateZ(15px)' }}>MainHaus Website Design</h3>
+                <p className="decs text-gray-300" style={{ transform: 'translateZ(10px)' }}>
                   We developed MeinHaus' website, linking service providers and users for services like painting, demolition, cleaning, and appliance installation.
                 </p>
               </div>
-            </Link>
+            </InteractiveCard>
 
-            <Link
+            <InteractiveCard
               href="/web-development"
-              className="relative flex-1 rounded-2xl overflow-hidden project-sec-two project-three"
+              className="flex-1 project-sec-two project-three"
             >
-              <div className="project-three-details">
-                <h3 className="project-title text-white mb-2">Wikistrings Website Design</h3>
-                <p className="decs text-gray-300">
+              <div className="project-three-details" style={{ transformStyle: 'preserve-3d', transform: 'translateZ(20px)' }}>
+                <h3 className="project-title text-white mb-2" style={{ transform: 'translateZ(15px)' }}>Wikistrings Website Design</h3>
+                <p className="decs text-gray-300" style={{ transform: 'translateZ(10px)' }}>
                   We crafted the website for Wikistrings, a dynamic platform designed for real-life interaction and evaluation of guitar strings.
                 </p>
               </div>
-            </Link>
+            </InteractiveCard>
           </div>
         </div>
       </div>
