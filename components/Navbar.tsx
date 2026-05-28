@@ -6,39 +6,12 @@ import { usePathname } from 'next/navigation'
 import { Sun, Moon, Menu, X, ChevronDown, Smartphone, Globe, TrendingUp, Cpu } from 'lucide-react'
 import { useTheme } from './ThemeProvider'
 
-const mobileAppItems = [
-  { label: 'Android App Development', href: '/app-development' },
-  { label: 'iOS App Development', href: '/app-development' },
-  { label: 'Swift App Development', href: '/app-development' },
-  { label: 'Cross Platform App', href: '/app-development' },
-  { label: 'iPad App Development', href: '/app-development' },
-  { label: 'Mobile Game Development', href: '/app-development' },
-]
-
-const webAppItems = [
-  { label: 'PHP Development', href: '/web-development' },
-  { label: 'ROR Development', href: '/web-development' },
-  { label: 'NODE.js Development', href: '/web-development' },
-  { label: 'Joomla Development', href: '/web-development' },
-  { label: 'Web Development Company USA', href: '/web-development' },
-  { label: 'UI UX Design Services', href: '/web-development' },
-]
-
-const digitalMarketingItems = [
-  { label: 'SEO Services', href: '/digital-marketing' },
-  { label: 'Pay Per Click', href: '/digital-marketing' },
-  { label: 'Social Media Marketing', href: '/digital-marketing' },
-  { label: 'Content Marketing', href: '/digital-marketing' },
-  { label: 'SEO Company Indianapolis', href: '/digital-marketing' },
-  { label: 'Healthcare Marketing', href: '/digital-marketing' },
-]
-
-const emergingTechItems = [
-  { label: 'Artificial Intelligence', href: '/artificial-intelligence' },
-  { label: 'Internet Of Things', href: '/artificial-intelligence' },
-  { label: 'Robotic Process Automation', href: '/artificial-intelligence' },
-  { label: 'AI & Software Development', href: '/artificial-intelligence' },
-  { label: 'AI Consultant', href: '/artificial-intelligence' },
+const servicesList = [
+  { label: 'Web Development', href: '/web-development' },
+  { label: 'Search Engine Optimization (SEO)', href: '/digital-marketing' },
+  { label: 'Pay Per Click (PPC)', href: '/digital-marketing' },
+  { label: 'Social Media Manager', href: '/digital-marketing' },
+  { label: 'Digital Consulting', href: '/company/contact' },
 ]
 
 export default function Navbar() {
@@ -74,11 +47,12 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0">
-            <img
-              src="/assets/logo-white.png"
-              alt="logo"
-              className="h-10 w-auto object-contain"
-            />
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-purple-600 flex items-center justify-center text-white shadow-md shadow-blue-500/20">
+              <TrendingUp size={16} className="text-white transform -rotate-12" />
+            </div>
+            <span className="text-xl font-black tracking-tight text-slate-950 dark:text-white">
+              Digita<span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">curve</span>
+            </span>
           </Link>
 
           {/* Desktop Nav */}
@@ -111,108 +85,20 @@ export default function Navbar() {
                 <ChevronDown size={14} className="transition-transform group-hover:rotate-180 duration-200" />
               </button>
 
-              <div className="mega-menu absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[780px] bg-[#111111] border border-[#2a2a2a] rounded-2xl shadow-2xl shadow-black/60 p-6 z-50">
-                <div className="grid grid-cols-4 gap-6">
-                  {/* Mobile App */}
-                  <div>
-                    <div className="flex items-center gap-2 mb-3 pb-2 border-b border-[#2a2a2a]">
-                      <div className="w-7 h-7 rounded-lg bg-blue-500/20 flex items-center justify-center">
-                        <Smartphone size={14} className="text-blue-400" />
-                      </div>
-                      <Link href="/app-development" className="text-xs font-bold text-white uppercase tracking-wider hover:text-blue-400 transition-colors">
-                        Mobile App
+              <div className="mega-menu absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-[#111111] border border-[#2a2a2a] rounded-xl shadow-2xl shadow-black/60 p-3 z-50">
+                <ul className="space-y-1">
+                  {servicesList.map(item => (
+                    <li key={item.label}>
+                      <Link
+                        href={item.href}
+                        className="block px-3 py-2 text-xs text-gray-400 hover:text-white hover:bg-[#1a1a1a] rounded-lg transition-colors flex items-center gap-2 group/item"
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover/item:bg-blue-400 transition-colors" />
+                        {item.label}
                       </Link>
-                    </div>
-                    <ul className="space-y-1.5">
-                      {mobileAppItems.map(item => (
-                        <li key={item.label}>
-                          <Link
-                            href={item.href}
-                            className="text-xs text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 group/item"
-                          >
-                            <span className="w-1 h-1 rounded-full bg-gray-600 group-hover/item:bg-blue-400 transition-colors" />
-                            {item.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Web App */}
-                  <div>
-                    <div className="flex items-center gap-2 mb-3 pb-2 border-b border-[#2a2a2a]">
-                      <div className="w-7 h-7 rounded-lg bg-purple-500/20 flex items-center justify-center">
-                        <Globe size={14} className="text-purple-400" />
-                      </div>
-                      <Link href="/web-development" className="text-xs font-bold text-white uppercase tracking-wider hover:text-purple-400 transition-colors">
-                        Web App
-                      </Link>
-                    </div>
-                    <ul className="space-y-1.5">
-                      {webAppItems.map(item => (
-                        <li key={item.label}>
-                          <Link
-                            href={item.href}
-                            className="text-xs text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 group/item"
-                          >
-                            <span className="w-1 h-1 rounded-full bg-gray-600 group-hover/item:bg-purple-400 transition-colors" />
-                            {item.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Digital Marketing */}
-                  <div>
-                    <div className="flex items-center gap-2 mb-3 pb-2 border-b border-[#2a2a2a]">
-                      <div className="w-7 h-7 rounded-lg bg-orange-500/20 flex items-center justify-center">
-                        <TrendingUp size={14} className="text-orange-400" />
-                      </div>
-                      <Link href="/digital-marketing" className="text-xs font-bold text-white uppercase tracking-wider hover:text-orange-400 transition-colors">
-                        Digital Marketing
-                      </Link>
-                    </div>
-                    <ul className="space-y-1.5">
-                      {digitalMarketingItems.map(item => (
-                        <li key={item.label}>
-                          <Link
-                            href={item.href}
-                            className="text-xs text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 group/item"
-                          >
-                            <span className="w-1 h-1 rounded-full bg-gray-600 group-hover/item:bg-orange-400 transition-colors" />
-                            {item.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Emerging Tech */}
-                  <div>
-                    <div className="flex items-center gap-2 mb-3 pb-2 border-b border-[#2a2a2a]">
-                      <div className="w-7 h-7 rounded-lg bg-green-500/20 flex items-center justify-center">
-                        <Cpu size={14} className="text-green-400" />
-                      </div>
-                      <Link href="/artificial-intelligence" className="text-xs font-bold text-white uppercase tracking-wider hover:text-green-400 transition-colors">
-                        Emerging Tech
-                      </Link>
-                    </div>
-                    <ul className="space-y-1.5">
-                      {emergingTechItems.map(item => (
-                        <li key={item.label}>
-                          <Link
-                            href={item.href}
-                            className="text-xs text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 group/item"
-                          >
-                            <span className="w-1 h-1 rounded-full bg-gray-600 group-hover/item:bg-green-400 transition-colors" />
-                            {item.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </li>
 
@@ -321,7 +207,7 @@ export default function Navbar() {
                 </button>
                 {mobileServicesOpen && (
                   <div className="ml-4 mt-1 space-y-1 border-l border-[#2a2a2a] pl-4">
-                    {[...mobileAppItems, ...webAppItems.slice(0, 3), ...digitalMarketingItems.slice(0, 3)].map(item => (
+                    {servicesList.map(item => (
                       <Link
                         key={item.label}
                         href={item.href}

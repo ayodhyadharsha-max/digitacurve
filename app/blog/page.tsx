@@ -115,7 +115,7 @@ export default function BlogPage() {
               <span className="w-6 h-px bg-blue-400 inline-block" />
             </div>
             <h1 className="text-4xl sm:text-6xl font-black mb-6 leading-tight">
-              Quantum <span className="gradient-text">Insights</span>
+              Digitacurve <span className="gradient-text">Insights</span>
             </h1>
             <p className="text-lg text-gray-400 leading-relaxed">
               Explore resources, technological deep dives, industry strategies, and developer tools curated by our engineering teams.
@@ -217,7 +217,7 @@ export default function BlogPage() {
               <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 mx-auto mb-4">
                 <Mail size={22} />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-black mb-3">Subscribe to Quantum Insights</h2>
+              <h2 className="text-2xl sm:text-3xl font-black mb-3">Subscribe to Digitacurve Insights</h2>
               <p className="text-gray-400 text-sm mb-6">
                 Get monthly roundups of technology trends, frameworks comparisons, and digital marketing insights delivered right to your inbox.
               </p>

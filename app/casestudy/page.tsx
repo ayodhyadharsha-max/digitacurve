@@ -3,9 +3,9 @@ import Link from 'next/link'
 import { ArrowUpRight, Smartphone, Globe, TrendingUp, Cpu, CheckCircle2, BarChart3, Users, Clock } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Case Studies | Quantum IT Innovation',
+  title: 'Case Studies | Digitacurve',
   description:
-    'Explore our success stories and Case Studies at Quantum IT Innovation. See how our expertise in AI, app development, and digital solutions drives business growth.',
+    'Explore our success stories and Case Studies at Digitacurve. See how our expertise in AI, app development, and digital solutions drives business growth.',
 }
 
 const filterTabs = [

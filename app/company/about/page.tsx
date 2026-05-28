@@ -6,21 +6,17 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'About Quantum IT Innovation | Leading Tech Solutions Provider',
+  title: 'About Digitacurve | Leading Tech Solutions Provider',
   description:
-    'Learn more about Quantum IT Innovation, a top-tier tech solutions provider specializing in AI, app development, and innovative IT services.',
+    'Learn more about Digitacurve, a top-tier tech solutions provider specializing in web development, SEO, PPC, and digital consulting.',
 }
 
 const services = [
   { icon: Globe, title: 'Web Development', desc: 'Crafting engaging online experiences through bespoke web development solutions, tailored to elevate your brand\'s digital presence.', color: 'text-blue-400', bg: 'from-blue-500/10' },
-  { icon: Smartphone, title: 'Mobile App', desc: 'Transform your ideas into intuitive mobile experiences with our expert app development services, driving engagement and growth.', color: 'text-purple-400', bg: 'from-purple-500/10' },
-  { icon: Cpu, title: 'Software Development', desc: 'Redefine your business landscape with our tailored software solutions, engineered for efficiency and scalability.', color: 'text-teal-400', bg: 'from-teal-500/10' },
-  { icon: TrendingUp, title: 'Social Media Optimization', desc: 'Enhance your online presence and interaction with our targeted social media optimization services.', color: 'text-pink-400', bg: 'from-pink-500/10' },
-  { icon: Cpu, title: 'Artificial Intelligence', desc: 'Utilize our advanced AI solutions to fuel innovation and streamline efficiency throughout your business processes.', color: 'text-green-400', bg: 'from-green-500/10' },
-  { icon: TrendingUp, title: 'Digital Marketing', desc: 'Boost your brand\'s online presence with our effective digital marketing strategies for visibility, engagement, and conversions.', color: 'text-orange-400', bg: 'from-orange-500/10' },
-  { icon: Cpu, title: 'Generative AI', desc: 'Expert generative AI consulting services, making us one of the top GenAI companies for innovative AI solutions.', color: 'text-violet-400', bg: 'from-violet-500/10' },
-  { icon: Cpu, title: 'AI Development', desc: 'Premier AI/ML development services providing innovative solutions tailored to meet your business\'s unique needs.', color: 'text-cyan-400', bg: 'from-cyan-500/10' },
-  { icon: Users, title: 'AI Consulting', desc: 'Expert AI consultants from leading AI consulting firms offering premier AI consultancy and consultation services.', color: 'text-amber-400', bg: 'from-amber-500/10' },
+  { icon: TrendingUp, title: 'SEO (Search Engine Optimization)', desc: 'Drive organic search traffic, secure high keyword rankings, and increase conversion rates with our technical, on-page, and off-page SEO services.', color: 'text-orange-400', bg: 'from-orange-500/10' },
+  { icon: Target, title: 'Pay Per Click (PPC)', desc: 'Maximize ROI with data-driven search, display, and social PPC ad campaigns. We optimize bids, ad copy, and landing pages for optimal results.', color: 'text-red-400', bg: 'from-red-500/10' },
+  { icon: Users, title: 'Social Media Management', desc: 'Enhance your brand presence and engage active audiences on Facebook, LinkedIn, Instagram, and Twitter through custom organic strategies.', color: 'text-pink-400', bg: 'from-pink-500/10' },
+  { icon: Cpu, title: 'Digital & IT Consulting', desc: 'Facilitating strategic IT and digital marketing consulting to streamline processes, drive innovation, and scale your business growth.', color: 'text-green-400', bg: 'from-green-500/10' },
 ]
 
 const stats = [
@@ -93,7 +89,7 @@ export default function AboutPage() {
               About <span className="gradient-text">Us</span>
             </h1>
             <p className="text-xl text-gray-300 font-semibold max-w-2xl mx-auto">
-              Quantum IT Innovation: Your partner in digital innovation and transformation.
+              Digitacurve: Your partner in digital innovation and transformation.
             </p>
           </div>
         </div>
@@ -120,7 +116,7 @@ export default function AboutPage() {
                 thinking to deliver results that exceed expectations.
               </p>
               <p className="text-gray-400 leading-relaxed mb-8">
-                Quantum IT Innovation is a global technology company offering a wide array of services focused
+                Digitacurve is a global technology company offering a wide array of services focused
                 on moving companies into the digital age. Our operations span the USA, UK, Canada, Australia,
                 Middle-East, Ireland, and India, and across the globe.
               </p>
@@ -185,7 +181,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-black text-white mb-10">
             Businesses all over the world trust{' '}
-            <span className="gradient-text">Quantum IT Innovation</span>{' '}
+            <span className="gradient-text">Digitacurve</span>{' '}
             to build their brand
           </h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
@@ -217,7 +213,7 @@ export default function AboutPage() {
                 Our <span className="gradient-text">Mission</span>
               </h2>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                Our mission at Quantum is to empower businesses with innovative digital solutions, driving
+                Our mission at Digitacurve is to empower businesses with innovative digital solutions, driving
                 growth and success in today&apos;s dynamic landscape. Through creativity, expertise, and
                 collaboration, we strive to exceed expectations and unlock the full potential of our
                 clients&apos; brands.
@@ -268,7 +264,7 @@ export default function AboutPage() {
               <span className="w-6 h-px bg-blue-400 inline-block" />
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-white">
-              Celebrating Quantum&apos;s{' '}
+              Celebrating Digitacurve&apos;s{' '}
               <span className="gradient-text">Association</span>
             </h2>
           </div>
@@ -297,7 +293,7 @@ export default function AboutPage() {
             Ready to <span className="gradient-text">transform</span> your business?
           </h2>
           <p className="text-gray-400 mb-8">
-            Partner with Quantum IT Innovation to unlock innovative solutions tailored for your growth.
+            Partner with Digitacurve to unlock innovative solutions tailored for your growth.
           </p>
           <Link
             href="/company/contact"

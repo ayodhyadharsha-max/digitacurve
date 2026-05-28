@@ -25,19 +25,6 @@ const slides = [
   },
   {
     id: 2,
-    eyebrow: 'Mobile Innovation',
-    title: 'Premier',
-    titleAccent: 'Mobile App Development',
-    titleEnd: 'Innovations',
-    subtitle:
-      'Our Mobile App Development services redefine the digital landscape, pushing boundaries with revolutionary solutions that drive success.',
-    cta: 'Explore Apps',
-    ctaHref: '/app-development',
-    gradient: 'from-purple-900/80 via-black/60 to-black',
-    accentColor: 'from-purple-400 to-pink-500',
-  },
-  {
-    id: 3,
     eyebrow: 'Digital Marketing',
     title: 'Experience our services and foresee the future of',
     titleAccent: 'Digital Marketing',
@@ -50,7 +37,7 @@ const slides = [
     accentColor: 'from-orange-400 to-yellow-500',
   },
   {
-    id: 4,
+    id: 3,
     eyebrow: 'Web Development',
     title: 'Supreme',
     titleAccent: 'Web Development',
@@ -61,19 +48,6 @@ const slides = [
     ctaHref: '/web-development',
     gradient: 'from-teal-900/80 via-black/60 to-black',
     accentColor: 'from-teal-400 to-blue-500',
-  },
-  {
-    id: 5,
-    eyebrow: 'AI Solutions',
-    title: 'Artificial intelligence',
-    titleAccent: 'Solutions with Unmatched Expertise',
-    titleEnd: '',
-    subtitle:
-      'Discover the unparalleled expertise and innovation offered by our leading AI solutions, where cutting-edge technology meets exceptional service.',
-    cta: 'Explore AI',
-    ctaHref: '/artificial-intelligence',
-    gradient: 'from-violet-900/80 via-black/60 to-black',
-    accentColor: 'from-violet-400 to-fuchsia-500',
   },
 ]
 
@@ -196,24 +170,24 @@ function HeroSlider() {
 
 const categories = [
   {
-    image: '/assets/appdev.webp',
-    title: 'App Development',
-    href: '/app-development',
-  },
-  {
     image: '/assets/web dev.webp',
     title: 'Web Development',
     href: '/web-development',
   },
   {
     image: '/assets/dm.webp',
-    title: 'Digital Marketing',
+    title: 'SEO & PPC Solutions',
     href: '/digital-marketing',
   },
   {
-    image: '/assets/ai.webp',
-    title: 'Artificial Intelligence (AI)',
-    href: '/artificial-intelligence',
+    image: '/assets/services-icons/qa.svg',
+    title: 'Social Media Management',
+    href: '/digital-marketing',
+  },
+  {
+    image: '/assets/services-icons/it-consultancy.svg',
+    title: 'Digital & IT Consulting',
+    href: '/company/contact',
   },
 ]
 
@@ -406,52 +380,28 @@ const services = [
     href: '/web-development',
   },
   {
-    image: '/assets/services-icons/mobile.svg',
-    title: 'Mobile App',
-    desc: 'Transform your ideas into intuitive mobile experiences with our expert app development services, driving engagement and growth.',
-    href: '/app-development',
+    image: '/assets/services-icons/dedicated-team.svg',
+    title: 'SEO (Search Engine Optimization)',
+    desc: 'Drive organic search traffic, secure high keyword rankings, and increase conversion rates with our technical, on-page, and off-page SEO services.',
+    href: '/digital-marketing',
   },
   {
     image: '/assets/services-icons/uiux.svg',
-    title: 'Software Development',
-    desc: 'Redefine your business landscape with our tailored software solutions, engineered for efficiency and scalability.',
-    href: '/web-development',
+    title: 'PPC Management',
+    desc: 'Maximize ROI with data-driven search, display, and social PPC ad campaigns. We optimize bids, ad copy, and landing pages for optimal results.',
+    href: '/digital-marketing',
   },
   {
     image: '/assets/services-icons/qa.svg',
-    title: 'Social Media Optimization',
-    desc: 'Enhance your online presence and interaction with our targeted social media optimization services, crafted for optimal impact and visibility.',
+    title: 'Social Media Management',
+    desc: 'Enhance your brand presence and engage active audiences on Facebook, LinkedIn, Instagram, and Twitter through custom organic strategies.',
     href: '/digital-marketing',
   },
   {
     image: '/assets/services-icons/it-consultancy.svg',
-    title: 'Artificial Intelligence',
-    desc: 'Utilize our advanced artificial intelligence solutions, customized to meet your specific needs, to fuel innovation and streamline efficiency throughout your business processes.',
-    href: '/artificial-intelligence',
-  },
-  {
-    image: '/assets/services-icons/dedicated-team.svg',
-    title: 'Digital Marketing',
-    desc: 'Boost your brand\'s online presence and reach with our effective digital marketing strategies, crafted to enhance visibility, engagement, and conversions.',
-    href: '/digital-marketing',
-  },
-  {
-    image: '/assets/services/AI_service/aigenerator/img1.png',
-    title: 'Generative AI',
-    desc: 'Quantum IT offers expert generative AI consulting services, making us one of the top GenAI companies for innovative AI solutions.',
-    href: '/artificial-intelligence',
-  },
-  {
-    image: '/assets/services/AI_service/aiservice/img1.png',
-    title: 'AI Development',
-    desc: 'Quantum IT offers premier AI/ML development services, providing innovative AI development services tailored to meet your business\'s unique needs.',
-    href: '/artificial-intelligence',
-  },
-  {
-    image: '/assets/services/AI_service/aiservice/img2.png',
-    title: 'AI Consulting',
-    desc: 'Discover top AI consulting services at Quantum IT. Our expert AI consultants from leading AI consulting firms offer premier AI consultancy and consultation.',
-    href: '/artificial-intelligence',
+    title: 'IT & Digital Consulting',
+    desc: 'Facilitating strategic IT and digital marketing consulting to streamline processes, drive innovation, and scale your business growth.',
+    href: '/company/contact',
   },
 ]
 
@@ -711,7 +661,7 @@ function OfficeLocations() {
             </div>
             <h3 className="text-white font-bold text-2xl mb-6">UAE</h3>
             <p className="text-gray-400 text-sm md:text-base leading-relaxed text-justify md:text-center max-w-3xl mx-auto font-medium">
-              Quantum IT Innovation is a global technology company that offers a wide array of services focused on moving companies into the digital age. Our operations span the <span className="text-blue-400 font-bold">USA, UK, Canada, Australia, Middle-East, Ireland, and India</span>, and across the globe. We excel in the fields of <span className="text-blue-400 font-bold">web</span> and <span className="text-blue-400 font-bold">mobile app development</span>, <span className="text-blue-400 font-bold">AI consulting</span>, and <span className="text-blue-400 font-bold">digital marketing</span>. Our web development services include the design of dynamic, sophisticated, and high-end <span className="text-blue-400 font-bold">CMS</span> websites with the use of advanced technologies like <span className="text-blue-400 font-bold">VB.Net, ASP.Net, PHP, Java, and Python</span>. In mobile app development, we specialize in <span className="text-blue-400 font-bold">Android, iOS</span>, and <span className="text-blue-400 font-bold">cross-platform applications</span>, ensuring unmatched usability. The <span className="text-blue-400 font-bold">AI</span> consulting services provide businesses with the tools to add value by using AI for operational solutions. Also, our digital marketing campaigns with <span className="text-blue-400 font-bold">SEO, SMO</span> and <span className="text-blue-400 font-bold">Paid ads</span> are designed to deliver results by maximizing conversion rates.
+              Digitacurve is a global technology company that offers a wide array of services focused on moving companies into the digital age. Our operations span the <span className="text-blue-400 font-bold">USA, UK, Canada, Australia, Middle-East, Ireland, and India</span>, and across the globe. We excel in the fields of <span className="text-blue-400 font-bold">web development</span>, <span className="text-blue-400 font-bold">SEO</span>, <span className="text-blue-400 font-bold">PPC</span>, <span className="text-blue-400 font-bold">social media management</span>, and <span className="text-blue-400 font-bold">digital consulting</span>. Our web development services include the design of dynamic, sophisticated, and high-end <span className="text-blue-400 font-bold">CMS</span> websites with the use of advanced technologies. Also, our digital marketing campaigns with <span className="text-blue-400 font-bold">SEO, SMO</span> and <span className="text-blue-400 font-bold">Paid ads</span> are designed to deliver results by maximizing conversion rates.
             </p>
           </div>
         </div>

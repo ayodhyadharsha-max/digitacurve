@@ -56,7 +56,7 @@ export default function ContactPage() {
     email: '',
     phone: '',
     company: '',
-    interest: 'Mobile App Development',
+    interest: 'Website Design & Development',
     message: '',
   })
   const [submitted, setSubmitted] = useState(false)
@@ -80,7 +80,7 @@ export default function ContactPage() {
         email: '',
         phone: '',
         company: '',
-        interest: 'Mobile App Development',
+        interest: 'Website Design & Development',
         message: '',
       })
     }, 4000)
@@ -154,7 +154,7 @@ export default function ContactPage() {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">Message Sent Successfully!</h3>
                   <p className="text-gray-400 text-sm max-w-sm">
-                    Thank you for reaching out to Quantum IT Innovation. An expert from our team will contact you shortly.
+                    Thank you for reaching out to Digitacurve. An expert from our team will contact you shortly.
                   </p>
                 </div>
               ) : (
@@ -233,11 +233,11 @@ export default function ContactPage() {
                         onChange={handleChange}
                         className="w-full bg-[#111] border border-[#2a2a2a] rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
                       >
-                        <option>Mobile App Development</option>
                         <option>Website Design & Development</option>
-                        <option>Digital Marketing</option>
-                        <option>Artificial Intelligence</option>
-                        <option>Robotic Process Automation</option>
+                        <option>Search Engine Optimization (SEO)</option>
+                        <option>Pay Per Click (PPC)</option>
+                        <option>Social Media Manager</option>
+                        <option>Digital & IT Consulting</option>
                       </select>
                     </div>
                   )}
@@ -272,13 +272,13 @@ export default function ContactPage() {
                 <h3 className="text-xl font-bold text-white mb-2">Connect Directly</h3>
                 <p className="text-gray-500 text-sm mb-6">Skip the form and email or call us directly. We respond within 24 hours.</p>
                 <div className="space-y-4">
-                  <a href="mailto:sales@quantumitinnovation.com" className="flex items-center gap-3 group">
+                  <a href="mailto:sales@digitacurve.com" className="flex items-center gap-3 group">
                     <div className="w-10 h-10 rounded-xl bg-[#111] flex items-center justify-center border border-[#2a2a2a] group-hover:border-blue-500/40 transition-colors">
                       <Mail size={16} className="text-blue-400" />
                     </div>
                     <div>
                       <p className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Email Us</p>
-                      <p className="text-sm text-white group-hover:text-blue-400 transition-colors">sales@quantumitinnovation.com</p>
+                      <p className="text-sm text-white group-hover:text-blue-400 transition-colors">sales@digitacurve.com</p>
                     </div>
                   </a>
                   <a href="tel:+919717998517" className="flex items-center gap-3 group">

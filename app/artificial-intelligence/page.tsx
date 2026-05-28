@@ -5,7 +5,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Artificial Intelligence & Emerging Technology | Quantum IT Innovation',
+  title: 'Artificial Intelligence & Emerging Technology | Digitacurve',
   description: 'Explore the unmatched expertise and innovation offered by our leading AI, Generative AI, IoT, RPA, and Software Development solutions.',
 }
 

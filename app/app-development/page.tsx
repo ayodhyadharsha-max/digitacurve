@@ -5,7 +5,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Mobile App Development Services | Quantum IT Innovation',
+  title: 'Mobile App Development Services | Digitacurve',
   description: 'Redefine your digital landscape with our premier Android, iOS, Swift, cross-platform mobile application development and game development services.',
 }
 

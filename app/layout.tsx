@@ -7,22 +7,22 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Top Mobile & Web Development | AI Solutions | Digital Marketing Services',
-    template: '%s | Quantum IT Innovation',
+    default: 'Top Web Development & Digital Marketing Services',
+    template: '%s | Digitacurve',
   },
   description:
-    'Leading AI & Digital Marketing Experts. Top Mobile & Web Development Solutions tailored for growth. Explore Quantum IT Innovation today!',
-  keywords: ['mobile app development', 'web development', 'AI solutions', 'digital marketing', 'quantum it innovation'],
+    'Leading Web Development & Digital Marketing Experts. Top SEO, PPC, SMO & Consulting Solutions tailored for growth. Explore Digitacurve today!',
+  keywords: ['web development', 'SEO services', 'PPC management', 'digital marketing', 'digitacurve'],
   openGraph: {
-    title: 'Top Mobile & Web Development | AI Solutions | Digital Marketing Services',
-    description: 'Leading AI & Digital Marketing Experts. Top Mobile & Web Development Solutions tailored for growth.',
-    url: 'https://quantumitinnovation.com',
-    siteName: 'Quantum IT Innovation',
+    title: 'Top Web Development & Digital Marketing Services',
+    description: 'Leading Web Development & Digital Marketing Experts. Top SEO, PPC, SMO & Consulting Solutions tailored for growth.',
+    url: 'https://digitacurve.com',
+    siteName: 'Digitacurve',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@quantum_it_',
+    site: '@digitacurve',
   },
 }
 

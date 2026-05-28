@@ -5,7 +5,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing Services | Quantum IT Innovation',
+  title: 'Digital Marketing Services | Digitacurve',
   description: 'Delve into our comprehensive array of services to witness the transformative evolution of digital marketing. SEO, PPC, SMO, and Content Marketing.',
 }
 

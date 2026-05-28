@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Phone, Mail, Linkedin, Instagram, Facebook } from 'lucide-react'
+import { Phone, Mail, Linkedin, Instagram, Facebook, TrendingUp } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -9,14 +9,15 @@ export default function Footer() {
           {/* Brand & Contact details */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-6">
-              <img
-                src="/assets/logo-white.png"
-                alt="logo"
-                className="h-10 w-auto object-contain"
-              />
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-purple-600 flex items-center justify-center text-white shadow-md shadow-blue-500/20">
+                <TrendingUp size={16} className="text-white transform -rotate-12" />
+              </div>
+              <span className="text-xl font-black tracking-tight text-slate-950 dark:text-white">
+                Digita<span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">curve</span>
+              </span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Quantum IT Innovation stands at the forefront of digital transformation, offering solutions that revolutionize businesses. Focusing on innovation, we harness the power of technology to propel your organization into the future.
+              Digitacurve stands at the forefront of digital transformation, offering solutions that revolutionize businesses. Focusing on innovation, we harness the power of technology to propel your organization into the future.
             </p>
             <div className="space-y-4">
               {/* Phone contact */}
@@ -42,8 +43,8 @@ export default function Footer() {
                   <Mail size={14} />
                 </div>
                 <div className="pt-1.5">
-                  <a href="mailto:sales@quantumitinnovation.com" className="text-sm text-gray-300 hover:text-white transition-colors break-all">
-                    sales@quantumitinnovation.com
+                  <a href="mailto:sales@digitacurve.com" className="text-sm text-gray-300 hover:text-white transition-colors break-all">
+                    sales@digitacurve.com
                   </a>
                 </div>
               </div>
@@ -76,9 +77,10 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { label: 'Web Development', href: '/web-development' },
-                { label: 'App Development', href: '/app-development' },
-                { label: 'Digital Marketing', href: '/digital-marketing' },
-                { label: 'Artificial Intelligence', href: '/artificial-intelligence' },
+                { label: 'Search Engine Optimization (SEO)', href: '/digital-marketing' },
+                { label: 'Pay Per Click (PPC)', href: '/digital-marketing' },
+                { label: 'Social Media Manager', href: '/digital-marketing' },
+                { label: 'Digital Consulting', href: '/company/contact' },
               ].map(link => (
                 <li key={link.label}>
                   <Link href={link.href} className="text-gray-400 hover:text-white text-sm transition-colors">
@@ -112,7 +114,7 @@ export default function Footer() {
         {/* Bottom Social panels */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 pt-8 border-t border-[#1a1a1a]">
           <a
-            href="https://www.linkedin.com/company/quantumit-it-innovation"
+            href="https://www.linkedin.com/company/digitacurve"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3.5 p-4 rounded-xl bg-[#0077b5] text-white hover:opacity-95 transition-opacity"
@@ -125,7 +127,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://www.instagram.com/quantumitpro/"
+            href="https://www.instagram.com/digitacurve/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3.5 p-4 rounded-xl bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white hover:opacity-95 transition-opacity"
@@ -138,7 +140,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://www.facebook.com/quantumitinnovationindia"
+            href="https://www.facebook.com/digitacurve"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3.5 p-4 rounded-xl bg-[#1877f2] text-white hover:opacity-95 transition-opacity"

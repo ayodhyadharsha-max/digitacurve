@@ -5,7 +5,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Web App Development Services | Quantum IT Innovation',
+  title: 'Web App Development Services | Digitacurve',
   description: 'Top-tier web development services, tailored to perfection. We specialize in PHP, Ruby on Rails, Node.js, Joomla, and UI/UX design.',
 }
 
