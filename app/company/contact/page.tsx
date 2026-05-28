@@ -7,7 +7,7 @@ const offices = [
   {
     country: 'India',
     role: 'Corporate Office',
-    address: 'H-11, First Floor, Sector 63, Noida, Uttar Pradesh 201301',
+    address: 'H-11, First Floor, Sector 62, Noida, Uttar Pradesh 201301',
     phone: '+91 7572094201',
     flag: '🇮🇳',
   },
