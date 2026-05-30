@@ -76,19 +76,27 @@ export default function ContactPage() {
     setError(null)
     
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://formsubmit.co/ajax/sale@digitacurve.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
         body: JSON.stringify({
-          ...formData,
-          type: activeTab,
+          'Name': `${formData.firstName} ${formData.lastName}`,
+          'Email': formData.email,
+          'Phone': formData.phone || 'N/A',
+          'Company': formData.company || 'N/A',
+          'Interest': formData.interest || 'N/A',
+          'Inquiry Type': activeTab || 'General Inquiry',
+          'Message': formData.message,
+          '_cc': 'digitacurve@gmail.com',
+          '_subject': `New Contact Lead: ${formData.interest || activeTab || 'General'} - ${formData.firstName} ${formData.lastName}`,
         }),
       })
       
       const data = await response.json()
-      if (response.ok && data.success) {
+      if (response.ok && data.success === 'true') {
         setSubmitted(true)
         setFormData({
           firstName: '',
@@ -103,7 +111,7 @@ export default function ContactPage() {
           setSubmitted(false)
         }, 5000)
       } else {
-        setError(data.error || 'Something went wrong. Please try again.')
+        setError(data.message || 'Something went wrong. Please try again.')
       }
     } catch (err: any) {
       console.error('Contact submission error:', err)
