@@ -5,6 +5,7 @@ import Topbar from '@/components/Topbar'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import WhatsAppButton from '@/components/WhatsAppButton'
 
 export const metadata: Metadata = {
   title: {
@@ -46,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
         </ThemeProvider>
         <SpeedInsights />
+        <WhatsAppButton />
       </body>
     </html>
   )

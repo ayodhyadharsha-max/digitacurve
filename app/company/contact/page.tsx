@@ -60,6 +60,8 @@ export default function ContactPage() {
     message: '',
   })
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -68,22 +70,47 @@ export default function ContactPage() {
     })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Simulated submission
-    setSubmitted(true)
-    setTimeout(() => {
-      setSubmitted(false)
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        company: '',
-        interest: 'Website Design & Development',
-        message: '',
+    setSending(true)
+    setError(null)
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          type: activeTab,
+        }),
       })
-    }, 4000)
+      
+      const data = await response.json()
+      if (response.ok && data.success) {
+        setSubmitted(true)
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          company: '',
+          interest: 'Website Design & Development',
+          message: '',
+        })
+        setTimeout(() => {
+          setSubmitted(false)
+        }, 5000)
+      } else {
+        setError(data.error || 'Something went wrong. Please try again.')
+      }
+    } catch (err: any) {
+      console.error('Contact submission error:', err)
+      setError('Failed to send message. Please check your internet connection and try again.')
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -255,12 +282,28 @@ export default function ContactPage() {
                     />
                   </div>
 
+                  {error && (
+                    <div className="p-4 bg-red-500/10 border border-red-500/20 text-red-400 text-xs rounded-xl">
+                      {error}
+                    </div>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-sm hover:from-blue-500 hover:to-purple-500 transition-all shadow-lg shadow-purple-500/25"
+                    disabled={sending}
+                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-sm hover:from-blue-500 hover:to-purple-500 transition-all shadow-lg shadow-purple-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Send Messages
-                    <ArrowRight size={16} />
+                    {sending ? (
+                      <>
+                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                        Sending Message...
+                      </>
+                    ) : (
+                      <>
+                        Send Messages
+                        <ArrowRight size={16} />
+                      </>
+                    )}
                   </button>
                 </form>
               )}
