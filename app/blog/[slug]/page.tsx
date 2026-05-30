@@ -194,8 +194,12 @@ export default function BlogDetailPage() {
   const [subscribed, setSubscribed] = useState(false)
 
   useEffect(() => {
+    console.log('EFFECT RUNNING: slug =', slug);
+    if (!slug) return;
+    
     // 1. Check if the slug matches a static blog
     if (staticBlogsDetail[slug]) {
+      console.log('Matched static blog:', slug);
       const staticPost = staticBlogsDetail[slug]
       setBlog({
         title: staticPost.title,
@@ -210,12 +214,15 @@ export default function BlogDetailPage() {
     }
 
     // 2. Fetch from API if not a static blog
+    console.log('Fetching blogs from API for slug:', slug);
     fetch('https://api.quantumitinnovation.com/api/blogs/blog?resultPerPage=40&currentPage=1')
       .then((res) => res.json())
       .then((data) => {
+        console.log('API response data success:', data.success, 'blogs count:', data.blogs?.length);
         if (data.success && data.blogs) {
           const apiBlog = data.blogs.find((b: any) => b.custom_url === slug)
           if (apiBlog) {
+            console.log('Found API blog matching slug:', slug);
             setBlog({
               title: apiBlog.title,
               description: apiBlog.description,
@@ -228,6 +235,8 @@ export default function BlogDetailPage() {
               }) : 'May 28, 2026',
               readTime: apiBlog.readTime || '5 min read',
             })
+          } else {
+            console.log('No API blog matched slug:', slug);
           }
         }
         setLoading(false)

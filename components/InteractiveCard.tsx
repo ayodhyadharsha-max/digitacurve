@@ -50,6 +50,19 @@ export default function InteractiveCard({ children, className = '', href }: Inte
     setRotate({ x: 0, y: 0 })
   }
 
+  const classes = className.split(' ')
+  const layoutKeywords = ['items-', 'justify-', 'content-', 'gap-', 'p-', 'pt-', 'pb-', 'pl-', 'pr-', 'px-', 'py-']
+  
+  const layoutClasses = classes.filter(c => {
+    if (c === 'flex' || c === 'flex-wrap' || c === 'flex-nowrap' || c === 'flex-col' || c === 'flex-row') return true
+    return layoutKeywords.some(kw => c.startsWith(kw))
+  }).join(' ')
+  
+  const baseClasses = classes.filter(c => {
+    if (c === 'flex' || c === 'flex-wrap' || c === 'flex-nowrap' || c === 'flex-col' || c === 'flex-row') return false
+    return !layoutKeywords.some(kw => c.startsWith(kw))
+  }).join(' ')
+
   if (!isMounted) {
     const content = (
       <div className={`relative overflow-hidden rounded-2xl border border-[#2a2a2a] bg-[#0a0a0a] ${className}`}>
@@ -83,7 +96,7 @@ export default function InteractiveCard({ children, className = '', href }: Inte
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`relative rounded-2xl border border-[#2a2a2a] bg-[#0a0a0a] h-full ${className}`}
+      className={`relative rounded-2xl border border-[#2a2a2a] bg-[#0a0a0a] h-full ${baseClasses}`}
       style={cardStyle}
     >
       {/* Conic neon glowing border on hover */}
@@ -127,11 +140,13 @@ export default function InteractiveCard({ children, className = '', href }: Inte
       {/* Content wrapper */}
       <div className="relative z-10 h-full w-full" style={{ transform: 'translateZ(0px)', transformStyle: 'preserve-3d' }}>
         {href ? (
-          <Link href={href} className="block no-underline h-full w-full">
+          <Link href={href} className={`no-underline h-full w-full ${layoutClasses || 'block'}`}>
             {children}
           </Link>
         ) : (
-          children
+          <div className={`h-full w-full ${layoutClasses || 'block'}`}>
+            {children}
+          </div>
         )}
       </div>
     </div>

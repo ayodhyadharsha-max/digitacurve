@@ -297,7 +297,9 @@ body {
     flex-direction: column;
     gap: 1.5rem;
   }
-  .project-one, .project-two, .project-three {
+  .projects-section .project-one, 
+  .projects-section .project-two, 
+  .projects-section .project-three {
     height: 300px !important;
   }
   .projects-section > div {
@@ -319,7 +321,9 @@ body {
 .project-two::before,
 .project-three::before {
   content: "";
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-size: cover;
