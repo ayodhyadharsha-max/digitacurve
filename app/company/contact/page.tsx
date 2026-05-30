@@ -76,7 +76,7 @@ export default function ContactPage() {
     setError(null)
     
     try {
-      const response = await fetch('https://formsubmit.co/ajax/sale@digitacurve.com', {
+      const response = await fetch('https://formsubmit.co/ajax/7574928178caf54be5cceb6c5e0a9767', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
