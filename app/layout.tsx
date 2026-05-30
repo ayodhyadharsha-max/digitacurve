@@ -4,6 +4,7 @@ import { ThemeProvider } from '@/components/ThemeProvider'
 import Topbar from '@/components/Topbar'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export const metadata: Metadata = {
   title: {
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main>{children}</main>
           <Footer />
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   )
