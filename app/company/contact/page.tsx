@@ -83,7 +83,7 @@ export default function ContactPage() {
           'Accept': 'application/json',
         },
         body: JSON.stringify({
-          'access_key': process.env.NEXT_PUBLIC_WEB3FORMS_KEY || 'YOUR_ACCESS_KEY_HERE',
+          'access_key': process.env.NEXT_PUBLIC_WEB3FORMS_KEY || '7e356166-b322-41d7-a244-7e9bdf676cd8',
           'from_name': 'Digitacurve Contact Form',
           'Name': `${formData.firstName} ${formData.lastName}`,
           'Email': formData.email,
