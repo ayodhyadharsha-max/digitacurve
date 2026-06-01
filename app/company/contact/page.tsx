@@ -76,13 +76,15 @@ export default function ContactPage() {
     setError(null)
     
     try {
-      const response = await fetch('https://formsubmit.co/ajax/7574928178caf54be5cceb6c5e0a9767', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
         },
         body: JSON.stringify({
+          'access_key': process.env.NEXT_PUBLIC_WEB3FORMS_KEY || 'YOUR_ACCESS_KEY_HERE',
+          'from_name': 'Digitacurve Contact Form',
           'Name': `${formData.firstName} ${formData.lastName}`,
           'Email': formData.email,
           'Phone': formData.phone || 'N/A',
@@ -90,13 +92,12 @@ export default function ContactPage() {
           'Interest': formData.interest || 'N/A',
           'Inquiry Type': activeTab || 'General Inquiry',
           'Message': formData.message,
-          '_cc': 'digitacurve@gmail.com',
-          '_subject': `New Contact Lead: ${formData.interest || activeTab || 'General'} - ${formData.firstName} ${formData.lastName}`,
+          'subject': `New Contact Lead: ${formData.interest || activeTab || 'General'} - ${formData.firstName} ${formData.lastName}`,
         }),
       })
       
       const data = await response.json()
-      if (response.ok && data.success === 'true') {
+      if (response.ok && data.success === true) {
         setSubmitted(true)
         setFormData({
           firstName: '',
