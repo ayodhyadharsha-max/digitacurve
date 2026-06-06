@@ -178,6 +178,9 @@ function getBlogImage(title: string, originalImage: string): string {
   if (lower.includes('canva') || lower.includes('photo') || lower.includes('design') || lower.includes('chub')) {
     return '/assets/blogs/design.jpg';
   }
+  if (lower.includes('marketing') || lower.includes('grow your mobile app')) {
+    return '/assets/blogs/marketing.png';
+  }
   if (originalImage && originalImage.startsWith('http')) {
     return originalImage;
   }
