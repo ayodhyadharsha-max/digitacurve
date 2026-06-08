@@ -443,6 +443,12 @@ const services = [
     desc: 'Facilitating strategic IT and digital marketing consulting to streamline processes, drive innovation, and scale your business growth.',
     href: '/company/contact',
   },
+  {
+    image: '/assets/services-icons/geo.svg',
+    title: 'GEO (Generative Engine Optimization)',
+    desc: 'Optimize your brand visibility for AI search engines, Gemini, and ChatGPT. We ensure your business is cited and recommended in generative AI search summaries.',
+    href: '/digital-marketing',
+  },
 ]
 
 function ServicesGrid() {

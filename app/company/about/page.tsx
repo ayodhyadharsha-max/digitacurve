@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   ArrowRight, Globe, Smartphone, TrendingUp, Cpu, Users,
-  Star, CheckCircle2, Rocket, Handshake, Award, Target
+  Star, CheckCircle2, Rocket, Handshake, Award, Target, Sparkles
 } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -17,6 +17,7 @@ const services = [
   { icon: Target, title: 'Pay Per Click (PPC)', desc: 'Maximize ROI with data-driven search, display, and social PPC ad campaigns. We optimize bids, ad copy, and landing pages for optimal results.', color: 'text-red-400', bg: 'from-red-500/10' },
   { icon: Users, title: 'Social Media Management', desc: 'Enhance your brand presence and engage active audiences on Facebook, LinkedIn, Instagram, and Twitter through custom organic strategies.', color: 'text-pink-400', bg: 'from-pink-500/10' },
   { icon: Cpu, title: 'Digital & IT Consulting', desc: 'Facilitating strategic IT and digital marketing consulting to streamline processes, drive innovation, and scale your business growth.', color: 'text-green-400', bg: 'from-green-500/10' },
+  { icon: Sparkles, title: 'GEO (Generative Engine Optimization)', desc: 'Optimize your brand visibility for AI search engines, Gemini, and ChatGPT. We ensure your business is cited and recommended in generative AI search summaries.', color: 'text-purple-400', bg: 'from-purple-500/10' },
 ]
 
 const stats = [
