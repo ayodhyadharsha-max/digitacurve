@@ -1227,6 +1227,9 @@ function getBlogImage(title: string, originalImage: string): string {
   if (lower.includes('marketing') || lower.includes('grow your mobile app')) {
     return '/assets/blogs/marketing.png';
   }
+  if (lower.includes('ott') || lower.includes('ott advertising')) {
+    return '/assets/blogs/ott.png';
+  }
   if (originalImage && originalImage.startsWith('http')) {
     return originalImage;
   }
