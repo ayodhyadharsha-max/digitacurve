@@ -24,6 +24,7 @@ const projects = [
     accent: 'border-blue-500/20',
     iconColor: 'text-blue-400',
     year: '2024',
+    image: '/assets/projects/imbooked.jpg',
   },
   {
     id: 2,
@@ -36,6 +37,7 @@ const projects = [
     accent: 'border-green-500/20',
     iconColor: 'text-green-400',
     year: '2024',
+    image: '/assets/projects/keepitgoing.jpg',
   },
   {
     id: 3,
@@ -48,6 +50,7 @@ const projects = [
     accent: 'border-yellow-500/20',
     iconColor: 'text-yellow-400',
     year: '2023',
+    image: '/assets/projects/fiscalkids.jpg',
   },
   {
     id: 4,
@@ -60,6 +63,7 @@ const projects = [
     accent: 'border-pink-500/20',
     iconColor: 'text-pink-400',
     year: '2023',
+    image: '/assets/projects/happiness.jpg',
   },
   {
     id: 5,
@@ -72,6 +76,7 @@ const projects = [
     accent: 'border-purple-500/20',
     iconColor: 'text-purple-400',
     year: '2024',
+    image: '/assets/projects/vlaunch.jpg',
   },
   {
     id: 6,
@@ -84,6 +89,7 @@ const projects = [
     accent: 'border-teal-500/20',
     iconColor: 'text-teal-400',
     year: '2023',
+    image: '/assets/backgroungimages/project2bg.webp',
   },
   {
     id: 7,
@@ -96,6 +102,7 @@ const projects = [
     accent: 'border-indigo-500/20',
     iconColor: 'text-indigo-400',
     year: '2022',
+    image: '/assets/backgroungimages/project1-bg.webp',
   },
   {
     id: 8,
@@ -108,6 +115,7 @@ const projects = [
     accent: 'border-orange-500/20',
     iconColor: 'text-orange-400',
     year: '2022',
+    image: '/assets/backgroungimages/project3-bg.webp',
   },
   {
     id: 9,
@@ -120,6 +128,7 @@ const projects = [
     accent: 'border-red-500/20',
     iconColor: 'text-red-400',
     year: '2024',
+    image: '/assets/projects/socialboost.jpg',
   },
 ]
 
@@ -195,16 +204,26 @@ export default function PortfolioPage() {
               >
                 {/* Mock thumbnail */}
                 <div className="w-full h-44 rounded-xl bg-[#111] mb-5 flex items-center justify-center border border-[#2a2a2a] relative overflow-hidden">
-                  <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-white/10 to-transparent" />
-                  <div className={`${project.iconColor} opacity-30`}>
-                    {project.category === 'mobile' ? (
-                      <Smartphone size={48} />
-                    ) : (
-                      <Globe size={48} />
-                    )}
-                  </div>
+                  {project.image ? (
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <>
+                      <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-white/10 to-transparent" />
+                      <div className={`${project.iconColor} opacity-30`}>
+                        {project.category === 'mobile' ? (
+                          <Smartphone size={48} />
+                        ) : (
+                          <Globe size={48} />
+                        )}
+                      </div>
+                    </>
+                  )}
                   {/* Year badge */}
-                  <div className="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-black/60 border border-[#2a2a2a] text-xs text-gray-400">
+                  <div className="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-black/60 border border-[#2a2a2a] text-xs text-gray-400 z-10">
                     {project.year}
                   </div>
                 </div>
