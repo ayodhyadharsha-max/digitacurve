@@ -1032,8 +1032,55 @@ interface FeedbackItem {
   category: string | null
 }
 
+const localFeedbacks: FeedbackItem[] = [
+  {
+    _id: 'fb1',
+    name: 'Caroline Andrew',
+    profileImg: '/assets/avatars/avatar1.png',
+    designation: 'CEO, AppSphere Inc.',
+    stars: 5,
+    message: 'Best Digital Marketing Company. Our objective behind the collaboration with Digitacurve was to strengthen our online presence through targeted SEO strategies, aiming to increase organic traffic and improve brand authority. They exceeded our expectations in every milestone.',
+    link: 'https://clutch.co/profile/digitacurve',
+    logo: '/assets/reviews/rclutch.png',
+    category: 'Marketing'
+  },
+  {
+    _id: 'fb2',
+    name: 'Kelvin Murphy',
+    profileImg: '/assets/avatars/avatar2.png',
+    designation: 'CEO at PointB Travel Sector',
+    stars: 5,
+    message: 'Proactive approach. They continuously analyzed performance, adapted strategies, and focused on long-term growth tailored to our business goals. Digitacurve is a highly professional and responsive development partner.',
+    link: 'https://clutch.co/profile/digitacurve',
+    logo: '/assets/reviews/rclutch.png',
+    category: 'Web Dev'
+  },
+  {
+    _id: 'fb3',
+    name: 'Sarah Jenkins',
+    profileImg: '/assets/avatars/avatar3.png',
+    designation: 'Product Lead, FinTech Solutions',
+    stars: 5,
+    message: 'Digitacurve delivered our mobile app on schedule and within budget. The user experience and visual design are outstanding. Highly recommend their skilled mobile app engineering team.',
+    link: 'https://google.com',
+    logo: '/assets/reviews/rgoogle.png',
+    category: 'App Dev'
+  },
+  {
+    _id: 'fb4',
+    name: 'David Chen',
+    profileImg: '/assets/avatars/avatar4.png',
+    designation: 'Founder, VLaunch Accelerator',
+    stars: 5,
+    message: 'We hired Digitacurve to redesign our corporate portal. Their technical consulting and development velocity were top-tier. Our site speed increased by 150%, and client sign-ups rose instantly.',
+    link: 'https://google.com',
+    logo: '/assets/reviews/rgoogle.png',
+    category: 'Web Dev'
+  }
+]
+
 function TestimonialsSection({ videoTestimonials }: { videoTestimonials: boolean }) {
-  const [feedbacks, setFeedbacks] = useState<FeedbackItem[]>([])
+  const [feedbacks, setFeedbacks] = useState<FeedbackItem[]>(localFeedbacks)
   const [isMobile, setIsMobile] = useState(false)
   const [hasMounted, setHasMounted] = useState(false)
 
@@ -1046,19 +1093,6 @@ function TestimonialsSection({ videoTestimonials }: { videoTestimonials: boolean
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
   }, [])
-
-  useEffect(() => {
-    if (!videoTestimonials) {
-      fetch('https://api.quantumitinnovation.com/api/feedback/feedback')
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.success && data.feedbacks) {
-            setFeedbacks(data.feedbacks)
-          }
-        })
-        .catch((err) => console.error('Error fetching feedbacks:', err))
-    }
-  }, [videoTestimonials])
 
   if (!hasMounted) return null
 
