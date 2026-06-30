@@ -1,43 +1,43 @@
 'use client'
 
 import { useState } from 'react'
-import { MapPin, Mail, ArrowRight, CheckCircle2 } from 'lucide-react'
+import { MapPin, Mail, Phone, ArrowRight, CheckCircle2 } from 'lucide-react'
 
 const offices = [
   {
     country: 'United States',
     role: 'Main Office',
-    address: '1001 Avenida Pico Suite C -256, San Clemente, CA 92673',
+    address: '',
     flag: '🇺🇸',
   },
   {
     country: 'United States',
     role: 'Branch Office',
-    address: '173 E Columbine LN, Westfield, Indiana 46074-9741',
+    address: '',
     flag: '🇺🇸',
   },
   {
     country: 'India',
     role: 'Corporate Office',
-    address: 'H-11, First Floor, Sector 62, Noida, Uttar Pradesh 201301',
+    address: '',
     flag: '🇮🇳',
   },
   {
     country: 'Ontario, Canada',
     role: 'Canada Office',
-    address: '6-425 Hespeler Road, Cambridge, Unit 303, N1R8J6',
+    address: '',
     flag: '🇨🇦',
   },
   {
     country: 'Melbourne, Australia',
     role: 'Australia Office',
-    address: '10 Suffolk Place Aintree, Victoria, Australia - 3336',
+    address: '',
     flag: '🇦🇺',
   },
   {
     country: 'Ireland',
     role: 'Ireland Office',
-    address: '5 Gleann Dara, Tully, Ballinamore Co Leitrim, Ireland',
+    address: '',
     flag: '🇮🇪',
   },
 ]
@@ -327,6 +327,16 @@ export default function ContactPage() {
                       <p className="text-sm text-white group-hover:text-blue-400 transition-colors">sales@digitacurve.com</p>
                     </div>
                   </a>
+
+                  <a href="tel:+917572094201" className="flex items-center gap-3 group">
+                    <div className="w-10 h-10 rounded-xl bg-[#111] flex items-center justify-center border border-[#2a2a2a] group-hover:border-blue-500/40 transition-colors">
+                      <Phone size={16} className="text-blue-400" />
+                    </div>
+                    <div>
+                      <p className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Call Us</p>
+                      <p className="text-sm text-white group-hover:text-blue-400 transition-colors">🇮🇳 +91 7572094201</p>
+                    </div>
+                  </a>
                 </div>
               </div>
 
@@ -357,7 +367,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {offices.map(office => (
               <div
-                key={office.address}
+                key={`${office.country}-${office.role}`}
                 className="p-6 rounded-2xl border border-[#2a2a2a] bg-[#111] hover:border-[#444] transition-all group"
               >
                 <div className="flex items-start gap-4 mb-4">
@@ -367,10 +377,12 @@ export default function ContactPage() {
                     <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold">{office.role}</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-2 mb-3">
-                  <MapPin size={14} className="text-gray-600 shrink-0 mt-0.5" />
-                  <p className="text-gray-400 text-xs leading-relaxed">{office.address}</p>
-                </div>
+                {office.address && (
+                  <div className="flex items-start gap-2 mb-3">
+                    <MapPin size={14} className="text-gray-600 shrink-0 mt-0.5" />
+                    <p className="text-gray-400 text-xs leading-relaxed">{office.address}</p>
+                  </div>
+                )}
               </div>
             ))}
           </div>
