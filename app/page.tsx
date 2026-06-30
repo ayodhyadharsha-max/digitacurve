@@ -1465,6 +1465,139 @@ function RecentBlogsSection() {
   )
 }
 
+function GeoOptimizationSection() {
+  const engines = [
+    {
+      name: 'ChatGPT',
+      description: 'Be the go-to suggestion when users ask for your products or services.',
+      icon: (
+        <svg className="w-8 h-8 text-[#10a37f]" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20.9 11.3c.2-.5.3-1 .3-1.6 0-2.8-2.3-5.1-5.1-5.1-.9 0-1.8.2-2.5.7C12.8 4.4 11.5 3.8 10 3.8 7.2 3.8 5 6.1 5 8.9c0 .6.1 1.2.3 1.7C4.4 11.4 3.8 12.8 3.8 14.2c0 2.8 2.3 5.1 5.1 5.1.9 0 1.7-.2 2.5-.7.8.9 2.1 1.5 3.5 1.5 2.8 0 5.1-2.3 5.1-5.1 0-.6-.1-1.2-.3-1.7.9-.7 1.6-2.1 1.6-3.5 0-1.2-.5-2.2-1.3-3zm-6 8c-.6 0-1.2-.2-1.6-.5.1 0 .1-.1.2-.1l3.5-2c.2-.1.3-.4.3-.6v-4.9l1.5.9c.8.5 1.3 1.3 1.3 2.3 0 1.5-1.2 2.7-2.7 2.7-1.2.1-2.2-.8-2.5-1.8zm-5.6-2.3c-.3-.5-.4-1.1-.4-1.7.1 0 .2.1.2.1l3.5 2c.2.1.5.1.7-.1l4.2-2.4v1.7c0 1-.5 1.9-1.3 2.4-1.3.8-3 .3-3.8-1l-3.1-5zm-1.8-6.1c.3-.5.7-.9 1.2-1.2v4.1c0 .2.1.5.4.6l4.2 2.4-1.5.9c-.8.5-1.9.7-2.8.2-.9-.5-1.5-1.5-1.5-2.6.1-1.8.8-3.4 1.8-4.4zM7.2 8.9c0-1.5 1.2-2.7 2.7-2.7.6 0 1.2.2 1.6.5-.1 0-.1.1-.2.1L7.8 8.8c-.2.1-.3.4-.3.6v4.9L6 13.4c-.8-.5-1.3-1.4-1.3-2.3 0-1.2.9-2.2 2.5-2.2zm7 2.8l-3.5-2 1.5-.9 3.5 2v4l-1.5-1.1v-2zm-5 5.2V11c0-.2-.1-.5-.4-.6L4.6 8v-1.7c0-1 .5-1.9 1.3-2.4 1.3-.8 3-.3 3.8 1l3.1 5.1-4 2.2zM14 6.7c.3.5.4 1.1.4 1.7-.1 0-.2-.1-.2-.1l-3.5-2c-.2-.1-.5-.1-.7.1L5.8 8.8V7.1c0-1 .5-1.9 1.3-2.4 1.3-.8 3-.3 3.8 1l3.1 5z" />
+        </svg>
+      ),
+      glow: 'hover:shadow-green-500/10 hover:border-green-500/30'
+    },
+    {
+      name: 'Google Gemini',
+      description: 'Get featured across Search, Maps, and Gemini\'s local answers.',
+      icon: (
+        <svg className="w-8 h-8 text-[#4a90e2]" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 21l-.813-5.096a5.148 5.148 0 00-4.225-4.225L1 11l5.096-.813a5.148 5.148 0 004.225-4.225L11 1l.813 5.096a5.148 5.148 0 004.225 4.225L23 11l-5.096.813a5.148 5.148 0 00-4.225 4.225L13 21l-.813-5.096a5.15 5.15 0 00-4.225-4.225z" fill="url(#gemini-grad)" />
+          <defs>
+            <linearGradient id="gemini-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#38bdf8" />
+              <stop offset="50%" stopColor="#ec4899" />
+              <stop offset="100%" stopColor="#f59e0b" />
+            </linearGradient>
+          </defs>
+        </svg>
+      ),
+      glow: 'hover:shadow-blue-500/10 hover:border-blue-500/30'
+    },
+    {
+      name: 'Perplexity AI',
+      description: 'Be referenced and linked as a credible source in real-time answers.',
+      icon: (
+        <svg className="w-8 h-8 text-[#19cca2]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21V3m0 18a9 9 0 000-18m0 0a9.004 9.004 0 00-8.716 6.747M12 3a9.004 9.004 0 018.716 6.747M12 3a9.004 9.004 0 00-8.716 6.747" />
+        </svg>
+      ),
+      glow: 'hover:shadow-teal-500/10 hover:border-teal-500/30'
+    },
+    {
+      name: 'Claude',
+      description: 'Match Claude\'s content style so it confidently cites your brand.',
+      icon: (
+        <svg className="w-8 h-8 text-[#cc785c]" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v8M8 12h8M9 9l6 6M15 9l-6 6" />
+        </svg>
+      ),
+      glow: 'hover:shadow-amber-600/10 hover:border-amber-600/30'
+    },
+    {
+      name: 'Meta AI',
+      description: 'Surface inside Facebook, Instagram, & WhatsApp AI chats.',
+      icon: (
+        <svg className="w-8 h-8 text-[#a855f7]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829a9 9 0 11-12.728 0m0 0l2.829-2.829m-2.829 2.829a9 9 0 010-12.728m0 0l2.828 2.828" />
+        </svg>
+      ),
+      glow: 'hover:shadow-purple-500/10 hover:border-purple-500/30'
+    },
+    {
+      name: 'Grok',
+      description: 'Appear in X\'s conversational AI for trending & niche topics.',
+      icon: (
+        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      ),
+      glow: 'hover:shadow-white/10 hover:border-white/20'
+    },
+    {
+      name: 'Google Search',
+      description: 'Classic SEO — technical, content & local rankings that still matter.',
+      icon: (
+        <svg className="w-8 h-8 text-[#ea4335]" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12.24 10.285V13.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.866-3.577-7.866-8s3.536-8 7.866-8c2.46 0 4.105 1.025 5.047 1.926l2.427-2.334C17.955 2.192 15.34 1 12.24 1 5.92 1 12s4.92 11 11.24 11c6.6 0 11-4.65 11-11.2 0-.75-.08-1.32-.18-1.815z" />
+        </svg>
+      ),
+      glow: 'hover:shadow-red-500/10 hover:border-red-500/30'
+    },
+    {
+      name: 'Voice & Visual',
+      description: 'Get noticed in AI tools that use voice commands and images too.',
+      icon: (
+        <svg className="w-8 h-8 text-[#3b82f6]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+        </svg>
+      ),
+      glow: 'hover:shadow-sky-500/10 hover:border-sky-500/30'
+    }
+  ]
+
+  return (
+    <section className="py-24 bg-black border-t border-[#1a1a1a] relative overflow-hidden">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-blue-400 mb-5">
+            <span className="w-6 h-px bg-blue-400 inline-block" />
+            Where We Get You Seen
+            <span className="w-6 h-px bg-blue-400 inline-block" />
+          </div>
+          <h2 className="text-4xl sm:text-5xl font-black text-white mb-6 tracking-tight leading-tight">
+            Optimized for every major <span className="gradient-text">AI engine</span>
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto text-base leading-relaxed">
+            GEO + SEO: The new front page of the internet is an AI answer. Be the brand that AI recommends and Google ranks.
+          </p>
+        </div>
+
+        {/* Grid layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {engines.map((engine) => (
+            <div
+              key={engine.name}
+              className={`p-8 rounded-2xl border border-[#2a2a2a] bg-[#0a0a0a] transition-all duration-300 hover:-translate-y-1 hover:bg-[#111111] hover:border-opacity-50 ${engine.glow} group flex flex-col items-center text-center`}
+            >
+              <div className="w-16 h-16 rounded-2xl bg-black border border-[#2a2a2a] flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300 shadow-inner shadow-black">
+                {engine.icon}
+              </div>
+              <h3 className="text-white font-bold text-lg mb-3 tracking-wide">{engine.name}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">{engine.description}</p>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  )
+}
+
 /* ── Page ───────────────────────────────────────────────────────── */
 export default function HomePage() {
   return (
@@ -1481,6 +1614,9 @@ export default function HomePage() {
       </RevealSection>
       <RevealSection>
         <ServicesGrid />
+      </RevealSection>
+      <RevealSection>
+        <GeoOptimizationSection />
       </RevealSection>
       <RevealSection>
         <StatsBar />
