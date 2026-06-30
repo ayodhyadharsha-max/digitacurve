@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   description:
     'Leading Web Development & Digital Marketing Experts. Top SEO, PPC, SMO & Consulting Solutions tailored for growth. Explore Digitacurve today!',
   keywords: ['web development', 'SEO services', 'PPC management', 'digital marketing', 'digitacurve'],
+  verification: {
+    google: 'WbnglHYC1zWfihaNiEeyOMTupfOh3iHF8h8tKPa07II',
+  },
   openGraph: {
     title: 'Top Web Development & Digital Marketing Services',
     description: 'Leading Web Development & Digital Marketing Experts. Top SEO, PPC, SMO & Consulting Solutions tailored for growth.',
