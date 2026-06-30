@@ -1242,8 +1242,101 @@ function getBlogImage(title: string, originalImage: string): string {
   return '/assets/blogs/default.jpg';
 }
 
+const localBlogs: BlogItem[] = [
+  {
+    id: '1',
+    title: 'How Generative AI is Changing Enterprise Software Development',
+    description: 'Generative AI tools are reshaping the software engineering lifecycle. Discover how companies are implementing LLMs to automate testing and speed up coding velocity.',
+    category: 'AI & Tech',
+    image: '/assets/blogs/tech.jpg',
+    image2: '',
+    readTime: '6 min read',
+    quote: '',
+    custom_url: 'generative-ai-enterprise-software',
+    meta_title: 'How Generative AI is Changing Enterprise Software Development',
+    meta_desc: 'Generative AI tools are reshaping the software engineering lifecycle. Discover how companies are implementing LLMs to automate testing and speed up coding velocity.',
+    createdAt: 'May 20, 2026',
+    updatedAt: 'May 20, 2026',
+  },
+  {
+    id: '2',
+    title: 'Top 5 Mobile App UX Trends to Watch in 2026',
+    description: 'From spatial computing design patterns to micro-gestures and AI-driven personalization, explore the core design elements that will dominate iOS and Android app stores.',
+    category: 'App Dev',
+    image: '/assets/blogs/design.jpg',
+    image2: '',
+    readTime: '5 min read',
+    quote: '',
+    custom_url: 'mobile-app-ux-trends-2026',
+    meta_title: 'Top 5 Mobile App UX Trends to Watch in 2026',
+    meta_desc: 'From spatial computing design patterns to micro-gestures and AI-driven personalization, explore the core design elements that will dominate iOS and Android app stores.',
+    createdAt: 'May 15, 2026',
+    updatedAt: 'May 15, 2026',
+  },
+  {
+    id: '3',
+    title: 'The Shift to Serverless Next.js and Edge Computing Platforms',
+    description: 'Edge middleware and serverless APIs are minimizing TTFB and maximizing Core Web Vitals performance. Learn why businesses are migrating their backends to edge configurations.',
+    category: 'Web Dev',
+    image: '/assets/blogs/cloud.jpg',
+    image2: '',
+    readTime: '8 min read',
+    quote: '',
+    custom_url: 'serverless-nextjs-edge-computing',
+    meta_title: 'The Shift to Serverless Next.js and Edge Computing Platforms',
+    meta_desc: 'Edge middleware and serverless APIs are minimizing TTFB and maximizing Core Web Vitals performance. Learn why businesses are migrating their backends to edge configurations.',
+    createdAt: 'May 08, 2026',
+    updatedAt: 'May 08, 2026',
+  },
+  {
+    id: '4',
+    title: 'Search Engine Landscaping: Navigating AI-Generated Search Summaries',
+    description: 'As search engines incorporate AI-driven results, traditional SEO strategies must evolve. Discover how to optimize content for AI answers and maintain high visibility.',
+    category: 'Marketing',
+    image: '/assets/blogs/marketplace.jpg',
+    image2: '',
+    readTime: '7 min read',
+    quote: '',
+    custom_url: 'search-engine-landscaping-ai-search',
+    meta_title: 'Search Engine Landscaping: Navigating AI-Generated Search Summaries',
+    meta_desc: 'As search engines incorporate AI-driven results, traditional SEO strategies must evolve. Discover how to optimize content for AI answers and maintain high visibility.',
+    createdAt: 'Apr 28, 2026',
+    updatedAt: 'Apr 28, 2026',
+  },
+  {
+    id: '5',
+    title: 'Securing IoT Devices: Best Practices for Firmware Development',
+    description: 'Connected hardware devices present unique security vulnerabilities. Explore practical steps for provisioning credentials, encrypting telemetry, and deploying OTA updates.',
+    category: 'AI & Tech',
+    image: '/assets/blogs/smart-home.jpg',
+    image2: '',
+    readTime: '9 min read',
+    quote: '',
+    custom_url: 'securing-iot-devices-firmware',
+    meta_title: 'Securing IoT Devices: Best Practices for Firmware Development',
+    meta_desc: 'Connected hardware devices present unique security vulnerabilities. Explore practical steps for provisioning credentials, encrypting telemetry, and deploying OTA updates.',
+    createdAt: 'Apr 22, 2026',
+    updatedAt: 'Apr 22, 2026',
+  },
+  {
+    id: '6',
+    title: 'Mastering App Store Optimization (ASO) for Higher Downloads',
+    description: 'Creating a great application is only half the battle. Discover the visual and text optimization guidelines to rank higher in Google Play and iOS App Store searches.',
+    category: 'Marketing',
+    image: '/assets/blogs/ecommerce.jpg',
+    image2: '',
+    readTime: '5 min read',
+    quote: '',
+    custom_url: 'mastering-aso-app-store-optimization',
+    meta_title: 'Mastering App Store Optimization (ASO) for Higher Downloads',
+    meta_desc: 'Creating a great application is only half the battle. Discover the visual and text optimization guidelines to rank higher in Google Play and iOS App Store searches.',
+    createdAt: 'Apr 14, 2026',
+    updatedAt: 'Apr 14, 2026',
+  },
+]
+
 function RecentBlogsSection() {
-  const [blogs, setBlogs] = useState<BlogItem[]>([])
+  const [blogs, setBlogs] = useState<BlogItem[]>(localBlogs)
   const [slides, setSlides] = useState<BlogItem[][]>([])
   const [isMobile, setIsMobile] = useState(false)
   const [isTablet, setIsTablet] = useState(false)
@@ -1258,17 +1351,6 @@ function RecentBlogsSection() {
     handleResize()
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
-  useEffect(() => {
-    fetch('https://api.quantumitinnovation.com/api/blogs/blog?resultPerPage=40&currentPage=1')
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.success && data.blogs) {
-          setBlogs(data.blogs)
-        }
-      })
-      .catch((err) => console.error('Error fetching blogs:', err))
   }, [])
 
   useEffect(() => {
