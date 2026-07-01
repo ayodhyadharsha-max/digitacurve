@@ -5,40 +5,40 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Web App Development Services | Digitacurve',
-  description: 'Top-tier web development services, tailored to perfection. We specialize in PHP, Ruby on Rails, Node.js, Joomla, and UI/UX design.',
+  title: 'Web Development Company | Custom Website Design Agency | Digitacurve',
+  description: 'Digitacurve is a premier website development company and web design agency offering responsive, professional website design & custom website development services globally in Melbourne, Sydney, London, Toronto, Dubai, and USA.',
 }
 
 const serviceDetails = [
   {
-    title: 'PHP Development',
-    desc: 'Scalable and dynamic server-side applications built using modern frameworks like Laravel and Symfony for fast development and secure execution.',
+    title: 'Custom Website Development',
+    desc: 'Bespoke corporate platforms, SaaS solutions, and business website development built for absolute performance, stability, and global scalability.',
+    techs: ['Next.js', 'React', 'TypeScript', 'Node.js'],
+  },
+  {
+    title: 'Ecommerce Website Development',
+    desc: 'Professional ecommerce website development featuring custom shopify website development storefronts and robust wordpress website development integrations.',
+    techs: ['Shopify API', 'WordPress', 'WooCommerce', 'Stripe'],
+  },
+  {
+    title: 'Small Business Website Design',
+    desc: 'Tailor-made, responsive web design and small business website design that is lightweight, fully optimized, and built to convert local traffic.',
+    techs: ['UI/UX Design', 'Figma', 'Responsive Web Design', 'HTML/CSS'],
+  },
+  {
+    title: 'PHP & Laravel Development',
+    desc: 'Scalable and dynamic server-side applications built using Laravel and Symfony for secure database execution and custom backend systems.',
     techs: ['PHP', 'Laravel', 'Symfony', 'MySQL'],
   },
   {
-    title: 'Ruby on Rails Development',
-    desc: 'Accelerate your time-to-market with the robust Ruby on Rails framework. Clean coding structures make maintenance and scaling seamless.',
-    techs: ['Ruby', 'Rails', 'PostgreSQL', 'Redis'],
-  },
-  {
-    title: 'Node.js Development',
-    desc: 'High-speed, real-time web applications built using event-driven, asynchronous I/O architectures on V8 Javascript engine for absolute scalability.',
+    title: 'Node.js & Real-time Web Apps',
+    desc: 'High-speed, real-time web applications built on event-driven, asynchronous architectures on V8 JavaScript engines for absolute scalability.',
     techs: ['Node.js', 'Express.js', 'NestJS', 'MongoDB'],
   },
   {
-    title: 'Joomla Development',
-    desc: 'Bespoke content management systems designed around Joomla. Easy administration interfaces paired with powerful extensibility options.',
-    techs: ['Joomla CMS', 'PHP', 'XML', 'Bootstrap'],
-  },
-  {
-    title: 'Custom Web Apps (USA & Global)',
-    desc: 'Custom corporate platforms, e-commerce applications, and secure portal developments built for enterprise deployment across global markets.',
-    techs: ['Next.js', 'React', 'TailwindCSS', 'TypeScript'],
-  },
-  {
-    title: 'UI/UX Design Services',
-    desc: 'Empathetic, data-driven design systems, digital wireframing, interactive prototyping, and visual interface styling that keep users engaged.',
-    techs: ['Figma', 'Adobe XD', 'Prototyping', 'User Research'],
+    title: 'UI/UX & Interactive Design',
+    desc: 'Empathetic, data-driven design systems, custom interface wireframes, and professional website design that keeps users engaged.',
+    techs: ['Figma', 'Prototyping', 'User Journeys', 'A/B Testing'],
   },
 ]
 
@@ -73,10 +73,10 @@ export default function WebDevelopmentPage() {
               <span className="w-6 h-px bg-teal-400 inline-block" />
             </div>
             <h1 className="text-4xl sm:text-6xl font-black mb-6 leading-tight">
-              Supreme <span className="gradient-text">Web Development</span> Solutions
+              Web Development <span className="gradient-text">Company & Design</span> Agency
             </h1>
             <p className="text-lg text-gray-400 leading-relaxed mb-8">
-              We engineer bespoke, brand-elevating web solutions, single page applications, and corporate platforms built to perform at absolute scale.
+              We are a premier website development company and custom web design agency. We deliver professional website design, custom website development, and business website development services to help you scale globally.
             </p>
             <div className="flex justify-center gap-4">
               <Link
@@ -167,6 +167,71 @@ export default function WebDevelopmentPage() {
                     </li>
                   ))}
                 </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Global Locations Footprint */}
+      <section className="py-20 bg-black border-t border-[#1a1a1a]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-teal-400 mb-5">
+              <span className="w-6 h-px bg-teal-400 inline-block" />
+              Global Reach
+              <span className="w-6 h-px bg-teal-400 inline-block" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-black mb-4">
+              Serving Clients <span className="gradient-text">Globally</span>
+            </h2>
+            <p className="text-gray-400 max-w-xl mx-auto">
+              Digitacurve is a trusted global web development company providing premium website design and custom software solutions across key tech hubs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {[
+              {
+                city: 'Melbourne',
+                devKwd: 'Website Development Melbourne',
+                designKwd: 'Web Design Melbourne',
+                desc: 'Specialized in custom website development and digital platform engineering for Australian businesses.'
+              },
+              {
+                city: 'Sydney',
+                devKwd: 'Website Development Sydney',
+                designKwd: 'Web Design Sydney',
+                desc: 'Delivering responsive web design and secure corporate business website development.'
+              },
+              {
+                city: 'London',
+                devKwd: 'Website Development London',
+                designKwd: 'Web Design London',
+                desc: 'Engineered for UK enterprise companies seeking professional website design and web applications.'
+              },
+              {
+                city: 'Toronto',
+                devKwd: 'Website Development Toronto',
+                designKwd: 'Web Design Toronto',
+                desc: 'Premium Shopify and custom e-commerce website development solutions for North American retail.'
+              },
+              {
+                city: 'Dubai',
+                devKwd: 'Website Development Dubai',
+                designKwd: 'Web Design Dubai',
+                desc: 'Cutting-edge web design agency services and custom software consulting in the UAE.'
+              }
+            ].map((loc) => (
+              <div
+                key={loc.city}
+                className="p-6 rounded-2xl border border-[#2a2a2a] bg-[#111] hover:border-[#444] transition-all hover:translate-y-[-2px]"
+              >
+                <h3 className="text-white font-bold text-lg mb-2 text-teal-400">{loc.city}</h3>
+                <p className="text-gray-500 text-xs font-semibold uppercase tracking-wider mb-4 leading-normal">
+                  {loc.devKwd} <br /> {loc.designKwd}
+                </p>
+                <p className="text-gray-400 text-sm leading-relaxed">{loc.desc}</p>
               </div>
             ))}
           </div>
