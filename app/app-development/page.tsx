@@ -5,8 +5,8 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Mobile App Development Services | Digitacurve',
-  description: 'Redefine your digital landscape with our premier Android, iOS, Swift, cross-platform mobile application development and game development services.',
+  title: 'Mobile App Development Company | Custom iOS & Android App Developers | Digitacurve',
+  description: 'Digitacurve is a premier mobile app development company and app design agency. We build custom iOS, Android, and cross-platform Flutter/React Native mobile applications globally in Melbourne, Sydney, London, Toronto, Dubai, and USA.',
 }
 
 const serviceDetails = [
@@ -94,10 +94,10 @@ export default function AppDevelopmentPage() {
               <span className="w-6 h-px bg-purple-400 inline-block" />
             </div>
             <h1 className="text-4xl sm:text-6xl font-black mb-6 leading-tight">
-              Premier <span className="gradient-text">Mobile App</span> Innovations
+              Mobile App <span className="gradient-text">Development</span> Company
             </h1>
             <p className="text-lg text-gray-400 leading-relaxed mb-8">
-              We design and develop revolutionary native and cross-platform mobile applications that provide unforgettable user experiences and drive operational success.
+              We are a professional mobile app development company and app design agency. We design and build high-performance custom iOS, Android, and cross-platform mobile applications to scale your business globally.
             </p>
             <div className="flex justify-center gap-4">
               <Link
@@ -187,6 +187,71 @@ export default function AppDevelopmentPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Global Locations Footprint */}
+      <section className="py-20 bg-black border-t border-[#1a1a1a]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-purple-400 mb-5">
+              <span className="w-6 h-px bg-purple-400 inline-block" />
+              Global Agency Locations
+              <span className="w-6 h-px bg-purple-400 inline-block" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-black mb-4">
+              Our App Developers <span className="gradient-text">Reach</span>
+            </h2>
+            <p className="text-gray-400 max-w-xl mx-auto">
+              Digitacurve is a premier mobile app development company driving native iOS, Android, and cross-platform Flutter/React Native solutions globally.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {[
+              {
+                city: 'Melbourne',
+                devKwd: 'Mobile App Development Melbourne',
+                coderKwd: 'App Developers Melbourne',
+                desc: 'Specialized iOS, Android, and cross-platform application engineering for businesses in Melbourne.'
+              },
+              {
+                city: 'Sydney',
+                devKwd: 'Mobile App Development Sydney',
+                coderKwd: 'App Developers Sydney',
+                desc: 'Delivering robust enterprise application architectures, App Store optimization, and Flutter apps in Sydney.'
+              },
+              {
+                city: 'London',
+                devKwd: 'Mobile App Development London',
+                coderKwd: 'App Developers London',
+                desc: 'Engineered for UK startups and brands seeking custom hybrid or native application development.'
+              },
+              {
+                city: 'Toronto',
+                devKwd: 'Mobile App Development Toronto',
+                coderKwd: 'App Developers Toronto',
+                desc: 'Premium UI/UX designs, wireframes, and scalable mobile app solutions for Canadian enterprises.'
+              },
+              {
+                city: 'Dubai',
+                devKwd: 'Mobile App Development Dubai',
+                coderKwd: 'App Developers Dubai',
+                desc: 'Cutting-edge iOS Swift, Kotlin Android, and React Native developers in the UAE.'
+              }
+            ].map((loc) => (
+              <div
+                key={loc.city}
+                className="p-6 rounded-2xl border border-[#2a2a2a] bg-[#111] hover:border-[#444] transition-all hover:translate-y-[-2px]"
+              >
+                <h3 className="text-white font-bold text-lg mb-2 text-purple-400">{loc.city}</h3>
+                <p className="text-gray-500 text-xs font-semibold uppercase tracking-wider mb-4 leading-normal">
+                  {loc.devKwd} <br /> {loc.coderKwd}
+                </p>
+                <p className="text-gray-400 text-sm leading-relaxed">{loc.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

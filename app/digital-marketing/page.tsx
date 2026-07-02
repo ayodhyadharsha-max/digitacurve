@@ -5,8 +5,8 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing Services | Digitacurve',
-  description: 'Delve into our comprehensive array of services to witness the transformative evolution of digital marketing. SEO, PPC, SMO, and Content Marketing.',
+  title: 'Digital Marketing Agency | SEO & Generative Engine Optimization (GEO) Company | Digitacurve',
+  description: 'Digitacurve is a leading digital marketing agency and SEO company specializing in Search Engine Optimization, PPC management, social media marketing, and GEO services globally in Melbourne, Sydney, London, Toronto, Dubai, and USA.',
 }
 
 const serviceDetails = [
@@ -32,25 +32,25 @@ const serviceDetails = [
     bg: 'from-blue-500/10',
   },
   {
-    title: 'Content Marketing',
+    title: 'Content Marketing & Copywriting',
     desc: 'Build authority and guide customers through the sales funnel with high-quality blog posts, infographics, whitepapers, and copy assets.',
     icon: FileText,
     color: 'text-purple-400',
     bg: 'from-purple-500/10',
   },
   {
-    title: 'Local SEO (Indianapolis, NJ & Global)',
+    title: 'Generative Engine Optimization (GEO)',
+    desc: 'Optimize your online brand footprint to rank in AI search summaries (ChatGPT, Gemini, Perplexity, Claude) through semantic structures and AEO strategies.',
+    icon: Activity,
+    color: 'text-teal-400',
+    bg: 'from-teal-500/10',
+  },
+  {
+    title: 'Local SEO & Citation Building',
     desc: 'Target local buyers in specific geographic regions. We optimize Google Business Profiles and localized citations to increase foot traffic.',
     icon: Search,
     color: 'text-emerald-400',
     bg: 'from-emerald-500/10',
-  },
-  {
-    title: 'Healthcare Digital Marketing',
-    desc: 'HIPAA-compliant, highly targeted digital campaigns tailored for doctors, hospitals, dental clinics, and biotech solutions providers.',
-    icon: Activity,
-    color: 'text-teal-400',
-    bg: 'from-teal-500/10',
   },
 ]
 
@@ -85,10 +85,10 @@ export default function DigitalMarketingPage() {
               <span className="w-6 h-px bg-orange-400 inline-block" />
             </div>
             <h1 className="text-4xl sm:text-6xl font-black mb-6 leading-tight">
-              Experience the Future of <span className="gradient-text">Digital Marketing</span>
+              Digital Marketing <span className="gradient-text">Agency & SEO</span> Company
             </h1>
             <p className="text-lg text-gray-400 leading-relaxed mb-8">
-              Witness the transformative evolution of digital marketing, where strategy meets innovation, and potential is unlocked into measurable growth.
+              We are a professional digital marketing agency and SEO company. We design and execute data-driven campaigns spanning SEO, PPC management, SMM, and GEO (Generative Engine Optimization) to scale your brand traffic and conversions globally.
             </p>
             <div className="flex justify-center gap-4">
               <Link
@@ -151,6 +151,71 @@ export default function DigitalMarketingPage() {
               <div key={item.desc} className="p-6 rounded-2xl border border-[#2a2a2a] bg-[#111]">
                 <div className="text-4xl font-black text-orange-400 mb-1">{item.value}</div>
                 <div className="text-gray-400 text-xs leading-relaxed">{item.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Global Locations Footprint */}
+      <section className="py-20 bg-black border-t border-[#1a1a1a]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-orange-400 mb-5">
+              <span className="w-6 h-px bg-orange-400 inline-block" />
+              Global Agency Locations
+              <span className="w-6 h-px bg-orange-400 inline-block" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-black mb-4">
+              Our Marketing <span className="gradient-text">Reach</span>
+            </h2>
+            <p className="text-gray-400 max-w-xl mx-auto">
+              Digitacurve is a premier digital marketing agency and SEO company driving organic visibility and PPC leads globally.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {[
+              {
+                city: 'Melbourne',
+                agencyKwd: 'Digital Marketing Agency Melbourne',
+                seoKwd: 'SEO Services Melbourne',
+                desc: 'Delivering results-oriented SEO services and Google Ads management for Melbourne businesses.'
+              },
+              {
+                city: 'Sydney',
+                agencyKwd: 'Digital Marketing Agency Sydney',
+                seoKwd: 'SEO Services Sydney',
+                desc: 'Specialized search engine marketing, social campaigns, and local citations in Sydney.'
+              },
+              {
+                city: 'London',
+                agencyKwd: 'Digital Marketing Agency London',
+                seoKwd: 'SEO Services London',
+                desc: 'Building high-authority backlink profiles, technical audits, and content strategies in the UK.'
+              },
+              {
+                city: 'Toronto',
+                agencyKwd: 'Digital Marketing Agency Toronto',
+                seoKwd: 'SEO Services Toronto',
+                desc: 'E-commerce SEO, brand visibility, and lead generation campaigns for Canadian businesses.'
+              },
+              {
+                city: 'Dubai',
+                agencyKwd: 'Digital Marketing Agency Dubai',
+                seoKwd: 'SEO Services Dubai',
+                desc: 'High-performance PPC, Social Media Marketing, and GEO/AEO optimization in the Middle East.'
+              }
+            ].map((loc) => (
+              <div
+                key={loc.city}
+                className="p-6 rounded-2xl border border-[#2a2a2a] bg-[#111] hover:border-[#444] transition-all hover:translate-y-[-2px]"
+              >
+                <h3 className="text-white font-bold text-lg mb-2 text-orange-400">{loc.city}</h3>
+                <p className="text-gray-500 text-xs font-semibold uppercase tracking-wider mb-4 leading-normal">
+                  {loc.agencyKwd} <br /> {loc.seoKwd}
+                </p>
+                <p className="text-gray-400 text-sm leading-relaxed">{loc.desc}</p>
               </div>
             ))}
           </div>
