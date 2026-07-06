@@ -15,18 +15,27 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Top Web Development & Digital Marketing Services',
+    default: 'Next.js Web Development Agency | SEO & GEO Company | Digitacurve',
     template: '%s | Digitacurve',
   },
   description:
-    'Leading Web Development & Digital Marketing Experts. Top SEO, PPC, SMO & Consulting Solutions tailored for growth. Explore Digitacurve today!',
-  keywords: ['web development', 'SEO services', 'PPC management', 'digital marketing', 'digitacurve'],
+    'Digitacurve is a premier Next.js web development agency, mobile app development company, and digital marketing firm specializing in custom software, SEO, and GEO (Generative Engine Optimization) globally.',
+  keywords: [
+    'Next.js web development agency',
+    'mobile app development company',
+    'SEO services',
+    'Generative Engine Optimization',
+    'GEO agency',
+    'custom website development',
+    'SEO company Noida',
+    'digitacurve'
+  ],
   verification: {
     google: 'WbnglHYC1zWfihaNiEeyOMTupfOh3iHF8h8tKPa07II',
   },
   openGraph: {
-    title: 'Top Web Development & Digital Marketing Services',
-    description: 'Leading Web Development & Digital Marketing Experts. Top SEO, PPC, SMO & Consulting Solutions tailored for growth.',
+    title: 'Next.js Web Development Agency | SEO & GEO Company | Digitacurve',
+    description: 'Digitacurve is a premier Next.js web development agency, mobile app development company, and digital marketing firm specializing in custom software, SEO, and GEO.',
     url: 'https://digitacurve.com',
     siteName: 'Digitacurve',
     type: 'website',
