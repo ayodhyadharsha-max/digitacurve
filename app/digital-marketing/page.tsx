@@ -222,6 +222,112 @@ export default function DigitalMarketingPage() {
         </div>
       </section>
 
+      {/* FAQ Accordion Section */}
+      <section className="py-20 bg-[#050505] border-t border-[#1a1a1a]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-orange-400 mb-5">
+              <span className="w-6 h-px bg-orange-400 inline-block" />
+              Direct Answers
+              <span className="w-6 h-px bg-orange-400 inline-block" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-black mb-4">
+              Frequently Asked <span className="gradient-text">Questions</span>
+            </h2>
+            <p className="text-gray-400 max-w-xl mx-auto">
+              Got questions about our digital marketing, SEO, and GEO services? Here are direct answers to our most common inquiries.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {[
+              {
+                q: "What is GEO (Generative Engine Optimization)?",
+                a: "GEO is the process of optimizing your brand content so that AI search engines (like ChatGPT, Google Gemini, Claude, and Perplexity) can crawl, parse, and cite your website in their answers. It is the modern evolution of traditional SEO."
+              },
+              {
+                q: "How does Answer Engine Optimization (AEO) work?",
+                a: "AEO focuses on designing direct, highly structured answer blocks (such as bulleted lists, structured schemas, and Q&A accordions) that match conversational voice and search engine queries. AI engines scrape these semantic blocks to extract quick answers."
+              },
+              {
+                q: "What SEO services do you provide?",
+                a: "We offer full-cycle search engine optimization services including technical audits, page speed improvements, on-page content tuning, keyword tracking, and high-quality local and global backlink outreach campaigns."
+              },
+              {
+                q: "How do you optimize PPC campaigns for maximum ROI?",
+                a: "Our PPC management specialists run campaigns across Google Ads, Bing, LinkedIn, and Meta Ads. We focus on continuous A/B testing of ad copies, negative keyword filtering, landing page optimization, and clear goal tracking to lower your cost-per-acquisition (CPA)."
+              }
+            ].map((faq, idx) => (
+              <details
+                key={idx}
+                className="group border border-[#2a2a2a] bg-[#111] rounded-2xl p-6 transition-all duration-300 [&_summary::-webkit-details-marker]:hidden open:border-orange-500/50"
+              >
+                <summary className="flex items-center justify-between cursor-pointer list-none">
+                  <h3 className="text-white font-bold text-base sm:text-lg pr-4">{faq.q}</h3>
+                  <span className="shrink-0">
+                    <svg
+                      className="w-5 h-5 text-gray-400 transition-transform duration-300 group-open:rotate-180"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </span>
+                </summary>
+                <div className="mt-4 text-gray-400 text-sm leading-relaxed border-t border-[#222] pt-4">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
+          </div>
+
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "What is GEO (Generative Engine Optimization)?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "GEO is the process of optimizing your brand content so that AI search engines (like ChatGPT, Google Gemini, Claude, and Perplexity) can crawl, parse, and cite your website in their answers. It is the modern evolution of traditional SEO."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How does Answer Engine Optimization (AEO) work?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "AEO focuses on designing direct, highly structured answer blocks (such as bulleted lists, structured schemas, and Q&A accordions) that match conversational voice and search engine queries. AI engines scrape these semantic blocks to extract quick answers."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What SEO services do you provide?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "We offer full-cycle search engine optimization services including technical audits, page speed improvements, on-page content tuning, keyword tracking, and high-quality local and global backlink outreach campaigns."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How do you optimize PPC campaigns for maximum ROI?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Our PPC management specialists run campaigns across Google Ads, Bing, LinkedIn, and Meta Ads. We focus on continuous A/B testing of ad copies, negative keyword filtering, landing page optimization, and clear goal tracking to lower your cost-per-acquisition (CPA)."
+                    }
+                  }
+                ]
+              })
+            }}
+          />
+        </div>
+      </section>
+
       {/* CTA Box */}
       <section className="py-20 bg-[#050505] border-t border-[#1a1a1a]">
         <div className="max-w-4xl mx-auto px-4 text-center">
