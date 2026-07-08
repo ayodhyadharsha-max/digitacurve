@@ -242,10 +242,12 @@ export default function CaseStudyPage() {
                       {cs.results.map(r => (
                         <div
                           key={r.label}
-                          className="p-4 rounded-2xl bg-[#111] border border-[#2a2a2a] text-center"
+                          className="p-4 rounded-2xl bg-[#111] border border-[#2a2a2a]"
                         >
-                          <div className={`text-2xl font-black ${cs.iconColor} mb-1`}>{r.metric}</div>
-                          <div className="text-gray-500 text-xs leading-tight">{r.label}</div>
+                          <dl className="text-center flex flex-col justify-center h-full">
+                            <dd className={`text-2xl font-black ${cs.iconColor} mb-1 order-1`}>{r.metric}</dd>
+                            <dt className="text-gray-500 text-xs leading-tight order-2">{r.label}</dt>
+                          </dl>
                         </div>
                       ))}
                     </div>
@@ -258,8 +260,7 @@ export default function CaseStudyPage() {
           {/* CTA */}
           <div className="mt-16 text-center p-10 rounded-3xl border border-[#2a2a2a] bg-gradient-to-br from-blue-950/30 to-purple-950/20">
             <h3 className="text-2xl font-black text-white mb-4">
-              Ready to become our next{' '}
-              <span className="gradient-text">success story</span>?
+              Ready to become our next <span className="gradient-text">success story</span>?
             </h3>
             <p className="text-gray-400 mb-6 max-w-md mx-auto text-sm">
               Tell us about your project and let&apos;s create remarkable results together.
@@ -274,6 +275,89 @@ export default function CaseStudyPage() {
           </div>
         </div>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "TechArticle",
+                "@id": "https://digitacurve.com/casestudy/#keep-it-going",
+                "headline": "Keep It Going - Mobile App Development Case Study",
+                "description": "How Digitacurve designed a cross-platform React Native habit tracking application that increased daily active users by 340% and improved 30-day user retention by 68%.",
+                "image": "https://digitacurve.com/keepitgoing_thumbnail_1782812919740.jpg",
+                "author": {
+                  "@type": "Organization",
+                  "name": "Digitacurve",
+                  "url": "https://digitacurve.com"
+                },
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Digitacurve",
+                  "url": "https://digitacurve.com"
+                },
+                "mainEntityOfPage": "https://digitacurve.com/casestudy"
+              },
+              {
+                "@type": "TechArticle",
+                "@id": "https://digitacurve.com/casestudy/#imbooked",
+                "headline": "Imbooked - Two-Sided Marketplace Mobile App Case Study",
+                "description": "How Digitacurve built a two-sided wellness booking application that onboarded 1,200+ providers and processed over $2.3M in transactions within its first year.",
+                "image": "https://digitacurve.com/imbooked_thumbnail_1782812897069.jpg",
+                "author": {
+                  "@type": "Organization",
+                  "name": "Digitacurve",
+                  "url": "https://digitacurve.com"
+                },
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Digitacurve",
+                  "url": "https://digitacurve.com"
+                },
+                "mainEntityOfPage": "https://digitacurve.com/casestudy"
+              },
+              {
+                "@type": "TechArticle",
+                "@id": "https://digitacurve.com/casestudy/#fiscal-kids",
+                "headline": "Fiscal Kids - Gamified EdTech Web Application Case Study",
+                "description": "How Digitacurve engineered a secure, COPPA-compliant gamified financial literacy Next.js web application that registered 8,500+ students in 60 days.",
+                "image": "https://digitacurve.com/fiscalkids_thumbnail_1782812961886.jpg",
+                "author": {
+                  "@type": "Organization",
+                  "name": "Digitacurve",
+                  "url": "https://digitacurve.com"
+                },
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Digitacurve",
+                  "url": "https://digitacurve.com"
+                },
+                "mainEntityOfPage": "https://digitacurve.com/casestudy"
+              },
+              {
+                "@type": "TechArticle",
+                "@id": "https://digitacurve.com/casestudy/#vlaunch-seo",
+                "headline": "VLaunch SEO & Content Strategy Case Study",
+                "description": "How Digitacurve executed a technical SEO, speed optimization, and SaaS content marketing campaign that delivered 780% organic traffic growth and a 45% reduction in CAC.",
+                "image": "https://digitacurve.com/vlaunch_thumbnail_1782813044831.jpg",
+                "author": {
+                  "@type": "Organization",
+                  "name": "Digitacurve",
+                  "url": "https://digitacurve.com"
+                },
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Digitacurve",
+                  "url": "https://digitacurve.com"
+                },
+                "mainEntityOfPage": "https://digitacurve.com/casestudy"
+              }
+            ]
+          })
+        }}
+      />
     </>
   )
 }
