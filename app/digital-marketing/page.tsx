@@ -157,6 +157,58 @@ export default function DigitalMarketingPage() {
         </div>
       </section>
 
+      {/* Featured Case Studies & Insights */}
+      <section className="py-20 bg-[#050505] border-t border-[#1a1a1a]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-orange-400 mb-5">
+              <span className="w-6 h-px bg-orange-400 inline-block" />
+              Related Resources
+              <span className="w-6 h-px bg-orange-400 inline-block" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-black mb-4">
+              Featured Case Studies & <span className="gradient-text">Insights</span>
+            </h2>
+            <p className="text-gray-400 max-w-xl mx-auto">
+              Explore how our digital marketing agency drives search visibility and AI engine recommendations.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="p-8 rounded-3xl border border-[#2a2a2a] bg-[#111]/30 hover:border-[#444] transition-all flex flex-col justify-between">
+              <div>
+                <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-orange-500/10 text-orange-400 border border-orange-500/20">SaaS SEO Case Study</span>
+                <h3 className="text-xl font-bold text-white mt-4 mb-3">VLaunch SEO Campaign</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                  How we executed a technical SEO, speed optimization, and SaaS content marketing campaign that delivered 780% organic traffic growth and a 45% reduction in CAC.
+                </p>
+              </div>
+              <Link href="/casestudy#vlaunch-seo" className="inline-flex items-center gap-2 text-sm font-bold text-orange-400 hover:text-orange-300">
+                View Case Study <ArrowRight size={14} />
+              </Link>
+            </div>
+
+            <div className="p-8 rounded-3xl border border-[#2a2a2a] bg-[#111]/30 hover:border-[#444] transition-all flex flex-col justify-between">
+              <div>
+                <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-orange-500/10 text-orange-400 border border-orange-500/20">SEO & GEO Insights</span>
+                <h3 className="text-xl font-bold text-white mt-4 mb-3">GEO: The Ultimate Guide</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                  AI-generated search summaries are changing click-through dynamics. Read our ultimate guide to Generative Engine Optimization (GEO).
+                </p>
+              </div>
+              <div className="flex gap-4">
+                <Link href="/blog/ultimate-guide-to-generative-engine-optimization" className="inline-flex items-center gap-2 text-sm font-bold text-orange-400 hover:text-orange-300">
+                  Read GEO Guide <ArrowRight size={14} />
+                </Link>
+                <Link href="/blog/search-engine-landscaping-ai-search" className="inline-flex items-center gap-2 text-sm font-bold text-orange-400/80 hover:text-orange-300">
+                  AI Search Article <ArrowRight size={14} />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Global Locations Footprint */}
       <section className="py-20 bg-black border-t border-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

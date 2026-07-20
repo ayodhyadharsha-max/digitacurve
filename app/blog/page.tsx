@@ -84,8 +84,20 @@ const blogPosts = [
     accentColor: 'from-red-500/20 to-orange-500/10',
     borderColor: 'hover:border-red-500/30',
     tagColor: 'text-red-400 border-red-500/30 bg-red-500/5',
-    image: '/assets/blogs/ecommerce.jpg',
     slug: 'mastering-aso-app-store-optimization',
+  },
+  {
+    id: 7,
+    title: 'The Ultimate Guide to Generative Engine Optimization (GEO)',
+    summary: 'AI-generated search summaries are rewriting web search dynamics. Discover what GEO is, how LLM algorithms compile brand metrics, and 5 action steps to secure AI citations.',
+    category: 'Marketing',
+    date: 'Jul 20, 2026',
+    readTime: '8 min read',
+    accentColor: 'from-orange-500/20 to-red-500/10',
+    borderColor: 'hover:border-orange-500/30',
+    tagColor: 'text-orange-400 border-orange-500/30 bg-orange-500/5',
+    image: '/assets/blogs/tech.jpg',
+    slug: 'ultimate-guide-to-generative-engine-optimization',
   },
 ]
 

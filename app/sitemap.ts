@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/casestudy',
     '/portfolio',
     '/blog',
+    '/faq',
   ]
 
   const staticEntries = staticRoutes.map((route) => ({
@@ -32,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'search-engine-landscaping-ai-search',
     'securing-iot-devices-firmware',
     'mastering-aso-app-store-optimization',
+    'ultimate-guide-to-generative-engine-optimization',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({

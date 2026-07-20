@@ -238,6 +238,53 @@ export default function WebDevelopmentPage() {
         </div>
       </section>
 
+      {/* Featured Case Studies & Insights */}
+      <section className="py-20 bg-black border-t border-[#1a1a1a]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-teal-400 mb-5">
+              <span className="w-6 h-px bg-teal-400 inline-block" />
+              Related Resources
+              <span className="w-6 h-px bg-teal-400 inline-block" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-black mb-4">
+              Featured Case Studies & <span className="gradient-text">Insights</span>
+            </h2>
+            <p className="text-gray-400 max-w-xl mx-auto">
+              Explore how our web design agency translates complex requirements into performant platforms.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="p-8 rounded-3xl border border-[#2a2a2a] bg-[#111]/30 hover:border-[#444] transition-all flex flex-col justify-between">
+              <div>
+                <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">EdTech Case Study</span>
+                <h3 className="text-xl font-bold text-white mt-4 mb-3">Fiscal Kids</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                  Learn how we engineered a secure, COPPA-compliant gamified financial literacy Next.js web application that registered 8,500+ students in 60 days.
+                </p>
+              </div>
+              <Link href="/casestudy#fiscal-kids" className="inline-flex items-center gap-2 text-sm font-bold text-teal-400 hover:text-teal-300">
+                View Case Study <ArrowRight size={14} />
+              </Link>
+            </div>
+
+            <div className="p-8 rounded-3xl border border-[#2a2a2a] bg-[#111]/30 hover:border-[#444] transition-all flex flex-col justify-between">
+              <div>
+                <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-teal-500/10 text-teal-400 border border-teal-500/20">Technical Insight</span>
+                <h3 className="text-xl font-bold text-white mt-4 mb-3">Serverless Next.js & Edge Computing</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                  Edge middleware and serverless APIs minimize TTFB and maximize Core Web Vitals. Discover why we migrate custom website backends to edge configurations.
+                </p>
+              </div>
+              <Link href="/blog/serverless-nextjs-edge-computing" className="inline-flex items-center gap-2 text-sm font-bold text-teal-400 hover:text-teal-300">
+                Read Article <ArrowRight size={14} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Accordion Section */}
       <section className="py-20 bg-[#050505] border-t border-[#1a1a1a]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

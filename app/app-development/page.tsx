@@ -191,6 +191,63 @@ export default function AppDevelopmentPage() {
         </div>
       </section>
 
+      {/* Featured Case Studies & Insights */}
+      <section className="py-20 bg-[#050505] border-t border-[#1a1a1a]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-purple-400 mb-5">
+              <span className="w-6 h-px bg-purple-400 inline-block" />
+              Related Resources
+              <span className="w-6 h-px bg-purple-400 inline-block" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-black mb-4">
+              Featured Case Studies & <span className="gradient-text">Insights</span>
+            </h2>
+            <p className="text-gray-400 max-w-xl mx-auto">
+              Explore how our mobile application engineering translates complex requirements into successful App Store entries.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="p-8 rounded-3xl border border-[#2a2a2a] bg-[#111]/30 hover:border-[#444] transition-all flex flex-col justify-between">
+              <div>
+                <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-blue-500/10 text-blue-400 border border-blue-500/20">Habits App Case Study</span>
+                <h3 className="text-xl font-bold text-white mt-4 mb-3">Keep It Going</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                  Learn how we designed a cross-platform React Native habit tracking application that increased daily active users by 340% and improved 30-day user retention by 68%.
+                </p>
+              </div>
+              <div className="flex gap-4">
+                <Link href="/casestudy#keep-it-going" className="inline-flex items-center gap-2 text-sm font-bold text-purple-400 hover:text-purple-300">
+                  View Case Study <ArrowRight size={14} />
+                </Link>
+                <Link href="/blog/mobile-app-ux-trends-2026" className="inline-flex items-center gap-2 text-sm font-bold text-purple-400/80 hover:text-purple-300">
+                  UX Insights <ArrowRight size={14} />
+                </Link>
+              </div>
+            </div>
+
+            <div className="p-8 rounded-3xl border border-[#2a2a2a] bg-[#111]/30 hover:border-[#444] transition-all flex flex-col justify-between">
+              <div>
+                <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-500/10 text-purple-400 border border-purple-500/20">Marketplace Case Study</span>
+                <h3 className="text-xl font-bold text-white mt-4 mb-3">Imbooked</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                  How we built a two-sided wellness booking application that onboarded 1,200+ providers and processed over $2.3M in transactions within its first year.
+                </p>
+              </div>
+              <div className="flex gap-4">
+                <Link href="/casestudy#imbooked" className="inline-flex items-center gap-2 text-sm font-bold text-purple-400 hover:text-purple-300">
+                  View Case Study <ArrowRight size={14} />
+                </Link>
+                <Link href="/blog/mastering-aso-app-store-optimization" className="inline-flex items-center gap-2 text-sm font-bold text-purple-400/80 hover:text-purple-300">
+                  ASO Guide <ArrowRight size={14} />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Global Locations Footprint */}
       <section className="py-20 bg-black border-t border-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
