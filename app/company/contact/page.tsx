@@ -6,38 +6,26 @@ import { MapPin, Mail, Phone, ArrowRight, CheckCircle2 } from 'lucide-react'
 const offices = [
   {
     country: 'United States',
-    role: 'Active Service Market',
-    address: '173 E Columbine LN, Westfield, Indiana 46074',
     flag: '🇺🇸',
   },
   {
     country: 'India',
-    role: 'Corporate Headquarters',
-    address: 'H-11, First Floor, Sector 62, Noida, Uttar Pradesh 201301',
     flag: '🇮🇳',
   },
   {
     country: 'Australia',
-    role: 'Active Service Market',
-    address: '10 Suffolk Place Aintree, Victoria, Australia 3336',
     flag: '🇦🇺',
   },
   {
     country: 'Ontario, Canada',
-    role: 'Active Service Market',
-    address: '6-425 Hespeler Road, Cambridge, Unit 303, N1R8J6',
     flag: '🇨🇦',
   },
   {
     country: 'United Kingdom',
-    role: 'Active Service Market',
-    address: 'Serving Clients Remotely in London & Across UK',
     flag: '🇬🇧',
   },
   {
     country: 'Ireland',
-    role: 'Active Service Market',
-    address: '5 Gleann Dara, Tully, Ballinamore Co Leitrim, Ireland',
     flag: '🇮🇪',
   },
 ]
@@ -367,22 +355,11 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {offices.map(office => (
               <div
-                key={`${office.country}-${office.role}`}
-                className="p-6 rounded-2xl border border-[#2a2a2a] bg-[#111] hover:border-[#444] transition-all group"
+                key={office.country}
+                className="p-6 rounded-2xl border border-[#2a2a2a] bg-[#111] hover:border-[#444] transition-all group flex items-center gap-4"
               >
-                <div className="flex items-start gap-4 mb-4">
-                  <span className="text-2xl">{office.flag}</span>
-                  <div>
-                    <h4 className="text-white font-bold text-base">{office.country}</h4>
-                    <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold">{office.role}</p>
-                  </div>
-                </div>
-                {office.address && (
-                  <div className="flex items-start gap-2 mb-3">
-                    <MapPin size={14} className="text-gray-600 shrink-0 mt-0.5" />
-                    <p className="text-gray-400 text-xs leading-relaxed">{office.address}</p>
-                  </div>
-                )}
+                <span className="text-3xl">{office.flag}</span>
+                <h4 className="text-white font-bold text-lg">{office.country}</h4>
               </div>
             ))}
           </div>

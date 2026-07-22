@@ -643,32 +643,26 @@ function FeaturedProjects() {
 const locations = [
   {
     country: 'United States',
-    address: '173 E Columbine LN, Westfield, Indiana 46074',
     skyline: '/assets/locations/USA.svg',
   },
   {
     country: 'India',
-    address: 'H-11, First Floor, Sector 62, Noida, Uttar Pradesh 201301',
     skyline: '/assets/locations/INDIA.svg',
   },
   {
     country: 'Australia',
-    address: '10 Suffolk Place Aintree, Victoria, Australia 3336',
     skyline: '/assets/locations/AUSTRALIA.svg',
   },
   {
     country: 'Ontario, Canada',
-    address: '6-425 Hespeler Road, Cambridge, Unit 303, N1R8J6',
     skyline: '/assets/locations/CANADA.svg',
   },
   {
     country: 'United Kingdom',
-    address: 'Serving Clients Remotely in London & Across UK',
     skyline: '/assets/locations/UK.svg',
   },
   {
     country: 'Ireland',
-    address: '5 Gleann Dara, Tully, Ballinamore Co Leitrim, Ireland',
     skyline: '/assets/locations/Dublin.png',
   },
 ]
@@ -691,13 +685,12 @@ function OfficeLocations() {
                 <div className="text-center flex flex-col items-center">
                   <div className="w-full h-36 flex items-center justify-center mb-6">
                     <img
-                      src={loc.skyline}
-                      alt={`${loc.country} Skyline`}
-                      className="max-h-full max-w-full object-contain filter brightness-90 hover:brightness-100 transition-all duration-300"
+                       src={loc.skyline}
+                       alt={`${loc.country} Skyline`}
+                       className="max-h-full max-w-full object-contain filter brightness-90 hover:brightness-100 transition-all duration-300"
                     />
                   </div>
                   <h4 className="text-white font-bold text-lg mb-3">{loc.country}</h4>
-                  <p className="text-gray-500 text-sm leading-relaxed max-w-xs">{loc.address}</p>
                 </div>
               </RevealStaggerItem>
             ))}
