@@ -6,38 +6,38 @@ import { MapPin, Mail, Phone, ArrowRight, CheckCircle2 } from 'lucide-react'
 const offices = [
   {
     country: 'United States',
-    role: 'Main Office',
-    address: '',
-    flag: '🇺🇸',
-  },
-  {
-    country: 'United States',
-    role: 'Branch Office',
-    address: '',
+    role: 'Active Service Market',
+    address: '173 E Columbine LN, Westfield, Indiana 46074',
     flag: '🇺🇸',
   },
   {
     country: 'India',
-    role: 'Corporate Office',
-    address: '',
+    role: 'Corporate Headquarters',
+    address: 'H-11, First Floor, Sector 62, Noida, Uttar Pradesh 201301',
     flag: '🇮🇳',
   },
   {
-    country: 'Ontario, Canada',
-    role: 'Canada Office',
-    address: '',
-    flag: '🇨🇦',
-  },
-  {
-    country: 'Melbourne, Australia',
-    role: 'Australia Office',
-    address: '',
+    country: 'Australia',
+    role: 'Active Service Market',
+    address: '10 Suffolk Place Aintree, Victoria, Australia 3336',
     flag: '🇦🇺',
   },
   {
+    country: 'Ontario, Canada',
+    role: 'Active Service Market',
+    address: '6-425 Hespeler Road, Cambridge, Unit 303, N1R8J6',
+    flag: '🇨🇦',
+  },
+  {
+    country: 'United Kingdom',
+    role: 'Active Service Market',
+    address: 'Serving Clients Remotely in London & Across UK',
+    flag: '🇬🇧',
+  },
+  {
     country: 'Ireland',
-    role: 'Ireland Office',
-    address: '',
+    role: 'Active Service Market',
+    address: '5 Gleann Dara, Tully, Ballinamore Co Leitrim, Ireland',
     flag: '🇮🇪',
   },
 ]
@@ -356,12 +356,12 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Locations Directory */}
+      {/* Global Presence Directory */}
       <section className="py-20 bg-[#050505] border-t border-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-black text-white">
-              We&apos;re <span className="gradient-text">Global</span> and Growing
+              Our <span className="gradient-text">Global Service</span> Presence
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
