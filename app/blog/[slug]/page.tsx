@@ -168,6 +168,49 @@ const staticBlogsDetail: Record<string, { title: string; category: string; date:
       <h2>Conclusion</h2>
       <p>Traditional SEO ensures Google ranks you, but GEO ensures AI models recommend you. To learn how to transform your digital strategy, explore our specialized <a href="/digital-marketing" class="text-orange-400 font-bold">GEO &amp; digital marketing consulting services</a> or get in touch with our tech teams today.</p>
     `
+  },
+  'how-to-optimize-nextjs-web-apps-for-core-web-vitals': {
+    title: 'How to Optimize Next.js Web Apps for Core Web Vitals in 2026',
+    category: 'Web Dev',
+    date: 'Jul 23, 2026',
+    readTime: '8 min read',
+    image: '/assets/blogs/cloud.jpg',
+    content: `
+      <p>In modern web development, speed isn't just a convenience—it's a core ranking factor and a critical driver of business conversions. With Google’s strict focus on user experience, optimizing your <strong>Core Web Vitals</strong> is essential. For teams building with Next.js, leveraging the framework's native features makes achieving perfect lighthouse scores much easier. Here is our technical guide to optimizing Next.js web applications for Core Web Vitals.</p>
+
+      <h2>1. Understanding Core Web Vitals in 2026</h2>
+      <p>Google evaluates user experience based on three primary metrics:</p>
+      <ul>
+        <li><strong>Largest Contentful Paint (LCP):</strong> Measures loading performance. The main content of the page should render within <strong>2.5 seconds</strong>.</li>
+        <li><strong>Interaction to Next Paint (INP):</strong> Measures responsiveness (replacing FID). Page elements should respond to user input within <strong>200 milliseconds</strong>.</li>
+        <li><strong>Cumulative Layout Shift (CLS):</strong> Measures visual stability. Pages should maintain a CLS score of less than <strong>0.1</strong>.</li>
+      </ul>
+
+      <h2>2. Optimizing LCP (Largest Contentful Paint)</h2>
+      <p>To reduce LCP, you must optimize how hero images, large text blocks, and media are loaded:</p>
+      <ul>
+        <li><strong>Use next/image:</strong> The Next.js <code>Image</code> component automatically resizes, compresses (using WebP/AVIF formats), and lazy-loads images. For hero banners, use the <code>priority</code> attribute to prefetch the image immediately.</li>
+        <li><strong>Minimize TTFB (Time to First Byte):</strong> Deploy your Next.js application on Edge runtimes (like Vercel Edge Network or Cloudflare Workers) to serve pages from the nearest CDN location, reducing latency to under 50ms.</li>
+        <li><strong>Fetch Priority:</strong> Add <code>fetchpriority="high"</code> to critical above-the-fold resources.</li>
+      </ul>
+
+      <h2>3. Eliminating CLS (Cumulative Layout Shift)</h2>
+      <p>CLS is caused when elements shift position as assets load asynchronously:</p>
+      <ul>
+        <li><strong>Reserve Space for Dynamic Content:</strong> Always define explicit height and width attributes for images, video frames, and ad slots.</li>
+        <li><strong>Optimize Font Loading:</strong> Use <code>next/font</code> which automatically downloads and self-hosts Google Fonts locally during the build process, eliminating flash of unstyled text (FOUT) and layout shifts.</li>
+      </ul>
+
+      <h2>4. Optimizing INP (Interaction to Next Paint)</h2>
+      <p>INP requires minimizing main thread blocking caused by long-running Javascript:</p>
+      <ul>
+        <li><strong>Code Splitting and Lazy Loading:</strong> Use <code>next/dynamic</code> to dynamically import client components only when they are needed (e.g., modals, third-party chat widgets).</li>
+        <li><strong>Minimize Third-Party Scripts:</strong> Use the Next.js <code>Script</code> component with the <code>worker</code> strategy to execute heavy scripts (like Google Analytics) inside web workers, keeping the main thread free.</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Optimizing Next.js for Core Web Vitals is an ongoing process of code hygiene and architectural choices. By leveraging Next.js's native components, deploying on edge runtimes, and keeping your javascript bundles lean, you can guarantee a blazing fast experience for both human visitors and search engine crawlers. For specialized engineering support, explore our <a href="/web-development" class="text-blue-400 underline font-semibold">custom Next.js web development services</a> or connect with our technical consultants today.</p>
+    `
   }
 }
 
@@ -325,8 +368,36 @@ export default function BlogDetailPage() {
     )
   }
 
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": blog.title,
+    "image": blog.image.startsWith('http') ? blog.image : `https://digitacurve.com${blog.image}`,
+    "datePublished": blog.date ? new Date(blog.date).toISOString() : new Date().toISOString(),
+    "dateModified": blog.date ? new Date(blog.date).toISOString() : new Date().toISOString(),
+    "author": {
+      "@type": "Organization",
+      "name": "Digitacurve",
+      "url": "https://digitacurve.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Digitacurve",
+      "url": "https://digitacurve.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://digitacurve.com/favicon.ico"
+      }
+    },
+    "description": blog.title
+  }
+
   return (
     <main className="bg-black text-white min-h-screen pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
       {/* Dynamic Style Override for editor inline black colors */}
       <style dangerouslySetInnerHTML={{ __html: `
         .blog-rich-text * {

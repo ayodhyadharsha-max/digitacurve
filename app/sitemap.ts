@@ -34,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'securing-iot-devices-firmware',
     'mastering-aso-app-store-optimization',
     'ultimate-guide-to-generative-engine-optimization',
+    'how-to-optimize-nextjs-web-apps-for-core-web-vitals',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({
