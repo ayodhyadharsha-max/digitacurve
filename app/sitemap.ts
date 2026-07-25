@@ -35,6 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'mastering-aso-app-store-optimization',
     'ultimate-guide-to-generative-engine-optimization',
     'how-to-optimize-nextjs-web-apps-for-core-web-vitals',
+    'react-native-vs-flutter-choosing-the-right-hybrid-app-framework',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({
