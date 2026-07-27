@@ -36,6 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'ultimate-guide-to-generative-engine-optimization',
     'how-to-optimize-nextjs-web-apps-for-core-web-vitals',
     'react-native-vs-flutter-choosing-the-right-hybrid-app-framework',
+    'the-impact-of-local-citations-on-gemini-and-chatgpt-search-recommendations',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({
