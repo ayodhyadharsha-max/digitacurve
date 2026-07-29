@@ -293,6 +293,79 @@ const staticBlogsDetail: Record<string, { title: string; category: string; date:
       <h2>Conclusion</h2>
       <p>In the age of AI search, local citations are no longer just about Google Maps—they are the foundational trust metrics used by LLMs to recommend businesses. To audit your brand's GEO and citation presence, explore our <a href="/digital-marketing" class="text-orange-400 font-bold">digital marketing and GEO consulting services</a> or get in touch with our team today.</p>
     `
+  },
+  'building-a-two-sided-on-demand-booking-marketplace-architecture-and-ux': {
+    title: 'Building a Two-Sided On-Demand Booking Marketplace: Architecture & UX',
+    category: 'App Dev',
+    date: 'Jul 29, 2026',
+    readTime: '8 min read',
+    image: '/assets/blogs/ecommerce.jpg',
+    content: `
+      <p>Two-sided marketplaces—platforms connecting service providers with customers in real-time—have become the backbone of modern on-demand services. From home maintenance platforms to salon booking and rental services, building a robust marketplace requires sophisticated engineering. As a leading <strong>custom software development company</strong>, Digitacurve designs scalable marketplace architectures. Here is our technical blueprint for building a two-sided on-demand booking marketplace in 2026.</p>
+
+      <h2>1. High-Level System Architecture</h2>
+      <p>A two-sided marketplace requires distinct workflows for two user personas: <strong>Customers</strong> (seeking services) and <strong>Providers</strong> (offering time slots and services). The underlying system must handle real-time availability updates, search geo-matching, and instant notifications.</p>
+      <ul>
+        <li><strong>Customer Client App:</strong> Search, schedule, geo-location mapping, payment checkout, and live provider tracking.</li>
+        <li><strong>Provider Dashboard App:</strong> Calendar management, service pricing, booking acceptance, and payout tracking.</li>
+        <li><strong>Central API & Broker Layer:</strong> Event-driven microservices handling booking states, push notifications, and webhooks.</li>
+      </ul>
+
+      <h2>2. Race Condition & Double-Booking Prevention</h2>
+      <p>The single biggest technical challenge in booking engines is preventing <strong>double-booking</strong> when two customers attempt to reserve the exact same provider slot simultaneously.</p>
+      <ul>
+        <li><strong>Distributed Locking with Redis:</strong> Use short-lived Redis locks (Redlock algorithm) to temporarily lock a provider's time slot for 5 minutes during the checkout process.</li>
+        <li><strong>Database Transaction Isolation:</strong> Execute booking insertions inside ACID-compliant relational transactions with pessimistic row locking (<code>SELECT FOR UPDATE</code>) to ensure only one booking succeeds.</li>
+      </ul>
+
+      <h2>3. Calendar Synchronization Best Practices</h2>
+      <p>To keep service providers engaged, your marketplace must sync bidirectionally with their personal calendars (Google Calendar, Apple iCal, Outlook):</p>
+      <ul>
+        <li><strong>Webhooks for Real-Time Sync:</strong> Listen to Google Calendar push notifications to block unavailable slots instantly.</li>
+        <li><strong>iCal Subscription Feeds:</strong> Generate dynamic <code>.ics</code> feeds so providers can view their bookings on any native calendar app.</li>
+      </ul>
+
+      <h2>4. Secure Payment Splits with Stripe Connect</h2>
+      <p>Handling multi-party payments requires automated split processing:</p>
+      <ul>
+        <li><strong>Stripe Connect Custom Accounts:</strong> Charge the customer the full service fee, automatically deduct the platform commission (e.g. 15%), and transfer the remaining balance directly to the provider's bank account.</li>
+        <li><strong>Escrow Holds:</strong> Hold funds in escrow until the customer confirms service completion, preventing fraud and chargebacks.</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Building a successful on-demand booking marketplace requires combining seamless user experience with bulletproof backend architecture. To see how Digitacurve engineered marketplace platforms like Imbooked, explore our specialized <a href="/app-development" class="text-blue-400 font-bold">custom app development services</a> or connect with our software architects today.</p>
+    `
+  },
+  'building-enterprise-ai-agents-with-nextjs-and-serverless-architectures': {
+    title: 'Building Enterprise AI Agents with Next.js & Serverless Architectures',
+    category: 'AI & Tech',
+    date: 'Jul 29, 2026',
+    readTime: '7 min read',
+    image: '/assets/blogs/tech.jpg',
+    content: `
+      <p>Artificial Intelligence has evolved from static text generation into autonomous, task-executing <strong>AI agents</strong>. Enterprise organizations are increasingly integrating custom AI agents into their workflows to automate customer support, analyze complex documents, and streamline internal ops. As an innovative <strong>AI development agency</strong>, Digitacurve builds enterprise AI solutions using Next.js and serverless cloud architectures. Here is our engineering guide for 2026.</p>
+
+      <h2>1. The Shift from Chatbots to Autonomous AI Agents</h2>
+      <p>Traditional chatbots simply respond to prompts using fixed knowledge bases. In contrast, modern AI agents possess <strong>tool-calling capabilities</strong>, allowing them to query external databases, invoke third-party APIs, execute code snippets, and complete multi-step tasks autonomously.</p>
+
+      <h2>2. Next.js App Router & Streaming Server Actions</h2>
+      <p>Next.js 14 provides the ideal foundation for AI applications:</p>
+      <ul>
+        <li><strong>Server-Sent Events (SSE):</strong> Stream AI token responses to client interfaces in real time for instant visual feedback.</li>
+        <li><strong>Server Actions:</strong> Execute secure API calls to Large Language Models (LLMs) without exposing private API keys or client-side tokens.</li>
+        <li><strong>Edge Function Execution:</strong> Run lightweight AI proxy routes globally to reduce network latency.</li>
+      </ul>
+
+      <h2>3. Vector Databases and RAG (Retrieval-Augmented Generation)</h2>
+      <p>To eliminate hallucination and ensure enterprise accuracy, AI agents rely on RAG pipelines:</p>
+      <ul>
+        <li><strong>Document Vectorization:</strong> Convert company documents, PDFs, and database tables into vector embeddings.</li>
+        <li><strong>Semantic Vector Search:</strong> Retrieve contextually relevant documents using vector databases (like Pinecone or pgvector) before passing context to the LLM.</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Enterprise AI agents are transforming business productivity by turning passive data into active automation. To discover how Digitacurve can build custom AI agent solutions for your organization, explore our <a href="/artificial-intelligence" class="text-purple-400 font-bold">Artificial Intelligence &amp; AI consulting services</a> or connect with our AI engineers today.</p>
+    `
   }
 }
 
