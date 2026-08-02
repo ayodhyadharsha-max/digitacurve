@@ -84,6 +84,7 @@ const blogPosts = [
     accentColor: 'from-red-500/20 to-orange-500/10',
     borderColor: 'hover:border-red-500/30',
     tagColor: 'text-red-400 border-red-500/30 bg-red-500/5',
+    image: '/assets/blogs/design.jpg',
     slug: 'mastering-aso-app-store-optimization',
   },
   {
@@ -261,7 +262,7 @@ export default function BlogPage() {
                 >
                   <div className="w-full h-48 overflow-hidden relative">
                     <img
-                      src={post.image}
+                      src={post.image || '/assets/blogs/tech.jpg'}
                       alt={post.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
