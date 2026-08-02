@@ -443,38 +443,9 @@ export default function BlogDetailPage() {
       return
     }
 
-    // 2. Fetch from API if not a static blog
-    console.log('Fetching blogs from API for slug:', slug);
-    fetch('https://api.quantumitinnovation.com/api/blogs/blog?resultPerPage=40&currentPage=1')
-      .then((res) => res.json())
-      .then((data) => {
-        console.log('API response data success:', data.success, 'blogs count:', data.blogs?.length);
-        if (data.success && data.blogs) {
-          const apiBlog = data.blogs.find((b: any) => b.custom_url === slug)
-          if (apiBlog) {
-            console.log('Found API blog matching slug:', slug);
-            setBlog({
-              title: apiBlog.title,
-              description: apiBlog.description,
-              image: getBlogImage(apiBlog.title, apiBlog.image),
-              category: apiBlog.category || 'Digital Marketing',
-              date: apiBlog.createdAt ? new Date(apiBlog.createdAt).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-              }) : 'May 28, 2026',
-              readTime: apiBlog.readTime || '5 min read',
-            })
-          } else {
-            console.log('No API blog matched slug:', slug);
-          }
-        }
-        setLoading(false)
-      })
-      .catch((err) => {
-        console.error('Error fetching blog detail:', err)
-        setLoading(false)
-      })
+    // 2. If not in static blog dictionary, mark as not found
+    setBlog(null)
+    setLoading(false)
   }, [slug])
 
   const handleShare = () => {
