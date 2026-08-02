@@ -15,11 +15,24 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CSV_PATH = PROJECT_ROOT / 'seo_rank_history.csv'
 
 KEYWORDS = [
-    "Next.js web development agency",
+    # Global Keywords
     "Generative Engine Optimization agency",
+    "GEO agency",
+    "Next.js web development agency",
     "mobile app development company",
+    "custom software development company",
+    "AI development agency",
+    "Core Web Vitals optimization",
+    "React Native vs Flutter",
+    
+    # Local & Noida Keywords
+    "SEO company Noida",
+    "Next.js development company Noida",
+    "web development agency Noida",
+    
+    # Brand Keywords
     "Digitacurve software development",
-    "SEO company Noida"
+    "Digitacurve website price"
 ]
 
 TARGET_DOMAIN = "digitacurve.com"

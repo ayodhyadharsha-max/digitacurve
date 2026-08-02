@@ -9,6 +9,10 @@ echo "   🚀 Digitacurve Automated SEO & GEO Engine"
 echo "===================================================="
 echo ""
 
+echo "📥 Pulling latest git changes..."
+git pull origin main 2>/dev/null || echo "⚠️ Git pull skipped or working directory has uncommitted changes."
+echo ""
+
 # Check python3
 if ! command -v python3 &> /dev/null; then
     echo "❌ Python 3 is not installed. Please install Python 3 and try again."
