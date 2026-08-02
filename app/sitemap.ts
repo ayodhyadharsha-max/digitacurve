@@ -39,6 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'the-impact-of-local-citations-on-gemini-and-chatgpt-search-recommendations',
     'building-a-two-sided-on-demand-booking-marketplace-architecture-and-ux',
     'building-enterprise-ai-agents-with-nextjs-and-serverless-architectures',
+    'global-web-development-services-custom-nextjs-vs-legacy-cms',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({
