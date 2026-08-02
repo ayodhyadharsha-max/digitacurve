@@ -1,6 +1,6 @@
 # 📊 Digitacurve SEO & GEO Automation Health Report
 
-*Generated on: `2026-08-02 17:00:01`*
+*Generated on: `2026-08-02 17:06:26`*
 
 ---
 
@@ -16,11 +16,41 @@
 
 | Keyword | Rank Position | Status |
 | :--- | :---: | :---: |
-| `Next.js web development agency` | **#N/A** | 🔵 Indexing/Tracked |
+| `digital marketing agency` | **#N/A** | 🔵 Indexing/Tracked |
+| `best digital marketing agency` | **#N/A** | 🔵 Indexing/Tracked |
+| `SEO services company` | **#N/A** | 🔵 Indexing/Tracked |
 | `Generative Engine Optimization agency` | **#N/A** | 🔵 Indexing/Tracked |
+| `GEO agency` | **#N/A** | 🔵 Indexing/Tracked |
+| `AEO agency` | **#N/A** | 🔵 Indexing/Tracked |
+| `search engine optimization agency` | **#N/A** | 🔵 Indexing/Tracked |
+| `PPC management agency` | **#N/A** | 🔵 Indexing/Tracked |
+| `social media marketing agency` | **#N/A** | 🔵 Indexing/Tracked |
+| `content marketing agency` | **#N/A** | 🔵 Indexing/Tracked |
+| `digital consulting agency` | **#N/A** | 🔵 Indexing/Tracked |
+| `Next.js web development agency` | **#N/A** | 🔵 Indexing/Tracked |
+| `custom web development company` | **#N/A** | 🔵 Indexing/Tracked |
+| `full stack development agency` | **#N/A** | 🔵 Indexing/Tracked |
+| `React web development company` | **#N/A** | 🔵 Indexing/Tracked |
+| `CMS web development services` | **#N/A** | 🔵 Indexing/Tracked |
+| `Core Web Vitals optimization` | **#N/A** | 🔵 Indexing/Tracked |
 | `mobile app development company` | **#N/A** | 🔵 Indexing/Tracked |
-| `Digitacurve software development` | **#1** | 🟢 Top 3 |
+| `React Native development agency` | **#N/A** | 🔵 Indexing/Tracked |
+| `Flutter app development company` | **#N/A** | 🔵 Indexing/Tracked |
+| `iOS and Android app development` | **#N/A** | 🔵 Indexing/Tracked |
+| `cross platform app development company` | **#N/A** | 🔵 Indexing/Tracked |
+| `React Native vs Flutter` | **#N/A** | 🔵 Indexing/Tracked |
+| `custom software development company` | **#N/A** | 🔵 Indexing/Tracked |
+| `AI development agency` | **#N/A** | 🔵 Indexing/Tracked |
+| `enterprise AI solutions company` | **#N/A** | 🔵 Indexing/Tracked |
+| `LLM integration services` | **#N/A** | 🔵 Indexing/Tracked |
 | `SEO company Noida` | **#N/A** | 🔵 Indexing/Tracked |
+| `digital marketing agency Noida` | **#N/A** | 🔵 Indexing/Tracked |
+| `Next.js development company Noida` | **#N/A** | 🔵 Indexing/Tracked |
+| `web development agency Noida` | **#N/A** | 🔵 Indexing/Tracked |
+| `top IT company Noida` | **#N/A** | 🔵 Indexing/Tracked |
+| `Digitacurve software development` | **#1** | 🟢 Top 3 |
+| `Digitacurve website price` | **#1** | 🟢 Top 3 |
+| `Digitacurve digital marketing` | **#1** | 🟢 Top 3 |
 
 ---
 

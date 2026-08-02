@@ -15,24 +15,52 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CSV_PATH = PROJECT_ROOT / 'seo_rank_history.csv'
 
 KEYWORDS = [
-    # Global Keywords
+    # Digital Marketing & GEO Agency Keywords
+    "digital marketing agency",
+    "best digital marketing agency",
+    "SEO services company",
     "Generative Engine Optimization agency",
     "GEO agency",
+    "AEO agency",
+    "search engine optimization agency",
+    "PPC management agency",
+    "social media marketing agency",
+    "content marketing agency",
+    "digital consulting agency",
+
+    # Web Development & Performance Keywords
     "Next.js web development agency",
+    "custom web development company",
+    "full stack development agency",
+    "React web development company",
+    "CMS web development services",
+    "Core Web Vitals optimization",
+
+    # Mobile App Development Keywords
     "mobile app development company",
+    "React Native development agency",
+    "Flutter app development company",
+    "iOS and Android app development",
+    "cross platform app development company",
+    "React Native vs Flutter",
+
+    # Software & AI Agency Keywords
     "custom software development company",
     "AI development agency",
-    "Core Web Vitals optimization",
-    "React Native vs Flutter",
-    
-    # Local & Noida Keywords
+    "enterprise AI solutions company",
+    "LLM integration services",
+
+    # Local & Regional Keywords (Noida / Delhi NCR)
     "SEO company Noida",
+    "digital marketing agency Noida",
     "Next.js development company Noida",
     "web development agency Noida",
-    
+    "top IT company Noida",
+
     # Brand Keywords
     "Digitacurve software development",
-    "Digitacurve website price"
+    "Digitacurve website price",
+    "Digitacurve digital marketing"
 ]
 
 TARGET_DOMAIN = "digitacurve.com"
