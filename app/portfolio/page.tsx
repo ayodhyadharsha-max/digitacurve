@@ -24,7 +24,7 @@ const projects = [
     accent: 'border-blue-500/20',
     iconColor: 'text-blue-400',
     year: '2024',
-    image: '/assets/projects/imbooked.jpg',
+    image: '/assets/projects/imbooked.webp',
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ const projects = [
     accent: 'border-green-500/20',
     iconColor: 'text-green-400',
     year: '2024',
-    image: '/assets/projects/keepitgoing.jpg',
+    image: '/assets/projects/keepitgoing.webp',
   },
   {
     id: 3,
@@ -50,7 +50,7 @@ const projects = [
     accent: 'border-yellow-500/20',
     iconColor: 'text-yellow-400',
     year: '2023',
-    image: '/assets/projects/fiscalkids.jpg',
+    image: '/assets/projects/fiscalkids.webp',
   },
   {
     id: 4,
@@ -63,7 +63,7 @@ const projects = [
     accent: 'border-pink-500/20',
     iconColor: 'text-pink-400',
     year: '2023',
-    image: '/assets/projects/happiness.jpg',
+    image: '/assets/projects/happiness.webp',
   },
   {
     id: 5,
@@ -76,7 +76,7 @@ const projects = [
     accent: 'border-purple-500/20',
     iconColor: 'text-purple-400',
     year: '2024',
-    image: '/assets/projects/vlaunch.jpg',
+    image: '/assets/projects/vlaunch.webp',
   },
   {
     id: 6,
@@ -128,7 +128,7 @@ const projects = [
     accent: 'border-red-500/20',
     iconColor: 'text-red-400',
     year: '2024',
-    image: '/assets/projects/socialboost.jpg',
+    image: '/assets/projects/socialboost.webp',
   },
 ]
 

@@ -28,7 +28,7 @@ const staticBlogsDetail: Record<string, { title: string; category: string; date:
     category: 'AI & Tech',
     date: 'May 20, 2026',
     readTime: '6 min read',
-    image: '/assets/blogs/tech.jpg',
+    image: '/assets/blogs/tech.webp',
     content: `
       <p>Generative AI is no longer a futuristic concept—it is actively reshaping how enterprise software is designed, written, tested, and deployed. From auto-generating boilerplate code to predicting bugs before they manifest, LLMs (Large Large Models) are becoming essential partners for developers.</p>
       
@@ -50,7 +50,7 @@ const staticBlogsDetail: Record<string, { title: string; category: string; date:
     category: 'App Dev',
     date: 'May 15, 2026',
     readTime: '5 min read',
-    image: '/assets/blogs/design.jpg',
+    image: '/assets/blogs/design.webp',
     content: `
       <p>Mobile user experience (UX) is evolving rapidly to match new hardware capabilities and changing user habits. To stand out in the crowded app stores, designers must look beyond flat interfaces and adopt more immersive, personalized design paradigms.</p>
 
@@ -72,7 +72,7 @@ const staticBlogsDetail: Record<string, { title: string; category: string; date:
     category: 'Web Dev',
     date: 'May 08, 2026',
     readTime: '8 min read',
-    image: '/assets/blogs/cloud.jpg',
+    image: '/assets/blogs/cloud.webp',
     content: `
       <p>As speed and latency directly impact conversions, businesses are moving away from traditional server setups toward serverless architectures deployed at the Edge. Next.js and platforms like Vercel/Cloudflare are leading this revolution.</p>
 
@@ -91,7 +91,7 @@ const staticBlogsDetail: Record<string, { title: string; category: string; date:
     category: 'Marketing',
     date: 'Apr 28, 2026',
     readTime: '7 min read',
-    image: '/assets/blogs/marketplace.jpg',
+    image: '/assets/blogs/marketplace.webp',
     content: `
       <p>The search landscape is undergoing its biggest transformation since the introduction of mobile search. With search engines showing AI-generated answers directly at the top of results pages, traditional SEO is no longer sufficient.</p>
 
@@ -110,7 +110,7 @@ const staticBlogsDetail: Record<string, { title: string; category: string; date:
     category: 'AI & Tech',
     date: 'Apr 22, 2026',
     readTime: '9 min read',
-    image: '/assets/blogs/smart-home.jpg',
+    image: '/assets/blogs/smart-home.webp',
     content: `
       <p>As IoT (Internet of Things) devices become integral to homes and industries, they present an attractive target for cyber threats. Securing firmware is the first and most critical line of defense in hardware development.</p>
 
@@ -129,7 +129,7 @@ const staticBlogsDetail: Record<string, { title: string; category: string; date:
     category: 'Marketing',
     date: 'Apr 14, 2026',
     readTime: '5 min read',
-    image: '/assets/blogs/ecommerce.jpg',
+    image: '/assets/blogs/ecommerce.webp',
     content: `
       <p>Creating a beautiful app is only half the battle; getting discovered by users is where App Store Optimization (ASO) comes in. With millions of apps available, optimization is critical for organic downloads.</p>
 
@@ -146,7 +146,7 @@ const staticBlogsDetail: Record<string, { title: string; category: string; date:
     category: 'Marketing',
     date: 'Jul 20, 2026',
     readTime: '8 min read',
-    image: '/assets/blogs/tech.jpg',
+    image: '/assets/blogs/tech.webp',
     content: `
       <p>In 2026, the internet is undergoing a major shift. The classic list of ten blue search links is increasingly being replaced by single, comprehensive, AI-generated search summaries. Welcome to the era of <strong>Generative Engine Optimization (GEO)</strong>—the new science of securing brand citations within Large Language Models (LLMs).</p>
 
@@ -174,7 +174,7 @@ const staticBlogsDetail: Record<string, { title: string; category: string; date:
     category: 'Web Dev',
     date: 'Jul 23, 2026',
     readTime: '8 min read',
-    image: '/assets/blogs/cloud.jpg',
+    image: '/assets/blogs/cloud.webp',
     content: `
       <p>In modern web development, speed isn't just a convenience—it's a core ranking factor and a critical driver of business conversions. With Google’s strict focus on user experience, optimizing your <strong>Core Web Vitals</strong> is essential. For teams building with Next.js, leveraging the framework's native features makes achieving perfect lighthouse scores much easier. Here is our technical guide to optimizing Next.js web applications for Core Web Vitals.</p>
 
@@ -217,7 +217,7 @@ const staticBlogsDetail: Record<string, { title: string; category: string; date:
     category: 'App Dev',
     date: 'Jul 25, 2026',
     readTime: '7 min read',
-    image: '/assets/blogs/design.jpg',
+    image: '/assets/blogs/design.webp',
     content: `
       <p>As businesses strive to launch mobile applications faster and more cost-effectively, the debate between cross-platform frameworks remains highly relevant. For any <strong>mobile app development company</strong>, choosing the right technology stack is a critical decision that influences performance, scalability, and time-to-market. Here is our architectural comparison of <strong>React Native vs Flutter</strong> in 2026.</p>
 
@@ -261,7 +261,7 @@ const staticBlogsDetail: Record<string, { title: string; category: string; date:
     category: 'Marketing',
     date: 'Jul 27, 2026',
     readTime: '6 min read',
-    image: '/assets/blogs/marketplace.jpg',
+    image: '/assets/blogs/marketplace.webp',
     content: `
       <p>As conversational AI models become the primary discovery tool for products and services, traditional local SEO is undergoing a fundamental transformation. Today, when a user asks ChatGPT Search or Google Gemini to recommend the best <strong>SEO company in Noida</strong> or a web development agency, these AI engines rely heavily on <strong>local citation alignment</strong> across third-party directories. Here is how local citations influence AI search recommendations in 2026.</p>
 
@@ -299,7 +299,7 @@ const staticBlogsDetail: Record<string, { title: string; category: string; date:
     category: 'App Dev',
     date: 'Jul 29, 2026',
     readTime: '8 min read',
-    image: '/assets/blogs/ecommerce.jpg',
+    image: '/assets/blogs/ecommerce.webp',
     content: `
       <p>Two-sided marketplaces—platforms connecting service providers with customers in real-time—have become the backbone of modern on-demand services. From home maintenance platforms to salon booking and rental services, building a robust marketplace requires sophisticated engineering. As a leading <strong>custom software development company</strong>, Digitacurve designs scalable marketplace architectures. Here is our technical blueprint for building a two-sided on-demand booking marketplace in 2026.</p>
 
@@ -341,7 +341,7 @@ const staticBlogsDetail: Record<string, { title: string; category: string; date:
     category: 'AI & Tech',
     date: 'Jul 29, 2026',
     readTime: '7 min read',
-    image: '/assets/blogs/tech.jpg',
+    image: '/assets/blogs/tech.webp',
     content: `
       <p>Artificial Intelligence has evolved from static text generation into autonomous, task-executing <strong>AI agents</strong>. Enterprise organizations are increasingly integrating custom AI agents into their workflows to automate customer support, analyze complex documents, and streamline internal ops. As an innovative <strong>AI development agency</strong>, Digitacurve builds enterprise AI solutions using Next.js and serverless cloud architectures. Here is our engineering guide for 2026.</p>
 
@@ -372,7 +372,7 @@ const staticBlogsDetail: Record<string, { title: string; category: string; date:
     category: 'Web Dev',
     date: 'Aug 02, 2026',
     readTime: '8 min read',
-    image: '/assets/blogs/cloud.jpg',
+    image: '/assets/blogs/cloud.webp',
     content: `
       <p>In today's competitive global digital economy, your website is your primary sales engine. Whether you are looking for a premier <strong>website development company</strong> in Melbourne, Sydney, London, Toronto, Dubai, or globally, choosing the right digital architecture defines your online success. Businesses frequently compare traditional CMS systems (like WordPress or Shopify) against custom modern web frameworks. As a leading <strong>custom website development</strong> firm, Digitacurve analyzes why modern Next.js architectures outperform legacy platforms across global markets.</p>
 
@@ -418,45 +418,45 @@ const staticBlogsDetail: Record<string, { title: string; category: string; date:
 function getBlogImage(title: string, originalImage: string): string {
   const lower = title.toLowerCase();
   if (lower.includes('shipping') || lower.includes('delivery')) {
-    return '/assets/blogs/shipping.jpg';
+    return '/assets/blogs/shipping.webp';
   }
   if (lower.includes('walmart') || lower.includes('ecommerce')) {
-    return '/assets/blogs/ecommerce.jpg';
+    return '/assets/blogs/ecommerce.webp';
   }
   if (lower.includes('marketplace') || lower.includes('buying') || lower.includes('selling')) {
-    return '/assets/blogs/marketplace.jpg';
+    return '/assets/blogs/marketplace.webp';
   }
   if (lower.includes('instacart') || lower.includes('shopper') || lower.includes('grocery')) {
-    return '/assets/blogs/grocery.jpg';
+    return '/assets/blogs/grocery.webp';
   }
   if (lower.includes('chatgpt') || lower.includes('ai') || lower.includes('dopple') || lower.includes('quillbot') || lower.includes('generative')) {
-    return '/assets/blogs/tech.jpg';
+    return '/assets/blogs/tech.webp';
   }
   if (lower.includes('zigbee') || lower.includes('z-wave') || lower.includes('smart home') || lower.includes('iot')) {
-    return '/assets/blogs/smart-home.jpg';
+    return '/assets/blogs/smart-home.webp';
   }
   if (lower.includes('web 2.0') || lower.includes('web 3.0') || lower.includes('blockchain')) {
-    return '/assets/blogs/web3.jpg';
+    return '/assets/blogs/web3.webp';
   }
   if (lower.includes('azure') || lower.includes('aws') || lower.includes('google cloud') || lower.includes('cloud')) {
-    return '/assets/blogs/cloud.jpg';
+    return '/assets/blogs/cloud.webp';
   }
   if (lower.includes('youtube') || lower.includes('shorts') || lower.includes('video')) {
-    return '/assets/blogs/video.jpg';
+    return '/assets/blogs/video.webp';
   }
   if (lower.includes('canva') || lower.includes('photo') || lower.includes('design') || lower.includes('chub')) {
-    return '/assets/blogs/design.jpg';
+    return '/assets/blogs/design.webp';
   }
   if (lower.includes('marketing') || lower.includes('grow your mobile app')) {
-    return '/assets/blogs/marketing.png';
+    return '/assets/blogs/marketing.webp';
   }
   if (lower.includes('ott') || lower.includes('ott advertising')) {
-    return '/assets/blogs/ott.png';
+    return '/assets/blogs/ott.webp';
   }
   if (originalImage && originalImage.startsWith('http')) {
     return originalImage;
   }
-  return '/assets/blogs/default.jpg';
+  return '/assets/blogs/default.webp';
 }
 
 export default function BlogDetailPage() {

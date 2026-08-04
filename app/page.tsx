@@ -247,10 +247,10 @@ function CategoriesGrid() {
 
 /* ── Review Badges ──────────────────────────────────────────────── */
 const reviewBadges = [
-  { platform: 'Google', count: '150+', logo: '/assets/reviews/rgoogle.png', href: 'https://share.google/THrR3FaoU9IJ7h73Y' },
-  { platform: 'Clutch', count: '50+', logo: '/assets/reviews/rclutch.png' },
-  { platform: 'GoodFirms', count: '60+', logo: '/assets/reviews/rgoodfirms.png' },
-  { platform: 'Sortlist', count: '110+', logo: '/assets/reviews/sortlistlight.png' },
+  { platform: 'Google', count: '150+', logo: '/assets/reviews/rgoogle.webp', href: 'https://share.google/THrR3FaoU9IJ7h73Y' },
+  { platform: 'Clutch', count: '50+', logo: '/assets/reviews/rclutch.webp' },
+  { platform: 'GoodFirms', count: '60+', logo: '/assets/reviews/rgoodfirms.webp' },
+  { platform: 'Sortlist', count: '110+', logo: '/assets/reviews/sortlistlight.webp' },
 ]
 
 function ReviewBadges() {
@@ -298,13 +298,13 @@ function ReviewBadges() {
 }
 
 const awardLogos = [
-  { alt: 'Good Firms Award', src: '/assets/about/award2.png' },
-  { alt: 'Google Review', src: '/assets/socials/googlepartner.png', href: 'https://share.google/THrR3FaoU9IJ7h73Y' },
+  { alt: 'Good Firms Award', src: '/assets/about/award2.webp' },
+  { alt: 'Google Review', src: '/assets/socials/googlepartner.webp', href: 'https://share.google/THrR3FaoU9IJ7h73Y' },
   { alt: 'Sortlist', src: 'https://sortlist-public-ui-manual-upload-production.s3.eu-west-1.amazonaws.com/badges/certified-primary-500.svg' },
-  { alt: 'Clutch SEO', src: '/assets/home/cluctch-Rpa.jpg' },
+  { alt: 'Clutch SEO', src: '/assets/home/cluctch-Rpa.webp' },
   { alt: 'Top Mobile App Development Company on GoodFirms', src: 'https://assets.goodfirms.co/badges/color-badge/app-development.svg' },
-  { alt: 'Top Software Developers in the USA', src: '/assets/home/tech-reviewer.jpeg' },
-  { alt: 'Top Generative AI Development Companies', src: '/assets/home/tech-reviewer-2.jpeg' },
+  { alt: 'Top Software Developers in the USA', src: '/assets/home/tech-reviewer.webp' },
+  { alt: 'Top Generative AI Development Companies', src: '/assets/home/tech-reviewer-2.webp' },
 ]
 
 function CollaborationBanner() {
@@ -663,7 +663,7 @@ const locations = [
   },
   {
     country: 'Ireland',
-    skyline: '/assets/locations/Dublin.png',
+    skyline: '/assets/locations/Dublin.webp',
   },
 ]
 
@@ -1029,45 +1029,45 @@ const localFeedbacks: FeedbackItem[] = [
   {
     _id: 'fb1',
     name: 'Caroline Andrew',
-    profileImg: '/assets/avatars/avatar1.png',
+    profileImg: '/assets/avatars/avatar1.webp',
     designation: 'CEO, AppSphere Inc.',
     stars: 5,
     message: 'Best Digital Marketing Company. Our objective behind the collaboration with Digitacurve was to strengthen our online presence through targeted SEO strategies, aiming to increase organic traffic and improve brand authority. They exceeded our expectations in every milestone.',
     link: 'https://clutch.co/profile/digitacurve',
-    logo: '/assets/reviews/rclutch.png',
+    logo: '/assets/reviews/rclutch.webp',
     category: 'Marketing'
   },
   {
     _id: 'fb2',
     name: 'Kelvin Murphy',
-    profileImg: '/assets/avatars/avatar2.png',
+    profileImg: '/assets/avatars/avatar2.webp',
     designation: 'CEO at PointB Travel Sector',
     stars: 5,
     message: 'Proactive approach. They continuously analyzed performance, adapted strategies, and focused on long-term growth tailored to our business goals. Digitacurve is a highly professional and responsive development partner.',
     link: 'https://clutch.co/profile/digitacurve',
-    logo: '/assets/reviews/rclutch.png',
+    logo: '/assets/reviews/rclutch.webp',
     category: 'Web Dev'
   },
   {
     _id: 'fb3',
     name: 'Sarah Jenkins',
-    profileImg: '/assets/avatars/avatar3.png',
+    profileImg: '/assets/avatars/avatar3.webp',
     designation: 'Product Lead, FinTech Solutions',
     stars: 5,
     message: 'Digitacurve delivered our mobile app on schedule and within budget. The user experience and visual design are outstanding. Highly recommend their skilled mobile app engineering team.',
     link: 'https://google.com',
-    logo: '/assets/reviews/rgoogle.png',
+    logo: '/assets/reviews/rgoogle.webp',
     category: 'App Dev'
   },
   {
     _id: 'fb4',
     name: 'David Chen',
-    profileImg: '/assets/avatars/avatar4.png',
+    profileImg: '/assets/avatars/avatar4.webp',
     designation: 'Founder, VLaunch Accelerator',
     stars: 5,
     message: 'We hired Digitacurve to redesign our corporate portal. Their technical consulting and development velocity were top-tier. Our site speed increased by 150%, and client sign-ups rose instantly.',
     link: 'https://google.com',
-    logo: '/assets/reviews/rgoogle.png',
+    logo: '/assets/reviews/rgoogle.webp',
     category: 'Web Dev'
   }
 ]
@@ -1228,45 +1228,45 @@ interface BlogItem {
 function getBlogImage(title: string, originalImage: string): string {
   const lower = title.toLowerCase();
   if (lower.includes('shipping') || lower.includes('delivery')) {
-    return '/assets/blogs/shipping.jpg';
+    return '/assets/blogs/shipping.webp';
   }
   if (lower.includes('walmart') || lower.includes('ecommerce')) {
-    return '/assets/blogs/ecommerce.jpg';
+    return '/assets/blogs/ecommerce.webp';
   }
   if (lower.includes('marketplace') || lower.includes('buying') || lower.includes('selling')) {
-    return '/assets/blogs/marketplace.jpg';
+    return '/assets/blogs/marketplace.webp';
   }
   if (lower.includes('instacart') || lower.includes('shopper') || lower.includes('grocery')) {
-    return '/assets/blogs/grocery.jpg';
+    return '/assets/blogs/grocery.webp';
   }
   if (lower.includes('chatgpt') || lower.includes('ai') || lower.includes('dopple') || lower.includes('quillbot') || lower.includes('generative')) {
-    return '/assets/blogs/tech.jpg';
+    return '/assets/blogs/tech.webp';
   }
   if (lower.includes('zigbee') || lower.includes('z-wave') || lower.includes('smart home') || lower.includes('iot')) {
-    return '/assets/blogs/smart-home.jpg';
+    return '/assets/blogs/smart-home.webp';
   }
   if (lower.includes('web 2.0') || lower.includes('web 3.0') || lower.includes('blockchain')) {
-    return '/assets/blogs/web3.jpg';
+    return '/assets/blogs/web3.webp';
   }
   if (lower.includes('azure') || lower.includes('aws') || lower.includes('google cloud') || lower.includes('cloud')) {
-    return '/assets/blogs/cloud.jpg';
+    return '/assets/blogs/cloud.webp';
   }
   if (lower.includes('youtube') || lower.includes('shorts') || lower.includes('video')) {
-    return '/assets/blogs/video.jpg';
+    return '/assets/blogs/video.webp';
   }
   if (lower.includes('canva') || lower.includes('photo') || lower.includes('design') || lower.includes('chub')) {
-    return '/assets/blogs/design.jpg';
+    return '/assets/blogs/design.webp';
   }
   if (lower.includes('marketing') || lower.includes('grow your mobile app')) {
-    return '/assets/blogs/marketing.png';
+    return '/assets/blogs/marketing.webp';
   }
   if (lower.includes('ott') || lower.includes('ott advertising')) {
-    return '/assets/blogs/ott.png';
+    return '/assets/blogs/ott.webp';
   }
   if (originalImage && originalImage.startsWith('http')) {
     return originalImage;
   }
-  return '/assets/blogs/default.jpg';
+  return '/assets/blogs/default.webp';
 }
 
 const localBlogs: BlogItem[] = [
@@ -1275,7 +1275,7 @@ const localBlogs: BlogItem[] = [
     title: 'How Generative AI is Changing Enterprise Software Development',
     description: 'Generative AI tools are reshaping the software engineering lifecycle. Discover how companies are implementing LLMs to automate testing and speed up coding velocity.',
     category: 'AI & Tech',
-    image: '/assets/blogs/tech.jpg',
+    image: '/assets/blogs/tech.webp',
     image2: '',
     readTime: '6 min read',
     quote: '',
@@ -1290,7 +1290,7 @@ const localBlogs: BlogItem[] = [
     title: 'Top 5 Mobile App UX Trends to Watch in 2026',
     description: 'From spatial computing design patterns to micro-gestures and AI-driven personalization, explore the core design elements that will dominate iOS and Android app stores.',
     category: 'App Dev',
-    image: '/assets/blogs/design.jpg',
+    image: '/assets/blogs/design.webp',
     image2: '',
     readTime: '5 min read',
     quote: '',
@@ -1305,7 +1305,7 @@ const localBlogs: BlogItem[] = [
     title: 'The Shift to Serverless Next.js and Edge Computing Platforms',
     description: 'Edge middleware and serverless APIs are minimizing TTFB and maximizing Core Web Vitals performance. Learn why businesses are migrating their backends to edge configurations.',
     category: 'Web Dev',
-    image: '/assets/blogs/cloud.jpg',
+    image: '/assets/blogs/cloud.webp',
     image2: '',
     readTime: '8 min read',
     quote: '',
@@ -1320,7 +1320,7 @@ const localBlogs: BlogItem[] = [
     title: 'Search Engine Landscaping: Navigating AI-Generated Search Summaries',
     description: 'As search engines incorporate AI-driven results, traditional SEO strategies must evolve. Discover how to optimize content for AI answers and maintain high visibility.',
     category: 'Marketing',
-    image: '/assets/blogs/marketplace.jpg',
+    image: '/assets/blogs/marketplace.webp',
     image2: '',
     readTime: '7 min read',
     quote: '',
@@ -1335,7 +1335,7 @@ const localBlogs: BlogItem[] = [
     title: 'Securing IoT Devices: Best Practices for Firmware Development',
     description: 'Connected hardware devices present unique security vulnerabilities. Explore practical steps for provisioning credentials, encrypting telemetry, and deploying OTA updates.',
     category: 'AI & Tech',
-    image: '/assets/blogs/smart-home.jpg',
+    image: '/assets/blogs/smart-home.webp',
     image2: '',
     readTime: '9 min read',
     quote: '',
@@ -1350,7 +1350,7 @@ const localBlogs: BlogItem[] = [
     title: 'Mastering App Store Optimization (ASO) for Higher Downloads',
     description: 'Creating a great application is only half the battle. Discover the visual and text optimization guidelines to rank higher in Google Play and iOS App Store searches.',
     category: 'Marketing',
-    image: '/assets/blogs/ecommerce.jpg',
+    image: '/assets/blogs/ecommerce.webp',
     image2: '',
     readTime: '5 min read',
     quote: '',

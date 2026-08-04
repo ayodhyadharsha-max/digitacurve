@@ -19,7 +19,7 @@ const blogPosts = [
     accentColor: 'from-violet-500/20 to-fuchsia-500/10',
     borderColor: 'hover:border-violet-500/30',
     tagColor: 'text-violet-400 border-violet-500/30 bg-violet-500/5',
-    image: '/assets/blogs/tech.jpg',
+    image: '/assets/blogs/tech.webp',
     slug: 'generative-ai-enterprise-software',
   },
   {
@@ -32,7 +32,7 @@ const blogPosts = [
     accentColor: 'from-purple-500/20 to-pink-500/10',
     borderColor: 'hover:border-purple-500/30',
     tagColor: 'text-purple-400 border-purple-500/30 bg-purple-500/5',
-    image: '/assets/blogs/design.jpg',
+    image: '/assets/blogs/design.webp',
     slug: 'mobile-app-ux-trends-2026',
   },
   {
@@ -45,7 +45,7 @@ const blogPosts = [
     accentColor: 'from-teal-500/20 to-blue-500/10',
     borderColor: 'hover:border-teal-500/30',
     tagColor: 'text-teal-400 border-teal-500/30 bg-teal-500/5',
-    image: '/assets/blogs/cloud.jpg',
+    image: '/assets/blogs/cloud.webp',
     slug: 'serverless-nextjs-edge-computing',
   },
   {
@@ -58,7 +58,7 @@ const blogPosts = [
     accentColor: 'from-orange-500/20 to-yellow-500/10',
     borderColor: 'hover:border-orange-500/30',
     tagColor: 'text-orange-400 border-orange-500/30 bg-orange-500/5',
-    image: '/assets/blogs/marketplace.jpg',
+    image: '/assets/blogs/marketplace.webp',
     slug: 'search-engine-landscaping-ai-search',
   },
   {
@@ -71,7 +71,7 @@ const blogPosts = [
     accentColor: 'from-blue-500/20 to-indigo-500/10',
     borderColor: 'hover:border-blue-500/30',
     tagColor: 'text-blue-400 border-blue-500/30 bg-blue-500/5',
-    image: '/assets/blogs/smart-home.jpg',
+    image: '/assets/blogs/smart-home.webp',
     slug: 'securing-iot-devices-firmware',
   },
   {
@@ -84,7 +84,7 @@ const blogPosts = [
     accentColor: 'from-red-500/20 to-orange-500/10',
     borderColor: 'hover:border-red-500/30',
     tagColor: 'text-red-400 border-red-500/30 bg-red-500/5',
-    image: '/assets/blogs/design.jpg',
+    image: '/assets/blogs/design.webp',
     slug: 'mastering-aso-app-store-optimization',
   },
   {
@@ -97,7 +97,7 @@ const blogPosts = [
     accentColor: 'from-orange-500/20 to-red-500/10',
     borderColor: 'hover:border-orange-500/30',
     tagColor: 'text-orange-400 border-orange-500/30 bg-orange-500/5',
-    image: '/assets/blogs/tech.jpg',
+    image: '/assets/blogs/tech.webp',
     slug: 'ultimate-guide-to-generative-engine-optimization',
   },
   {
@@ -110,7 +110,7 @@ const blogPosts = [
     accentColor: 'from-teal-500/20 to-blue-500/10',
     borderColor: 'hover:border-teal-500/30',
     tagColor: 'text-teal-400 border-teal-500/30 bg-teal-500/5',
-    image: '/assets/blogs/cloud.jpg',
+    image: '/assets/blogs/cloud.webp',
     slug: 'how-to-optimize-nextjs-web-apps-for-core-web-vitals',
   },
   {
@@ -123,7 +123,7 @@ const blogPosts = [
     accentColor: 'from-purple-500/20 to-pink-500/10',
     borderColor: 'hover:border-purple-500/30',
     tagColor: 'text-purple-400 border-purple-500/30 bg-purple-500/5',
-    image: '/assets/blogs/design.jpg',
+    image: '/assets/blogs/design.webp',
     slug: 'react-native-vs-flutter-choosing-the-right-hybrid-app-framework',
   },
   {
@@ -136,7 +136,7 @@ const blogPosts = [
     accentColor: 'from-blue-500/20 to-indigo-500/10',
     borderColor: 'hover:border-blue-500/30',
     tagColor: 'text-blue-400 border-blue-500/30 bg-blue-500/5',
-    image: '/assets/blogs/ecommerce.jpg',
+    image: '/assets/blogs/ecommerce.webp',
     slug: 'building-a-two-sided-on-demand-booking-marketplace-architecture-and-ux',
   },
   {
@@ -149,7 +149,7 @@ const blogPosts = [
     accentColor: 'from-violet-500/20 to-fuchsia-500/10',
     borderColor: 'hover:border-violet-500/30',
     tagColor: 'text-violet-400 border-violet-500/30 bg-violet-500/5',
-    image: '/assets/blogs/tech.jpg',
+    image: '/assets/blogs/tech.webp',
     slug: 'building-enterprise-ai-agents-with-nextjs-and-serverless-architectures',
   },
   {
@@ -162,7 +162,7 @@ const blogPosts = [
     accentColor: 'from-teal-500/20 to-blue-500/10',
     borderColor: 'hover:border-teal-500/30',
     tagColor: 'text-teal-400 border-teal-500/30 bg-teal-500/5',
-    image: '/assets/blogs/cloud.jpg',
+    image: '/assets/blogs/cloud.webp',
     slug: 'global-web-development-services-custom-nextjs-vs-legacy-cms',
   },
 ]
@@ -262,7 +262,7 @@ export default function BlogPage() {
                 >
                   <div className="w-full h-48 overflow-hidden relative">
                     <img
-                      src={post.image || '/assets/blogs/tech.jpg'}
+                      src={post.image || '/assets/blogs/tech.webp'}
                       alt={post.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
