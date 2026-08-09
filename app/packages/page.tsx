@@ -3,6 +3,7 @@ import Link from 'next/link'
 import {
   CheckCircle2, ArrowRight, Zap, Shield, Rocket, Phone, MessageSquare, Globe, Sparkles, Building2, Stethoscope, Compass, SunMedium
 } from 'lucide-react'
+import QuoteCalculator from '@/components/QuoteCalculator'
 
 export const metadata: Metadata = {
   title: 'Complete 360° Digital Marketing & Development Packages | Digitacurve',
@@ -202,6 +203,13 @@ export default function PackagesPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Interactive Project Cost Estimator Section */}
+      <section className="py-16 bg-gradient-to-b from-black via-purple-950/20 to-black border-t border-[#1a1a1a]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <QuoteCalculator />
         </div>
       </section>
 

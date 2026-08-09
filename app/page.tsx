@@ -9,6 +9,7 @@ import {
 } from 'lucide-react'
 import InteractiveCard from '@/components/InteractiveCard'
 import CyberGrid from '@/components/CyberGrid'
+import QuoteCalculator from '@/components/QuoteCalculator'
 
 /* ── Hero Slider ───────────────────────────────────────────────── */
 const slides = [
@@ -1608,6 +1609,11 @@ export default function HomePage() {
       <RevealSection>
         <ServicesGrid />
       </RevealSection>
+      <section className="py-16 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <QuoteCalculator />
+        </div>
+      </section>
       <RevealSection>
         <GeoOptimizationSection />
       </RevealSection>
