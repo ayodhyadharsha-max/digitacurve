@@ -417,7 +417,7 @@ const staticBlogsDetail: Record<string, { title: string; category: string; date:
     category: 'Marketing',
     date: 'Aug 09, 2026',
     readTime: '8 min read',
-    image: '/assets/blogs/marketplace.jpg',
+    image: '/assets/blogs/marketplace.webp',
     content: `
       <p>In high-ticket real estate, generating generic inquiries is no longer enough. Developers and brokerage firms need pre-qualified buyer leads with verified budgets. As a premier <strong>real estate digital marketing agency</strong>, Digitacurve analyzes how modern property firms engineer automated buyer acquisition funnels in 2026.</p>
 
@@ -448,7 +448,7 @@ const staticBlogsDetail: Record<string, { title: string; category: string; date:
     category: 'Marketing',
     date: 'Aug 09, 2026',
     readTime: '7 min read',
-    image: '/assets/blogs/smart-home.jpg',
+    image: '/assets/blogs/smart-home.webp',
     content: `
       <p>Healthcare consumers today research doctors, read peer reviews, and book clinic appointments directly through mobile search. To establish authority and grow patient volume, healthcare practitioners require a focused patient acquisition system. Here is Digitacurve's guide to <strong>digital marketing for doctors and healthcare clinics</strong>.</p>
 
@@ -474,7 +474,7 @@ const staticBlogsDetail: Record<string, { title: string; category: string; date:
     category: 'Marketing',
     date: 'Aug 09, 2026',
     readTime: '8 min read',
-    image: '/assets/blogs/marketplace.jpg',
+    image: '/assets/blogs/marketplace.webp',
     content: `
       <p>The travel industry is booming, but relying solely on third-party OTAs (Online Travel Agencies) eats into profit margins through steep 20-30% commissions. By deploying a proprietary direct booking portal and targeted digital campaigns, travel agencies can secure high-margin holiday bookings directly from global travelers.</p>
 
@@ -498,7 +498,7 @@ const staticBlogsDetail: Record<string, { title: string; category: string; date:
     category: 'Marketing',
     date: 'Aug 09, 2026',
     readTime: '8 min read',
-    image: '/assets/blogs/tech.jpg',
+    image: '/assets/blogs/tech.webp',
     content: `
       <p>As residential and commercial electricity tariffs climb, the demand for rooftop solar installations is expanding rapidly. However, many solar EPC contractors struggle with poor-quality, shared leads. Here is how solar companies can generate exclusive, high-ticket solar installation contracts using modern digital marketing.</p>
 

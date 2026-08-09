@@ -68,19 +68,37 @@ def audit_site():
 
         # 1. Check Titles
         title_matches = re.findall(r"title:\s*['\"`]([^'\"`]+)['\"`]", content) or re.findall(r"<title>([^<]+)</title>", content)
+        # Check sibling layout if page is a client component
+        sibling_layout = file_path.parent / 'layout.tsx'
+        layout_content = ""
+        if sibling_layout.exists():
+            try:
+                with open(sibling_layout, 'r', encoding='utf-8') as lf:
+                    layout_content = lf.read()
+            except Exception:
+                pass
+
         if not title_matches and 'page.tsx' in file_path.name:
-            # check default layout title fallback
-            if 'layout.tsx' not in rel_path and 'page.tsx' in rel_path and 'app/page.tsx' not in rel_path:
+            if layout_content:
+                layout_titles = re.findall(r"title:\s*['\"`]([^'\"`]+)['\"`]", layout_content)
+                if not layout_titles and 'generateMetadata' not in layout_content:
+                    issues["missing_titles"].append({"file": rel_path, "issue": "No explicit title defined"})
+            elif 'app/page.tsx' not in rel_path:
                 issues["missing_titles"].append({"file": rel_path, "issue": "No explicit title defined"})
         elif title_matches:
             title_text = title_matches[0]
-            if len(title_text) < 10:
+            if len(title_text) < 10 and 'title:' in content and 'export const metadata' in content:
                 issues["short_titles"].append({"file": rel_path, "title": title_text, "length": len(title_text)})
 
         # 2. Check Meta Descriptions
         meta_desc = re.findall(r"description:\s*['\"`]([^'\"`]+)['\"`]", content) or re.findall(r'<meta\s+name=["\']description["\']\s+content=["\']([^"\']+)["\']', content)
         if not meta_desc and 'page.tsx' in file_path.name and 'layout.tsx' not in rel_path:
-            issues["missing_meta_descriptions"].append({"file": rel_path, "issue": "Missing meta description"})
+            if layout_content:
+                layout_desc = re.findall(r"description:\s*['\"`]([^'\"`]+)['\"`]", layout_content)
+                if not layout_desc and 'generateMetadata' not in layout_content:
+                    issues["missing_meta_descriptions"].append({"file": rel_path, "issue": "Missing meta description"})
+            else:
+                issues["missing_meta_descriptions"].append({"file": rel_path, "issue": "Missing meta description"})
 
         # 3. Check H1 Tags
         h1_tags = re.findall(r"<h1[^>]*>(.*?)</h1>", content, re.DOTALL)
