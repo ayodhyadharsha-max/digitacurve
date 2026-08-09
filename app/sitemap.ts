@@ -6,6 +6,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Define static routes
   const staticRoutes = [
     '',
+    '/packages',
+    '/solutions/real-estate',
+    '/solutions/healthcare',
+    '/solutions/travel-tourism',
+    '/solutions/solar-energy',
     '/company/about',
     '/company/contact',
     '/web-development',
@@ -22,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1.0 : 0.8,
+    priority: route === '' || route === '/packages' ? 1.0 : 0.8,
   }))
 
   // Define static blog slugs
@@ -40,6 +45,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'building-a-two-sided-on-demand-booking-marketplace-architecture-and-ux',
     'building-enterprise-ai-agents-with-nextjs-and-serverless-architectures',
     'global-web-development-services-custom-nextjs-vs-legacy-cms',
+    'real-estate-digital-marketing-lead-generation-guide-2026',
+    'digital-marketing-for-doctors-healthcare-clinics-2026',
+    'travel-tourism-digital-marketing-global-booking-guide',
+    'solar-company-digital-marketing-lead-generation-guide-2026',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({

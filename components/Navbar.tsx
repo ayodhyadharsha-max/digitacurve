@@ -14,6 +14,13 @@ const servicesList = [
   { label: 'Digital Consulting', href: '/company/contact' },
 ]
 
+const solutionsList = [
+  { label: 'Real Estate & Builders', href: '/solutions/real-estate' },
+  { label: 'Healthcare & Doctors', href: '/solutions/healthcare' },
+  { label: 'Travel & Tourism', href: '/solutions/travel-tourism' },
+  { label: 'Solar Energy Companies', href: '/solutions/solar-energy' },
+]
+
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme()
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -65,15 +72,31 @@ export default function Navbar() {
                 Home
               </Link>
             </li>
-            <li>
-              <Link
-                href="/company/about"
-                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                  isActive('/company/about') ? 'text-blue-400' : 'text-gray-300 hover:text-white'
-                }`}
-              >
-                About Us
-              </Link>
+
+            {/* Solutions Dropdown */}
+            <li className="nav-item relative group">
+              <button className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white rounded-md transition-colors">
+                Solutions
+                <ChevronDown size={14} className="transition-transform group-hover:rotate-180 duration-200" />
+              </button>
+
+              <div className="mega-menu absolute top-full left-1/2 -translate-x-1/2 pt-2 w-64 z-50">
+                <div className="bg-[#111111] border border-[#2a2a2a] rounded-xl shadow-2xl shadow-black/60 p-3">
+                  <ul className="space-y-1">
+                    {solutionsList.map(item => (
+                      <li key={item.label}>
+                        <Link
+                          href={item.href}
+                          className="block px-3 py-2 text-xs text-gray-400 hover:text-white hover:bg-[#1a1a1a] rounded-lg transition-colors flex items-center gap-2 group/item"
+                        >
+                          <span className="w-1.5 h-1.5 rounded-full bg-purple-500 group-hover/item:bg-blue-400 transition-colors" />
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </li>
 
             {/* Services Mega Menu */}
@@ -104,22 +127,22 @@ export default function Navbar() {
 
             <li>
               <Link
+                href="/packages"
+                className={`px-3 py-2 text-sm font-bold rounded-md transition-colors ${
+                  isActive('/packages') ? 'text-purple-400' : 'text-purple-400 hover:text-purple-300'
+                }`}
+              >
+                Packages ⚡
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/portfolio"
                 className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                   isActive('/portfolio') ? 'text-blue-400' : 'text-gray-300 hover:text-white'
                 }`}
               >
                 Portfolio
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/casestudy"
-                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                  isActive('/casestudy') ? 'text-blue-400' : 'text-gray-300 hover:text-white'
-                }`}
-              >
-                Case Study
               </Link>
             </li>
             <li>
