@@ -70,6 +70,10 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'Solar Company Digital Marketing & Lead Generation Blueprint 2026 | Digitacurve',
     desc: 'Exclusive rooftop solar lead generation funnels, solar savings calculator integrations, and Google PPC strategies for Solar EPC contractors.',
   },
+  'headless-ecommerce-shopify-to-nextjs-migration-guide': {
+    title: 'Headless E-Commerce: Migrate from Shopify to Custom Next.js Architecture | Digitacurve',
+    desc: 'Discover why high-growth e-commerce brands migrate from monolithic Shopify themes to headless Next.js for sub-second page loads and higher checkout conversion.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

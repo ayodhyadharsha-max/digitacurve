@@ -217,6 +217,19 @@ const blogPosts = [
     image: '/assets/blogs/tech.webp',
     slug: 'solar-company-digital-marketing-lead-generation-guide-2026',
   },
+  {
+    id: 17,
+    title: 'Headless E-Commerce in 2026: Why High-Growth Brands Migrate from Shopify to Custom Next.js Architecture',
+    summary: 'Discover how D2C and multi-store retailers achieve sub-second page loads, zero app bloat, and higher checkout conversion by migrating from Shopify to Next.js.',
+    category: 'Web Dev',
+    date: 'Aug 10, 2026',
+    readTime: '9 min read',
+    accentColor: 'from-blue-500/20 to-purple-500/10',
+    borderColor: 'hover:border-blue-500/30',
+    tagColor: 'text-blue-400 border-blue-500/30 bg-blue-500/5',
+    image: '/assets/blogs/ecommerce.webp',
+    slug: 'headless-ecommerce-shopify-to-nextjs-migration-guide',
+  },
 ]
 
 export default function BlogPage() {

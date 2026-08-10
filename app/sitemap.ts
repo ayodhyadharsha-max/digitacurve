@@ -49,6 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'digital-marketing-for-doctors-healthcare-clinics-2026',
     'travel-tourism-digital-marketing-global-booking-guide',
     'solar-company-digital-marketing-lead-generation-guide-2026',
+    'headless-ecommerce-shopify-to-nextjs-migration-guide',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({
