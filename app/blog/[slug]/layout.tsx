@@ -74,6 +74,10 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'Headless E-Commerce: Migrate from Shopify to Custom Next.js Architecture | Digitacurve',
     desc: 'Discover why high-growth e-commerce brands migrate from monolithic Shopify themes to headless Next.js for sub-second page loads and higher checkout conversion.',
   },
+  'enterprise-ai-agents-llm-workflows-automation-guide-2026': {
+    title: 'Enterprise AI Agents & Custom LLM Workflows Guide 2026 | Digitacurve',
+    desc: 'Learn how modern enterprises automate business operations, lead qualification, and customer support with autonomous AI agents and vector RAG architectures.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

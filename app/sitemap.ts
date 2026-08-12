@@ -50,6 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'travel-tourism-digital-marketing-global-booking-guide',
     'solar-company-digital-marketing-lead-generation-guide-2026',
     'headless-ecommerce-shopify-to-nextjs-migration-guide',
+    'enterprise-ai-agents-llm-workflows-automation-guide-2026',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({

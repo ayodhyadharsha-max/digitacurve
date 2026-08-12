@@ -230,6 +230,19 @@ const blogPosts = [
     image: '/assets/blogs/ecommerce.webp',
     slug: 'headless-ecommerce-shopify-to-nextjs-migration-guide',
   },
+  {
+    id: 18,
+    title: 'Enterprise AI Agents in 2026: How Custom LLM Workflows Automate Business Operations',
+    summary: 'Explore how modern enterprises deploy autonomous AI agents, tool-calling workflows, and vector RAG to automate lead qualification and operations.',
+    category: 'AI & Tech',
+    date: 'Aug 12, 2026',
+    readTime: '8 min read',
+    accentColor: 'from-violet-500/20 to-purple-500/10',
+    borderColor: 'hover:border-violet-500/30',
+    tagColor: 'text-violet-400 border-violet-500/30 bg-violet-500/5',
+    image: '/assets/blogs/tech.webp',
+    slug: 'enterprise-ai-agents-llm-workflows-automation-guide-2026',
+  },
 ]
 
 export default function BlogPage() {
