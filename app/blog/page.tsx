@@ -243,6 +243,19 @@ const blogPosts = [
     image: '/assets/blogs/tech.webp',
     slug: 'enterprise-ai-agents-llm-workflows-automation-guide-2026',
   },
+  {
+    id: 19,
+    title: 'Multi-Location Local SEO in 2026: How Franchise & Multi-City Brands Dominate Google Map 3-Packs',
+    summary: 'Master multi-location local SEO strategies: Google Local Map 3-Pack domination, branch landing page architecture, and verified NAP synchronization.',
+    category: 'Marketing',
+    date: 'Aug 13, 2026',
+    readTime: '8 min read',
+    accentColor: 'from-emerald-500/20 to-teal-500/10',
+    borderColor: 'hover:border-emerald-500/30',
+    tagColor: 'text-emerald-400 border-emerald-500/30 bg-emerald-500/5',
+    image: '/assets/blogs/smart-home.webp',
+    slug: 'multi-location-local-seo-google-map-pack-domination-guide-2026',
+  },
 ]
 
 export default function BlogPage() {

@@ -78,6 +78,10 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'Enterprise AI Agents & Custom LLM Workflows Guide 2026 | Digitacurve',
     desc: 'Learn how modern enterprises automate business operations, lead qualification, and customer support with autonomous AI agents and vector RAG architectures.',
   },
+  'multi-location-local-seo-google-map-pack-domination-guide-2026': {
+    title: 'Multi-Location Local SEO & Google Map Pack Guide 2026 | Digitacurve',
+    desc: 'Master multi-location local SEO strategies: Google Local Map 3-Pack domination, branch landing page architecture, and verified NAP synchronization.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
