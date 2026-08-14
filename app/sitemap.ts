@@ -52,6 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'headless-ecommerce-shopify-to-nextjs-migration-guide',
     'enterprise-ai-agents-llm-workflows-automation-guide-2026',
     'multi-location-local-seo-google-map-pack-domination-guide-2026',
+    'building-scalable-b2b-saas-nextjs-multi-tenancy-guide-2026',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({

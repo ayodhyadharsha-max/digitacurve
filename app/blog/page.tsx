@@ -256,6 +256,19 @@ const blogPosts = [
     image: '/assets/blogs/smart-home.webp',
     slug: 'multi-location-local-seo-google-map-pack-domination-guide-2026',
   },
+  {
+    id: 20,
+    title: 'Building Scalable B2B SaaS in 2026: Next.js Multi-Tenancy & Stripe Architecture',
+    summary: 'Engineering blueprint for building high-scale B2B SaaS platforms: Next.js edge multi-tenancy, Stripe billing webhooks, and serverless background workers.',
+    category: 'Web Dev',
+    date: 'Aug 14, 2026',
+    readTime: '9 min read',
+    accentColor: 'from-blue-500/20 to-cyan-500/10',
+    borderColor: 'hover:border-blue-500/30',
+    tagColor: 'text-cyan-400 border-cyan-500/30 bg-cyan-500/5',
+    image: '/assets/blogs/cloud.webp',
+    slug: 'building-scalable-b2b-saas-nextjs-multi-tenancy-guide-2026',
+  },
 ]
 
 export default function BlogPage() {

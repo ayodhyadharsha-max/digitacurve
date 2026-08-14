@@ -82,6 +82,10 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'Multi-Location Local SEO & Google Map Pack Guide 2026 | Digitacurve',
     desc: 'Master multi-location local SEO strategies: Google Local Map 3-Pack domination, branch landing page architecture, and verified NAP synchronization.',
   },
+  'building-scalable-b2b-saas-nextjs-multi-tenancy-guide-2026': {
+    title: 'Building Scalable B2B SaaS: Next.js Multi-Tenancy & Stripe Guide 2026 | Digitacurve',
+    desc: 'Engineering blueprint for building high-scale B2B SaaS platforms: Next.js edge multi-tenancy, Stripe billing webhooks, and serverless architectures.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
