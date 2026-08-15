@@ -86,6 +86,10 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'Building Scalable B2B SaaS: Next.js Multi-Tenancy & Stripe Guide 2026 | Digitacurve',
     desc: 'Engineering blueprint for building high-scale B2B SaaS platforms: Next.js edge multi-tenancy, Stripe billing webhooks, and serverless architectures.',
   },
+  'landing-page-conversion-rate-optimization-nextjs-guide-2026': {
+    title: 'Landing Page CRO & Next.js Funnel Optimization Guide 2026 | Digitacurve',
+    desc: 'How to optimize landing page conversion rates with Next.js sub-second speed, interactive cost estimators, and instant WhatsApp customer acquisition funnels.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

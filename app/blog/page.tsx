@@ -269,6 +269,19 @@ const blogPosts = [
     image: '/assets/blogs/cloud.webp',
     slug: 'building-scalable-b2b-saas-nextjs-multi-tenancy-guide-2026',
   },
+  {
+    id: 21,
+    title: 'Landing Page Conversion Rate Optimization (CRO) in 2026: Next.js Funnels & WhatsApp Lead Capture',
+    summary: 'Discover how top digital agencies achieve 15-30% landing page conversion rates using Next.js sub-second speed, interactive cost estimators, and WhatsApp funnels.',
+    category: 'Marketing',
+    date: 'Aug 15, 2026',
+    readTime: '8 min read',
+    accentColor: 'from-amber-500/20 to-orange-500/10',
+    borderColor: 'hover:border-amber-500/30',
+    tagColor: 'text-amber-400 border-amber-500/30 bg-amber-500/5',
+    image: '/assets/blogs/marketplace.webp',
+    slug: 'landing-page-conversion-rate-optimization-nextjs-guide-2026',
+  },
 ]
 
 export default function BlogPage() {
