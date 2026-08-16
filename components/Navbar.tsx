@@ -137,6 +137,16 @@ export default function Navbar() {
             </li>
             <li>
               <Link
+                href="/pricing"
+                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                  isActive('/pricing') ? 'text-blue-400' : 'text-gray-300 hover:text-white'
+                }`}
+              >
+                Pricing
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/portfolio"
                 className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                   isActive('/portfolio') ? 'text-blue-400' : 'text-gray-300 hover:text-white'

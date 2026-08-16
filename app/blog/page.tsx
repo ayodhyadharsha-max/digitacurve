@@ -295,6 +295,19 @@ const blogPosts = [
     image: '/assets/blogs/cloud.webp',
     slug: 'global-web-performance-sub-50ms-ttfb-nextjs-edge-caching-2026',
   },
+  {
+    id: 23,
+    title: 'Website Development Cost in India: 2026 Transparent Price Guide',
+    summary: 'Explore transparent 2026 development pricing: from ₹25,000 small business websites to enterprise Next.js and headless e-commerce portals.',
+    category: 'Web Dev',
+    date: 'Aug 16, 2026',
+    readTime: '10 min read',
+    accentColor: 'from-emerald-500/20 to-teal-500/10',
+    borderColor: 'hover:border-emerald-500/30',
+    tagColor: 'text-emerald-400 border-emerald-500/30 bg-emerald-500/5',
+    image: '/assets/blogs/ecommerce.webp',
+    slug: 'website-development-cost-in-india-2026-pricing-guide',
+  },
 ]
 
 export default function BlogPage() {

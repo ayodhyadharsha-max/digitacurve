@@ -94,6 +94,10 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'Global Web Performance: Sub-50ms TTFB with Next.js Edge Caching | Digitacurve',
     desc: 'Engineering sub-50ms TTFB for international enterprises using Next.js Edge runtime, stale-while-revalidate caching, and distributed edge nodes.',
   },
+  'website-development-cost-in-india-2026-pricing-guide': {
+    title: 'Website Development Cost in India (2026 Price Guide) | Digitacurve',
+    desc: 'Transparent 2026 cost breakdown for small business websites, custom Next.js corporate portals, and headless e-commerce stores in India.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
