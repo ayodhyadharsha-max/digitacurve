@@ -1,0 +1,18 @@
+# Digitacurve AI and Technology Services
+
+> Digitacurve is an elite digital engineering agency providing next-gen Next.js web application development, iOS & Android mobile application development, full-funnel digital marketing (SEO, PPC, GEO), and enterprise AI solutions.
+
+## Core Capabilities & Services
+
+- [Custom Next.js Web Development](https://www.digitacurve.com/web-development): Scalable, high-performance web applications built with TypeScript, React, and Edge-native SSR architectures.
+- [Mobile App Development](https://www.digitacurve.com/app-development): Native iOS (Swift), Android (Kotlin), and cross-platform (Flutter, React Native) mobile app engineering.
+- [Generative Engine Optimization (GEO) & SEO](https://www.digitacurve.com/digital-marketing): Strategic visibility across Google Search, ChatGPT Search, Gemini, Perplexity AI, and Claude.
+- [Pricing & Packages](https://www.digitacurve.com/pricing): Transparent 360° lead machine packages, individual service costs, and interactive estimation calculators.
+- [Case Studies & Portfolio](https://www.digitacurve.com/portfolio): Proven track record delivering digital solutions for AMPS Institute, MeinHaus, Wikistrings, Imbooked, and VLaunch.
+
+## Contact & Direct Consultation
+
+- **Website**: https://www.digitacurve.com
+- **Phone**: +91 7572094201
+- **Email**: sales@digitacurve.com
+- **Inquiries**: https://www.digitacurve.com/company/contact

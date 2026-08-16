@@ -100,31 +100,34 @@ export default function InteractiveCard({ children, className = '', href }: Inte
       style={cardStyle}
     >
       {/* Conic neon glowing border on hover */}
-      <div
-        className="pointer-events-none absolute -inset-[1px] rounded-2xl transition-opacity duration-300"
-        style={{
-          opacity: isHovered ? 1 : 0,
-          padding: '1px',
-          background: 'conic-gradient(from var(--border-angle), #3b82f6, #8b5cf6, #f97316, #3b82f6)',
-          WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-          WebkitMaskComposite: 'xor',
-          maskComposite: 'exclude',
-          animation: 'border-rotate 4s linear infinite',
-          zIndex: 10,
-        }}
-      />
+      {isHovered && (
+        <div
+          className="pointer-events-none absolute -inset-[1px] rounded-2xl transition-opacity duration-300"
+          style={{
+            padding: '1px',
+            background: 'conic-gradient(from var(--border-angle), #3b82f6, #8b5cf6, #f97316, #3b82f6)',
+            WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+            WebkitMaskComposite: 'xor',
+            maskComposite: 'exclude',
+            animation: 'border-rotate 4s linear infinite',
+            zIndex: 10,
+          }}
+        />
+      )}
 
       {/* Conic soft diffuse halo on hover */}
-      <div
-        className="pointer-events-none absolute -inset-[6px] rounded-2xl transition-opacity duration-300"
-        style={{
-          opacity: isHovered ? 0.25 : 0,
-          background: 'conic-gradient(from var(--border-angle), #3b82f6, #8b5cf6, #f97316, #3b82f6)',
-          filter: 'blur(12px)',
-          animation: 'border-rotate 4s linear infinite',
-          zIndex: 0,
-        }}
-      />
+      {isHovered && (
+        <div
+          className="pointer-events-none absolute -inset-[6px] rounded-2xl transition-opacity duration-300"
+          style={{
+            opacity: 0.25,
+            background: 'conic-gradient(from var(--border-angle), #3b82f6, #8b5cf6, #f97316, #3b82f6)',
+            filter: 'blur(12px)',
+            animation: 'border-rotate 4s linear infinite',
+            zIndex: 0,
+          }}
+        />
+      )}
 
       {/* Inner overflow-hidden container for clipping the mouse light glow */}
       <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none z-0">

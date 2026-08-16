@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/_next/',
     },
-    sitemap: 'https://digitacurve.com/sitemap.xml',
+    sitemap: 'https://www.digitacurve.com/sitemap.xml',
   }
 }
