@@ -282,6 +282,19 @@ const blogPosts = [
     image: '/assets/blogs/marketplace.webp',
     slug: 'landing-page-conversion-rate-optimization-nextjs-guide-2026',
   },
+  {
+    id: 22,
+    title: 'Global Web Performance in 2026: Sub-50ms TTFB with Next.js Edge Caching & Regional Nodes',
+    summary: 'Explore how global enterprises achieve sub-50ms TTFB across London, Sydney, Dubai, and Toronto using Next.js Edge runtime and distributed caching.',
+    category: 'Web Dev',
+    date: 'Aug 16, 2026',
+    readTime: '9 min read',
+    accentColor: 'from-sky-500/20 to-indigo-500/10',
+    borderColor: 'hover:border-sky-500/30',
+    tagColor: 'text-sky-400 border-sky-500/30 bg-sky-500/5',
+    image: '/assets/blogs/cloud.webp',
+    slug: 'global-web-performance-sub-50ms-ttfb-nextjs-edge-caching-2026',
+  },
 ]
 
 export default function BlogPage() {

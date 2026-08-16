@@ -90,6 +90,10 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'Landing Page CRO & Next.js Funnel Optimization Guide 2026 | Digitacurve',
     desc: 'How to optimize landing page conversion rates with Next.js sub-second speed, interactive cost estimators, and instant WhatsApp customer acquisition funnels.',
   },
+  'global-web-performance-sub-50ms-ttfb-nextjs-edge-caching-2026': {
+    title: 'Global Web Performance: Sub-50ms TTFB with Next.js Edge Caching | Digitacurve',
+    desc: 'Engineering sub-50ms TTFB for international enterprises using Next.js Edge runtime, stale-while-revalidate caching, and distributed edge nodes.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

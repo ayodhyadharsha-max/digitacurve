@@ -54,6 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'multi-location-local-seo-google-map-pack-domination-guide-2026',
     'building-scalable-b2b-saas-nextjs-multi-tenancy-guide-2026',
     'landing-page-conversion-rate-optimization-nextjs-guide-2026',
+    'global-web-performance-sub-50ms-ttfb-nextjs-edge-caching-2026',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({
