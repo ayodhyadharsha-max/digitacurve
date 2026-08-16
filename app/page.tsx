@@ -224,7 +224,9 @@ function CategoriesGrid() {
                   >
                     <img
                       src={cat.image}
-                      alt={cat.title}
+                      alt={`${cat.title} engineering icon`}
+                      width={32}
+                      height={32}
                       className="h-8 w-8 object-contain"
                     />
                   </div>
@@ -264,7 +266,9 @@ function ReviewBadges() {
               <>
                 <img
                   src={badge.logo}
-                  alt={`${badge.platform} logo`}
+                  alt={`Verified ${badge.platform} client review badge`}
+                  width={140}
+                  height={48}
                   className="h-10 sm:h-12 w-auto object-contain mb-3"
                 />
                 <div className="flex gap-0.5 mb-1 text-[#EDB451] text-base">
@@ -279,6 +283,7 @@ function ReviewBadges() {
                 href={badge.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`View Digitacurve verified ratings on ${badge.platform}`}
                 className="flex flex-col items-center justify-center text-center group hover:scale-105 transition-transform"
               >
                 {content}
@@ -480,7 +485,9 @@ function ServicesGrid() {
                     >
                       <img
                         src={svc.image}
-                        alt={svc.title}
+                        alt={`${svc.title} service graphic`}
+                        width={40}
+                        height={40}
                         className="h-10 w-auto object-contain filter brightness-110"
                         loading="lazy"
                       />
@@ -489,7 +496,7 @@ function ServicesGrid() {
                       className="title my-3"
                       style={{ transform: 'translateZ(20px)' }}
                     >
-                      <h4>{svc.title}</h4>
+                      <h3>{svc.title}</h3>
                     </div>
                     <div 
                       className="description max-w-sm flex-1 flex items-center justify-center"
@@ -687,11 +694,14 @@ function OfficeLocations() {
                   <div className="w-full h-36 flex items-center justify-center mb-6">
                     <img
                        src={loc.skyline}
-                       alt={`${loc.country} Skyline`}
+                       alt={`${loc.country} skyline architecture illustration`}
+                       width={320}
+                       height={144}
+                       loading="lazy"
                        className="max-h-full max-w-full object-contain filter brightness-90 hover:brightness-100 transition-all duration-300"
                     />
                   </div>
-                  <h4 className="text-white font-bold text-lg mb-3">{loc.country}</h4>
+                  <h3 className="text-white font-bold text-lg mb-3">{loc.country}</h3>
                 </div>
               </RevealStaggerItem>
             ))}
@@ -704,7 +714,10 @@ function OfficeLocations() {
             <div className="w-full h-40 flex items-center justify-center mb-6">
               <img
                 src="/assets/locations/UAE.svg"
-                alt="UAE Skyline"
+                alt="UAE skyline architecture illustration"
+                width={400}
+                height={160}
+                loading="lazy"
                 className="max-h-full max-w-full object-contain filter brightness-90"
               />
             </div>
@@ -742,7 +755,9 @@ function TrustedClients() {
         <div className="flex justify-center items-center w-full">
           <img
             src="/assets/home/map2.svg"
-            alt="Trusted Worldwide Map"
+            alt="Digitacurve Worldwide Clients and Footprint Map"
+            width={1024}
+            height={512}
             className="w-full max-w-5xl h-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
             loading="lazy"
           />
@@ -1163,10 +1178,18 @@ function TestimonialsSection({ videoTestimonials }: { videoTestimonials: boolean
                             ))}
                           </div>
                           {item.logo && (
-                            <a href={item.link} target="_blank" rel="noopener noreferrer" className="cursor-pointer shrink-0">
+                            <a
+                              href={item.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={`View Digitacurve verified review on ${item.category || 'verified platform'}`}
+                              className="cursor-pointer shrink-0"
+                            >
                               <img
                                 src={item.logo}
-                                alt="review platform logo"
+                                alt={`Verified review badge for ${item.name}`}
+                                width={60}
+                                height={34}
                                 loading="lazy"
                                 className="rounded-[5px] w-[60px] h-[34px] object-contain bg-white/10 p-0.5"
                               />
@@ -1182,7 +1205,7 @@ function TestimonialsSection({ videoTestimonials }: { videoTestimonials: boolean
                         {/* Author */}
                         <div className="customer flex justify-between items-end mt-auto w-full pt-4 border-t border-white/5">
                           <div className="customer-name">
-                            <h5 className="font-bold text-white text-base leading-tight mb-1">{item.name}</h5>
+                            <h3 className="font-bold text-white text-base leading-tight mb-1">{item.name}</h3>
                             <p className="m-0 text-xs text-gray-500 font-medium">{item.designation}</p>
                           </div>
                           {item.profileImg && (
@@ -1190,7 +1213,9 @@ function TestimonialsSection({ videoTestimonials }: { videoTestimonials: boolean
                               <img
                                 className="rounded-full w-[60px] h-[60px] object-cover border border-white/20 bg-white"
                                 src={item.profileImg}
-                                alt={`${item.name} profile`}
+                                alt={`Client portrait of ${item.name}`}
+                                width={60}
+                                height={60}
                                 loading="lazy"
                               />
                             </div>
@@ -1423,14 +1448,16 @@ function RecentBlogsSection() {
                   <div className="card rounded-2xl flex flex-col w-full min-h-[440px] bg-[#111111] border border-[#2a2a2a] overflow-hidden hover:border-blue-500/20 hover:-translate-y-1 transition-all duration-300">
                     <img
                       src={getBlogImage(blog.title, blog.image)}
-                      alt={blog.title}
+                      alt={`Article cover for ${blog.title}`}
+                      width={385}
+                      height={200}
                       className="w-full h-[200px] object-cover rounded-t-2xl border-b border-[#2a2a2a]/40"
                       loading="lazy"
                     />
                     <div className="card-body p-6 flex flex-col flex-1 text-left">
-                      <h5 className="card-title text-white text-lg font-bold mb-3 line-clamp-2 hover:text-blue-400 transition-colors">
+                      <h3 className="card-title text-white text-lg font-bold mb-3 line-clamp-2 hover:text-blue-400 transition-colors">
                         {blog.meta_title || blog.title}
-                      </h5>
+                      </h3>
                       <p
                         className="card-text text-gray-400 text-sm mb-6 line-clamp-3 leading-relaxed flex-1"
                         dangerouslySetInnerHTML={{
@@ -1443,9 +1470,11 @@ function RecentBlogsSection() {
                       <Link
                         href={`/blog/${blog.custom_url}`}
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                        className="px-5 py-2.5 bg-[#00a3ff] hover:bg-[#008ae0] text-white rounded-lg text-sm font-semibold transition-all inline-block text-center self-start btn-shine"
+                        aria-label={`Read full article: ${blog.title}`}
+                        className="px-5 py-2.5 bg-[#00a3ff] hover:bg-[#008ae0] text-white rounded-lg text-sm font-semibold transition-all inline-flex items-center gap-1.5 text-center self-start btn-shine"
                       >
-                        Read More
+                        <span>Read Article</span>
+                        <ArrowRight size={14} />
                       </Link>
                     </div>
                   </div>
@@ -1534,7 +1563,7 @@ function GeoOptimizationSection() {
       description: 'Classic SEO — technical, content & local rankings that still matter.',
       icon: (
         <svg className="w-8 h-8 text-[#ea4335]" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12.24 10.285V13.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.866-3.577-7.866-8s3.536-8 7.866-8c2.46 0 4.105 1.025 5.047 1.926l2.427-2.334C17.955 2.192 15.34 1 12.24 1 5.92 1 12s4.92 11 11.24 11c6.6 0 11-4.65 11-11.2 0-.75-.08-1.32-.18-1.815z" />
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.55 0 9.77-3.92 10.37-9.06H12v-4.14h14.73c.18.98.27 2 .27 3.2 0 7.73-5.27 13-15 13-6.63 0-12-5.37-12-12S5.37 0 12 0c3.24 0 6 1.18 8.12 3.12l-3.3 3.3C15.53 5.17 13.91 4.5 12 4.5c-4.14 0-7.5 3.36-7.5 7.5s3.36 7.5 7.5 7.5c3.6 0 6.09-2.07 6.48-5h-6.48v-3.5h10.98c.08.5.12 1.02.12 1.56 0 6.1-4.12 10.44-10.6 10.44z" />
         </svg>
       ),
       glow: 'hover:shadow-red-500/10 hover:border-red-500/30'

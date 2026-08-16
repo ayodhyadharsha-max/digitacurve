@@ -1,14 +1,14 @@
 # 📊 Digitacurve SEO & GEO Automation Health Report
 
-*Generated on: `2026-08-16 20:59:50`*
+*Generated on: `2026-08-16 21:06:56`*
 
 ---
 
 ## 🎯 Executive Summary
-- **Overall Site Health Score**: `100/100`
+- **Overall Site Health Score**: `92/100`
 - **Total Files Audited**: `24`
 - **Registered Next.js Routes**: `22`
-- **Total Audit Issues Detected**: `0`
+- **Total Audit Issues Detected**: `4`
 
 ---
 
@@ -90,12 +90,12 @@
 ## 🔍 Site Audit Diagnostics
 
 ### 1. Title Tags & Meta Descriptions
-- Missing / Unset Titles: `0`
+- Missing / Unset Titles: `1`
 - Short Titles (<10 chars): `0`
-- Missing Meta Descriptions: `0`
+- Missing Meta Descriptions: `2`
 
 ### 2. Heading & Structure (`<h1>` Tags)
-- Missing or Multiple `<h1>` Issues: `0`
+- Missing or Multiple `<h1>` Issues: `1`
 
 ### 3. Images & Accessibility
 - Missing `alt` attributes: `0`
