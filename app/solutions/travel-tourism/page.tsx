@@ -103,10 +103,10 @@ export default function TravelSolutionPage() {
           <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">Start Taking Direct Bookings Today</h2>
           <p className="text-gray-400 text-xs mb-8">Cut out high OTA commissions and build your own profitable direct travel booking platform.</p>
           <Link
-            href="/packages"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-sky-500 to-blue-600 text-white font-bold text-xs hover:from-sky-400 hover:to-blue-500 transition-all shadow-lg"
+            href="/pricing"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-sky-500 to-blue-500 text-white font-bold text-xs hover:from-sky-400 hover:to-blue-400 transition-all shadow-lg"
           >
-            Explore Travel Packages <ArrowRight size={14} />
+            Explore Travel Growth Packages <ArrowRight size={14} />
           </Link>
         </div>
       </section>

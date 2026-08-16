@@ -103,10 +103,10 @@ export default function HealthcareSolutionPage() {
           <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">Grow Your Medical Practice Online</h2>
           <p className="text-gray-400 text-xs mb-8">Turn your clinic website into your practice's #1 patient source.</p>
           <Link
-            href="/packages"
+            href="/pricing"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold text-xs hover:from-emerald-400 hover:to-teal-400 transition-all shadow-lg"
           >
-            Explore Turnkey Healthcare Packages <ArrowRight size={14} />
+            View Full Healthcare Packages <ArrowRight size={14} />
           </Link>
         </div>
       </section>

@@ -6,7 +6,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Define static routes
   const staticRoutes = [
     '',
-    '/packages',
     '/pricing',
     '/solutions/real-estate',
     '/solutions/healthcare',
@@ -28,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
-    priority: route === '' || route === '/packages' || route === '/pricing' ? 1.0 : 0.8,
+    priority: route === '' || route === '/pricing' ? 1.0 : 0.8,
   }))
 
   // Define static blog slugs

@@ -103,10 +103,10 @@ export default function SolarSolutionPage() {
           <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">Scale Your Solar Installation Volume</h2>
           <p className="text-gray-400 text-xs mb-8">Get high-ticket solar installation inquiries delivered straight to your team every single day.</p>
           <Link
-            href="/packages"
+            href="/pricing"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-yellow-500 to-amber-500 text-black font-bold text-xs hover:from-yellow-400 hover:to-amber-400 transition-all shadow-lg"
           >
-            Explore Solar Packages <ArrowRight size={14} />
+            Explore Solar Packages &amp; Pricing <ArrowRight size={14} />
           </Link>
         </div>
       </section>

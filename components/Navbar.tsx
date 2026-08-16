@@ -127,22 +127,12 @@ export default function Navbar() {
 
             <li>
               <Link
-                href="/packages"
-                className={`px-3 py-2 text-sm font-bold rounded-md transition-colors ${
-                  isActive('/packages') ? 'text-purple-400' : 'text-purple-400 hover:text-purple-300'
-                }`}
-              >
-                Packages ⚡
-              </Link>
-            </li>
-            <li>
-              <Link
                 href="/pricing"
-                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                  isActive('/pricing') ? 'text-blue-400' : 'text-gray-300 hover:text-white'
+                className={`px-3 py-2 text-sm font-bold rounded-md transition-colors ${
+                  isActive('/pricing') ? 'text-purple-400' : 'text-purple-400 hover:text-purple-300'
                 }`}
               >
-                Pricing
+                Pricing &amp; Packages ⚡
               </Link>
             </li>
             <li>
@@ -211,6 +201,7 @@ export default function Navbar() {
             <ul className="space-y-1">
               {[
                 { label: 'Home', href: '/' },
+                { label: 'Pricing & Packages ⚡', href: '/pricing' },
                 { label: 'About Us', href: '/company/about' },
                 { label: 'Portfolio', href: '/portfolio' },
                 { label: 'Case Study', href: '/casestudy' },

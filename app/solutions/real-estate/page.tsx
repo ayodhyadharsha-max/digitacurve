@@ -103,7 +103,7 @@ export default function RealEstateSolutionPage() {
           <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">Ready to Fill Your Site Visit Calendars?</h2>
           <p className="text-gray-400 text-xs mb-8">Let Digitacurve design your complete digital marketing and buyer acquisition funnel today.</p>
           <Link
-            href="/packages"
+            href="/pricing"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold text-xs hover:from-amber-400 hover:to-orange-400 transition-all shadow-lg"
           >
             View Full Package Pricing <ArrowRight size={14} />

@@ -1,13 +1,13 @@
 # 📊 Digitacurve SEO & GEO Automation Health Report
 
-*Generated on: `2026-08-16 20:41:28`*
+*Generated on: `2026-08-16 20:59:50`*
 
 ---
 
 ## 🎯 Executive Summary
 - **Overall Site Health Score**: `100/100`
-- **Total Files Audited**: `23`
-- **Registered Next.js Routes**: `21`
+- **Total Files Audited**: `24`
+- **Registered Next.js Routes**: `22`
 - **Total Audit Issues Detected**: `0`
 
 ---
@@ -67,8 +67,8 @@
 | `website development sydney` | **#12** | 🔵 Indexing/Tracked |
 | `web design melbourne` | **#12** | 🔵 Indexing/Tracked |
 | `web design sydney` | **#12** | 🔵 Indexing/Tracked |
-| `website development london` | **#12** | 🔵 Indexing/Tracked |
-| `web design london` | **#12** | 🔵 Indexing/Tracked |
+| `website development london` | **#N/A** | 🔵 Indexing/Tracked |
+| `web design london` | **#N/A** | 🔵 Indexing/Tracked |
 | `website development toronto` | **#N/A** | 🔵 Indexing/Tracked |
 | `web design toronto` | **#N/A** | 🔵 Indexing/Tracked |
 | `website development dubai` | **#N/A** | 🔵 Indexing/Tracked |
