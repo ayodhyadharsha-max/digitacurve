@@ -98,6 +98,10 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'Website Development Cost in India (2026 Price Guide) | Digitacurve',
     desc: 'Transparent 2026 cost breakdown for small business websites, custom Next.js corporate portals, and headless e-commerce stores in India.',
   },
+  'mobile-app-development-cost-in-india-2026-price-breakdown': {
+    title: 'Mobile App Development Cost in India (2026 Complete Price Breakdown) | Digitacurve',
+    desc: 'Complete 2026 price guide for iOS, Android, Flutter & React Native app development costs in India. Detailed line-item breakdown for MVPs & enterprise apps.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

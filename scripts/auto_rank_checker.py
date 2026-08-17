@@ -84,6 +84,13 @@ KEYWORDS = [
     "website development dubai",
     "web design dubai",
 
+    # High-Intent Pricing & Cost Keywords
+    "website development cost in india",
+    "mobile app development cost in india",
+    "app development cost in india",
+    "digital marketing packages in india",
+    "web development pricing india",
+
     # Brand Keywords
     "Digitacurve software development",
     "Digitacurve website price",

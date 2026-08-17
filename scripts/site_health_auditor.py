@@ -38,7 +38,7 @@ def get_registered_routes():
             routes.add(clean_route)
             
     # Add common static assets & API routes
-    routes.update(['/favicon.ico', '/robots.txt', '/sitemap.xml', '/icon.png'])
+    routes.update(['/favicon.ico', '/robots.txt', '/sitemap.xml', '/icon.png', '/llms.txt'])
     return routes
 
 def audit_site():
@@ -66,8 +66,9 @@ def audit_site():
         except Exception as e:
             continue
 
-        # 1. Check Titles
-        title_matches = re.findall(r"title:\s*['\"`]([^'\"`]+)['\"`]", content) or re.findall(r"<title>([^<]+)</title>", content)
+        # Skip redirect stub pages
+        is_redirect_stub = "redirect(" in content and len(content.splitlines()) < 25
+
         # Check sibling layout if page is a client component
         sibling_layout = file_path.parent / 'layout.tsx'
         layout_content = ""
@@ -78,47 +79,50 @@ def audit_site():
             except Exception:
                 pass
 
-        if not title_matches and 'page.tsx' in file_path.name:
-            if layout_content:
-                layout_titles = re.findall(r"title:\s*['\"`]([^'\"`]+)['\"`]", layout_content)
-                if not layout_titles and 'generateMetadata' not in layout_content:
+        if not is_redirect_stub:
+            # 1. Check Titles
+            title_matches = re.findall(r"title:\s*['\"`]([^'\"`]+)['\"`]", content) or re.findall(r"<title>([^<]+)</title>", content)
+
+            if not title_matches and 'page.tsx' in file_path.name:
+                if layout_content:
+                    layout_titles = re.findall(r"title:\s*['\"`]([^'\"`]+)['\"`]", layout_content)
+                    if not layout_titles and 'generateMetadata' not in layout_content:
+                        issues["missing_titles"].append({"file": rel_path, "issue": "No explicit title defined"})
+                elif 'app/page.tsx' not in rel_path:
                     issues["missing_titles"].append({"file": rel_path, "issue": "No explicit title defined"})
-            elif 'app/page.tsx' not in rel_path:
-                issues["missing_titles"].append({"file": rel_path, "issue": "No explicit title defined"})
-        elif title_matches:
-            title_text = title_matches[0]
-            if len(title_text) < 10 and 'title:' in content and 'export const metadata' in content:
-                issues["short_titles"].append({"file": rel_path, "title": title_text, "length": len(title_text)})
+            elif title_matches:
+                title_text = title_matches[0]
+                if len(title_text) < 10 and 'title:' in content and 'export const metadata' in content:
+                    issues["short_titles"].append({"file": rel_path, "title": title_text, "length": len(title_text)})
 
-        # 2. Check Meta Descriptions
-        meta_desc = re.findall(r"description:\s*['\"`]([^'\"`]+)['\"`]", content) or re.findall(r'<meta\s+name=["\']description["\']\s+content=["\']([^"\']+)["\']', content)
-        if not meta_desc and 'page.tsx' in file_path.name and 'layout.tsx' not in rel_path:
-            if layout_content:
-                layout_desc = re.findall(r"description:\s*['\"`]([^'\"`]+)['\"`]", layout_content)
-                if not layout_desc and 'generateMetadata' not in layout_content:
+            # 2. Check Meta Descriptions
+            meta_desc = re.findall(r"description:\s*['\"`]([^'\"`]+)['\"`]", content) or re.findall(r'<meta\s+name=["\']description["\']\s+content=["\']([^"\']+)["\']', content)
+            if not meta_desc and 'page.tsx' in file_path.name and 'layout.tsx' not in rel_path:
+                if layout_content:
+                    layout_desc = re.findall(r"description:\s*['\"`]([^'\"`]+)['\"`]", layout_content)
+                    if not layout_desc and 'generateMetadata' not in layout_content:
+                        issues["missing_meta_descriptions"].append({"file": rel_path, "issue": "Missing meta description"})
+                else:
                     issues["missing_meta_descriptions"].append({"file": rel_path, "issue": "Missing meta description"})
-            else:
-                issues["missing_meta_descriptions"].append({"file": rel_path, "issue": "Missing meta description"})
 
-        # 3. Check H1 Tags
-        h1_tags = re.findall(r"<h1[^>]*>(.*?)</h1>", content, re.DOTALL)
-        if 'page.tsx' in file_path.name:
-            if len(h1_tags) == 0:
-                issues["h1_issues"].append({"file": rel_path, "issue": "Missing <h1> tag"})
-            elif len(h1_tags) > 1:
-                issues["h1_issues"].append({"file": rel_path, "issue": f"Multiple <h1> tags ({len(h1_tags)} found)"})
+            # 3. Check H1 Tags
+            h1_tags = re.findall(r"<h1[^>]*>(.*?)</h1>", content, re.DOTALL)
+            if 'page.tsx' in file_path.name:
+                if len(h1_tags) == 0:
+                    issues["h1_issues"].append({"file": rel_path, "issue": "Missing <h1> tag"})
+                elif len(h1_tags) > 1:
+                    issues["h1_issues"].append({"file": rel_path, "issue": f"Multiple <h1> tags ({len(h1_tags)} found)"})
 
-        # 4. Check Image Alt Tags
+        # 4. Check Image Alt Tags (allowing alt="" only when aria-hidden is specified for decorative icons)
         img_tags = re.findall(r"<(?:img|Image)\s+[^>]*>", content)
         for img in img_tags:
-            if 'alt=' not in img or re.search(r'alt=["\']\s*["\']', img):
+            if 'alt=' not in img:
+                issues["missing_image_alts"].append({"file": rel_path, "tag": img[:60] + "..."})
+            elif re.search(r'alt=["\']\s*["\']', img) and 'aria-hidden' not in img and 'role="presentation"' not in img:
                 issues["missing_image_alts"].append({"file": rel_path, "tag": img[:60] + "..."})
 
         # 5. Check JSON-LD Schemas
-        jsonld_blocks = re.findall(r'dangerouslySetInnerHTML=\{\{\s*__html:\s*JSON\.stringify\((.*?)\)\s*\}\}', content, re.DOTALL)
         jsonld_script_blocks = re.findall(r'<script[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', content, re.DOTALL)
-        
-        # Check raw JSON script blocks
         for block in jsonld_script_blocks:
             try:
                 json.loads(block.strip())
@@ -131,7 +135,6 @@ def audit_site():
             clean_link = link.split('?')[0].split('#')[0]
             if clean_link == '' or clean_link == '/':
                 continue
-            # check if path or prefix exists in valid_routes or static public files
             is_valid = any(clean_link.startswith(r) or r.startswith(clean_link) for r in valid_routes)
             if not is_valid and not (PUBLIC_DIR / clean_link.lstrip('/')).exists():
                 issues["broken_internal_links"].append({"file": rel_path, "link": link})

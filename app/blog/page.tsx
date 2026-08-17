@@ -308,6 +308,18 @@ const blogPosts = [
     image: '/assets/blogs/ecommerce.webp',
     slug: 'website-development-cost-in-india-2026-pricing-guide',
   },
+  {
+    title: 'Mobile App Development Cost in India: 2026 Complete Price Breakdown',
+    summary: 'Complete 2026 line-item guide on mobile app costs in India: iOS, Android, Flutter vs Native development, MVP timelines, and cloud infrastructure.',
+    category: 'App Dev',
+    date: 'Aug 17, 2026',
+    readTime: '11 min read',
+    accentColor: 'from-purple-500/20 to-indigo-500/10',
+    borderColor: 'hover:border-purple-500/30',
+    tagColor: 'text-purple-400 border-purple-500/30 bg-purple-500/5',
+    image: '/assets/blogs/marketing.webp',
+    slug: 'mobile-app-development-cost-in-india-2026-price-breakdown',
+  },
 ]
 
 export default function BlogPage() {
