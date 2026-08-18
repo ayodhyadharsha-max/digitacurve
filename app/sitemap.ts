@@ -57,6 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'global-web-performance-sub-50ms-ttfb-nextjs-edge-caching-2026',
     'website-development-cost-in-india-2026-pricing-guide',
     'mobile-app-development-cost-in-india-2026-price-breakdown',
+    'digital-marketing-packages-pricing-india-2026-roi-guide',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({

@@ -320,6 +320,18 @@ const blogPosts = [
     image: '/assets/blogs/marketing.webp',
     slug: 'mobile-app-development-cost-in-india-2026-price-breakdown',
   },
+  {
+    title: 'Digital Marketing Packages & Pricing in India: 2026 ROI Guide',
+    summary: 'Explore 2026 digital marketing pricing: from ₹20,000/mo SEO & local Google Map retainers to ₹75,000+ 360° omnichannel lead machine packages.',
+    category: 'Digital Marketing',
+    date: 'Aug 18, 2026',
+    readTime: '12 min read',
+    accentColor: 'from-blue-500/20 to-cyan-500/10',
+    borderColor: 'hover:border-blue-500/30',
+    tagColor: 'text-blue-400 border-blue-500/30 bg-blue-500/5',
+    image: '/assets/blogs/marketing.webp',
+    slug: 'digital-marketing-packages-pricing-india-2026-roi-guide',
+  },
 ]
 
 export default function BlogPage() {

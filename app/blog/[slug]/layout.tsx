@@ -102,6 +102,10 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'Mobile App Development Cost in India (2026 Complete Price Breakdown) | Digitacurve',
     desc: 'Complete 2026 price guide for iOS, Android, Flutter & React Native app development costs in India. Detailed line-item breakdown for MVPs & enterprise apps.',
   },
+  'digital-marketing-packages-pricing-india-2026-roi-guide': {
+    title: 'Digital Marketing Packages & Pricing in India (2026 ROI Guide) | Digitacurve',
+    desc: 'Transparent 2026 guide to digital marketing packages in India: SEO, PPC management, Generative Engine Optimization (GEO), and 360° lead machine retainers.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
