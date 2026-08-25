@@ -58,6 +58,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'website-development-cost-in-india-2026-pricing-guide',
     'mobile-app-development-cost-in-india-2026-price-breakdown',
     'digital-marketing-packages-pricing-india-2026-roi-guide',
+    'top-it-company-noida-delhi-ncr-custom-software-services-2026',
+    'generative-engine-optimization-geo-agency-guide-2026',
+    'react-native-vs-flutter-app-development-cost-performance-2026',
+    'ecommerce-website-development-cost-shopify-vs-nextjs-2026',
+    'hire-dedicated-nextjs-fullstack-developers-india-2026-guide',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({

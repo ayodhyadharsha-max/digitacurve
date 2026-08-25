@@ -6,9 +6,9 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'About Digitacurve | Leading Tech Solutions Provider',
+  title: 'About Digitacurve | Leadership Team & Leading Tech Solutions Provider',
   description:
-    'Learn more about Digitacurve, a top-tier tech solutions provider specializing in web development, SEO, PPC, and digital consulting.',
+    'Learn more about Digitacurve\'s executive leadership, software architects, app developers, and digital marketing team delivering enterprise digital transformation.',
 }
 
 const services = [
@@ -21,11 +21,46 @@ const services = [
 ]
 
 const stats = [
-  { value: '5,000', label: 'Daily Active Users', icon: Users, color: 'text-blue-400' },
+  { value: '5,000+', label: 'Daily Active Users', icon: Users, color: 'text-blue-400' },
   { value: '850+', label: 'Projects Done', icon: Globe, color: 'text-purple-400' },
   { value: '400+', label: 'Awesome Clients', icon: Star, color: 'text-orange-400' },
   { value: '10+', label: 'Years of Experience', icon: Award, color: 'text-green-400' },
   { value: '250+', label: 'Team Advisors', icon: Users, color: 'text-cyan-400' },
+]
+
+const teamMembers = [
+  {
+    name: 'Pooja Sharma',
+    role: 'Senior VP of Operations & Enterprise Strategy',
+    image: '/assets/team/team1.jpg',
+    desc: 'Directs global project delivery, client success, and operational execution across USA, UK, Canada, and Asia Pacific markets.',
+    color: 'from-blue-500/20 to-purple-500/10',
+    borderColor: 'hover:border-blue-500/40',
+  },
+  {
+    name: 'Rishabh Jaiswal',
+    role: 'Chief Technology Officer & Senior Architect',
+    image: '/assets/team/team2.jpg',
+    desc: 'Architects enterprise Next.js edge applications, AI agent integrations, cloud infrastructure, and 100/100 Core Web Vitals.',
+    color: 'from-purple-500/20 to-pink-500/10',
+    borderColor: 'hover:border-purple-500/40',
+  },
+  {
+    name: 'Akash Verma',
+    role: 'Lead Mobile & Full-Stack Engineer',
+    image: '/assets/team/team3.jpg',
+    desc: 'Leads cross-platform iOS, Android (Flutter / React Native), and serverless API engineering for high-concurrency applications.',
+    color: 'from-emerald-500/20 to-teal-500/10',
+    borderColor: 'hover:border-emerald-500/40',
+  },
+  {
+    name: 'Shivam Patel',
+    role: 'Head of Growth Marketing & Generative Engine Optimization',
+    image: '/assets/team/team4.jpg',
+    desc: 'Drives technical SEO, Generative Engine Optimization (GEO) for ChatGPT/Gemini, and performance PPC ad funnels.',
+    color: 'from-orange-500/20 to-amber-500/10',
+    borderColor: 'hover:border-orange-500/40',
+  },
 ]
 
 const pillars = [
@@ -90,7 +125,7 @@ export default function AboutPage() {
               About <span className="gradient-text">Us</span>
             </h1>
             <p className="text-xl text-gray-300 font-semibold max-w-2xl mx-auto">
-              Digitacurve: Your partner in digital innovation and transformation.
+              Digitacurve: Your partner in digital innovation, custom engineering, and revenue growth.
             </p>
           </div>
         </div>
@@ -146,8 +181,57 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Leadership & Team Section */}
+      <section className="py-24 bg-black border-t border-[#1a1a1a]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">
+              <span className="w-6 h-px bg-blue-400 inline-block" />
+              Leadership & Experts
+              <span className="w-6 h-px bg-blue-400 inline-block" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white">
+              Meet the Minds Behind <span className="gradient-text">Digitacurve</span>
+            </h2>
+            <p className="text-gray-400 text-base max-w-2xl mx-auto mt-4">
+              Our multidisciplinary team of senior software architects, app engineers, AI strategists, and marketing specialists drive scalable enterprise revenue.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map(member => (
+              <div
+                key={member.name}
+                className={`group rounded-2xl border border-[#2a2a2a] bg-[#0a0a0a] overflow-hidden ${member.borderColor} transition-all duration-300 hover:-translate-y-1`}
+              >
+                <div className="relative h-72 w-full overflow-hidden bg-[#151515]">
+                  <img
+                    src={member.image}
+                    alt={`${member.name} - ${member.role} at Digitacurve`}
+                    width={320}
+                    height={288}
+                    loading="lazy"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-95 group-hover:brightness-100"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-80" />
+                </div>
+                <div className="p-6 text-left">
+                  <h3 className="text-white font-bold text-lg mb-1">{member.name}</h3>
+                  <p className="text-blue-400 text-xs font-semibold uppercase tracking-wider mb-3 leading-snug">
+                    {member.role}
+                  </p>
+                  <p className="text-gray-400 text-xs leading-relaxed">
+                    {member.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-[#050505] border-t border-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-blue-400 mb-4">

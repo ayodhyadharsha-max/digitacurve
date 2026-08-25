@@ -106,6 +106,26 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'Digital Marketing Packages & Pricing in India (2026 ROI Guide) | Digitacurve',
     desc: 'Transparent 2026 guide to digital marketing packages in India: SEO, PPC management, Generative Engine Optimization (GEO), and 360° lead machine retainers.',
   },
+  'top-it-company-noida-delhi-ncr-custom-software-services-2026': {
+    title: 'Top IT & Software Company in Noida & Delhi NCR (2026 Guide) | Digitacurve',
+    desc: 'Top software engineering and IT consulting company in Noida & Delhi NCR specializing in custom Next.js web applications, mobile apps, and enterprise AI.',
+  },
+  'generative-engine-optimization-geo-agency-guide-2026': {
+    title: 'Generative Engine Optimization (GEO) Agency Guide 2026 | Digitacurve',
+    desc: 'How to rank on ChatGPT Search, Google Gemini, and Perplexity AI in 2026 with Generative Engine Optimization (GEO) strategies.',
+  },
+  'react-native-vs-flutter-app-development-cost-performance-2026': {
+    title: 'React Native vs Flutter in 2026: Cost & Performance | Digitacurve',
+    desc: 'Technical comparison of React Native vs Flutter in 2026: performance benchmarks, development cost, and cross-platform mobile architecture.',
+  },
+  'ecommerce-website-development-cost-shopify-vs-nextjs-2026': {
+    title: 'E-Commerce Website Cost 2026: Shopify vs Headless Next.js | Digitacurve',
+    desc: 'Complete 2026 cost comparison for e-commerce website development: monolithic Shopify vs custom headless Next.js online stores.',
+  },
+  'hire-dedicated-nextjs-fullstack-developers-india-2026-guide': {
+    title: 'Hire Dedicated Next.js & App Developers in India (2026 Guide) | Digitacurve',
+    desc: 'How to hire dedicated Next.js, React Native, and full-stack software developers in India: monthly retainer pricing, skill verification, and time-zone models.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
