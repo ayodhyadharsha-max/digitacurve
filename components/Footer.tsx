@@ -161,21 +161,9 @@ export default function Footer() {
                 className="h-7 w-auto object-contain"
               />
             </div>
-            <a
-              href="https://abacklaunch.com"
-              target="_blank"
-              rel="dofollow"
-              aria-label="Listed on Aback Launch"
-              className="flex items-center justify-center p-2.5 rounded-xl bg-[#111] border border-[#2a2a2a] hover:border-purple-500/50 transition-colors"
-            >
-              <img
-                src="https://abacklaunch.com/badges/listed-on-dark.svg"
-                alt="Listed on Aback Launch"
-                width={150}
-                height={32}
-                className="h-7 w-auto object-contain"
-              />
-            </a>
+            <div className="flex items-center justify-center p-2.5 rounded-xl bg-[#111] border border-[#2a2a2a] hover:border-purple-500/50 transition-colors">
+              <span dangerouslySetInnerHTML={{ __html: `<a href="https://abacklaunch.com" target="_blank" rel="dofollow"><img src="https://abacklaunch.com/badges/listed-on-dark.svg" alt="Listed on Aback Launch" width="150" height="32" /></a>` }} />
+            </div>
           </div>
         </div>
 
