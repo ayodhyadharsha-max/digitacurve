@@ -96,7 +96,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   ],
                   "sameAs": [
                     "https://www.linkedin.com/company/digitacurve",
-                    "https://github.com/ayodhyadharsha-max/digitacurve"
+                    "https://github.com/ayodhyadharsha-max/digitacurve",
+                    "https://www.facebook.com/digitacurve",
+                    "https://www.instagram.com/digitacurve/",
+                    "https://buymeacoffee.com/digitacurvi",
+                    "https://modal.com/apps/digitacurve/main"
                   ]
                 },
                 {
