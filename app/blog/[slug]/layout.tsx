@@ -130,6 +130,26 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'AI Development Services & LLM Agent Solutions in India (2026 Guide) | Digitacurve',
     desc: 'Enterprise guide to custom AI development services, multi-agent orchestration, RAG vector architectures, and LLM integrations in India.',
   },
+  'top-marketplaces-for-buying-and-selling': {
+    title: 'Top Marketplaces for Buying and Selling in 2026 | Digitacurve',
+    desc: 'Multi-vendor marketplace architecture, escrow payment processing, inventory API sync, and seller management guide.',
+  },
+  'web-2-0-vs-web-3-0-guide': {
+    title: 'Web 2.0 vs Web 3.0 Guide 2026 | Digitacurve',
+    desc: 'Technical comparison of Web 2.0 vs Web 3.0: centralized cloud servers vs IPFS storage, OAuth vs wallet authentication.',
+  },
+  'what-is-walmart-marketplace-and-how-to-sell-on-it': {
+    title: 'Walmart Marketplace 2026 Guide | Digitacurve',
+    desc: 'How to sell, scale, and integrate custom e-commerce APIs on Walmart Marketplace.',
+  },
+  'how-much-to-charge-for-shipping': {
+    title: 'How Much to Charge for Shipping in 2026 | Digitacurve',
+    desc: 'E-commerce shipping pricing models, carrier API calculation, and checkout conversion rate optimization.',
+  },
+  'ott-advertising-guide-strategy-platforms-benefits': {
+    title: 'OTT Advertising Guide 2026 | Digitacurve',
+    desc: 'Over-The-Top (OTT) video advertising strategies, Connected TV targeting, and streaming ad platform performance.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

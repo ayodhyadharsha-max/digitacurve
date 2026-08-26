@@ -64,6 +64,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'ecommerce-website-development-cost-shopify-vs-nextjs-2026',
     'hire-dedicated-nextjs-fullstack-developers-india-2026-guide',
     'ai-development-services-llm-agents-india-2026-guide',
+    'top-marketplaces-for-buying-and-selling',
+    'web-2-0-vs-web-3-0-guide',
+    'what-is-walmart-marketplace-and-how-to-sell-on-it',
+    'how-much-to-charge-for-shipping',
+    'ott-advertising-guide-strategy-platforms-benefits',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({

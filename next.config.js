@@ -63,6 +63,8 @@ const nextConfig = {
       { source: '/wp-json/:path*', destination: '/', permanent: true },
       { source: '/wp-content/:path*', destination: '/', permanent: true },
       { source: '/wp-includes/:path*', destination: '/', permanent: true },
+      { source: '/blog/how-to-reactivate-and-recover-pinterest-account', destination: '/blog', permanent: true },
+      { source: '/blog/how-to-use-facebook-messenger-without-app', destination: '/blog', permanent: true },
     ]
   },
   async headers() {
