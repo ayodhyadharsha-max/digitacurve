@@ -151,16 +151,31 @@ export default function Footer() {
             </div>
           </a>
 
-          <div
-            className="flex items-center justify-center p-4 rounded-xl bg-white text-black border border-[#e2e8f0]"
-          >
-            <img
-              src="/assets/socials/google.png"
-              alt="Official Google Partner Badge"
-              width={120}
-              height={28}
-              className="h-7 w-auto object-contain"
-            />
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <div className="flex items-center justify-center p-3 rounded-xl bg-white text-black border border-[#e2e8f0]">
+              <img
+                src="/assets/socials/google.png"
+                alt="Official Google Partner Badge"
+                width={120}
+                height={28}
+                className="h-7 w-auto object-contain"
+              />
+            </div>
+            <a
+              href="https://abacklaunch.com"
+              target="_blank"
+              rel="dofollow"
+              aria-label="Listed on Aback Launch"
+              className="flex items-center justify-center p-2.5 rounded-xl bg-[#111] border border-[#2a2a2a] hover:border-purple-500/50 transition-colors"
+            >
+              <img
+                src="https://abacklaunch.com/badges/listed-on-dark.svg"
+                alt="Listed on Aback Launch"
+                width={150}
+                height={32}
+                className="h-7 w-auto object-contain"
+              />
+            </a>
           </div>
         </div>
 
