@@ -392,6 +392,18 @@ const blogPosts = [
     image: '/assets/blogs/cloud.webp',
     slug: 'hire-dedicated-nextjs-fullstack-developers-india-2026-guide',
   },
+  {
+    title: 'AI Development Services & LLM Agent Solutions in India: 2026 Guide',
+    summary: 'Enterprise guide to building autonomous AI agents, RAG vector search, and custom LLM integrations for operational automation in 2026.',
+    category: 'AI & Automation',
+    date: 'Aug 26, 2026',
+    readTime: '11 min read',
+    accentColor: 'from-purple-500/20 to-pink-500/10',
+    borderColor: 'hover:border-purple-500/30',
+    tagColor: 'text-purple-400 border-purple-500/30 bg-purple-500/5',
+    image: '/assets/blogs/tech.webp',
+    slug: 'ai-development-services-llm-agents-india-2026-guide',
+  },
 ]
 
 export default function BlogPage() {

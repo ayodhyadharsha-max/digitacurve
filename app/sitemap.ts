@@ -63,6 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'react-native-vs-flutter-app-development-cost-performance-2026',
     'ecommerce-website-development-cost-shopify-vs-nextjs-2026',
     'hire-dedicated-nextjs-fullstack-developers-india-2026-guide',
+    'ai-development-services-llm-agents-india-2026-guide',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({

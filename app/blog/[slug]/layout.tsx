@@ -126,6 +126,10 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'Hire Dedicated Next.js & App Developers in India (2026 Guide) | Digitacurve',
     desc: 'How to hire dedicated Next.js, React Native, and full-stack software developers in India: monthly retainer pricing, skill verification, and time-zone models.',
   },
+  'ai-development-services-llm-agents-india-2026-guide': {
+    title: 'AI Development Services & LLM Agent Solutions in India (2026 Guide) | Digitacurve',
+    desc: 'Enterprise guide to custom AI development services, multi-agent orchestration, RAG vector architectures, and LLM integrations in India.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

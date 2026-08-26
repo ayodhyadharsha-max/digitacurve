@@ -32,7 +32,7 @@ const teamMembers = [
   {
     name: 'Pooja Sharma',
     role: 'Senior VP of Operations & Enterprise Strategy',
-    image: '/assets/team/team1.jpg',
+    image: '/assets/team/team1.webp',
     desc: 'Directs global project delivery, client success, and operational execution across USA, UK, Canada, and Asia Pacific markets.',
     color: 'from-blue-500/20 to-purple-500/10',
     borderColor: 'hover:border-blue-500/40',
@@ -40,7 +40,7 @@ const teamMembers = [
   {
     name: 'Rishabh Jaiswal',
     role: 'Chief Technology Officer & Senior Architect',
-    image: '/assets/team/team2.jpg',
+    image: '/assets/team/team2.webp',
     desc: 'Architects enterprise Next.js edge applications, AI agent integrations, cloud infrastructure, and 100/100 Core Web Vitals.',
     color: 'from-purple-500/20 to-pink-500/10',
     borderColor: 'hover:border-purple-500/40',
@@ -48,7 +48,7 @@ const teamMembers = [
   {
     name: 'Akash Verma',
     role: 'Lead Mobile & Full-Stack Engineer',
-    image: '/assets/team/team3.jpg',
+    image: '/assets/team/team3.webp',
     desc: 'Leads cross-platform iOS, Android (Flutter / React Native), and serverless API engineering for high-concurrency applications.',
     color: 'from-emerald-500/20 to-teal-500/10',
     borderColor: 'hover:border-emerald-500/40',
@@ -56,7 +56,7 @@ const teamMembers = [
   {
     name: 'Shivam Patel',
     role: 'Head of Growth Marketing & Generative Engine Optimization',
-    image: '/assets/team/team4.jpg',
+    image: '/assets/team/team4.webp',
     desc: 'Drives technical SEO, Generative Engine Optimization (GEO) for ChatGPT/Gemini, and performance PPC ad funnels.',
     color: 'from-orange-500/20 to-amber-500/10',
     borderColor: 'hover:border-orange-500/40',
