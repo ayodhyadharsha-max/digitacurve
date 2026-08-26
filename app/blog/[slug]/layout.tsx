@@ -166,6 +166,10 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'Zigbee vs Z-Wave 2026 IoT Guide | Digitacurve',
     desc: 'Technical comparison of Zigbee vs Z-Wave wireless mesh protocols for smart home IoT hubs and mobile automation apps.',
   },
+  'custom-healthcare-app-development-hipaa-telemedicine-guide-2026': {
+    title: 'Custom Healthcare & Telemedicine App Development (2026 Guide) | Digitacurve',
+    desc: 'HIPAA-compliant healthcare web portals, mobile telemedicine app engineering, WebRTC video consultations, and EHR/EMR FHIR integrations.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

@@ -404,6 +404,18 @@ const blogPosts = [
     image: '/assets/blogs/tech.webp',
     slug: 'ai-development-services-llm-agents-india-2026-guide',
   },
+  {
+    title: 'Custom Healthcare & Telemedicine App Development: 2026 HIPAA Compliance Guide',
+    summary: 'Technical guide to HIPAA-compliant healthcare web portals, WebRTC telemedicine video consultations, and EHR/EMR FHIR API integrations.',
+    category: 'Healthcare Tech',
+    date: 'Aug 26, 2026',
+    readTime: '12 min read',
+    accentColor: 'from-blue-500/20 to-teal-500/10',
+    borderColor: 'hover:border-blue-500/30',
+    tagColor: 'text-blue-400 border-blue-500/30 bg-blue-500/5',
+    image: '/assets/blogs/tech.webp',
+    slug: 'custom-healthcare-app-development-hipaa-telemedicine-guide-2026',
+  },
 ]
 
 export default function BlogPage() {
