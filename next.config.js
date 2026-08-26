@@ -58,6 +58,11 @@ const nextConfig = {
       { source: '/case-study', destination: '/casestudy', permanent: true },
       { source: '/work', destination: '/portfolio', permanent: true },
       { source: '/our-work', destination: '/portfolio', permanent: true },
+      // Legacy WordPress URL redirects to clear GSC 403 Forbidden errors
+      { source: '/wp-admin/:path*', destination: '/', permanent: true },
+      { source: '/wp-json/:path*', destination: '/', permanent: true },
+      { source: '/wp-content/:path*', destination: '/', permanent: true },
+      { source: '/wp-includes/:path*', destination: '/', permanent: true },
     ]
   },
   async headers() {
