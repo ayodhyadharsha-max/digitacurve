@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { useParams } from 'next/navigation'
+import { useParams, notFound } from 'next/navigation'
 import { Calendar, Clock, ArrowLeft, Share2, Mail, CheckCircle2 } from 'lucide-react'
 
 // Define blog interface matching the API
@@ -1011,18 +1011,7 @@ export default function BlogDetailPage() {
   }
 
   if (!blog) {
-    return (
-      <div className="bg-black text-white min-h-screen flex flex-col items-center justify-center px-4">
-        <h2 className="text-3xl font-black mb-4">Article Not Found</h2>
-        <p className="text-gray-400 mb-8 text-center max-w-md">
-          The blog article you are looking for does not exist or has been removed.
-        </p>
-        <Link href="/blog" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 font-bold hover:from-blue-500 hover:to-purple-500 transition-all">
-          <ArrowLeft size={16} />
-          Back to Insights
-        </Link>
-      </div>
-    )
+    notFound()
   }
 
   const blogSchema = {

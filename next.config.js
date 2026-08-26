@@ -11,11 +11,21 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      {
-        source: '/packages',
-        destination: '/pricing',
-        permanent: true,
-      },
+      { source: '/packages', destination: '/pricing', permanent: true },
+      { source: '/package', destination: '/pricing', permanent: true },
+      { source: '/about', destination: '/company/about', permanent: true },
+      { source: '/about-us', destination: '/company/about', permanent: true },
+      { source: '/contact', destination: '/company/contact', permanent: true },
+      { source: '/contact-us', destination: '/company/contact', permanent: true },
+      { source: '/blogs', destination: '/blog', permanent: true },
+      { source: '/services', destination: '/', permanent: true },
+      { source: '/service', destination: '/', permanent: true },
+      { source: '/case-studies', destination: '/casestudy', permanent: true },
+      { source: '/case-study', destination: '/casestudy', permanent: true },
+      { source: '/work', destination: '/portfolio', permanent: true },
+      { source: '/our-work', destination: '/portfolio', permanent: true },
+      { source: '/privacy-policy', destination: '/faq', permanent: true },
+      { source: '/terms-conditions', destination: '/faq', permanent: true },
     ]
   },
   async headers() {
