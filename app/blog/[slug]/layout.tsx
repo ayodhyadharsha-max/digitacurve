@@ -150,6 +150,22 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'OTT Advertising Guide 2026 | Digitacurve',
     desc: 'Over-The-Top (OTT) video advertising strategies, Connected TV targeting, and streaming ad platform performance.',
   },
+  'marketing-guide-for-apps': {
+    title: 'Mobile App Marketing Guide 2026 | Digitacurve',
+    desc: 'App Store Optimization (ASO), paid user acquisition, Apple Search Ads, and mobile app growth funnels.',
+  },
+  'how-does-instacart-work-guide': {
+    title: 'How Does Instacart Work 2026 Guide | Digitacurve',
+    desc: 'On-demand grocery delivery platform business model, shopper dispatch algorithms, and multi-store inventory APIs.',
+  },
+  'how-to-build-an-app-with-chatgpt': {
+    title: 'How to Build an App with ChatGPT & AI Agents 2026 | Digitacurve',
+    desc: 'Building custom Next.js and mobile apps using ChatGPT, OpenAI APIs, and AI coding assistants.',
+  },
+  'zigbee-vs-z-wave-guide': {
+    title: 'Zigbee vs Z-Wave 2026 IoT Guide | Digitacurve',
+    desc: 'Technical comparison of Zigbee vs Z-Wave wireless mesh protocols for smart home IoT hubs and mobile automation apps.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

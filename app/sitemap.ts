@@ -69,6 +69,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'what-is-walmart-marketplace-and-how-to-sell-on-it',
     'how-much-to-charge-for-shipping',
     'ott-advertising-guide-strategy-platforms-benefits',
+    'marketing-guide-for-apps',
+    'how-does-instacart-work-guide',
+    'how-to-build-an-app-with-chatgpt',
+    'zigbee-vs-z-wave-guide',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({
