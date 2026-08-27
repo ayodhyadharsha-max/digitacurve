@@ -170,6 +170,10 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'Custom Healthcare & Telemedicine App Development (2026 Guide) | Digitacurve',
     desc: 'HIPAA-compliant healthcare web portals, mobile telemedicine app engineering, WebRTC video consultations, and EHR/EMR FHIR integrations.',
   },
+  'real-estate-website-crm-development-proptech-lead-guide-2026': {
+    title: 'Real Estate Website & CRM Development (2026 PropTech Guide) | Digitacurve',
+    desc: 'Custom real estate website development, MLS/RETS API feed integration, interactive Mapbox search, and automated CRM lead capture for brokerages.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

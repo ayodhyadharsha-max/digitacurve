@@ -74,6 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'how-to-build-an-app-with-chatgpt',
     'zigbee-vs-z-wave-guide',
     'custom-healthcare-app-development-hipaa-telemedicine-guide-2026',
+    'real-estate-website-crm-development-proptech-lead-guide-2026',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({

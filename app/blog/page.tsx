@@ -416,6 +416,18 @@ const blogPosts = [
     image: '/assets/blogs/tech.webp',
     slug: 'custom-healthcare-app-development-hipaa-telemedicine-guide-2026',
   },
+  {
+    title: 'Custom Real Estate Website & CRM Development: 2026 PropTech Lead Guide',
+    summary: 'PropTech guide to custom real estate website development, MLS/RETS property feeds, interactive Mapbox search, and automated CRM lead capture.',
+    category: 'Real Estate Tech',
+    date: 'Aug 27, 2026',
+    readTime: '12 min read',
+    accentColor: 'from-amber-500/20 to-orange-500/10',
+    borderColor: 'hover:border-amber-500/30',
+    tagColor: 'text-amber-400 border-amber-500/30 bg-amber-500/5',
+    image: '/assets/blogs/real-estate.webp',
+    slug: 'real-estate-website-crm-development-proptech-lead-guide-2026',
+  },
 ]
 
 export default function BlogPage() {
