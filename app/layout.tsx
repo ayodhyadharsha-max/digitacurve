@@ -48,6 +48,9 @@ export const metadata: Metadata = {
   verification: {
     google: 'WbnglHYC1zWfihaNiEeyOMTupfOh3iHF8h8tKPa07II',
   },
+  other: {
+    'google-adsense-account': 'ca-pub-6312900704119053',
+  },
   openGraph: {
     title: 'Next.js Web Development Agency | SEO & GEO Company | Digitacurve',
     description: 'Digitacurve is a premier Next.js web development agency, mobile app development company, and digital marketing firm specializing in custom software, SEO, and GEO.',
@@ -65,6 +68,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6312900704119053"
+          crossOrigin="anonymous"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
