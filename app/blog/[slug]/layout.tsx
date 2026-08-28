@@ -198,6 +198,14 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'Digital Marketing Agency & Software Company in Pune | Digitacurve',
     desc: 'Top digital marketing agency in Pune & custom software development company. SaaS product SEO, microservices, and mobile app engineering.',
   },
+  'what-is-digital-marketing-benefits-for-business-2026': {
+    title: 'What is Digital Marketing? 10 Benefits for Business (2026 Guide) | Digitacurve',
+    desc: 'Complete beginner guide to digital marketing: SEO, social media, PPC ads, and 10 ways digital marketing multiplies business revenue.',
+  },
+  'what-is-ai-how-small-businesses-can-use-artificial-intelligence-2026': {
+    title: "What is AI? A Beginner's Guide for Business Owners (2026) | Digitacurve",
+    desc: "Understand Artificial Intelligence (AI) for business: automated chatbots, content generation, and small business productivity tools.",
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

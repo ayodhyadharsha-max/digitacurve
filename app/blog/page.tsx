@@ -500,6 +500,30 @@ const blogPosts = [
     image: '/assets/blogs/tech.webp',
     slug: 'top-digital-marketing-agency-in-pune-custom-software-web-services-2026',
   },
+  {
+    title: 'What is Digital Marketing? 10 Easy Ways It Multiplies Business Revenue in 2026',
+    summary: 'Beginner-friendly business guide: SEO, social media marketing, instant lead generation, and 10 proven ways to scale sales online.',
+    category: 'Digital Marketing',
+    date: 'Aug 28, 2026',
+    readTime: '10 min read',
+    accentColor: 'from-amber-500/20 to-orange-500/10',
+    borderColor: 'hover:border-amber-500/30',
+    tagColor: 'text-amber-400 border-amber-500/30 bg-amber-500/5',
+    image: '/assets/blogs/marketing.webp',
+    slug: 'what-is-digital-marketing-benefits-for-business-2026',
+  },
+  {
+    title: "What is Artificial Intelligence (AI)? A Beginner's Guide for Business Owners",
+    summary: "Simple guide for entrepreneurs: Automated customer support, AI content generation, and smart tools to save time and boost profits.",
+    category: 'AI & Innovation',
+    date: 'Aug 28, 2026',
+    readTime: '10 min read',
+    accentColor: 'from-cyan-500/20 to-blue-500/10',
+    borderColor: 'hover:border-cyan-500/30',
+    tagColor: 'text-cyan-400 border-cyan-500/30 bg-cyan-500/5',
+    image: '/assets/blogs/tech.webp',
+    slug: 'what-is-ai-how-small-businesses-can-use-artificial-intelligence-2026',
+  },
 ]
 
 export default function BlogPage() {

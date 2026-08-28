@@ -81,6 +81,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'top-digital-marketing-agency-delhi-ncr-custom-web-app-services-2026',
     'best-digital-marketing-agency-in-mumbai-web-app-development-company-2026',
     'top-digital-marketing-agency-in-pune-custom-software-web-services-2026',
+    'what-is-digital-marketing-benefits-for-business-2026',
+    'what-is-ai-how-small-businesses-can-use-artificial-intelligence-2026',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({
