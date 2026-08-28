@@ -174,6 +174,10 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'Real Estate Website & CRM Development (2026 PropTech Guide) | Digitacurve',
     desc: 'Custom real estate website development, MLS/RETS API feed integration, interactive Mapbox search, and automated CRM lead capture for brokerages.',
   },
+  'solar-cleantech-digital-marketing-website-app-lead-guide-2026': {
+    title: 'Solar & CleanTech Digital Marketing Guide (2026) | Digitacurve',
+    desc: 'Solar company digital marketing strategies, custom solar installer website development, rooftop ROI calculators, and mobile lead dispatch apps.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

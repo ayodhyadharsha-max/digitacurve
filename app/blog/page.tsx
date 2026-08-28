@@ -428,6 +428,18 @@ const blogPosts = [
     image: '/assets/blogs/real-estate.webp',
     slug: 'real-estate-website-crm-development-proptech-lead-guide-2026',
   },
+  {
+    title: 'Solar & CleanTech Digital Marketing Guide 2026: Website, App & Lead System',
+    summary: 'CleanTech digital marketing guide to custom solar installer website development, interactive rooftop ROI calculators, and mobile lead dispatch apps.',
+    category: 'CleanTech',
+    date: 'Aug 28, 2026',
+    readTime: '12 min read',
+    accentColor: 'from-yellow-500/20 to-amber-500/10',
+    borderColor: 'hover:border-yellow-500/30',
+    tagColor: 'text-yellow-400 border-yellow-500/30 bg-yellow-500/5',
+    image: '/assets/blogs/tech.webp',
+    slug: 'solar-cleantech-digital-marketing-website-app-lead-guide-2026',
+  },
 ]
 
 export default function BlogPage() {
