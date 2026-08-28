@@ -76,6 +76,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'custom-healthcare-app-development-hipaa-telemedicine-guide-2026',
     'real-estate-website-crm-development-proptech-lead-guide-2026',
     'solar-cleantech-digital-marketing-website-app-lead-guide-2026',
+    'deepseek-r1-vs-gpt4o-claude35-sonnet-ai-benchmarks-2026',
+    'best-digital-marketing-agency-in-lucknow-web-development-company-2026',
+    'top-digital-marketing-agency-delhi-ncr-custom-web-app-services-2026',
+    'best-digital-marketing-agency-in-mumbai-web-app-development-company-2026',
+    'top-digital-marketing-agency-in-pune-custom-software-web-services-2026',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({

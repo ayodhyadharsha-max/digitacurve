@@ -178,6 +178,26 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'Solar & CleanTech Digital Marketing Guide (2026) | Digitacurve',
     desc: 'Solar company digital marketing strategies, custom solar installer website development, rooftop ROI calculators, and mobile lead dispatch apps.',
   },
+  'deepseek-r1-vs-gpt4o-claude35-sonnet-ai-benchmarks-2026': {
+    title: 'DeepSeek R1 vs GPT-4o vs Claude 3.5 Sonnet: 2026 AI Benchmarks & Free API Guide | Digitacurve',
+    desc: 'Comprehensive 2026 AI benchmark comparison: DeepSeek R1 reasoning architecture vs OpenAI GPT-4o vs Claude 3.5 Sonnet. SWE-bench coding scores, local Ollama execution, and API cost breakdown.',
+  },
+  'best-digital-marketing-agency-in-lucknow-web-development-company-2026': {
+    title: 'Digital Marketing Agency & Web Development Company in Lucknow | Digitacurve',
+    desc: 'Top digital marketing agency in Lucknow & custom web development company. Google 3-Pack Local SEO, Next.js website design, and high-ROI lead generation.',
+  },
+  'top-digital-marketing-agency-delhi-ncr-custom-web-app-services-2026': {
+    title: 'Digital Marketing Agency & Custom App Development in Delhi NCR | Digitacurve',
+    desc: 'Premier digital marketing agency in Delhi NCR & custom web app development company in Delhi, Gurgaon, and Noida.',
+  },
+  'best-digital-marketing-agency-in-mumbai-web-app-development-company-2026': {
+    title: 'Digital Marketing Agency & Software Company in Mumbai | Digitacurve',
+    desc: 'Top digital marketing agency in Mumbai & software development company. Enterprise SEO, headless e-commerce, and custom mobile app engineering.',
+  },
+  'top-digital-marketing-agency-in-pune-custom-software-web-services-2026': {
+    title: 'Digital Marketing Agency & Software Company in Pune | Digitacurve',
+    desc: 'Top digital marketing agency in Pune & custom software development company. SaaS product SEO, microservices, and mobile app engineering.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
