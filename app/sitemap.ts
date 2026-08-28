@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://digitacurve.com'
+  const baseUrl = 'https://www.digitacurve.com'
 
   // Define static routes
   const staticRoutes = [
