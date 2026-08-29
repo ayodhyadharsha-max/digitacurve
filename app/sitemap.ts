@@ -83,6 +83,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'top-digital-marketing-agency-in-pune-custom-software-web-services-2026',
     'what-is-digital-marketing-benefits-for-business-2026',
     'what-is-ai-how-small-businesses-can-use-artificial-intelligence-2026',
+    'how-to-choose-the-best-web-development-agency-2026-checklist',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({

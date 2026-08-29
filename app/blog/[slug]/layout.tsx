@@ -206,6 +206,10 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: "What is AI? A Beginner's Guide for Business Owners (2026) | Digitacurve",
     desc: "Understand Artificial Intelligence (AI) for business: automated chatbots, content generation, and small business productivity tools.",
   },
+  'how-to-choose-the-best-web-development-agency-2026-checklist': {
+    title: 'How to Choose the Best Web Development Agency in 2026 | Digitacurve',
+    desc: '10-point checklist for hiring a web development agency in 2026. Evaluating Next.js SSR tech stacks, 100/100 Core Web Vitals, GEO AI search optimization, and transparent pricing.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

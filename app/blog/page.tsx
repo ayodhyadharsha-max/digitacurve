@@ -524,6 +524,18 @@ const blogPosts = [
     image: '/assets/blogs/tech.webp',
     slug: 'what-is-ai-how-small-businesses-can-use-artificial-intelligence-2026',
   },
+  {
+    title: 'How to Choose the Best Web Development Agency in 2026: 10-Point Checklist',
+    summary: '10-point evaluation guide for business owners: Next.js tech stacks, 100/100 Core Web Vitals, GEO AI search optimization, and custom CRM integration.',
+    category: 'Web Engineering',
+    date: 'Aug 29, 2026',
+    readTime: '11 min read',
+    accentColor: 'from-blue-500/20 to-indigo-500/10',
+    borderColor: 'hover:border-blue-500/30',
+    tagColor: 'text-blue-400 border-blue-500/30 bg-blue-500/5',
+    image: '/assets/blogs/tech.webp',
+    slug: 'how-to-choose-the-best-web-development-agency-2026-checklist',
+  },
 ]
 
 export default function BlogPage() {
