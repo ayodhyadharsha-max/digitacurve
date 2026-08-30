@@ -210,6 +210,10 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'How to Choose the Best Web Development Agency in 2026 | Digitacurve',
     desc: '10-point checklist for hiring a web development agency in 2026. Evaluating Next.js SSR tech stacks, 100/100 Core Web Vitals, GEO AI search optimization, and transparent pricing.',
   },
+  '5-reasons-every-business-needs-custom-mobile-app-2026': {
+    title: '5 Reasons Every Business Needs a Custom Mobile App in 2026 | Digitacurve',
+    desc: 'Why businesses need custom mobile app development in 2026: direct push notification engagement, 3x higher checkout conversions, brand loyalty rewards, and React Native/Flutter cross-platform efficiency.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
