@@ -85,6 +85,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'what-is-ai-how-small-businesses-can-use-artificial-intelligence-2026',
     'how-to-choose-the-best-web-development-agency-2026-checklist',
     '5-reasons-every-business-needs-custom-mobile-app-2026',
+    'how-ai-automation-saves-20-hours-per-week-small-business-2026',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({

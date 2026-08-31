@@ -548,6 +548,18 @@ const blogPosts = [
     image: '/assets/blogs/tech.webp',
     slug: '5-reasons-every-business-needs-custom-mobile-app-2026',
   },
+  {
+    title: 'How AI Automation Saves 20+ Hours Per Week for Small Business Owners in 2026',
+    summary: 'Practical automation blueprint: 24/7 AI chatbots, instant CRM lead follow-ups, automated invoicing, and social media pipelines.',
+    category: 'AI & Automation',
+    date: 'Aug 31, 2026',
+    readTime: '11 min read',
+    accentColor: 'from-cyan-500/20 to-teal-500/10',
+    borderColor: 'hover:border-cyan-500/30',
+    tagColor: 'text-cyan-400 border-cyan-500/30 bg-cyan-500/5',
+    image: '/assets/blogs/tech.webp',
+    slug: 'how-ai-automation-saves-20-hours-per-week-small-business-2026',
+  },
 ]
 
 export default function BlogPage() {

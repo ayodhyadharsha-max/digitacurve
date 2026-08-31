@@ -214,6 +214,10 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: '5 Reasons Every Business Needs a Custom Mobile App in 2026 | Digitacurve',
     desc: 'Why businesses need custom mobile app development in 2026: direct push notification engagement, 3x higher checkout conversions, brand loyalty rewards, and React Native/Flutter cross-platform efficiency.',
   },
+  'how-ai-automation-saves-20-hours-per-week-small-business-2026': {
+    title: 'How AI Automation Saves 20+ Hours Per Week for Small Business (2026) | Digitacurve',
+    desc: 'Practical guide on how small businesses use AI chatbots, automated CRM follow-up sequences, and AI workflows to save 20+ hours weekly and double lead conversions.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
