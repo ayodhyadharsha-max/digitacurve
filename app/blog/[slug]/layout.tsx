@@ -230,6 +230,22 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'Social Media Marketing Agency & Instagram Account Management Company | Digitacurve',
     desc: 'Top social media marketing agency & Instagram account management company. Viral Reels strategy, targeted lead ads, brand collaborations, and 24/7 engagement automation.',
   },
+  'top-digital-marketing-agency-in-surat-agra-meerut-varanasi-regional-2026': {
+    title: 'Digital Marketing Agency in Surat, Agra, Meerut, Varanasi & Regional Hubs | Digitacurve',
+    desc: 'Top digital marketing agency & web development company in Surat, Agra, Meerut, Varanasi, Rajkot, Gorakhpur, and Prayagraj.',
+  },
+  'performance-marketing-google-ads-seo-services-guide-2026': {
+    title: 'Performance Marketing, Google Ads Management & SEO Services Guide | Digitacurve',
+    desc: 'Top performance marketing agency, Google Ads specialist, and SEO company in India. Data-driven PPC campaigns, technical SEO, and sub-50ms lead landing pages.',
+  },
+  'small-business-digital-marketing-guide-2026-affordable-packages': {
+    title: 'Small Business Digital Marketing Guide & Affordable Packages (2026) | Digitacurve',
+    desc: 'Affordable digital marketing agency solutions for small businesses: Local SEO, low-cost Instagram lead ads, automated WhatsApp responses, and fast websites.',
+  },
+  'niche-digital-marketing-guide-2026-real-estate-ecommerce-hotel-app': {
+    title: 'Niche Digital Marketing Agency: Real Estate, E-Commerce, Hotel & App Growth | Digitacurve',
+    desc: 'Industry-specific digital marketing agency for real estate, luxury hotels, headless e-commerce, and mobile app growth in 2026.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

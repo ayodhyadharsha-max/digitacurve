@@ -89,6 +89,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'top-digital-marketing-agency-in-patna-indore-bhopal-jaipur-2026',
     'digital-marketing-website-development-cost-in-india-2026-pricing-packages',
     'top-social-media-marketing-agency-instagram-management-2026-guide',
+    'top-digital-marketing-agency-in-surat-agra-meerut-varanasi-regional-2026',
+    'performance-marketing-google-ads-seo-services-guide-2026',
+    'small-business-digital-marketing-guide-2026-affordable-packages',
+    'niche-digital-marketing-guide-2026-real-estate-ecommerce-hotel-app',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({
