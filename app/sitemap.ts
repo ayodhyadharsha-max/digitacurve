@@ -86,6 +86,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'how-to-choose-the-best-web-development-agency-2026-checklist',
     '5-reasons-every-business-needs-custom-mobile-app-2026',
     'how-ai-automation-saves-20-hours-per-week-small-business-2026',
+    'top-digital-marketing-agency-in-patna-indore-bhopal-jaipur-2026',
+    'digital-marketing-website-development-cost-in-india-2026-pricing-packages',
+    'top-social-media-marketing-agency-instagram-management-2026-guide',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({

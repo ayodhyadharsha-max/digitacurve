@@ -218,6 +218,18 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'How AI Automation Saves 20+ Hours Per Week for Small Business (2026) | Digitacurve',
     desc: 'Practical guide on how small businesses use AI chatbots, automated CRM follow-up sequences, and AI workflows to save 20+ hours weekly and double lead conversions.',
   },
+  'top-digital-marketing-agency-in-patna-indore-bhopal-jaipur-2026': {
+    title: 'Digital Marketing Agency & Web Development Company in Patna, Indore, Bhopal & Jaipur | Digitacurve',
+    desc: 'Premier digital marketing agency & web development company in Patna, Indore, Bhopal, and Jaipur. Local SEO Google 3-Pack, Next.js web apps, and high-ROI performance ads.',
+  },
+  'digital-marketing-website-development-cost-in-india-2026-pricing-packages': {
+    title: 'Digital Marketing & Website Development Cost in India (2026 Price List) | Digitacurve',
+    desc: 'Comprehensive 2026 price guide: Digital marketing cost in India, website development pricing breakdown, monthly SEO package rates, and transparent agency pricing.',
+  },
+  'top-social-media-marketing-agency-instagram-management-2026-guide': {
+    title: 'Social Media Marketing Agency & Instagram Account Management Company | Digitacurve',
+    desc: 'Top social media marketing agency & Instagram account management company. Viral Reels strategy, targeted lead ads, brand collaborations, and 24/7 engagement automation.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

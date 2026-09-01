@@ -38,10 +38,17 @@ export const metadata: Metadata = {
   keywords: [
     'Next.js web development agency',
     'mobile app development company',
-    'SEO services',
+    'SEO services company',
     'Generative Engine Optimization',
     'GEO agency',
     'custom website development',
+    'digital marketing website',
+    'digital marketing services in india',
+    'best digital marketing agency in delhi',
+    'digital marketing agency in lucknow',
+    'social media marketing agency',
+    'digital marketing cost in india',
+    'website development company in india',
     'SEO company Noida',
     'digitacurve'
   ],
