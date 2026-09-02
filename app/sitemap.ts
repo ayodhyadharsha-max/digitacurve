@@ -93,6 +93,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'performance-marketing-google-ads-seo-services-guide-2026',
     'small-business-digital-marketing-guide-2026-affordable-packages',
     'niche-digital-marketing-guide-2026-real-estate-ecommerce-hotel-app',
+    'how-generative-engine-optimization-geo-helps-businesses-rank-chatgpt-gemini-2026',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({

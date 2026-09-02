@@ -644,6 +644,18 @@ const blogPosts = [
     image: '/assets/blogs/tech.webp',
     slug: 'niche-digital-marketing-guide-2026-real-estate-ecommerce-hotel-app',
   },
+  {
+    title: 'How Generative Engine Optimization (GEO) Helps Businesses Rank #1 on ChatGPT & Gemini',
+    summary: 'Master AI Search in 2026: Structured JSON-LD entity graphs, digital PR citations, direct-answer content, and sub-50ms velocity.',
+    category: 'GEO & AI SEO',
+    date: 'Sep 02, 2026',
+    readTime: '12 min read',
+    accentColor: 'from-cyan-500/20 to-blue-500/10',
+    borderColor: 'hover:border-cyan-500/30',
+    tagColor: 'text-cyan-400 border-cyan-500/30 bg-cyan-500/5',
+    image: '/assets/blogs/tech.webp',
+    slug: 'how-generative-engine-optimization-geo-helps-businesses-rank-chatgpt-gemini-2026',
+  },
 ]
 
 export default function BlogPage() {

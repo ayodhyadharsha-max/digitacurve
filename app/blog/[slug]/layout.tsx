@@ -246,6 +246,10 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'Niche Digital Marketing Agency: Real Estate, E-Commerce, Hotel & App Growth | Digitacurve',
     desc: 'Industry-specific digital marketing agency for real estate, luxury hotels, headless e-commerce, and mobile app growth in 2026.',
   },
+  'how-generative-engine-optimization-geo-helps-businesses-rank-chatgpt-gemini-2026': {
+    title: 'Generative Engine Optimization (GEO): Rank on ChatGPT & Gemini (2026) | Digitacurve',
+    desc: 'Learn how Generative Engine Optimization (GEO) and AEO help your business rank #1 on ChatGPT, Google Gemini, and Perplexity AI search engines.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
