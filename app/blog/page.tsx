@@ -656,6 +656,18 @@ const blogPosts = [
     image: '/assets/blogs/tech.webp',
     slug: 'how-generative-engine-optimization-geo-helps-businesses-rank-chatgpt-gemini-2026',
   },
+  {
+    title: 'How Next.js 14 SSR & Sub-50ms TTFB Boost E-Commerce & B2B Conversions in 2026',
+    summary: 'Web performance blueprint: Edge network rendering, 100/100 Core Web Vitals, instant Google indexing, and custom CRM connectors.',
+    category: 'Web Engineering',
+    date: 'Sep 03, 2026',
+    readTime: '11 min read',
+    accentColor: 'from-blue-500/20 to-indigo-500/10',
+    borderColor: 'hover:border-blue-500/30',
+    tagColor: 'text-blue-400 border-blue-500/30 bg-blue-500/5',
+    image: '/assets/blogs/tech.webp',
+    slug: 'how-nextjs-14-ssr-sub-50ms-ttfb-boost-ecommerce-b2b-conversions-2026',
+  },
 ]
 
 export default function BlogPage() {

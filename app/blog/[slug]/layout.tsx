@@ -250,6 +250,10 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'Generative Engine Optimization (GEO): Rank on ChatGPT & Gemini (2026) | Digitacurve',
     desc: 'Learn how Generative Engine Optimization (GEO) and AEO help your business rank #1 on ChatGPT, Google Gemini, and Perplexity AI search engines.',
   },
+  'how-nextjs-14-ssr-sub-50ms-ttfb-boost-ecommerce-b2b-conversions-2026': {
+    title: 'How Next.js 14 SSR & Sub-50ms TTFB Boost E-Commerce & B2B Conversions | Digitacurve',
+    desc: 'Technical guide on Next.js 14 SSR, edge network rendering, 100/100 Core Web Vitals, and sub-50ms TTFB web development for maximum sales conversions.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

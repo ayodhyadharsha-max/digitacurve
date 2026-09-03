@@ -7,6 +7,8 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import WhatsAppButton from '@/components/WhatsAppButton'
+import SmoothScroll from '@/components/SmoothScroll'
+import CustomCursor from '@/components/CustomCursor'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -160,14 +162,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className={`${inter.className} bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased`}>
-        <ThemeProvider>
-          <Topbar />
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-        </ThemeProvider>
-        <SpeedInsights />
-        <WhatsAppButton />
+        <SmoothScroll>
+          <CustomCursor />
+          <ThemeProvider>
+            <Topbar />
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+          </ThemeProvider>
+          <SpeedInsights />
+          <WhatsAppButton />
+        </SmoothScroll>
       </body>
     </html>
   )
