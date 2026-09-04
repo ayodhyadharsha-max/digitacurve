@@ -668,6 +668,18 @@ const blogPosts = [
     image: '/assets/blogs/tech.webp',
     slug: 'how-nextjs-14-ssr-sub-50ms-ttfb-boost-ecommerce-b2b-conversions-2026',
   },
+  {
+    title: 'Top Digital Marketing Agency & Web Development Company in Noida & Delhi NCR',
+    summary: 'Enterprise growth guide: Local SEO Google 3-Pack, Next.js web applications, GEO AI recommendations, and high-ROI Meta/Google ads.',
+    category: 'Enterprise Hub',
+    date: 'Sep 04, 2026',
+    readTime: '12 min read',
+    accentColor: 'from-purple-500/20 to-blue-500/10',
+    borderColor: 'hover:border-purple-500/30',
+    tagColor: 'text-purple-400 border-purple-500/30 bg-purple-500/5',
+    image: '/assets/blogs/tech.webp',
+    slug: 'digital-marketing-agency-in-noida-delhi-ncr-seo-web-development-2026',
+  },
 ]
 
 export default function BlogPage() {

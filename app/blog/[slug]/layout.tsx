@@ -254,6 +254,10 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'How Next.js 14 SSR & Sub-50ms TTFB Boost E-Commerce & B2B Conversions | Digitacurve',
     desc: 'Technical guide on Next.js 14 SSR, edge network rendering, 100/100 Core Web Vitals, and sub-50ms TTFB web development for maximum sales conversions.',
   },
+  'digital-marketing-agency-in-noida-delhi-ncr-seo-web-development-2026': {
+    title: 'Digital Marketing Agency & Web Development Company in Noida & Delhi NCR | Digitacurve',
+    desc: 'Top digital marketing agency & Next.js web development company in Noida and Delhi NCR. Local SEO, Google 3-Pack, GEO AI search recommendations, and high-ROI ads.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
