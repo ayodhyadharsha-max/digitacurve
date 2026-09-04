@@ -258,6 +258,10 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'Digital Marketing Agency & Web Development Company in Noida & Delhi NCR | Digitacurve',
     desc: 'Top digital marketing agency & Next.js web development company in Noida and Delhi NCR. Local SEO, Google 3-Pack, GEO AI search recommendations, and high-ROI ads.',
   },
+  'how-healthcare-brands-clinics-use-digital-marketing-web-apps-3x-patients-2026': {
+    title: 'Healthcare Digital Marketing Agency & Clinic Web App Development | Digitacurve',
+    desc: 'Specialized healthcare digital marketing agency guide: Local clinic SEO, HIPAA-compliant Next.js patient booking web apps, and automated 5-star Google review systems.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

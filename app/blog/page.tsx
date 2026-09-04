@@ -680,6 +680,18 @@ const blogPosts = [
     image: '/assets/blogs/tech.webp',
     slug: 'digital-marketing-agency-in-noida-delhi-ncr-seo-web-development-2026',
   },
+  {
+    title: 'How Healthcare Brands & Clinics Use Digital Marketing & Web Apps to 3x Patient Inquiries',
+    summary: 'Medical growth guide: Local clinic SEO, HIPAA-compliant Next.js booking apps, automated WhatsApp reminders, and 5-star Google review systems.',
+    category: 'Healthcare Growth',
+    date: 'Sep 04, 2026',
+    readTime: '12 min read',
+    accentColor: 'from-cyan-500/20 to-teal-500/10',
+    borderColor: 'hover:border-cyan-500/30',
+    tagColor: 'text-cyan-400 border-cyan-500/30 bg-cyan-500/5',
+    image: '/assets/blogs/tech.webp',
+    slug: 'how-healthcare-brands-clinics-use-digital-marketing-web-apps-3x-patients-2026',
+  },
 ]
 
 export default function BlogPage() {
