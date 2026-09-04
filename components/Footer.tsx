@@ -1,116 +1,177 @@
-'use client'
-
 import Link from 'next/link'
-import { ArrowUpRight, Mail, Phone, Instagram, Linkedin, Github } from 'lucide-react'
-import MagneticButton from './MagneticButton'
+import { Phone, Mail, Linkedin, Instagram, Facebook } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white pt-24 pb-12 border-t border-slate-900 relative overflow-hidden">
-      {/* Background ambient glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[300px] bg-cyan-600/5 blur-[120px] pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col items-start justify-between border-b border-slate-800 pb-16">
-          <span className="text-xs font-mono tracking-widest text-cyan-400 uppercase mb-4">
-            READY FOR A MORE CONNECTED SYSTEM?
-          </span>
-          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black uppercase leading-none tracking-tight">
-            LET'S BUILD <br />
-            <span className="agency-serif-italic text-cyan-400">WHAT'S NEXT.</span>
-          </h2>
-
-          <div className="mt-10">
-            <MagneticButton>
-              <Link
-                href="/company/contact"
-                data-cursor="BUILD"
-                className="agency-pill agency-pill-primary px-8 py-4 text-sm shadow-[0_0_30px_rgba(255,255,255,0.3)]"
-              >
-                START A PROJECT <ArrowUpRight size={18} />
-              </Link>
-            </MagneticButton>
-          </div>
-        </div>
-
-        {/* Footer Info Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 py-12 border-b border-slate-900">
-          <div>
-            <span className="text-xs font-mono text-slate-500 uppercase tracking-widest block mb-3">
-              AGENCY BASE
-            </span>
-            <p className="text-sm font-bold text-white uppercase tracking-wider">
-              DIGITACURVE CREATIVE GROWTH STUDIO <br />
-              <span className="text-slate-400 font-normal">INDIA BASE → SERVING GLOBALLY</span>
+    <footer className="bg-black border-t border-[#1a1a1a]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+          {/* Brand & Contact details */}
+          <div className="lg:col-span-1">
+            <Link href="/" aria-label="Digitacurve Home" className="flex items-center gap-2 mb-6">
+              <img src="/assets/logo-mark.png" alt="Digitacurve Agency Logo" width={32} height={32} className="w-8 h-8 object-contain" />
+              <span className="text-xl font-black tracking-tight text-white">
+                Digita<span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">curve</span>
+              </span>
+            </Link>
+            <p className="text-gray-300 text-sm leading-relaxed mb-6">
+              Digitacurve stands at the forefront of digital transformation, offering custom Next.js web applications, mobile apps, and 360° lead generation systems that scale enterprise revenue.
             </p>
-          </div>
+            <div className="space-y-4">
+              {/* Phone contact */}
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-full bg-[#111] border border-[#2a2a2a] flex items-center justify-center text-gray-400 shrink-0">
+                  <Phone size={14} />
+                </div>
+                <div className="space-y-1.5 pt-0.5">
+                  <a href="tel:+917572094201" aria-label="Call Digitacurve Support" className="flex items-center gap-2 text-sm text-gray-200 hover:text-white transition-colors">
+                    <img src="/assets/contact/india.png" alt="India Country Flag" width={18} height={12} className="h-3 w-4.5 object-cover rounded-sm" />
+                    <span>+91 7572094201</span>
+                  </a>
+                </div>
+              </div>
 
-          <div>
-            <span className="text-xs font-mono text-slate-500 uppercase tracking-widest block mb-3">
-              DIRECT CONTACT
-            </span>
-            <div className="space-y-2 text-sm font-bold text-slate-300">
-              <a
-                href="mailto:sales@digitacurve.com"
-                className="hover:text-cyan-400 flex items-center gap-2 transition-colors"
-              >
-                <Mail size={14} className="text-cyan-400" /> sales@digitacurve.com
-              </a>
-              <a
-                href="https://wa.me/917572094201"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-cyan-400 flex items-center gap-2 transition-colors"
-              >
-                <Phone size={14} className="text-cyan-400" /> +91 75720 94201 (WhatsApp)
-              </a>
+              {/* Email contact */}
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-full bg-[#111] border border-[#2a2a2a] flex items-center justify-center text-gray-400 shrink-0">
+                  <Mail size={14} />
+                </div>
+                <div className="pt-1.5">
+                  <a href="mailto:sales@digitacurve.com" aria-label="Email Digitacurve Sales Team" className="text-sm text-gray-200 hover:text-white transition-colors break-all">
+                    sales@digitacurve.com
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
+          {/* Quick Links */}
           <div>
-            <span className="text-xs font-mono text-slate-500 uppercase tracking-widest block mb-3">
-              CONNECT
-            </span>
-            <div className="flex gap-4">
-              <a
-                href="https://www.linkedin.com/company/digitacurve"
-                target="_blank"
-                rel="noreferrer"
-                className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-cyan-400 transition-all"
-              >
-                <Linkedin size={18} />
-              </a>
-              <a
-                href="https://www.instagram.com/digitacurve/"
-                target="_blank"
-                rel="noreferrer"
-                className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-cyan-400 transition-all"
-              >
-                <Instagram size={18} />
-              </a>
-              <a
-                href="https://github.com/ayodhyadharsha-max/digitacurve"
-                target="_blank"
-                rel="noreferrer"
-                className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-cyan-400 transition-all"
-              >
-                <Github size={18} />
-              </a>
+            <h3 className="text-white font-bold text-base uppercase tracking-wider mb-5">Quick Links</h3>
+            <ul className="space-y-3">
+              {[
+                { label: 'Home', href: '/' },
+                { label: 'Pricing & Packages ⚡', href: '/pricing' },
+                { label: 'About Us', href: '/company/about' },
+                { label: 'Portfolio', href: '/portfolio' },
+                { label: 'FAQs', href: '/faq' },
+                { label: 'Contact', href: '/company/contact' },
+              ].map(link => (
+                <li key={link.label}>
+                  <Link href={link.href} className="text-gray-300 hover:text-white text-sm transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-white font-bold text-base uppercase tracking-wider mb-5">Core Services</h3>
+            <ul className="space-y-3">
+              {[
+                { label: 'Web Development', href: '/web-development' },
+                { label: 'Mobile App Development', href: '/app-development' },
+                { label: 'Search Engine Optimization (SEO)', href: '/digital-marketing' },
+                { label: 'Pay Per Click (PPC)', href: '/digital-marketing' },
+                { label: 'Generative Engine Optimization (GEO)', href: '/digital-marketing' },
+                { label: 'Digital Consulting', href: '/company/contact' },
+              ].map(link => (
+                <li key={link.label}>
+                  <Link href={link.href} className="text-gray-300 hover:text-white text-sm transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company Details */}
+          <div>
+            <h3 className="text-white font-bold text-base uppercase tracking-wider mb-5">Company Details</h3>
+            <ul className="space-y-3">
+              {[
+                { label: 'Privacy Policy', href: '/privacy-policy' },
+                { label: 'Terms and Condition', href: '/terms-and-conditions' },
+                { label: 'Refund and Return Policy', href: '/refund-policy' },
+                { label: 'Inquiries & Support', href: '/company/contact' },
+              ].map(link => (
+                <li key={link.label}>
+                  <Link href={link.href} className="text-gray-300 hover:text-white text-sm transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Social panels with High Contrast */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 pt-8 border-t border-[#1a1a1a]">
+          <a
+            href="https://www.linkedin.com/company/digitacurve"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow Digitacurve on LinkedIn"
+            className="flex items-center gap-3.5 p-4 rounded-xl bg-[#0077b5] text-white hover:opacity-95 transition-opacity"
+          >
+            <Linkedin size={22} className="shrink-0" />
+            <div className="text-left leading-tight">
+              <div className="text-[10px] text-white font-bold uppercase tracking-wider">Follow Us On</div>
+              <div className="text-sm font-bold text-white">LinkedIn</div>
+            </div>
+          </a>
+
+          <a
+            href="https://www.instagram.com/digitacurve/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow Digitacurve on Instagram"
+            className="flex items-center gap-3.5 p-4 rounded-xl bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white hover:opacity-95 transition-opacity"
+          >
+            <Instagram size={22} className="shrink-0" />
+            <div className="text-left leading-tight">
+              <div className="text-[10px] text-white font-bold uppercase tracking-wider">Follow Us On</div>
+              <div className="text-sm font-bold text-white">Instagram</div>
+            </div>
+          </a>
+
+          <a
+            href="https://www.facebook.com/digitacurve"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow Digitacurve on Facebook"
+            className="flex items-center gap-3.5 p-4 rounded-xl bg-[#1877f2] text-white hover:opacity-95 transition-opacity"
+          >
+            <Facebook size={22} className="shrink-0" />
+            <div className="text-left leading-tight">
+              <div className="text-[10px] text-white font-bold uppercase tracking-wider">Follow Us On</div>
+              <div className="text-sm font-bold text-white">Facebook</div>
+            </div>
+          </a>
+
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <div className="flex items-center justify-center p-3 rounded-xl bg-white text-black border border-[#e2e8f0]">
+              <img
+                src="/assets/socials/google.png"
+                alt="Official Google Partner Badge"
+                width={120}
+                height={28}
+                className="h-7 w-auto object-contain"
+              />
+            </div>
+            <div className="flex items-center justify-center p-2.5 rounded-xl bg-[#111] border border-[#2a2a2a] hover:border-purple-500/50 transition-colors">
+              <span dangerouslySetInnerHTML={{ __html: `<a href="https://abacklaunch.com" target="_blank" rel="dofollow"><img src="https://abacklaunch.com/badges/listed-on-dark.svg" alt="Listed on Aback Launch" width="150" height="32" /></a>` }} />
             </div>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-slate-500 gap-4">
-          <p>© 2026 DIGITACURVE CREATIVE GROWTH STUDIO. ALL RIGHTS RESERVED.</p>
-          <div className="flex gap-6">
-            <Link href="/privacy" className="hover:text-slate-300">
-              PRIVACY POLICY
-            </Link>
-            <Link href="/terms" className="hover:text-slate-300">
-              TERMS OF SERVICE
-            </Link>
-          </div>
+        <div className="mt-8 pt-8 border-t border-[#1a1a1a] text-center">
+          <p className="text-gray-300 text-xs tracking-wider">
+            © 2025-2026 Digitacurve. All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>
