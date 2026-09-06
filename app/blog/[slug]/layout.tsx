@@ -262,6 +262,10 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'Healthcare Digital Marketing Agency & Clinic Web App Development | Digitacurve',
     desc: 'Specialized healthcare digital marketing agency guide: Local clinic SEO, HIPAA-compliant Next.js patient booking web apps, and automated 5-star Google review systems.',
   },
+  'how-proptech-real-estate-agencies-double-qualified-buyer-leads-2026': {
+    title: 'PropTech Real Estate Digital Marketing Agency & Property Portal Web Apps | Digitacurve',
+    desc: 'PropTech digital marketing agency guide: High-converting Next.js property portals, 3D floorplan previews, instant WhatsApp CRM routing, and hyper-local real estate SEO.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

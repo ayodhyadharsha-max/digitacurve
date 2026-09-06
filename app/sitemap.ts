@@ -97,6 +97,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'how-nextjs-14-ssr-sub-50ms-ttfb-boost-ecommerce-b2b-conversions-2026',
     'digital-marketing-agency-in-noida-delhi-ncr-seo-web-development-2026',
     'how-healthcare-brands-clinics-use-digital-marketing-web-apps-3x-patients-2026',
+    'how-proptech-real-estate-agencies-double-qualified-buyer-leads-2026',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({

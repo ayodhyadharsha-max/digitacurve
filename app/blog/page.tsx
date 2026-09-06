@@ -692,6 +692,18 @@ const blogPosts = [
     image: '/assets/blogs/tech.webp',
     slug: 'how-healthcare-brands-clinics-use-digital-marketing-web-apps-3x-patients-2026',
   },
+  {
+    title: 'How PropTech Real Estate Agencies & Developers Double Qualified Buyer Leads in 2026',
+    summary: 'Real estate growth blueprint: 3D floorplan Next.js portals, targeted Meta/Google lead funnels, instant WhatsApp CRM routing, and local property SEO.',
+    category: 'PropTech Growth',
+    date: 'Sep 06, 2026',
+    readTime: '12 min read',
+    accentColor: 'from-blue-500/20 to-cyan-500/10',
+    borderColor: 'hover:border-blue-500/30',
+    tagColor: 'text-blue-400 border-blue-500/30 bg-blue-500/5',
+    image: '/assets/blogs/tech.webp',
+    slug: 'how-proptech-real-estate-agencies-double-qualified-buyer-leads-2026',
+  },
 ]
 
 export default function BlogPage() {
