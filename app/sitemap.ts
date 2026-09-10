@@ -98,6 +98,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'digital-marketing-agency-in-noida-delhi-ncr-seo-web-development-2026',
     'how-healthcare-brands-clinics-use-digital-marketing-web-apps-3x-patients-2026',
     'how-proptech-real-estate-agencies-double-qualified-buyer-leads-2026',
+    'how-solar-cleantech-companies-generate-500-commercial-leads-2026',
   ]
 
   const blogEntries = blogSlugs.map((slug) => ({

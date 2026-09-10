@@ -704,6 +704,18 @@ const blogPosts = [
     image: '/assets/blogs/tech.webp',
     slug: 'how-proptech-real-estate-agencies-double-qualified-buyer-leads-2026',
   },
+  {
+    title: 'How Solar & CleanTech Companies Generate 500+ Commercial Leads in 2026: Website & SEO Guide',
+    summary: 'CleanTech growth blueprint: Sub-50ms Next.js solar ROI calculators, high-intent Google PPC ads, renewable energy SEO, and automated CRM routing.',
+    category: 'CleanTech Growth',
+    date: 'Sep 10, 2026',
+    readTime: '12 min read',
+    accentColor: 'from-amber-500/20 to-orange-500/10',
+    borderColor: 'hover:border-amber-500/30',
+    tagColor: 'text-amber-400 border-amber-500/30 bg-amber-500/5',
+    image: '/assets/blogs/tech.webp',
+    slug: 'how-solar-cleantech-companies-generate-500-commercial-leads-2026',
+  },
 ]
 
 export default function BlogPage() {

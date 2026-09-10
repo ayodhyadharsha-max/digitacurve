@@ -266,6 +266,10 @@ const blogMetaDictionary: Record<string, { title: string; desc: string }> = {
     title: 'PropTech Real Estate Digital Marketing Agency & Property Portal Web Apps | Digitacurve',
     desc: 'PropTech digital marketing agency guide: High-converting Next.js property portals, 3D floorplan previews, instant WhatsApp CRM routing, and hyper-local real estate SEO.',
   },
+  'how-solar-cleantech-companies-generate-500-commercial-leads-2026': {
+    title: 'Solar & CleanTech Digital Marketing Agency & Calculator Web Apps | Digitacurve',
+    desc: 'Solar & CleanTech digital marketing agency guide: High-converting Next.js ROI calculator web apps, Google Search PPC ads, renewable energy SEO, and instant WhatsApp CRM routing.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
