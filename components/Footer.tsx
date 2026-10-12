@@ -53,12 +53,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
           {/* Col 1 - Studio Info & Founder */}
           <div className="lg:col-span-4 space-y-5">
-            <Link href="/" className="inline-block">
+            <Link href="/" className="inline-flex items-center gap-2.5">
               <img
-                src="/media/logo-dark.png?v=5"
+                src="/media/logo-icon.png"
                 alt="Digitacurve Logo"
                 className="h-9 sm:h-10 w-auto object-contain"
               />
+              <span className="font-extrabold text-xl sm:text-2xl tracking-tight text-slate-900">
+                DIGITACURVE
+              </span>
             </Link>
             <p className="text-slate-600 text-xs leading-relaxed font-light">
               Premium Web Development &amp; Performance Marketing Studio from Noida. Building high-converting web apps, local SEO, and scalable ad funnels across India.

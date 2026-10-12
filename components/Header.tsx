@@ -15,12 +15,15 @@ export default function Header() {
       <header className="sticky top-0 z-40 w-full liquid-glass-header">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           {/* Brand Logo - DIGITACURVE */}
-          <Link href="/" className="flex items-center group shrink-0">
+          <Link href="/" className="flex items-center gap-2.5 group shrink-0">
             <img
-              src="/media/logo-dark.png?v=5"
+              src="/media/logo-icon.png"
               alt="Digitacurve Logo"
               className="h-9 sm:h-10 w-auto object-contain group-hover:scale-105 transition-transform"
             />
+            <span className="font-extrabold text-xl sm:text-2xl tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors">
+              DIGITACURVE
+            </span>
           </Link>
 
           {/* Desktop Navigation Links */}
