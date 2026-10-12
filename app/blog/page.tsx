@@ -1,904 +1,407 @@
-'use client'
+import Link from 'next/link';
+import { ArrowUpRight, BookOpen, Calendar, Clock, Tag } from 'lucide-react';
 
-import { useState } from 'react'
-import Link from 'next/link'
-import {
-  Calendar, Clock, ArrowRight, ArrowUpRight, Search, Mail, CheckCircle2
-} from 'lucide-react'
-
-const categories = ['All', 'AI & Tech', 'App Dev', 'Web Dev', 'Marketing']
+export const metadata = {
+  title: 'Insights & Articles | Digitacurve Blog',
+  description: 'Actionable strategies on modern web development, SEO ranking, performance marketing, and digital growth from the Digitacurve team.',
+  alternates: {
+    canonical: 'https://www.digitacurve.com/blog',
+  },
+};
 
 const blogPosts = [
   {
-    id: 1,
-    title: 'How Generative AI is Changing Enterprise Software Development',
-    summary: 'Generative AI tools are reshaping the software engineering lifecycle. Discover how companies are implementing LLMs to automate testing and speed up coding velocity.',
-    category: 'AI & Tech',
-    date: 'May 20, 2026',
-    readTime: '6 min read',
-    accentColor: 'from-violet-500/20 to-fuchsia-500/10',
-    borderColor: 'hover:border-violet-500/30',
-    tagColor: 'text-violet-400 border-violet-500/30 bg-violet-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'generative-ai-enterprise-software',
-  },
-  {
-    id: 2,
-    title: 'Top 5 Mobile App UX Trends to Watch in 2026',
-    summary: 'From spatial computing design patterns to micro-gestures and AI-driven personalization, explore the core design elements that will dominate iOS and Android app stores.',
-    category: 'App Dev',
-    date: 'May 15, 2026',
-    readTime: '5 min read',
-    accentColor: 'from-purple-500/20 to-pink-500/10',
-    borderColor: 'hover:border-purple-500/30',
-    tagColor: 'text-purple-400 border-purple-500/30 bg-purple-500/5',
-    image: '/assets/blogs/design.webp',
-    slug: 'mobile-app-ux-trends-2026',
-  },
-  {
-    id: 3,
-    title: 'The Shift to Serverless Next.js and Edge Computing Platforms',
-    summary: 'Edge middleware and serverless APIs are minimizing TTFB and maximizing Core Web Vitals performance. Learn why businesses are migrating their backends to edge configurations.',
-    category: 'Web Dev',
-    date: 'May 08, 2026',
-    readTime: '8 min read',
-    accentColor: 'from-teal-500/20 to-blue-500/10',
-    borderColor: 'hover:border-teal-500/30',
-    tagColor: 'text-teal-400 border-teal-500/30 bg-teal-500/5',
-    image: '/assets/blogs/cloud.webp',
-    slug: 'serverless-nextjs-edge-computing',
-  },
-  {
-    id: 4,
-    title: 'Search Engine Landscaping: Navigating AI-Generated Search Summaries',
-    summary: 'As search engines incorporate AI-driven results, traditional SEO strategies must evolve. Discover how to optimize content for AI answers and maintain high visibility.',
-    category: 'Marketing',
-    date: 'Apr 28, 2026',
-    readTime: '7 min read',
-    accentColor: 'from-orange-500/20 to-yellow-500/10',
-    borderColor: 'hover:border-orange-500/30',
-    tagColor: 'text-orange-400 border-orange-500/30 bg-orange-500/5',
-    image: '/assets/blogs/marketplace.webp',
-    slug: 'search-engine-landscaping-ai-search',
-  },
-  {
-    id: 5,
-    title: 'Securing IoT Devices: Best Practices for Firmware Development',
-    summary: 'Connected hardware devices present unique security vulnerabilities. Explore practical steps for provisioning credentials, encrypting telemetry, and deploying OTA updates.',
-    category: 'AI & Tech',
-    date: 'Apr 22, 2026',
+    slug: 'generative-engine-optimization-chatgpt-search-perplexity-gemini-2026',
+    title: 'Generative Engine Optimization (GEO) & Answer Engine Playbook 2026: How to Rank #1 on ChatGPT Search, Perplexity & Gemini',
+    category: 'GEO & AI Search',
+    date: 'Oct 12, 2026',
     readTime: '9 min read',
-    accentColor: 'from-blue-500/20 to-indigo-500/10',
-    borderColor: 'hover:border-blue-500/30',
-    tagColor: 'text-blue-400 border-blue-500/30 bg-blue-500/5',
-    image: '/assets/blogs/smart-home.webp',
-    slug: 'securing-iot-devices-firmware',
+    excerpt: 'How forward-thinking brands combine entity-fact JSON-LD schema, direct answer extraction, and brand authority citations to win prime recommendation spots across ChatGPT Search, Perplexity, and Google Gemini.',
   },
   {
-    id: 6,
-    title: 'Mastering App Store Optimization (ASO) for Higher Downloads',
-    summary: 'Creating a great application is only half the battle. Discover the visual and text optimization guidelines to rank higher in Google Play and iOS App Store searches.',
-    category: 'Marketing',
-    date: 'Apr 14, 2026',
-    readTime: '5 min read',
-    accentColor: 'from-red-500/20 to-orange-500/10',
-    borderColor: 'hover:border-red-500/30',
-    tagColor: 'text-red-400 border-red-500/30 bg-red-500/5',
-    image: '/assets/blogs/design.webp',
-    slug: 'mastering-aso-app-store-optimization',
-  },
-  {
-    id: 7,
-    title: 'The Ultimate Guide to Generative Engine Optimization (GEO)',
-    summary: 'AI-generated search summaries are rewriting web search dynamics. Discover what GEO is, how LLM algorithms compile brand metrics, and 5 action steps to secure AI citations.',
-    category: 'Marketing',
-    date: 'Jul 20, 2026',
+    slug: 'local-seo-google-maps-3-pack-ranking-noida-delhi-ncr-2026',
+    title: 'Local SEO & Google Maps 3-Pack Dominance 2026: Hyper-Local Ranking Blueprint for Noida, Delhi NCR & India',
+    category: 'Local SEO & Growth',
+    date: 'Oct 12, 2026',
     readTime: '8 min read',
-    accentColor: 'from-orange-500/20 to-red-500/10',
-    borderColor: 'hover:border-orange-500/30',
-    tagColor: 'text-orange-400 border-orange-500/30 bg-orange-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'ultimate-guide-to-generative-engine-optimization',
+    excerpt: 'A battle-tested blueprint for local service businesses and agencies to dominate Google Maps 3-pack rankings, boost phone calls, and capture high-intent inquiries in Noida and Delhi NCR.',
   },
   {
-    id: 8,
-    title: 'How to Optimize Next.js Web Apps for Core Web Vitals in 2026',
-    summary: 'Master LCP, INP, and CLS performance tuning for Next.js 14 applications with edge caching and font optimizations.',
-    category: 'Web Dev',
-    date: 'Jul 23, 2026',
+    slug: 'nextjs-15-enterprise-performance-cwv-inp-optimization-2026',
+    title: 'Next.js 15 & React 19 Enterprise Web Architecture 2026: Sub-Second Core Web Vitals, INP Mastery & TTFB Optimization',
+    category: 'Web Architecture',
+    date: 'Oct 11, 2026',
     readTime: '8 min read',
-    accentColor: 'from-teal-500/20 to-blue-500/10',
-    borderColor: 'hover:border-teal-500/30',
-    tagColor: 'text-teal-400 border-teal-500/30 bg-teal-500/5',
-    image: '/assets/blogs/cloud.webp',
-    slug: 'how-to-optimize-nextjs-web-apps-for-core-web-vitals',
+    excerpt: 'How enterprise engineering teams achieve sub-100ms Interaction to Next Paint (INP), sub-second Largest Contentful Paint (LCP), and 99+ Google PageSpeed scores with Next.js 15.',
   },
   {
-    id: 9,
-    title: 'React Native vs Flutter: Choosing the Right Hybrid App Framework in 2026',
-    summary: 'Compare JavaScript bridges vs Dart machine code compilation for mobile app performance, UI fidelity, and developer ecosystem.',
-    category: 'App Dev',
-    date: 'Jul 25, 2026',
+    slug: 'high-converting-landing-page-cro-whatsapp-funnels-2026',
+    title: 'High-Converting B2B & Real Estate Landing Page Architecture 2026: Quadruple ROAS with WhatsApp Funnels & CRO',
+    category: 'Conversion Optimization',
+    date: 'Oct 10, 2026',
+    readTime: '8 min read',
+    excerpt: 'The exact landing page architecture and micro-conversion psychology that top-performing B2B brands and luxury real estate developers use to convert paid ad clicks into booked deals.',
+  },
+  {
+    slug: 'omnichannel-marketing-custom-ecommerce-nextjs-2026',
+    title: 'Omnichannel Marketing Systems & Headless E-Commerce Architecture in 2026: Next.js 14 Playbook',
+    category: 'E-Commerce Growth',
+    date: 'Sep 30, 2026',
+    readTime: '8 min read',
+    excerpt: 'How scaling D2C brands and enterprise retailers combine headless Next.js e-commerce storefronts, sub-second checkout hydration, and automated WhatsApp funnels.',
+  },
+  {
+    slug: 'b2b-enterprise-web-design-cro-noida-2026',
+    title: 'High-Converting B2B Enterprise Web Design & CRO Blueprint 2026: Driving 4x Inbound Sales Pipeline',
+    category: 'B2B Web Design',
+    date: 'Sep 30, 2026',
+    readTime: '8 min read',
+    excerpt: 'A tactical guide for B2B tech companies and IT services firms to quadruple inbound RFP inquiries using fast Next.js architecture and micro-copy CRO.',
+  },
+  {
+    slug: 'enterprise-web-security-soc2-hipaa-nextjs-2026',
+    title: 'Enterprise Web Security & SOC 2 / HIPAA Compliant Next.js Web Development (2026 Shield Playbook)',
+    category: 'Web Security',
+    date: 'Sep 29, 2026',
+    readTime: '8 min read',
+    excerpt: 'How enterprise tech brands build bank-grade Next.js web applications compliant with SOC 2 Type II, HIPAA, CSP policies, and zero-trust data encryption.',
+  },
+  {
+    slug: 'ai-search-optimization-geo-brand-citations-2026',
+    title: 'AI Search Optimization (GEO) 2026: Winning Brand Citations on ChatGPT Search, Perplexity & Gemini',
+    category: 'GEO & AI Search',
+    date: 'Sep 29, 2026',
+    readTime: '8 min read',
+    excerpt: 'A tactical blueprint for capturing top AI recommendations and brand citations on ChatGPT Search, Perplexity, and Google Gemini using entity-fact schema.',
+  },
+  {
+    slug: 'enterprise-nextjs-microservices-app-router-2026',
+    title: 'Enterprise Next.js 14 App Router & Microservices Architecture (2026 Engineering Playbook)',
+    category: 'Web Architecture',
+    date: 'Sep 28, 2026',
+    readTime: '8 min read',
+    excerpt: 'How global engineering teams architect decoupled Next.js 14 App Router platforms with Server Components, Edge Middleware, microservices, and sub-50ms TTFB.',
+  },
+  {
+    slug: 'b2b-saas-multi-tenant-web-portal-development-2026',
+    title: 'B2B SaaS & Multi-Tenant Web Portal Development in 2026: Scalable Next.js Architecture & Local SEO',
+    category: 'SaaS Engineering',
+    date: 'Sep 28, 2026',
+    readTime: '8 min read',
+    excerpt: 'A comprehensive guide for B2B SaaS startups building isolated multi-tenant client portals, interactive pricing calculators, and programmatic SEO lead funnels.',
+  },
+  {
+    slug: 'fintech-banking-website-development-security-seo-2026',
+    title: 'FinTech & Banking Web Application Development 2026: Next.js Security Architecture, API Integrations & Local SEO',
+    category: 'FinTech Engineering',
+    date: 'Sep 27, 2026',
+    readTime: '8 min read',
+    excerpt: 'How FinTech startups and financial institutions build bank-grade Next.js web applications, sub-second EMI calculators, secure CRM lead routing, and dominate local search.',
+  },
+  {
+    slug: 'ai-lead-generation-whatsapp-funnels-conversion-2026',
+    title: 'AI-Powered Lead Generation & WhatsApp Funnels in 2026: Automating B2B & D2C Sales Workflows',
+    category: 'AI Lead Systems',
+    date: 'Sep 27, 2026',
     readTime: '7 min read',
-    accentColor: 'from-purple-500/20 to-pink-500/10',
-    borderColor: 'hover:border-purple-500/30',
-    tagColor: 'text-purple-400 border-purple-500/30 bg-purple-500/5',
-    image: '/assets/blogs/design.webp',
-    slug: 'react-native-vs-flutter-choosing-the-right-hybrid-app-framework',
+    excerpt: 'A tactical blueprint for service brands and D2C enterprises to combine Next.js lead forms, AI pre-screening chatbots, and automated WhatsApp sequences with 90%+ open rates.',
   },
   {
-    id: 10,
-    title: 'Building a Two-Sided On-Demand Booking Marketplace: Architecture & UX',
-    summary: 'Explore Redis locking, double-booking prevention, calendar webhooks, and Stripe Connect split payments for two-sided marketplace apps.',
-    category: 'App Dev',
-    date: 'Jul 29, 2026',
-    readTime: '8 min read',
-    accentColor: 'from-blue-500/20 to-indigo-500/10',
-    borderColor: 'hover:border-blue-500/30',
-    tagColor: 'text-blue-400 border-blue-500/30 bg-blue-500/5',
-    image: '/assets/blogs/ecommerce.webp',
-    slug: 'building-a-two-sided-on-demand-booking-marketplace-architecture-and-ux',
-  },
-  {
-    id: 11,
-    title: 'Building Enterprise AI Agents with Next.js & Serverless Architectures',
-    summary: 'Discover how serverless edge runtimes, vector databases, and RAG pipelines power task-executing autonomous AI agents.',
-    category: 'AI & Tech',
-    date: 'Jul 29, 2026',
-    readTime: '7 min read',
-    accentColor: 'from-violet-500/20 to-fuchsia-500/10',
-    borderColor: 'hover:border-violet-500/30',
-    tagColor: 'text-violet-400 border-violet-500/30 bg-violet-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'building-enterprise-ai-agents-with-nextjs-and-serverless-architectures',
-  },
-  {
-    id: 12,
-    title: 'Global Web Development Services: How Custom Next.js Architecture Outperforms Legacy CMS',
-    summary: 'Explore why global enterprises in Melbourne, Sydney, London, Toronto, and Dubai choose custom Next.js over legacy WordPress & Shopify.',
-    category: 'Web Dev',
-    date: 'Aug 02, 2026',
-    readTime: '8 min read',
-    accentColor: 'from-teal-500/20 to-blue-500/10',
-    borderColor: 'hover:border-teal-500/30',
-    tagColor: 'text-teal-400 border-teal-500/30 bg-teal-500/5',
-    image: '/assets/blogs/cloud.webp',
-    slug: 'global-web-development-services-custom-nextjs-vs-legacy-cms',
-  },
-  {
-    id: 13,
-    title: 'Real Estate Digital Marketing & Lead Generation Blueprint 2026',
-    summary: 'Discover how modern property builders and brokerages generate high-ticket luxury buyer leads and site visits through automated Next.js portals and Meta ads.',
-    category: 'Marketing',
-    date: 'Aug 09, 2026',
-    readTime: '8 min read',
-    accentColor: 'from-amber-500/20 to-orange-500/10',
-    borderColor: 'hover:border-amber-500/30',
-    tagColor: 'text-amber-400 border-amber-500/30 bg-amber-500/5',
-    image: '/assets/blogs/marketplace.webp',
-    slug: 'real-estate-digital-marketing-lead-generation-guide-2026',
-  },
-  {
-    id: 14,
-    title: 'Digital Marketing for Doctors & Healthcare Clinics: Patient Acquisition Strategy',
-    summary: 'Explore Google Local Map Pack domination, verified patient review automation, and instant appointment booking funnels for healthcare centers.',
-    category: 'Marketing',
-    date: 'Aug 09, 2026',
-    readTime: '7 min read',
-    accentColor: 'from-emerald-500/20 to-teal-500/10',
-    borderColor: 'hover:border-emerald-500/30',
-    tagColor: 'text-emerald-400 border-emerald-500/30 bg-emerald-500/5',
-    image: '/assets/blogs/smart-home.webp',
-    slug: 'digital-marketing-for-doctors-healthcare-clinics-2026',
-  },
-  {
-    id: 15,
-    title: 'Travel & Tourism Digital Marketing: How to Scale Booking Inquiries Globally',
-    summary: 'Cut out OTA commissions by deploying dynamic tour booking platforms, itinerary builders, and multi-currency checkout systems.',
-    category: 'Marketing',
-    date: 'Aug 09, 2026',
-    readTime: '8 min read',
-    accentColor: 'from-sky-500/20 to-blue-500/10',
-    borderColor: 'hover:border-sky-500/30',
-    tagColor: 'text-sky-400 border-sky-500/30 bg-sky-500/5',
-    image: '/assets/blogs/marketplace.webp',
-    slug: 'travel-tourism-digital-marketing-global-booking-guide',
-  },
-  {
-    id: 16,
-    title: 'Solar Company Digital Marketing & Lead Generation Blueprint 2026',
-    summary: 'How solar EPC contractors generate exclusive rooftop solar installation contracts using interactive solar savings calculator funnels.',
-    category: 'Marketing',
-    date: 'Aug 09, 2026',
-    readTime: '8 min read',
-    accentColor: 'from-yellow-500/20 to-amber-500/10',
-    borderColor: 'hover:border-yellow-500/30',
-    tagColor: 'text-yellow-400 border-yellow-500/30 bg-yellow-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'solar-company-digital-marketing-lead-generation-guide-2026',
-  },
-  {
-    id: 17,
-    title: 'Headless E-Commerce in 2026: Why High-Growth Brands Migrate from Shopify to Custom Next.js Architecture',
-    summary: 'Discover how D2C and multi-store retailers achieve sub-second page loads, zero app bloat, and higher checkout conversion by migrating from Shopify to Next.js.',
-    category: 'Web Dev',
-    date: 'Aug 10, 2026',
-    readTime: '9 min read',
-    accentColor: 'from-blue-500/20 to-purple-500/10',
-    borderColor: 'hover:border-blue-500/30',
-    tagColor: 'text-blue-400 border-blue-500/30 bg-blue-500/5',
-    image: '/assets/blogs/ecommerce.webp',
-    slug: 'headless-ecommerce-shopify-to-nextjs-migration-guide',
-  },
-  {
-    id: 18,
-    title: 'Enterprise AI Agents in 2026: How Custom LLM Workflows Automate Business Operations',
-    summary: 'Explore how modern enterprises deploy autonomous AI agents, tool-calling workflows, and vector RAG to automate lead qualification and operations.',
-    category: 'AI & Tech',
-    date: 'Aug 12, 2026',
-    readTime: '8 min read',
-    accentColor: 'from-violet-500/20 to-purple-500/10',
-    borderColor: 'hover:border-violet-500/30',
-    tagColor: 'text-violet-400 border-violet-500/30 bg-violet-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'enterprise-ai-agents-llm-workflows-automation-guide-2026',
-  },
-  {
-    id: 19,
-    title: 'Multi-Location Local SEO in 2026: How Franchise & Multi-City Brands Dominate Google Map 3-Packs',
-    summary: 'Master multi-location local SEO strategies: Google Local Map 3-Pack domination, branch landing page architecture, and verified NAP synchronization.',
-    category: 'Marketing',
-    date: 'Aug 13, 2026',
-    readTime: '8 min read',
-    accentColor: 'from-emerald-500/20 to-teal-500/10',
-    borderColor: 'hover:border-emerald-500/30',
-    tagColor: 'text-emerald-400 border-emerald-500/30 bg-emerald-500/5',
-    image: '/assets/blogs/smart-home.webp',
-    slug: 'multi-location-local-seo-google-map-pack-domination-guide-2026',
-  },
-  {
-    id: 20,
-    title: 'Building Scalable B2B SaaS in 2026: Next.js Multi-Tenancy & Stripe Architecture',
-    summary: 'Engineering blueprint for building high-scale B2B SaaS platforms: Next.js edge multi-tenancy, Stripe billing webhooks, and serverless background workers.',
-    category: 'Web Dev',
-    date: 'Aug 14, 2026',
-    readTime: '9 min read',
-    accentColor: 'from-blue-500/20 to-cyan-500/10',
-    borderColor: 'hover:border-blue-500/30',
-    tagColor: 'text-cyan-400 border-cyan-500/30 bg-cyan-500/5',
-    image: '/assets/blogs/cloud.webp',
-    slug: 'building-scalable-b2b-saas-nextjs-multi-tenancy-guide-2026',
-  },
-  {
-    id: 21,
-    title: 'Landing Page Conversion Rate Optimization (CRO) in 2026: Next.js Funnels & WhatsApp Lead Capture',
-    summary: 'Discover how top digital agencies achieve 15-30% landing page conversion rates using Next.js sub-second speed, interactive cost estimators, and WhatsApp funnels.',
-    category: 'Marketing',
-    date: 'Aug 15, 2026',
-    readTime: '8 min read',
-    accentColor: 'from-amber-500/20 to-orange-500/10',
-    borderColor: 'hover:border-amber-500/30',
-    tagColor: 'text-amber-400 border-amber-500/30 bg-amber-500/5',
-    image: '/assets/blogs/marketplace.webp',
-    slug: 'landing-page-conversion-rate-optimization-nextjs-guide-2026',
-  },
-  {
-    id: 22,
-    title: 'Global Web Performance in 2026: Sub-50ms TTFB with Next.js Edge Caching & Regional Nodes',
-    summary: 'Explore how global enterprises achieve sub-50ms TTFB across London, Sydney, Dubai, and Toronto using Next.js Edge runtime and distributed caching.',
-    category: 'Web Dev',
-    date: 'Aug 16, 2026',
-    readTime: '9 min read',
-    accentColor: 'from-sky-500/20 to-indigo-500/10',
-    borderColor: 'hover:border-sky-500/30',
-    tagColor: 'text-sky-400 border-sky-500/30 bg-sky-500/5',
-    image: '/assets/blogs/cloud.webp',
-    slug: 'global-web-performance-sub-50ms-ttfb-nextjs-edge-caching-2026',
-  },
-  {
-    id: 23,
-    title: 'Website Development Cost in India: 2026 Transparent Price Guide',
-    summary: 'Explore transparent 2026 development pricing: from ₹25,000 small business websites to enterprise Next.js and headless e-commerce portals.',
-    category: 'Web Dev',
-    date: 'Aug 16, 2026',
-    readTime: '10 min read',
-    accentColor: 'from-emerald-500/20 to-teal-500/10',
-    borderColor: 'hover:border-emerald-500/30',
-    tagColor: 'text-emerald-400 border-emerald-500/30 bg-emerald-500/5',
-    image: '/assets/blogs/ecommerce.webp',
-    slug: 'website-development-cost-in-india-2026-pricing-guide',
-  },
-  {
-    title: 'Mobile App Development Cost in India: 2026 Complete Price Breakdown',
-    summary: 'Complete 2026 line-item guide on mobile app costs in India: iOS, Android, Flutter vs Native development, MVP timelines, and cloud infrastructure.',
-    category: 'App Dev',
-    date: 'Aug 17, 2026',
-    readTime: '11 min read',
-    accentColor: 'from-purple-500/20 to-indigo-500/10',
-    borderColor: 'hover:border-purple-500/30',
-    tagColor: 'text-purple-400 border-purple-500/30 bg-purple-500/5',
-    image: '/assets/blogs/marketing.webp',
-    slug: 'mobile-app-development-cost-in-india-2026-price-breakdown',
-  },
-  {
-    title: 'Digital Marketing Packages & Pricing in India: 2026 ROI Guide',
-    summary: 'Explore 2026 digital marketing pricing: from ₹20,000/mo SEO & local Google Map retainers to ₹75,000+ 360° omnichannel lead machine packages.',
-    category: 'Digital Marketing',
-    date: 'Aug 18, 2026',
-    readTime: '12 min read',
-    accentColor: 'from-blue-500/20 to-cyan-500/10',
-    borderColor: 'hover:border-blue-500/30',
-    tagColor: 'text-blue-400 border-blue-500/30 bg-blue-500/5',
-    image: '/assets/blogs/marketing.webp',
-    slug: 'digital-marketing-packages-pricing-india-2026-roi-guide',
-  },
-  {
-    title: 'Top IT & Software Development Company in Noida & Delhi NCR: 2026 Guide',
-    summary: 'Enterprise guide to choosing a top IT company in Noida: custom Next.js web applications, mobile engineering, and AI agent integration.',
-    category: 'IT Consulting',
-    date: 'Aug 19, 2026',
-    readTime: '10 min read',
-    accentColor: 'from-purple-500/20 to-indigo-500/10',
-    borderColor: 'hover:border-purple-500/30',
-    tagColor: 'text-purple-400 border-purple-500/30 bg-purple-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'top-it-company-noida-delhi-ncr-custom-software-services-2026',
-  },
-  {
-    title: 'Generative Engine Optimization (GEO): How to Rank on ChatGPT & Gemini in 2026',
-    summary: 'Learn how to optimize your brand for AI search engines: entity citations, JSON-LD schemas, and conversational AI recommendation algorithms.',
-    category: 'GEO & AI',
-    date: 'Aug 21, 2026',
-    readTime: '12 min read',
-    accentColor: 'from-amber-500/20 to-orange-500/10',
-    borderColor: 'hover:border-amber-500/30',
-    tagColor: 'text-amber-400 border-amber-500/30 bg-amber-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'generative-engine-optimization-geo-agency-guide-2026',
-  },
-  {
-    title: 'React Native vs Flutter in 2026: Performance & Cost Comparison',
-    summary: 'Direct technical and financial comparison of React Native vs Flutter: rendering engines, developer velocity, and cross-platform mobile cost.',
-    category: 'App Dev',
-    date: 'Aug 22, 2026',
-    readTime: '11 min read',
-    accentColor: 'from-cyan-500/20 to-blue-500/10',
-    borderColor: 'hover:border-cyan-500/30',
-    tagColor: 'text-cyan-400 border-cyan-500/30 bg-cyan-500/5',
-    image: '/assets/blogs/design.webp',
-    slug: 'react-native-vs-flutter-app-development-cost-performance-2026',
-  },
-  {
-    title: 'E-Commerce Website Cost 2026: Monolithic Shopify vs Headless Next.js',
-    summary: 'Compare e-commerce development costs in 2026: monolithic Shopify themes vs custom headless Next.js storefronts with 100/100 Core Web Vitals.',
-    category: 'Web Dev',
-    date: 'Aug 24, 2026',
-    readTime: '10 min read',
-    accentColor: 'from-emerald-500/20 to-teal-500/10',
-    borderColor: 'hover:border-emerald-500/30',
-    tagColor: 'text-emerald-400 border-emerald-500/30 bg-emerald-500/5',
-    image: '/assets/blogs/ecommerce.webp',
-    slug: 'ecommerce-website-development-cost-shopify-vs-nextjs-2026',
-  },
-  {
-    title: 'How to Hire Dedicated Next.js & Mobile App Developers in India: 2026 Guide',
-    summary: 'Complete guide to hiring dedicated software developers in India: monthly retainer models ($1,500–$3,200/mo), skill testing, and time-zone alignment.',
-    category: 'Engineering',
-    date: 'Aug 25, 2026',
-    readTime: '12 min read',
-    accentColor: 'from-violet-500/20 to-fuchsia-500/10',
-    borderColor: 'hover:border-violet-500/30',
-    tagColor: 'text-violet-400 border-violet-500/30 bg-violet-500/5',
-    image: '/assets/blogs/cloud.webp',
-    slug: 'hire-dedicated-nextjs-fullstack-developers-india-2026-guide',
-  },
-  {
-    title: 'AI Development Services & LLM Agent Solutions in India: 2026 Guide',
-    summary: 'Enterprise guide to building autonomous AI agents, RAG vector search, and custom LLM integrations for operational automation in 2026.',
-    category: 'AI & Automation',
-    date: 'Aug 26, 2026',
-    readTime: '11 min read',
-    accentColor: 'from-purple-500/20 to-pink-500/10',
-    borderColor: 'hover:border-purple-500/30',
-    tagColor: 'text-purple-400 border-purple-500/30 bg-purple-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'ai-development-services-llm-agents-india-2026-guide',
-  },
-  {
-    title: 'Custom Healthcare & Telemedicine App Development: 2026 HIPAA Compliance Guide',
-    summary: 'Technical guide to HIPAA-compliant healthcare web portals, WebRTC telemedicine video consultations, and EHR/EMR FHIR API integrations.',
-    category: 'Healthcare Tech',
-    date: 'Aug 26, 2026',
-    readTime: '12 min read',
-    accentColor: 'from-blue-500/20 to-teal-500/10',
-    borderColor: 'hover:border-blue-500/30',
-    tagColor: 'text-blue-400 border-blue-500/30 bg-blue-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'custom-healthcare-app-development-hipaa-telemedicine-guide-2026',
-  },
-  {
-    title: 'Custom Real Estate Website & CRM Development: 2026 PropTech Lead Guide',
-    summary: 'PropTech guide to custom real estate website development, MLS/RETS property feeds, interactive Mapbox search, and automated CRM lead capture.',
-    category: 'Real Estate Tech',
-    date: 'Aug 27, 2026',
-    readTime: '12 min read',
-    accentColor: 'from-amber-500/20 to-orange-500/10',
-    borderColor: 'hover:border-amber-500/30',
-    tagColor: 'text-amber-400 border-amber-500/30 bg-amber-500/5',
-    image: '/assets/blogs/real-estate.webp',
-    slug: 'real-estate-website-crm-development-proptech-lead-guide-2026',
-  },
-  {
-    title: 'Solar & CleanTech Digital Marketing Guide 2026: Website, App & Lead System',
-    summary: 'CleanTech digital marketing guide to custom solar installer website development, interactive rooftop ROI calculators, and mobile lead dispatch apps.',
-    category: 'CleanTech',
-    date: 'Aug 28, 2026',
-    readTime: '12 min read',
-    accentColor: 'from-yellow-500/20 to-amber-500/10',
-    borderColor: 'hover:border-yellow-500/30',
-    tagColor: 'text-yellow-400 border-yellow-500/30 bg-yellow-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'solar-cleantech-digital-marketing-website-app-lead-guide-2026',
-  },
-  {
-    title: 'DeepSeek R1 vs GPT-4o vs Claude 3.5 Sonnet: 2026 AI Benchmarks & Free API Guide',
-    summary: 'Viral AI guide: DeepSeek R1 reasoning architecture vs OpenAI GPT-4o vs Claude 3.5 Sonnet. SWE-bench coding benchmarks, local Ollama execution, and API pricing breakdown.',
-    category: 'Trending AI Tech',
-    date: 'Aug 28, 2026',
-    readTime: '14 min read',
-    accentColor: 'from-purple-500/20 to-cyan-500/10',
-    borderColor: 'hover:border-cyan-500/30',
-    tagColor: 'text-cyan-400 border-cyan-500/30 bg-cyan-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'deepseek-r1-vs-gpt4o-claude35-sonnet-ai-benchmarks-2026',
-  },
-  {
-    title: 'Top Digital Marketing Agency & Web Development Company in Lucknow: 2026 Guide',
-    summary: 'Local growth guide: Google 3-Pack Local SEO, custom Next.js website design, and high-ROI lead generation for Lucknow businesses.',
-    category: 'Local Growth',
-    date: 'Aug 28, 2026',
-    readTime: '11 min read',
-    accentColor: 'from-orange-500/20 to-red-500/10',
-    borderColor: 'hover:border-orange-500/30',
-    tagColor: 'text-orange-400 border-orange-500/30 bg-orange-500/5',
-    image: '/assets/blogs/marketing.webp',
-    slug: 'best-digital-marketing-agency-in-lucknow-web-development-company-2026',
-  },
-  {
-    title: 'Top Digital Marketing Agency & Custom App Company in Delhi NCR: 2026 Guide',
-    summary: 'Delhi NCR growth guide: Generative Engine Optimization (GEO), Next.js web apps, and high-ticket B2B lead generation.',
-    category: 'Local Growth',
-    date: 'Aug 28, 2026',
-    readTime: '12 min read',
-    accentColor: 'from-blue-500/20 to-indigo-500/10',
-    borderColor: 'hover:border-blue-500/30',
-    tagColor: 'text-blue-400 border-blue-500/30 bg-blue-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'top-digital-marketing-agency-delhi-ncr-custom-web-app-services-2026',
-  },
-  {
-    title: 'Top Digital Marketing Agency & Software Company in Mumbai: 2026 Guide',
-    summary: 'Mumbai growth guide: Enterprise SEO, headless Next.js e-commerce, and mobile app development for corporate brands.',
-    category: 'Local Growth',
-    date: 'Aug 28, 2026',
-    readTime: '12 min read',
-    accentColor: 'from-emerald-500/20 to-teal-500/10',
-    borderColor: 'hover:border-emerald-500/30',
-    tagColor: 'text-emerald-400 border-emerald-500/30 bg-emerald-500/5',
-    image: '/assets/blogs/marketing.webp',
-    slug: 'best-digital-marketing-agency-in-mumbai-web-app-development-company-2026',
-  },
-  {
-    title: 'Top Digital Marketing Agency & Custom Software Company in Pune: 2026 Guide',
-    summary: 'Pune tech growth guide: SaaS product SEO, microservices API engineering, and high-converting performance ad campaigns.',
-    category: 'Local Growth',
-    date: 'Aug 28, 2026',
-    readTime: '11 min read',
-    accentColor: 'from-violet-500/20 to-purple-500/10',
-    borderColor: 'hover:border-violet-500/30',
-    tagColor: 'text-violet-400 border-violet-500/30 bg-violet-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'top-digital-marketing-agency-in-pune-custom-software-web-services-2026',
-  },
-  {
-    title: 'What is Digital Marketing? 10 Easy Ways It Multiplies Business Revenue in 2026',
-    summary: 'Beginner-friendly business guide: SEO, social media marketing, instant lead generation, and 10 proven ways to scale sales online.',
-    category: 'Digital Marketing',
-    date: 'Aug 28, 2026',
-    readTime: '10 min read',
-    accentColor: 'from-amber-500/20 to-orange-500/10',
-    borderColor: 'hover:border-amber-500/30',
-    tagColor: 'text-amber-400 border-amber-500/30 bg-amber-500/5',
-    image: '/assets/blogs/marketing.webp',
-    slug: 'what-is-digital-marketing-benefits-for-business-2026',
-  },
-  {
-    title: "What is Artificial Intelligence (AI)? A Beginner's Guide for Business Owners",
-    summary: "Simple guide for entrepreneurs: Automated customer support, AI content generation, and smart tools to save time and boost profits.",
-    category: 'AI & Innovation',
-    date: 'Aug 28, 2026',
-    readTime: '10 min read',
-    accentColor: 'from-cyan-500/20 to-blue-500/10',
-    borderColor: 'hover:border-cyan-500/30',
-    tagColor: 'text-cyan-400 border-cyan-500/30 bg-cyan-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'what-is-ai-how-small-businesses-can-use-artificial-intelligence-2026',
-  },
-  {
-    title: 'How to Choose the Best Web Development Agency in 2026: 10-Point Checklist',
-    summary: '10-point evaluation guide for business owners: Next.js tech stacks, 100/100 Core Web Vitals, GEO AI search optimization, and custom CRM integration.',
-    category: 'Web Engineering',
-    date: 'Aug 29, 2026',
-    readTime: '11 min read',
-    accentColor: 'from-blue-500/20 to-indigo-500/10',
-    borderColor: 'hover:border-blue-500/30',
-    tagColor: 'text-blue-400 border-blue-500/30 bg-blue-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'how-to-choose-the-best-web-development-agency-2026-checklist',
-  },
-  {
-    title: '5 Reasons Every Business Needs a Custom Mobile App in 2026: iOS & Android Guide',
-    summary: 'Essential guide for business growth: Direct push notification engagement, 3x higher checkout conversions, brand loyalty, and React Native/Flutter efficiency.',
+    slug: 'mobile-app-development-company-noida-delhi-ncr-2026',
+    title: 'Top iOS & Android Mobile App Development Agency in Noida & Delhi NCR (2026 Tech Stack Guide)',
     category: 'Mobile Engineering',
-    date: 'Aug 30, 2026',
-    readTime: '10 min read',
-    accentColor: 'from-purple-500/20 to-pink-500/10',
-    borderColor: 'hover:border-purple-500/30',
-    tagColor: 'text-purple-400 border-purple-500/30 bg-purple-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: '5-reasons-every-business-needs-custom-mobile-app-2026',
+    date: 'Sep 26, 2026',
+    readTime: '8 min read',
+    excerpt: 'How leading enterprises and tech startups build high-performance iOS, Android, and React Native mobile applications equipped with Apple Intelligence, Siri App Intents, and real-time backend sync.',
   },
   {
-    title: 'How AI Automation Saves 20+ Hours Per Week for Small Business Owners in 2026',
-    summary: 'Practical automation blueprint: 24/7 AI chatbots, instant CRM lead follow-ups, automated invoicing, and social media pipelines.',
-    category: 'AI & Automation',
-    date: 'Aug 31, 2026',
-    readTime: '11 min read',
-    accentColor: 'from-cyan-500/20 to-teal-500/10',
-    borderColor: 'hover:border-cyan-500/30',
-    tagColor: 'text-cyan-400 border-cyan-500/30 bg-cyan-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'how-ai-automation-saves-20-hours-per-week-small-business-2026',
+    slug: 'conversion-rate-optimization-cro-landing-pages-2026',
+    title: 'Conversion Rate Optimization (CRO) Blueprint 2026: Designing Zero-Bounce Next.js Landing Pages That Quadruple ROAS',
+    category: 'Conversion Optimization',
+    date: 'Sep 26, 2026',
+    readTime: '7 min read',
+    excerpt: 'A tactical CRO guide on sub-second mobile hydration, dual WhatsApp lead triggers, micro-copy social proof, and A/B testing frameworks that transform ad clicks into high-ticket inbound leads.',
   },
   {
-    title: 'Top Digital Marketing Agency & Web Development Company in Patna, Indore, Bhopal & Jaipur',
-    summary: 'Regional growth guide: Google 3-Pack Local SEO, custom Next.js web applications, and high-ROI lead generation for Tier-2 commercial hubs.',
-    category: 'Regional Growth',
-    date: 'Sep 01, 2026',
-    readTime: '12 min read',
-    accentColor: 'from-orange-500/20 to-amber-500/10',
-    borderColor: 'hover:border-orange-500/30',
-    tagColor: 'text-orange-400 border-orange-500/30 bg-orange-500/5',
-    image: '/assets/blogs/marketing.webp',
-    slug: 'top-digital-marketing-agency-in-patna-indore-bhopal-jaipur-2026',
+    slug: 'ai-powered-seo-strategy-rank-1-google-gemini-2026',
+    title: 'AI-Powered SEO Strategy 2026: Combining Next.js Technical Speed, Generative Search Optimization & LLM Brand Citations',
+    category: 'AI & Search Strategy',
+    date: 'Sep 25, 2026',
+    readTime: '8 min read',
+    excerpt: 'Discover how modern digital agencies combine Core Web Vitals optimization, entity-fact schema mapping, and AI Generative Engine Optimization (GEO) to capture top rankings on Google and ChatGPT Search.',
   },
   {
-    title: 'Digital Marketing & Website Development Cost in India: 2026 Price List & Packages',
-    summary: 'Comprehensive 2026 pricing guide: Next.js website cost, monthly SEO package rates, e-commerce storefront pricing, and transparent agency deliverables.',
-    category: 'Pricing & Cost',
-    date: 'Sep 01, 2026',
-    readTime: '12 min read',
-    accentColor: 'from-green-500/20 to-emerald-500/10',
-    borderColor: 'hover:border-green-500/30',
-    tagColor: 'text-green-400 border-green-500/30 bg-green-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'digital-marketing-website-development-cost-in-india-2026-pricing-packages',
+    slug: '360-degree-digital-marketing-agency-noida-india-2026',
+    title: '360° Digital Marketing & Full-Funnel Growth Agency in Noida & India (2026 Enterprise Guide)',
+    category: 'Digital Growth Systems',
+    date: 'Sep 25, 2026',
+    readTime: '7 min read',
+    excerpt: 'A comprehensive evaluation of end-to-end digital growth systems connecting Next.js web portals, Google & Meta PPC ads, technical SEO, and automated WhatsApp lead nurture.',
   },
   {
-    title: 'Top Social Media Marketing Agency & Instagram Account Management Company',
-    summary: 'Social media growth blueprint: Short-form viral reels, Meta lead campaigns, influencer brand deals, and 24/7 engagement automation.',
-    category: 'Social Growth',
-    date: 'Sep 01, 2026',
-    readTime: '11 min read',
-    accentColor: 'from-purple-500/20 to-indigo-500/10',
-    borderColor: 'hover:border-purple-500/30',
-    tagColor: 'text-purple-400 border-purple-500/30 bg-purple-500/5',
-    image: '/assets/blogs/marketing.webp',
-    slug: 'top-social-media-marketing-agency-instagram-management-2026-guide',
+    slug: 'educational-edtech-portal-website-development-2026',
+    title: 'Educational & EdTech Portal Development in 2026: Next.js Student Portals, LMS Integration & High-Intent Student Lead Gen',
+    category: 'EdTech Solutions',
+    date: 'Sep 24, 2026',
+    readTime: '8 min read',
+    excerpt: 'How universities, coaching institutes, and EdTech platforms in Noida, Delhi NCR, and India double student enrollments using fast Next.js course portals, Meta lead ads, and automated WhatsApp counseling.',
   },
   {
-    title: 'Top Digital Marketing Agency & Web Development Company in Surat, Agra, Meerut & Varanasi',
-    summary: 'Regional commercial growth guide: Local SEO Google Maps dominance, Next.js web applications, and performance marketing for regional hubs.',
-    category: 'Regional Growth',
-    date: 'Sep 01, 2026',
-    readTime: '12 min read',
-    accentColor: 'from-red-500/20 to-orange-500/10',
-    borderColor: 'hover:border-red-500/30',
-    tagColor: 'text-red-400 border-red-500/30 bg-red-500/5',
-    image: '/assets/blogs/marketing.webp',
-    slug: 'top-digital-marketing-agency-in-surat-agra-meerut-varanasi-regional-2026',
+    slug: 'google-ppc-ads-agency-noida-delhi-ncr-2026',
+    title: 'Top Google PPC Ads & Performance Marketing Agency in Noida & Delhi NCR (2026 ROAS Framework)',
+    category: 'PPC & Digital Marketing',
+    date: 'Sep 24, 2026',
+    readTime: '7 min read',
+    excerpt: 'A data-driven playbook for service brands and B2B enterprises to maximize ROAS, eliminate negative keyword waste, and drive 3x more inbound sales calls using Google Search PPC.',
   },
   {
-    title: 'Performance Marketing, Google Ads Management & SEO Services Guide 2026',
-    summary: 'Data-driven ad growth guide: B2B Google Search ads, technical SEO Top 3 rankings, GEO AI search recommendations, and high-converting landing pages.',
-    category: 'Performance Ads',
-    date: 'Sep 01, 2026',
-    readTime: '12 min read',
-    accentColor: 'from-blue-500/20 to-cyan-500/10',
-    borderColor: 'hover:border-blue-500/30',
-    tagColor: 'text-blue-400 border-blue-500/30 bg-blue-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'performance-marketing-google-ads-seo-services-guide-2026',
+    slug: 'ecommerce-web-development-nextjs-shopify-headless-2026',
+    title: 'Headless E-Commerce & Next.js 14 in 2026: Architecting High-Converting D2C Stores with Sub-Second Page Speeds',
+    category: 'E-Commerce Engineering',
+    date: 'Sep 23, 2026',
+    readTime: '8 min read',
+    excerpt: 'Discover how D2C brands and enterprise e-commerce platforms in Noida, Delhi NCR, and globally increase checkout conversion rates by 40% using headless Next.js storefronts, Shopify APIs, and instant search.',
   },
   {
-    title: 'Small Business Digital Marketing Guide 2026: Affordable Packages & Lead Systems',
-    summary: 'Budget growth guide for local SMBs: Google My Business Local SEO, low-cost Instagram lead ads, automated WhatsApp responses, and fast websites.',
-    category: 'Small Business',
-    date: 'Sep 01, 2026',
-    readTime: '11 min read',
-    accentColor: 'from-emerald-500/20 to-teal-500/10',
-    borderColor: 'hover:border-emerald-500/30',
-    tagColor: 'text-emerald-400 border-emerald-500/30 bg-emerald-500/5',
-    image: '/assets/blogs/marketing.webp',
-    slug: 'small-business-digital-marketing-guide-2026-affordable-packages',
+    slug: 'b2b-saas-lead-generation-digital-marketing-agency-2026',
+    title: 'B2B SaaS Digital Marketing & Growth Playbook 2026: Next.js Product Landing Pages, LinkedIn Ads & Automated Demo Booking',
+    category: 'B2B Growth',
+    date: 'Sep 23, 2026',
+    readTime: '7 min read',
+    excerpt: 'How B2B software companies and SaaS startups scale Monthly Recurring Revenue (MRR) using high-converting Next.js product pages, targeted PPC ad campaigns, and instant sales calendar routing.',
   },
   {
-    title: 'Niche Digital Marketing Guide 2026: Real Estate, E-Commerce, Hotel & App Growth',
-    summary: 'Industry-specific growth frameworks: Real estate 3D landing pages, hotel luxury stay SEO, headless Next.js e-commerce, and mobile app ASO.',
-    category: 'Niche Solutions',
-    date: 'Sep 01, 2026',
-    readTime: '12 min read',
-    accentColor: 'from-amber-500/20 to-yellow-500/10',
-    borderColor: 'hover:border-amber-500/30',
-    tagColor: 'text-amber-400 border-amber-500/30 bg-amber-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'niche-digital-marketing-guide-2026-real-estate-ecommerce-hotel-app',
+    slug: 'solar-energy-cleantech-lead-generation-digital-agency-2026',
+    title: 'Solar Energy & Cleantech Lead Generation Playbook 2026: Next.js Calculators, Google PPC & WhatsApp Automation',
+    category: 'CleanTech Lead Gen',
+    date: 'Sep 22, 2026',
+    readTime: '8 min read',
+    excerpt: 'How solar EPC installers and renewable energy companies across India, Noida, and globally capture high-intent commercial & residential solar leads using interactive Next.js ROI calculators and Meta ads.',
   },
   {
-    title: 'How Generative Engine Optimization (GEO) Helps Businesses Rank #1 on ChatGPT & Gemini',
-    summary: 'Master AI Search in 2026: Structured JSON-LD entity graphs, digital PR citations, direct-answer content, and sub-50ms velocity.',
-    category: 'GEO & AI SEO',
-    date: 'Sep 02, 2026',
-    readTime: '12 min read',
-    accentColor: 'from-cyan-500/20 to-blue-500/10',
-    borderColor: 'hover:border-cyan-500/30',
-    tagColor: 'text-cyan-400 border-cyan-500/30 bg-cyan-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'how-generative-engine-optimization-geo-helps-businesses-rank-chatgpt-gemini-2026',
+    slug: 'travel-tourism-booking-engine-nextjs-seo-2026',
+    title: 'Building High-Converting Travel & Tourism Booking Platforms in 2026: Custom Next.js Systems vs Off-The-Shelf Plugins',
+    category: 'Travel Engineering',
+    date: 'Sep 22, 2026',
+    readTime: '7 min read',
+    excerpt: 'Discover how tour operators, luxury travel agencies, and hotel chains increase direct booking revenues with ultra-fast Next.js itineraries, Razorpay/Stripe checkout, and Local SEO.',
   },
   {
-    title: 'How Next.js 14 SSR & Sub-50ms TTFB Boost E-Commerce & B2B Conversions in 2026',
-    summary: 'Web performance blueprint: Edge network rendering, 100/100 Core Web Vitals, instant Google indexing, and custom CRM connectors.',
-    category: 'Web Engineering',
-    date: 'Sep 03, 2026',
-    readTime: '11 min read',
-    accentColor: 'from-blue-500/20 to-indigo-500/10',
-    borderColor: 'hover:border-blue-500/30',
-    tagColor: 'text-blue-400 border-blue-500/30 bg-blue-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'how-nextjs-14-ssr-sub-50ms-ttfb-boost-ecommerce-b2b-conversions-2026',
+    slug: 'healthcare-hospital-website-development-lead-gen-2026',
+    title: 'Healthcare & Hospital Web Development in 2026: Architecting HIPAA-Compliant Next.js Portals & Doctor Appointment Systems',
+    category: 'Healthcare Solutions',
+    date: 'Sep 21, 2026',
+    readTime: '8 min read',
+    excerpt: 'How hospitals, clinics, and healthtech platforms in Noida, Delhi NCR, and India double patient consultations using fast Next.js appointment portals, Local SEO, and instant WhatsApp booking.',
   },
   {
-    title: 'Top Digital Marketing Agency & Web Development Company in Noida & Delhi NCR',
-    summary: 'Enterprise growth guide: Local SEO Google 3-Pack, Next.js web applications, GEO AI recommendations, and high-ROI Meta/Google ads.',
-    category: 'Enterprise Hub',
+    slug: 'generative-ai-search-optimization-chatgpt-gemini-2026',
+    title: 'How to Optimize Your Business for ChatGPT Search & Google Gemini Overviews (2026 GEO Playbook)',
+    category: 'GEO & AI Search',
+    date: 'Sep 21, 2026',
+    readTime: '7 min read',
+    excerpt: 'Master Generative Engine Optimization (GEO) strategies to ensure LLMs cite, recommend, and feature your company when users ask commercial questions on ChatGPT and Gemini.',
+  },
+  {
+    slug: 'real-estate-digital-marketing-agency-noida-gurgaon-2026',
+    title: 'Top Real Estate Digital Marketing & Lead Generation Agency in Noida & Gurgaon (2026 Playbook)',
+    category: 'Real Estate Lead Gen',
+    date: 'Sep 20, 2026',
+    readTime: '8 min read',
+    excerpt: 'How leading real estate developers in Noida, Gurgaon, and Delhi NCR capture 3x more qualified buyer leads using Next.js interactive project portals, Meta PPC ads, and instant WhatsApp routing.',
+  },
+  {
+    slug: 'nextjs-vs-wordpress-seo-performance-agency-guide-2026',
+    title: 'Next.js 14 vs WordPress in 2026: Why Modern Enterprises Are Migrating to Custom React Architectures for 10x SEO Rankings',
+    category: 'Web Engineering & SEO',
+    date: 'Sep 20, 2026',
+    readTime: '7 min read',
+    excerpt: 'A detailed comparison of Core Web Vitals, page speed, security, and Google indexing speed between legacy WordPress CMS and modern Next.js serverless web applications.',
+  },
+  {
+    slug: 'autonomous-ai-coding-agents-nextjs-web-development-2026',
+    title: 'How Autonomous AI Coding Agents (Antigravity & Gemini) Are Rewriting Web Development in 2026: From Prompt to Enterprise Next.js App',
+    category: 'AI & Future Tech',
+    date: 'Sep 20, 2026',
+    readTime: '7 min read',
+    excerpt: 'Discover how modern autonomous AI coding agents like Google Antigravity & Gemini 2.0 build production-grade Next.js web applications, automate technical SEO, and reshape digital agency workflows in 2026.',
+  },
+  {
+    slug: 'how-to-go-viral-and-rank-1-on-google-and-chatgpt-2026',
+    title: 'The 2026 Blueprint to Going Viral & Ranking #1 on Google Search, Gemini & ChatGPT Search',
+    category: 'Viral Marketing & GEO',
+    date: 'Sep 20, 2026',
+    readTime: '8 min read',
+    excerpt: 'A step-by-step masterclass on Generative Engine Optimization (GEO), viral content loops, and zero-bounce landing page architectures that drive thousands of organic impressions and clicks.',
+  },
+  {
+    slug: 'meta-ads-whatsapp-lead-funnels-roi-2026',
+    title: 'Meta Ads & WhatsApp Automation in 2026: Reducing Lead CPA by 50% for D2C & Service Brands',
+    category: 'Performance Marketing',
+    date: 'Sep 19, 2026',
+    readTime: '7 min read',
+    excerpt: 'How combining high-converting Meta click-to-WhatsApp ad campaigns with Next.js web forms drives 50% lower customer acquisition costs for Indian and global brands.',
+  },
+  {
+    slug: 'schema-markup-jsonld-geo-search-ranking-2026',
+    title: 'Enterprise JSON-LD Schema Markup Guide (2026): Structuring Web Data for Search Engine Rich Snippets & LLM AI Engines',
+    category: 'Technical SEO & GEO',
+    date: 'Sep 19, 2026',
+    readTime: '8 min read',
+    excerpt: 'Master modern JSON-LD schema implementation (Organization, LocalBusiness, FAQPage, Service, Article) to capture Google rich snippets and generative AI recommendations.',
+  },
+  {
+    slug: 'ai-agents-nextjs-web-app-integration-2026',
+    title: 'AI Agents & Next.js Web App Integration in 2026: Automating Enterprise Customer Operations & Lead Qualification',
+    category: 'AI & Web Engineering',
+    date: 'Sep 18, 2026',
+    readTime: '7 min read',
+    excerpt: 'Discover how integrating autonomous AI agents into Next.js 14 web applications automates 24/7 customer support, lead scoring, and CRM synchronization for modern enterprises.',
+  },
+  {
+    slug: 'local-seo-geo-noida-delhi-ncr-business-guide-2026',
+    title: 'Local SEO & GEO Dominance for Noida & Delhi NCR Businesses: Ranking #1 on Google Search, Maps & ChatGPT Search',
+    category: 'Local SEO & GEO',
+    date: 'Sep 18, 2026',
+    readTime: '8 min read',
+    excerpt: 'A definitive playbook for businesses in Noida, Delhi NCR, and Pan-India to dominate Google Local Pack rankings, Google Maps citations, and AI generative recommendations.',
+  },
+  {
+    slug: 'apple-intelligence-ios-app-development-trends-2026',
+    title: 'Apple Intelligence & iOS App Development: Leveraging On-Device AI & Siri Intents for 10x UX in 2026',
+    category: 'Mobile & AI Tech',
+    date: 'Sep 15, 2026',
+    readTime: '6 min read',
+    excerpt: 'Explore how Apple Intelligence, Siri App Intents, Swift CoreML, and privacy-first on-device AI transform mobile application performance and user engagement.',
+  },
+  {
+    slug: 'best-web-development-digital-agency-noida-india-2026',
+    title: 'Top Next.js Web Development & Digital Marketing Agencies in Noida & India (2026 Buyers Guide)',
+    category: 'Industry Guide',
+    date: 'Sep 15, 2026',
+    readTime: '8 min read',
+    excerpt: 'A comprehensive evaluation of leading Next.js web application partners, SEO specialists, and performance marketing agencies in Noida and India.',
+  },
+  {
+    slug: '360-lead-generation-systems-nextjs-whatsapp-funnels-2026',
+    title: '360° Lead Generation Systems in 2026: Integrating Next.js Web Apps, Meta Ads & Automated WhatsApp Funnels',
+    category: 'Lead Generation',
+    date: 'Sep 15, 2026',
+    readTime: '6 min read',
+    excerpt: 'Discover how combining high-speed Next.js web applications, targeted Meta/Google PPC ad campaigns, and instant WhatsApp automation maximizes lead qualification and conversion.',
+  },
+  {
+    slug: 'nextjs-landing-page-architecture-lead-generation-2026',
+    title: 'High-Converting Next.js Landing Page Architecture for Real Estate & B2B Lead Generation',
+    Category: 'Conversion Optimization',
+    date: 'Sep 14, 2026',
+    readTime: '7 min read',
+    excerpt: 'Architecting sub-second landing pages with instant Web3Forms lead capture, WhatsApp routing, and custom CRM integrations to maximize ROAS.',
+  },
+  {
+    slug: 'generative-engine-optimization-geo-guide-2026',
+    title: 'Generative Engine Optimization (GEO): How to Rank on Google Gemini, ChatGPT Search & Perplexity in 2026',
+    category: 'GEO & AI Search',
+    date: 'Sep 13, 2026',
+    readTime: '6 min read',
+    excerpt: 'Master the transition from traditional SEO to Generative Engine Optimization. Learn how AI engines select brand citations, extract structured data, and recommend businesses.',
+  },
+  {
+    slug: 'nextjs-14-speed-optimization',
+    title: 'Why Next.js 14 is the Ultimate Web Framework for High-Converting Business Websites',
+    category: 'Engineering',
+    date: 'Sep 08, 2026',
+    readTime: '5 min read',
+    excerpt: 'Discover how server-side rendering, automatic image optimization, and sub-second Core Web Vitals elevate user experience and search rankings.',
+  },
+  {
+    slug: 'google-ads-roi-framework',
+    title: 'How to Reduce Google Ads CPA by 40% Without Sacrificing High-Intent Lead Quality',
+    category: 'Digital Marketing',
     date: 'Sep 04, 2026',
-    readTime: '12 min read',
-    accentColor: 'from-purple-500/20 to-blue-500/10',
-    borderColor: 'hover:border-purple-500/30',
-    tagColor: 'text-purple-400 border-purple-500/30 bg-purple-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'digital-marketing-agency-in-noida-delhi-ncr-seo-web-development-2026',
+    readTime: '7 min read',
+    excerpt: 'Step-by-step breakdown of negative keyword management, exact-match bid strategies, and high-converting dark landing page layouts.',
   },
   {
-    title: 'How Healthcare Brands & Clinics Use Digital Marketing & Web Apps to 3x Patient Inquiries',
-    summary: 'Medical growth guide: Local clinic SEO, HIPAA-compliant Next.js booking apps, automated WhatsApp reminders, and 5-star Google review systems.',
-    category: 'Healthcare Growth',
-    date: 'Sep 04, 2026',
-    readTime: '12 min read',
-    accentColor: 'from-cyan-500/20 to-teal-500/10',
-    borderColor: 'hover:border-cyan-500/30',
-    tagColor: 'text-cyan-400 border-cyan-500/30 bg-cyan-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'how-healthcare-brands-clinics-use-digital-marketing-web-apps-3x-patients-2026',
+    slug: 'real-estate-lead-generation-2026',
+    title: 'The 2026 Playbook for Real Estate Digital Lead Generation in Tier-1 & Tier-2 Indian Cities',
+    category: 'Industry Solutions',
+    date: 'Aug 28, 2026',
+    readTime: '6 min read',
+    excerpt: 'How real estate developers in Noida, Gurgaon, and Bangalore use interactive property viewports and instant WhatsApp CTAs to double sales leads.',
   },
   {
-    title: 'How PropTech Real Estate Agencies & Developers Double Qualified Buyer Leads in 2026',
-    summary: 'Real estate growth blueprint: 3D floorplan Next.js portals, targeted Meta/Google lead funnels, instant WhatsApp CRM routing, and local property SEO.',
-    category: 'PropTech Growth',
-    date: 'Sep 06, 2026',
-    readTime: '12 min read',
-    accentColor: 'from-blue-500/20 to-cyan-500/10',
-    borderColor: 'hover:border-blue-500/30',
-    tagColor: 'text-blue-400 border-blue-500/30 bg-blue-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'how-proptech-real-estate-agencies-double-qualified-buyer-leads-2026',
+    slug: 'seo-domain-authority-guide',
+    title: 'Technical SEO Audit Checklist: Dominating Local & Pan-India Search Rankings',
+    category: 'SEO',
+    date: 'Aug 18, 2026',
+    readTime: '8 min read',
+    excerpt: 'Learn how clean canonical tags, schema markup, and structured metadata boost search engine indexing speed and organic visibility.',
   },
-  {
-    title: 'How Solar & CleanTech Companies Generate 500+ Commercial Leads in 2026: Website & SEO Guide',
-    summary: 'CleanTech growth blueprint: Sub-50ms Next.js solar ROI calculators, high-intent Google PPC ads, renewable energy SEO, and automated CRM routing.',
-    category: 'CleanTech Growth',
-    date: 'Sep 10, 2026',
-    readTime: '12 min read',
-    accentColor: 'from-amber-500/20 to-orange-500/10',
-    borderColor: 'hover:border-amber-500/30',
-    tagColor: 'text-amber-400 border-amber-500/30 bg-amber-500/5',
-    image: '/assets/blogs/tech.webp',
-    slug: 'how-solar-cleantech-companies-generate-500-commercial-leads-2026',
-  },
-]
+];
 
-export default function BlogPage() {
-  const [activeCategory, setActiveCategory] = useState('All')
-  const [searchQuery, setSearchQuery] = useState('')
-  const [subscribed, setSubscribed] = useState(false)
-
-  const filteredPosts = blogPosts.filter((post) => {
-    const matchesCategory = activeCategory === 'All' || post.category === activeCategory
-    const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.summary.toLowerCase().includes(searchQuery.toLowerCase())
-    return matchesCategory && matchesSearch
-  })
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault()
-    setSubscribed(true)
-  }
-
+export default function BlogListingPage() {
   return (
-    <main className="bg-black text-white min-h-screen">
-      {/* Hero Header */}
-      <section className="relative py-24 bg-gradient-to-b from-blue-950/20 via-black to-black overflow-hidden border-b border-[#1a1a1a]">
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 25px 25px, rgba(255,255,255,0.3) 2px, transparent 0)',
-            backgroundSize: '50px 50px',
-          }}
-        />
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-2xl mx-auto">
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-blue-400 mb-5">
-              <span className="w-6 h-px bg-blue-400 inline-block" />
-              Insights & News
-              <span className="w-6 h-px bg-blue-400 inline-block" />
-            </div>
-            <h1 className="text-4xl sm:text-6xl font-black mb-6 leading-tight">
-              Digitacurve <span className="gradient-text">Insights</span>
-            </h1>
-            <p className="text-lg text-gray-400 leading-relaxed">
-              Explore resources, technological deep dives, industry strategies, and developer tools curated by our engineering teams.
-            </p>
+    <div className="min-h-screen bg-white text-slate-900 selection:bg-blue-600 selection:text-white">
+      <section className="relative pt-24 pb-20 overflow-hidden border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-600 font-mono text-xs font-bold">
+            <BookOpen className="w-3.5 h-3.5" />
+            <span>DIGITACURVE INSIGHTS</span>
           </div>
+          <h1 className="text-5xl sm:text-7xl font-black tracking-tight leading-[0.95] uppercase text-slate-900">
+            GROWTH &amp; TECH <br />
+            <span className="text-blue-600 italic">
+              ARTICLES.
+            </span>
+          </h1>
+          <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-2xl">
+            Practical insights on web engineering, performance advertising, and digital positioning.
+          </p>
         </div>
       </section>
 
-      {/* Main Content Area */}
-      <section className="py-16 bg-[#050505]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Filters and Search Bar */}
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between mb-12 pb-6 border-b border-[#1a1a1a]">
-            {/* Category tabs */}
-            <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
-                  className={`px-4 py-2 rounded-full text-xs font-bold transition-all border ${
-                    activeCategory === cat
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white border-transparent'
-                      : 'bg-[#111] text-gray-400 border-[#2a2a2a] hover:text-white hover:border-[#444]'
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
-
-            {/* Search inputs */}
-            <div className="relative w-full max-w-xs">
-              <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-500">
-                <Search size={16} />
-              </span>
-              <input
-                type="text"
-                placeholder="Search articles..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-[#111] border border-[#2a2a2a] rounded-full py-2 pl-9 pr-4 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
-              />
-            </div>
-          </div>
-
-          {/* Posts Grid */}
-          {filteredPosts.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredPosts.map((post) => (
-                <Link
-                  key={post.id}
-                  href={`/blog/${post.slug}`}
-                  className={`rounded-2xl border border-[#2a2a2a] bg-[#111] bg-gradient-to-br ${post.accentColor} to-transparent ${post.borderColor} transition-all duration-300 flex flex-col group overflow-hidden hover:scale-[1.01]`}
-                >
-                  <div className="w-full h-48 overflow-hidden relative">
-                    <img
-                      src={post.image || '/assets/blogs/tech.webp'}
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                    />
+      {/* Blog Cards */}
+      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {blogPosts.map((post, idx) => (
+            <div
+              key={idx}
+              className="p-8 rounded-3xl bg-white border border-slate-200 hover:border-blue-500 transition-all duration-300 flex flex-col justify-between space-y-6 group shadow-md"
+            >
+              <div className="space-y-4">
+                <div className="flex items-center justify-between text-xs font-mono text-slate-500 font-medium">
+                  <span className="text-blue-600 bg-blue-50 border border-blue-200 px-3 py-1 rounded-full flex items-center gap-1 font-bold">
+                    <Tag className="w-3 h-3" /> {post.category}
+                  </span>
+                  <div className="flex items-center gap-4">
+                    <span className="flex items-center gap-1">
+                      <Calendar className="w-3.5 h-3.5" /> {post.date}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Clock className="w-3.5 h-3.5" /> {post.readTime}
+                    </span>
                   </div>
-                  <div className="p-6 flex flex-col flex-1">
-                    <div className="flex items-center justify-between mb-4">
-                      <span className={`px-2.5 py-0.5 rounded-md border text-xxs font-bold uppercase tracking-wider ${post.tagColor}`}>
-                        {post.category}
-                      </span>
-                      <span className="flex items-center gap-1.5 text-xxs text-gray-500">
-                        <Clock size={12} />
-                        {post.readTime}
-                      </span>
-                    </div>
-
-                    <h3 className="text-white font-bold text-lg mb-3 group-hover:text-blue-400 transition-colors line-clamp-2">
-                      {post.title}
-                    </h3>
-
-                    <p className="text-gray-400 text-xs leading-relaxed mb-6 line-clamp-3">
-                      {post.summary}
-                    </p>
-
-                    <div className="mt-auto pt-4 border-t border-[#222]/30 flex items-center justify-between">
-                      <span className="text-xxs text-gray-500 flex items-center gap-1.5">
-                        <Calendar size={12} />
-                        {post.date}
-                      </span>
-                      <span className="inline-flex items-center gap-1 text-xs font-bold text-blue-400 group-hover:translate-x-1 transition-transform">
-                        Read Article
-                        <ArrowUpRight size={14} />
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-20">
-              <p className="text-gray-400 text-sm">No articles found matching your criteria.</p>
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Newsletter Section */}
-      <section className="py-20 bg-black border-t border-[#1a1a1a]">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="p-8 rounded-3xl border border-[#2a2a2a] bg-[#111] relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
-            <div className="max-w-2xl mx-auto text-center relative z-10">
-              <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 mx-auto mb-4">
-                <Mail size={22} />
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-black mb-3">Subscribe to Digitacurve Insights</h2>
-              <p className="text-gray-400 text-sm mb-6">
-                Get monthly roundups of technology trends, frameworks comparisons, and digital marketing insights delivered right to your inbox.
-              </p>
-
-              {subscribed ? (
-                <div className="inline-flex items-center gap-2 p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm">
-                  <CheckCircle2 size={16} />
-                  <span>Success! You have been subscribed to our newsletter.</span>
                 </div>
-              ) : (
-                <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
-                  <input
-                    type="email"
-                    required
-                    placeholder="Enter your email address"
-                    className="flex-1 bg-black border border-[#2a2a2a] rounded-xl px-4 py-3 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
-                  />
-                  <button
-                    type="submit"
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-xs py-3 px-6 rounded-xl hover:from-blue-500 hover:to-purple-500 transition-all shadow-lg shadow-purple-500/20"
-                  >
-                    Subscribe
-                  </button>
-                </form>
-              )}
+
+                <h2 className="text-2xl font-black tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors leading-tight">
+                  {post.title}
+                </h2>
+                <p className="text-slate-600 text-sm leading-relaxed font-light">{post.excerpt}</p>
+              </div>
+
+              <div className="pt-4 border-t border-slate-100">
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="inline-flex items-center gap-2 text-xs font-bold text-blue-600 hover:text-blue-800 transition-colors"
+                >
+                  READ ARTICLE <ArrowUpRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </section>
-    </main>
-  )
+    </div>
+  );
 }

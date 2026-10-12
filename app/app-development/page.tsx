@@ -1,336 +1,169 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import {
-  Smartphone, CheckCircle2, ArrowRight, Zap, Target, Shield, Cpu, Layers, Code, Play
-} from 'lucide-react'
+import Link from 'next/link';
+import { ArrowUpRight, Smartphone, Cpu, Shield, Zap, CheckCircle2, Layers, Code2, Globe } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Mobile App Development Company | Custom iOS & Android App Developers | Digitacurve',
-  description: 'Digitacurve is a premier mobile app development company and app design agency. We build custom iOS, Android, and cross-platform Flutter/React Native mobile applications globally in Melbourne, Sydney, London, Toronto, Dubai, and USA.',
-}
-
-const serviceDetails = [
-  {
-    title: 'Android App Development',
-    desc: 'Empower your business with custom Android apps built for performance, reliability, and security. We cover everything from design to Google Play Store deployment.',
-    techs: ['Kotlin', 'Java', 'Android SDK', 'Jetpack Compose'],
+export const metadata = {
+  title: 'Mobile App Development Company Noida & India | iOS, Android & Apple Intelligence',
+  description: 'Custom mobile app development agency in Noida & India. Specialized in iOS (SwiftUI), Android (Kotlin), React Native, Flutter, and Apple Intelligence (AI) feature integration for high-converting business applications.',
+  alternates: {
+    canonical: 'https://www.digitacurve.com/app-development',
   },
-  {
-    title: 'iOS App Development',
-    desc: 'Deliver an exceptional user experience on Apple devices with native iOS apps optimized for speed, security, and fluid interfaces.',
-    techs: ['Swift', 'Objective-C', 'iOS SDK', 'SwiftUI'],
-  },
-  {
-    title: 'Swift App Development',
-    desc: 'Harness the full power of Swift to build modern, lightning-fast applications for macOS, iOS, watchOS, and tvOS with high code maintainability.',
-    techs: ['Swift', 'SwiftUI', 'CocoaPods', 'Swift Package Manager'],
-  },
-  {
-    title: 'Cross-Platform Mobile Apps',
-    desc: 'Reach both Android and iOS audiences simultaneously with high-performance cross-platform apps that share a single codebase, lowering costs.',
-    techs: ['React Native', 'Flutter', 'TypeScript', 'Dart'],
-  },
-  {
-    title: 'iPad App Development',
-    desc: 'Take full advantage of larger screen real estate, multitasking capabilities, and iPadOS features with tailored tablet applications.',
-    techs: ['Swift', 'iPadOS APIs', 'Auto Layout', 'Split View Controller'],
-  },
-  {
-    title: 'Mobile Game Development',
-    desc: 'Engage players with immersive, visually stunning 2D and 3D mobile games featuring physics simulation, rich soundscapes, and smooth frame rates.',
-    techs: ['Unity', 'C#', 'Unreal Engine', 'C++', 'OpenGL/Vulkan'],
-  },
-]
-
-const processSteps = [
-  {
-    step: '01',
-    title: 'Discovery & Consulting',
-    desc: 'We define product requirements, target audience, and feature maps to outline a solid strategy.',
-  },
-  {
-    step: '02',
-    title: 'UI/UX Design',
-    desc: 'We map user journeys, create wireframes, and design immersive, modern mobile interfaces.',
-  },
-  {
-    step: '03',
-    title: 'Agile Development',
-    desc: 'Our developers implement structured, clean, and fully-tested code in active sprint cycles.',
-  },
-  {
-    step: '04',
-    title: 'Quality Assurance',
-    desc: 'Rigorous manual and automated testing across multiple device screen sizes to ensure stability.',
-  },
-  {
-    step: '05',
-    title: 'Launch & Support',
-    desc: 'Deploying your applications to the App Store and Google Play, followed by regular maintenance updates.',
-  },
-]
+};
 
 export default function AppDevelopmentPage() {
+  const appCapabilities = [
+    {
+      icon: Smartphone,
+      title: 'iOS (Swift/SwiftUI) & Apple Intelligence Integration',
+      desc: 'High-performance iOS applications built with SwiftUI, Siri App Intents, and Apple Intelligence CoreML features for next-gen iPhone & iPad experiences.',
+    },
+    {
+      icon: Code2,
+      title: 'Cross-Platform React Native & Flutter',
+      desc: 'Single codebase deployment to iOS and Android without sacrificing 60fps UI performance or native UX feel.',
+    },
+    {
+      icon: Zap,
+      title: 'Real-Time Sync & Offline First',
+      desc: 'Seamless data synchronization, offline local caching, push notifications, and background job handling.',
+    },
+    {
+      icon: Shield,
+      title: 'Secure API & Payment Gateways',
+      desc: 'Bank-grade encryption, JWT authentication, OAuth2 login, and integrated Razorpay / Stripe / Apple Pay checkout.',
+    },
+    {
+      icon: Layers,
+      title: 'App Store & Play Store Deployment',
+      desc: 'Complete end-to-end management of App Store Connect and Google Play Console publishing, compliance, and guidelines approval.',
+    },
+    {
+      icon: Globe,
+      title: 'Enterprise Backend & Admin Panels',
+      desc: 'Custom Web Admin Dashboards for real-time app analytics, user management, order processing, and dynamic content updates.',
+    },
+  ];
+
   return (
-    <main className="bg-black text-white min-h-screen">
-      {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-b from-purple-950/20 via-black to-black overflow-hidden border-b border-[#1a1a1a]">
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 25px 25px, rgba(255,255,255,0.3) 2px, transparent 0)',
-            backgroundSize: '50px 50px',
-          }}
-        />
-        {/* Glow orbs */}
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-10 left-10 w-72 h-72 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-purple-400 mb-5">
-              <span className="w-6 h-px bg-purple-400 inline-block" />
-              Mobile App Development
-              <span className="w-6 h-px bg-purple-400 inline-block" />
-            </div>
-            <h1 className="text-4xl sm:text-6xl font-black mb-6 leading-tight">
-              Mobile App <span className="gradient-text">Development</span> Company
-            </h1>
-            <p className="text-lg text-gray-400 leading-relaxed mb-8">
-              We are a professional mobile app development company and app design agency. We design and build high-performance custom iOS, Android, and cross-platform mobile applications to scale your business globally.
-            </p>
-            <div className="flex justify-center gap-4">
-              <Link
-                href="/company/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold text-sm hover:from-purple-500 hover:to-blue-500 transition-all shadow-lg shadow-purple-500/20 hover:scale-105"
-              >
-                Get Started
-                <ArrowRight size={15} />
-              </Link>
-              <Link
-                href="/portfolio"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 text-white font-bold text-sm hover:bg-white/10 transition-all"
-              >
-                View Portfolio
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Services Grid */}
-      <section className="py-20 bg-[#050505]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-black mb-4">
-              Our App <span className="gradient-text">Development Capabilities</span>
-            </h2>
-            <p className="text-gray-400 max-w-xl mx-auto">
-              From enterprise solutions to engaging consumer applications, our engineering expertise spans all major architectures.
-            </p>
+    <div className="bg-white text-slate-900 min-h-screen">
+      {/* Hero Header */}
+      <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-b border-slate-200">
+        <div className="max-w-3xl space-y-6">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-xs font-mono text-blue-600 font-bold uppercase tracking-wider">
+            <Smartphone className="w-4 h-4" /> MOBILE APP DEVELOPMENT
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {serviceDetails.map((service) => (
-              <div
-                key={service.title}
-                className="p-6 rounded-2xl border border-[#2a2a2a] bg-[#111] hover:border-[#444] transition-all hover:translate-y-[-2px] group"
-              >
-                <div className="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6 group-hover:bg-purple-500/20 transition-all">
-                  <Smartphone size={22} />
-                </div>
-                <h3 className="text-white font-bold text-xl mb-3">{service.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                  {service.desc}
-                </p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {service.techs.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-2.5 py-1 rounded-md bg-black border border-[#222] text-xs font-semibold text-gray-500"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight uppercase leading-[0.95] text-slate-900">
+            MOBILE APPS BUILT FOR<br />
+            <span className="text-blue-600 italic font-light">RETENTION &amp; SCALE.</span>
+          </h1>
 
-      {/* Development Process */}
-      <section className="py-20 bg-black border-t border-[#1a1a1a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-black mb-4">
-              Our Proven <span className="gradient-text">Workflow</span>
-            </h2>
-            <p className="text-gray-400 max-w-xl mx-auto">
-              How we take your app idea from paper notes to a successful App Store launch.
-            </p>
-          </div>
-
-          <div className="relative">
-            {/* Visual connecting line for desktop */}
-            <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-950 via-blue-950 to-purple-950 -translate-y-1/2 hidden lg:block" />
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
-              {processSteps.map((step) => (
-                <div
-                  key={step.step}
-                  className="p-6 rounded-2xl border border-[#2a2a2a] bg-[#111] hover:border-[#444] transition-all"
-                >
-                  <div className="text-4xl font-black text-purple-500/20 mb-4">{step.step}</div>
-                  <h4 className="text-white font-bold text-base mb-2">{step.title}</h4>
-                  <p className="text-gray-500 text-xs leading-relaxed">{step.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Case Studies & Insights */}
-      <section className="py-20 bg-[#050505] border-t border-[#1a1a1a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-purple-400 mb-5">
-              <span className="w-6 h-px bg-purple-400 inline-block" />
-              Related Resources
-              <span className="w-6 h-px bg-purple-400 inline-block" />
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-black mb-4">
-              Featured Case Studies & <span className="gradient-text">Insights</span>
-            </h2>
-            <p className="text-gray-400 max-w-xl mx-auto">
-              Explore how our mobile application engineering translates complex requirements into successful App Store entries.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-8 rounded-3xl border border-[#2a2a2a] bg-[#111]/30 hover:border-[#444] transition-all flex flex-col justify-between">
-              <div>
-                <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-blue-500/10 text-blue-400 border border-blue-500/20">Habits App Case Study</span>
-                <h3 className="text-xl font-bold text-white mt-4 mb-3">Keep It Going</h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                  Learn how we designed a cross-platform React Native habit tracking application that increased daily active users by 340% and improved 30-day user retention by 68%.
-                </p>
-              </div>
-              <div className="flex gap-4">
-                <Link href="/casestudy#keep-it-going" className="inline-flex items-center gap-2 text-sm font-bold text-purple-400 hover:text-purple-300">
-                  View Case Study <ArrowRight size={14} />
-                </Link>
-                <Link href="/blog/mobile-app-ux-trends-2026" className="inline-flex items-center gap-2 text-sm font-bold text-purple-400/80 hover:text-purple-300">
-                  UX Insights <ArrowRight size={14} />
-                </Link>
-              </div>
-            </div>
-
-            <div className="p-8 rounded-3xl border border-[#2a2a2a] bg-[#111]/30 hover:border-[#444] transition-all flex flex-col justify-between">
-              <div>
-                <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-500/10 text-purple-400 border border-purple-500/20">Marketplace Case Study</span>
-                <h3 className="text-xl font-bold text-white mt-4 mb-3">Imbooked</h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                  How we built a two-sided wellness booking application that onboarded 1,200+ providers and processed over $2.3M in transactions within its first year.
-                </p>
-              </div>
-              <div className="flex gap-4">
-                <Link href="/casestudy#imbooked" className="inline-flex items-center gap-2 text-sm font-bold text-purple-400 hover:text-purple-300">
-                  View Case Study <ArrowRight size={14} />
-                </Link>
-                <Link href="/blog/mastering-aso-app-store-optimization" className="inline-flex items-center gap-2 text-sm font-bold text-purple-400/80 hover:text-purple-300">
-                  ASO Guide <ArrowRight size={14} />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Global Locations Footprint */}
-      <section className="py-20 bg-black border-t border-[#1a1a1a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-purple-400 mb-5">
-              <span className="w-6 h-px bg-purple-400 inline-block" />
-              Global Agency Locations
-              <span className="w-6 h-px bg-purple-400 inline-block" />
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-black mb-4">
-              Our App Developers <span className="gradient-text">Reach</span>
-            </h2>
-            <p className="text-gray-400 max-w-xl mx-auto">
-              Digitacurve is a premier mobile app development company driving native iOS, Android, and cross-platform Flutter/React Native solutions globally.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {[
-              {
-                city: 'Melbourne',
-                devKwd: 'Mobile App Development Melbourne',
-                coderKwd: 'App Developers Melbourne',
-                desc: 'Specialized iOS, Android, and cross-platform application engineering for businesses in Melbourne.'
-              },
-              {
-                city: 'Sydney',
-                devKwd: 'Mobile App Development Sydney',
-                coderKwd: 'App Developers Sydney',
-                desc: 'Delivering robust enterprise application architectures, App Store optimization, and Flutter apps in Sydney.'
-              },
-              {
-                city: 'London',
-                devKwd: 'Mobile App Development London',
-                coderKwd: 'App Developers London',
-                desc: 'Engineered for UK startups and brands seeking custom hybrid or native application development.'
-              },
-              {
-                city: 'Toronto',
-                devKwd: 'Mobile App Development Toronto',
-                coderKwd: 'App Developers Toronto',
-                desc: 'Premium UI/UX designs, wireframes, and scalable mobile app solutions for Canadian enterprises.'
-              },
-              {
-                city: 'Dubai',
-                devKwd: 'Mobile App Development Dubai',
-                coderKwd: 'App Developers Dubai',
-                desc: 'Cutting-edge iOS Swift, Kotlin Android, and React Native developers in the UAE.'
-              }
-            ].map((loc) => (
-              <div
-                key={loc.city}
-                className="p-6 rounded-2xl border border-[#2a2a2a] bg-[#111] hover:border-[#444] transition-all hover:translate-y-[-2px]"
-              >
-                <h3 className="text-white font-bold text-lg mb-2 text-purple-400">{loc.city}</h3>
-                <p className="text-gray-500 text-xs font-semibold uppercase tracking-wider mb-4 leading-normal">
-                  {loc.devKwd} <br /> {loc.coderKwd}
-                </p>
-                <p className="text-gray-400 text-sm leading-relaxed">{loc.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Box */}
-      <section className="py-20 bg-[#050505] border-t border-[#1a1a1a]">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl sm:text-4xl font-black mb-4">
-            Have a project in mind? Let&apos;s build it <span className="gradient-text">together</span>.
-          </h2>
-          <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-            Get in touch with our team of expert app developers today to schedule a free project discovery and consultation.
+          <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-light">
+            From consumer iOS &amp; Android apps to internal business field engines. We build sleek mobile products with intuitive UI, sub-second responses, and solid API architecture.
           </p>
+
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+            <Link
+              href="/company/contact"
+              className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm px-8 py-4 rounded-full shadow-lg shadow-blue-600/30 transition-all hover:scale-105"
+            >
+              START AN APP PROJECT <ArrowUpRight className="w-4 h-4" />
+            </Link>
+            <a
+              href="https://wa.me/917572094201"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-white border-2 border-slate-200 hover:border-slate-900 text-slate-900 font-bold text-sm px-7 py-4 rounded-full transition-all"
+            >
+              DISCUSS APP ARCHITECTURE
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Capabilities Grid */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-b border-slate-200">
+        <div className="space-y-4 mb-12">
+          <p className="text-xs font-mono text-blue-600 tracking-widest uppercase font-bold">
+            MOBILE ENGINEERING STACK
+          </p>
+          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 uppercase">
+            FULL-STACK MOBILE SOLUTIONS.
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {appCapabilities.map((item, idx) => {
+            const IconComponent = item.icon;
+            return (
+              <div
+                key={idx}
+                className="bg-white border border-slate-200 hover:border-blue-500 rounded-2xl p-6 space-y-4 transition-all duration-300 group shadow-md"
+              >
+                <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                  <IconComponent className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 uppercase tracking-tight group-hover:text-blue-600 transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-light">
+                  {item.desc}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Process / Tech Stack */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-b border-slate-200">
+        <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 sm:p-12 space-y-8 shadow-sm">
+          <div className="space-y-3">
+            <span className="text-xs font-mono text-blue-600 uppercase tracking-widest font-bold">
+              OUR TECH &amp; FRAMEWORKS
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-black text-slate-900 uppercase">
+              MODERN TECH STACK
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-mono">
+            <div className="p-4 bg-white border border-slate-200 rounded-xl space-y-1 shadow-sm">
+              <div className="text-blue-600 font-bold">iOS DEVELOPMENT</div>
+              <div className="text-slate-700">Swift, SwiftUI, XCode</div>
+            </div>
+            <div className="p-4 bg-white border border-slate-200 rounded-xl space-y-1 shadow-sm">
+              <div className="text-blue-600 font-bold">ANDROID</div>
+              <div className="text-slate-700">Kotlin, Jetpack Compose</div>
+            </div>
+            <div className="p-4 bg-white border border-slate-200 rounded-xl space-y-1 shadow-sm">
+              <div className="text-blue-600 font-bold">CROSS PLATFORM</div>
+              <div className="text-slate-700">React Native, Flutter</div>
+            </div>
+            <div className="p-4 bg-white border border-slate-200 rounded-xl space-y-1 shadow-sm">
+              <div className="text-blue-600 font-bold">BACKEND &amp; CLOUD</div>
+              <div className="text-slate-700">Node.js, Firebase, AWS</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom CTA */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center space-y-6">
+        <h2 className="text-3xl sm:text-5xl font-black uppercase text-slate-900">
+          HAVE AN APP IDEA IN MIND?
+        </h2>
+        <p className="text-slate-600 text-sm max-w-xl mx-auto font-light">
+          Talk directly with Rishabh Jaiswal to plan your app features, tech stack, and launch roadmap.
+        </p>
+        <div>
           <Link
             href="/company/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold hover:from-purple-500 hover:to-blue-500 transition-all shadow-lg shadow-purple-500/20 hover:scale-105"
+            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm px-8 py-4 rounded-full shadow-lg shadow-blue-600/30 transition-all hover:scale-105"
           >
-            Launch Your App Idea
-            <ArrowRight size={16} />
+            BOOK A FREE APP CONSULTATION <ArrowUpRight className="w-4 h-4" />
           </Link>
         </div>
       </section>
-    </main>
-  )
+    </div>
+  );
 }

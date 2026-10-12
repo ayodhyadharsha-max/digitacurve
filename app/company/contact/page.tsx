@@ -1,370 +1,263 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import { MapPin, Mail, Phone, ArrowRight, CheckCircle2 } from 'lucide-react'
-
-const offices = [
-  {
-    country: 'United States',
-    flag: '🇺🇸',
-  },
-  {
-    country: 'India',
-    flag: '🇮🇳',
-  },
-  {
-    country: 'Australia',
-    flag: '🇦🇺',
-  },
-  {
-    country: 'Ontario, Canada',
-    flag: '🇨🇦',
-  },
-  {
-    country: 'United Kingdom',
-    flag: '🇬🇧',
-  },
-  {
-    country: 'Ireland',
-    flag: '🇮🇪',
-  },
-]
+import { useState } from 'react';
+import Link from 'next/link';
+import { Mail, Phone, MapPin, Send, CheckCircle2, Clock, Instagram } from 'lucide-react';
 
 export default function ContactPage() {
-  const [activeTab, setActiveTab] = useState<'project' | 'career' | 'general'>('project')
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
+    name: '',
     phone: '',
-    company: '',
-    interest: 'Website Design & Development',
+    email: '',
+    service: 'Web Development & Next.js Application',
     message: '',
-  })
-  const [submitted, setSubmitted] = useState(false)
-  const [sending, setSending] = useState(false)
-  const [error, setError] = useState<string | null>(null)
+  });
+
+  const [sending, setSending] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setSending(true)
-    setError(null)
-    
+    e.preventDefault();
+    setSending(true);
+    setError('');
+
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('https://formspree.io/f/mqaevean', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json',
+          Accept: 'application/json',
         },
         body: JSON.stringify({
-          'access_key': process.env.NEXT_PUBLIC_WEB3FORMS_KEY || '7e356166-b322-41d7-a244-7e9bdf676cd8',
-          'from_name': 'Digitacurve Contact Form',
-          'Name': `${formData.firstName} ${formData.lastName}`,
-          'Email': formData.email,
-          'Phone': formData.phone || 'N/A',
-          'Company': formData.company || 'N/A',
-          'Interest': formData.interest || 'N/A',
-          'Inquiry Type': activeTab || 'General Inquiry',
-          'Message': formData.message,
-          'subject': `New Contact Lead: ${formData.interest || activeTab || 'General'} - ${formData.firstName} ${formData.lastName}`,
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          service: formData.service,
+          message: formData.message,
+          _subject: `New Digitacurve Lead: ${formData.name} (${formData.service})`,
         }),
-      })
-      
-      const data = await response.json()
+      });
+
+      const data = await response.json();
       if (response.ok && data.success === true) {
-        setSubmitted(true)
+        setSubmitted(true);
         setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
+          name: '',
           phone: '',
-          company: '',
-          interest: 'Website Design & Development',
+          email: '',
+          service: 'Web Development & Next.js Application',
           message: '',
-        })
-        setTimeout(() => {
-          setSubmitted(false)
-        }, 5000)
+        });
       } else {
-        setError(data.message || 'Something went wrong. Please try again.')
+        setError(data.message || 'Something went wrong. Please try again.');
       }
     } catch (err: any) {
-      console.error('Contact submission error:', err)
-      setError('Failed to send message. Please check your internet connection and try again.')
+      setError('Network error. Please try again or call +91 75720 94201 directly.');
     } finally {
-      setSending(false)
+      setSending(false);
     }
-  }
+  };
 
   return (
-    <div className="bg-black text-white min-h-screen">
-      {/* Hero */}
-      <section className="relative py-24 bg-black overflow-hidden border-b border-[#1a1a1a]">
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 25px 25px, rgba(255,255,255,0.3) 2px, transparent 0)',
-            backgroundSize: '50px 50px',
-          }}
-        />
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center">
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-blue-400 mb-5">
-              <span className="w-6 h-px bg-blue-400 inline-block" />
-              Contact Us
-              <span className="w-6 h-px bg-blue-400 inline-block" />
-            </div>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-6">
-              Get In <span className="gradient-text">Touch</span>
-            </h1>
-            <p className="text-gray-400 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
-              Have a project in mind that you think we&apos;d be a great fit for? We&apos;d love to know what you&apos;re thinking.
-            </p>
+    <div className="min-h-screen bg-white text-slate-900 selection:bg-blue-600 selection:text-white">
+      <section className="relative pt-24 pb-20 overflow-hidden border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-600 font-mono text-xs font-bold">
+            <Mail className="w-3.5 h-3.5" />
+            <span>DIRECT CHANNELS / NOIDA STUDIO</span>
           </div>
+          <h1 className="text-5xl sm:text-7xl font-black tracking-tight leading-[0.95] uppercase text-slate-900">
+            LET’S START A <br />
+            <span className="text-blue-600 italic">
+              CONVERSATION.
+            </span>
+          </h1>
+          <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-2xl">
+            Whether you need a new web application, an ad campaign audit, or an industry growth platform, our team in Noida is ready.
+          </p>
         </div>
       </section>
 
-      {/* Main Grid: Form + Address Info */}
-      <section className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-12">
-            
-            {/* Left Column: Form Card */}
-            <div className="lg:col-span-7 bg-[#0a0a0a] border border-[#2a2a2a] rounded-3xl p-6 sm:p-10 shadow-2xl relative">
-              
-              {/* Tab Selector */}
-              <div className="mb-8">
-                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Let&apos;s Talk About :</p>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    { id: 'project', label: 'New Project' },
-                    { id: 'career', label: 'Joining Our Team' },
-                    { id: 'general', label: 'General Enquiries' },
-                  ].map(tab => (
-                    <button
-                      key={tab.id}
-                      onClick={() => setActiveTab(tab.id as any)}
-                      className={`px-5 py-2.5 rounded-full text-xs font-bold border transition-all ${
-                        activeTab === tab.id
-                          ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white border-transparent shadow-lg shadow-purple-500/25'
-                          : 'bg-[#111] text-gray-400 border-[#2a2a2a] hover:border-white/20'
-                      }`}
-                    >
-                      {tab.label}
-                    </button>
-                  ))}
+      {/* Main Contact Grid */}
+      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          {/* Left - Contact Form */}
+          <div className="lg:col-span-7 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 shadow-xl space-y-6">
+            <h2 className="text-3xl font-black uppercase text-slate-900 tracking-tight">SEND AN INQUIRY</h2>
+            <p className="text-slate-600 text-xs font-light">Fill out the form below and Founder Rishabh Jaiswal (RJ) or our technical team will respond within 24 hours.</p>
+
+            {submitted ? (
+              <div className="p-6 bg-emerald-50 border border-emerald-200 rounded-2xl space-y-2 text-center animate-in fade-in duration-300">
+                <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                  <CheckCircle2 className="w-6 h-6" />
                 </div>
+                <h3 className="text-lg font-bold text-slate-900 uppercase">INQUIRY SENT SUCCESSFULLY</h3>
+                <p className="text-xs text-emerald-800 font-light leading-relaxed">
+                  Thank you! Your inquiry has been sent to digitacurve@gmail.com. Rishabh Jaiswal (RJ) will contact you within 24 hours.
+                </p>
               </div>
-
-              {submitted ? (
-                <div className="py-12 flex flex-col items-center justify-center text-center">
-                  <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center text-green-400 mb-4 animate-bounce">
-                    <CheckCircle2 size={32} />
+            ) : (
+              <form className="space-y-4 pt-2" onSubmit={handleSubmit}>
+                {error && (
+                  <div className="p-3 bg-red-50 border border-red-200 rounded-xl text-xs text-red-600">
+                    {error}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Message Sent Successfully!</h3>
-                  <p className="text-gray-400 text-sm max-w-sm">
-                    Thank you for reaching out to Digitacurve. An expert from our team will contact you shortly.
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">First Name</label>
-                      <input
-                        type="text"
-                        name="firstName"
-                        required
-                        value={formData.firstName}
-                        onChange={handleChange}
-                        className="w-full bg-[#111] border border-[#2a2a2a] rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-blue-500 transition-colors"
-                        placeholder="John"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Last Name</label>
-                      <input
-                        type="text"
-                        name="lastName"
-                        required
-                        value={formData.lastName}
-                        onChange={handleChange}
-                        className="w-full bg-[#111] border border-[#2a2a2a] rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-blue-500 transition-colors"
-                        placeholder="Doe"
-                      />
-                    </div>
-                  </div>
+                )}
 
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Email Address</label>
-                      <input
-                        type="email"
-                        name="email"
-                        required
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="w-full bg-[#111] border border-[#2a2a2a] rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-blue-500 transition-colors"
-                        placeholder="john.doe@example.com"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Phone Number</label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="w-full bg-[#111] border border-[#2a2a2a] rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-blue-500 transition-colors"
-                        placeholder="+1 (123) 456-7890"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Company Name (Optional)</label>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-1.5">
+                    <label className="text-[11px] font-mono text-slate-700 font-bold uppercase">Your Name</label>
                     <input
                       type="text"
-                      name="company"
-                      value={formData.company}
+                      name="name"
+                      value={formData.name}
                       onChange={handleChange}
-                      className="w-full bg-[#111] border border-[#2a2a2a] rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-blue-500 transition-colors"
-                      placeholder="My Company Inc."
-                    />
-                  </div>
-
-                  {activeTab === 'project' && (
-                    <div>
-                      <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Your Enquiry About</label>
-                      <select
-                        name="interest"
-                        value={formData.interest}
-                        onChange={handleChange}
-                        className="w-full bg-[#111] border border-[#2a2a2a] rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
-                      >
-                        <option>Website Design & Development</option>
-                        <option>Search Engine Optimization (SEO)</option>
-                        <option>Pay Per Click (PPC)</option>
-                        <option>Social Media Manager</option>
-                        <option>Digital & IT Consulting</option>
-                      </select>
-                    </div>
-                  )}
-
-                  <div>
-                    <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Message</label>
-                    <textarea
-                      name="message"
                       required
-                      rows={5}
-                      value={formData.message}
-                      onChange={handleChange}
-                      className="w-full bg-[#111] border border-[#2a2a2a] rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-blue-500 transition-colors resize-none"
-                      placeholder="Briefly describe your requirements..."
+                      placeholder="Rishabh Sharma"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-600 transition-colors"
                     />
                   </div>
+                  <div className="space-y-1.5">
+                    <label className="text-[11px] font-mono text-slate-700 font-bold uppercase">Phone / WhatsApp</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      required
+                      placeholder="+91 98765 43210"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-600 transition-colors"
+                    />
+                  </div>
+                </div>
 
-                  {error && (
-                    <div className="p-4 bg-red-500/10 border border-red-500/20 text-red-400 text-xs rounded-xl">
-                      {error}
-                    </div>
-                  )}
+                <div className="space-y-1.5">
+                  <label className="text-[11px] font-mono text-slate-700 font-bold uppercase">Email Address</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    placeholder="contact@yourbusiness.com"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-600 transition-colors"
+                  />
+                </div>
 
-                  <button
-                    type="submit"
-                    disabled={sending}
-                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-sm hover:from-blue-500 hover:to-purple-500 transition-all shadow-lg shadow-purple-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
+                <div className="space-y-1.5">
+                  <label className="text-[11px] font-mono text-slate-700 font-bold uppercase">Service Required</label>
+                  <select
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs text-slate-900 focus:outline-none focus:border-blue-600 transition-colors"
                   >
-                    {sending ? (
-                      <>
-                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                        Sending Message...
-                      </>
-                    ) : (
-                      <>
-                        Send Messages
-                        <ArrowRight size={16} />
-                      </>
-                    )}
-                  </button>
-                </form>
-              )}
+                    <option value="Web Development & Next.js Application">Web Development &amp; Next.js Application</option>
+                    <option value="Mobile App Development">Mobile App Development (iOS &amp; Android)</option>
+                    <option value="Digital Marketing & Ads">Digital Marketing &amp; Google/Meta Ads</option>
+                    <option value="SEO Optimization">SEO Optimization &amp; Organic Growth</option>
+                    <option value="Real Estate Solution">Real Estate Solution</option>
+                    <option value="Healthcare / Travel / Solar">Healthcare / Travel / Solar Solution</option>
+                    <option value="Custom Consultation">Other / Custom Consultation</option>
+                  </select>
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="text-[11px] font-mono text-slate-700 font-bold uppercase">Project Details</label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={4}
+                    required
+                    placeholder="Tell us about your project, current website, timeline, or business goals..."
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-600 transition-colors"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={sending}
+                  className="w-full inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white font-bold text-xs px-8 py-4 rounded-xl shadow-lg shadow-blue-600/30 transition-all cursor-pointer"
+                >
+                  {sending ? 'SENDING INQUIRY...' : 'SUBMIT INQUIRY'} <Send className="w-4 h-4" />
+                </button>
+              </form>
+            )}
+          </div>
+
+          {/* Right - Studio Details */}
+          <div className="lg:col-span-5 space-y-6">
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-6 shadow-md">
+              <h3 className="text-xl font-black uppercase text-slate-900 tracking-tight">DIRECT CHANNELS</h3>
+
+              <div className="space-y-4">
+                <a
+                  href="mailto:contact@digitacurve.com"
+                  className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-500 transition-colors group shadow-sm"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="text-[10px] font-mono text-slate-500 font-bold">EMAIL ADDRESS</div>
+                    <div className="text-sm font-bold text-slate-900">contact@digitacurve.com</div>
+                  </div>
+                </a>
+
+                <a
+                  href="tel:+917572094201"
+                  className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-500 transition-colors group shadow-sm"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="text-[10px] font-mono text-slate-500 font-bold">PHONE &amp; WHATSAPP</div>
+                    <div className="text-sm font-bold text-slate-900">+91 75720 94201</div>
+                  </div>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/digitacurve/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-200 hover:border-pink-500 transition-colors group shadow-sm"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-pink-50 flex items-center justify-center text-pink-600 group-hover:bg-pink-600 group-hover:text-white transition-colors">
+                    <Instagram className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="text-[10px] font-mono text-slate-500 font-bold">INSTAGRAM</div>
+                    <div className="text-sm font-bold text-slate-900">@digitacurve</div>
+                  </div>
+                </a>
+              </div>
             </div>
 
-            {/* Right Column: Address and Info Cards */}
-            <div className="lg:col-span-5 flex flex-col justify-between space-y-8">
-              <div className="p-6 sm:p-8 bg-[#0a0a0a] border border-[#2a2a2a] rounded-3xl">
-                <h3 className="text-xl font-bold text-white mb-2">Connect Directly</h3>
-                <p className="text-gray-500 text-sm mb-6">Skip the form and email or call us directly. We respond within 24 hours.</p>
-                <div className="space-y-4">
-                  <a href="mailto:sales@digitacurve.com" className="flex items-center gap-3 group">
-                    <div className="w-10 h-10 rounded-xl bg-[#111] flex items-center justify-center border border-[#2a2a2a] group-hover:border-blue-500/40 transition-colors">
-                      <Mail size={16} className="text-blue-400" />
-                    </div>
-                    <div>
-                      <p className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Email Us</p>
-                      <p className="text-sm text-white group-hover:text-blue-400 transition-colors">sales@digitacurve.com</p>
-                    </div>
-                  </a>
-
-                  <a href="tel:+917572094201" className="flex items-center gap-3 group">
-                    <div className="w-10 h-10 rounded-xl bg-[#111] flex items-center justify-center border border-[#2a2a2a] group-hover:border-blue-500/40 transition-colors">
-                      <Phone size={16} className="text-blue-400" />
-                    </div>
-                    <div>
-                      <p className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Call Us</p>
-                      <p className="text-sm text-white group-hover:text-blue-400 transition-colors">🇮🇳 +91 7572094201</p>
-                    </div>
-                  </a>
-                </div>
+            {/* Address Card */}
+            <div className="p-8 rounded-3xl bg-white border border-slate-200 space-y-4 shadow-md">
+              <div className="flex items-center gap-3">
+                <MapPin className="w-6 h-6 text-blue-600" />
+                <h4 className="font-bold text-slate-900 text-base">STUDIO LOCATION</h4>
               </div>
-
-              <div className="p-6 sm:p-8 bg-gradient-to-br from-blue-950/40 to-purple-950/20 border border-blue-950/40 rounded-3xl">
-                <h3 className="text-xl font-bold text-white mb-2">Our Availability</h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                  Building an enterprise-level site doesn&apos;t need to be a nightmare or cost you thousands. Felix is purpose-built.
-                </p>
-                <div className="flex items-center gap-2">
-                  <div className="w-2.5 h-2.5 bg-green-400 rounded-full animate-ping" />
-                  <span className="text-xs text-green-400 font-bold uppercase tracking-wider">Available Worldwide</span>
-                </div>
+              <p className="text-slate-600 text-xs leading-relaxed font-light">
+                Digitacurve Digital Agency <br />
+                Noida, Uttar Pradesh, India <br />
+                Pincode: 201301
+              </p>
+              <div className="pt-2 flex items-center gap-2 text-xs font-mono text-emerald-600 font-bold">
+                <Clock className="w-3.5 h-3.5" /> IST Hours: 09:30 AM – 07:30 PM (Mon – Sat)
               </div>
             </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Global Presence Directory */}
-      <section className="py-20 bg-[#050505] border-t border-[#1a1a1a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-black text-white">
-              Our <span className="gradient-text">Global Service</span> Presence
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {offices.map(office => (
-              <div
-                key={office.country}
-                className="p-6 rounded-2xl border border-[#2a2a2a] bg-[#111] hover:border-[#444] transition-all group flex items-center gap-4"
-              >
-                <span className="text-3xl">{office.flag}</span>
-                <h4 className="text-white font-bold text-lg">{office.country}</h4>
-              </div>
-            ))}
           </div>
         </div>
       </section>
     </div>
-  )
+  );
 }

@@ -1,115 +1,97 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import { Compass, CheckCircle2, ArrowRight, Phone, MessageSquare, Globe2, Plane, CreditCard, Sparkles } from 'lucide-react'
+import Link from 'next/link';
+import { ArrowUpRight, Plane, Compass, CreditCard, Globe } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Travel & Tourism Digital Marketing & Booking Website Solutions | Digitacurve',
-  description: 'Custom travel booking websites, dynamic tour package portals, international tourist acquisition ads, and payment gateway integration for Travel Agencies and Tour Operators.',
-  keywords: 'travel agency digital marketing, tour booking website development, travel portal development, tourism advertising agency, flight hotel booking engine',
-}
+export const metadata = {
+  title: 'Travel Agency Website & Booking Engine Development Noida | Digitacurve',
+  description: 'Custom travel agency web development, tour booking engines, package showcases, and performance marketing for travel operators in Noida & India.',
+  alternates: {
+    canonical: 'https://www.digitacurve.com/solutions/travel-tourism',
+  },
+};
 
-export default function TravelSolutionPage() {
+export default function TravelTourismPage() {
+  const features = [
+    {
+      icon: Compass,
+      title: 'Interactive Tour & Package Catalog',
+      desc: 'Dynamic itinerary layouts, day-wise tour breakdown widgets, photo carousels, and instant WhatsApp inquiry triggers.',
+    },
+    {
+      icon: CreditCard,
+      title: 'Payment Gateway & Razorpay Integration',
+      desc: 'Secure deposit collection, multi-currency pricing, and automated booking confirmation receipts.',
+    },
+    {
+      icon: Globe,
+      title: 'Global Performance Marketing',
+      desc: 'Targeted PPC campaigns designed to capture seasonal holiday bookings, honeymooners, and corporate retreats.',
+    },
+  ];
+
   return (
-    <main className="bg-black text-white min-h-screen">
-      {/* Hero */}
-      <section className="relative py-24 bg-gradient-to-b from-sky-950/20 via-black to-black overflow-hidden border-b border-[#1a1a1a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-400 text-xs font-bold uppercase tracking-widest mb-6">
-            <Compass size={14} /> Travel &amp; Tourism Solution
-          </div>
-          <h1 className="text-4xl sm:text-6xl font-black text-white mb-6 leading-tight max-w-4xl mx-auto">
-            Scale Global <span className="bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent">Tour Bookings &amp; Inquiries</span> with Turnkey Tech
-          </h1>
-          <p className="text-base sm:text-lg text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-            From luxury domestic holiday packages to international flight &amp; hotel reservations, Digitacurve engineers ultra-fast booking portals, automated itinerary builders, and high-ROI global ad campaigns.
-          </p>
-
-          <div className="flex flex-wrap justify-center items-center gap-4">
-            <a
-              href="https://wa.me/917572094201?text=Hi%20Digitacurve%2C%20I%20run%20a%20travel%20agency%20and%20need%20a%20tour%20booking%20website%20and%20marketing%20package."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#25D366] text-black font-bold text-xs hover:bg-[#20bd5a] transition-all shadow-lg"
-            >
-              <MessageSquare size={16} /> Consult with Travel Strategist
-            </a>
-            <a
-              href="tel:+917572094201"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#111] border border-[#2a2a2a] text-white hover:border-[#444] transition-all text-xs font-semibold"
-            >
-              <Phone size={14} className="text-sky-400" /> Direct Call: +91 7572094201
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Deliverables */}
-      <section className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-black text-white mb-4">Complete Travel Agency Growth Architecture</h2>
-            <p className="text-gray-400 text-xs">Everything required to convert global travelers into paid package bookings:</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-3xl border border-[#2a2a2a] bg-[#111]">
-              <div className="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-6">
-                <Globe2 size={24} />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">Dynamic Tour Booking Engine</h3>
-              <p className="text-xs text-gray-400 leading-relaxed mb-6">
-                Interactive holiday package showcases with day-wise itineraries, hotel tier options, seasonal pricing tables, and instant inquiry forms.
-              </p>
-              <ul className="space-y-2 text-xs text-gray-300">
-                <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-sky-400" /> Dynamic Itinerary PDF Generator</li>
-                <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-sky-400" /> WhatsApp Direct Booking Inquiries</li>
-              </ul>
+    <div className="min-h-screen bg-white text-slate-900 selection:bg-blue-600 selection:text-white">
+      <section className="relative pt-24 pb-20 overflow-hidden border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl space-y-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-700 font-mono text-xs font-bold">
+              <Plane className="w-3.5 h-3.5" />
+              <span>INDUSTRY SOLUTION / TRAVEL &amp; TOURISM</span>
             </div>
-
-            <div className="p-8 rounded-3xl border border-[#2a2a2a] bg-[#111]">
-              <div className="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-6">
-                <Plane size={24} />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">Global Tourist Acquisition Ads</h3>
-              <p className="text-xs text-gray-400 leading-relaxed mb-6">
-                Google Search ads targeting high-budget vacation queries and visual Instagram reels/ads targeting honeymooners and family travel groups.
-              </p>
-              <ul className="space-y-2 text-xs text-gray-300">
-                <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-blue-400" /> Multi-Country Targeted Campaigns</li>
-                <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-blue-400" /> Retargeting Vacation Shoppers</li>
-              </ul>
-            </div>
-
-            <div className="p-8 rounded-3xl border border-[#2a2a2a] bg-[#111]">
-              <div className="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-6">
-                <CreditCard size={24} />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">Multi-Currency Payment Engine</h3>
-              <p className="text-xs text-gray-400 leading-relaxed mb-6">
-                Accept bookings seamlessly in USD, EUR, GBP, AED, and INR using Stripe, Razorpay, and PayPal with automated digital invoice delivery.
-              </p>
-              <ul className="space-y-2 text-xs text-gray-300">
-                <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-indigo-400" /> Secure Partial Advance Deposits</li>
-                <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-indigo-400" /> Automated Booking Confirmations</li>
-              </ul>
+            <h1 className="text-5xl sm:text-7xl font-black tracking-tight leading-[0.95] uppercase text-slate-900">
+              TRAVEL &amp; TOURISM <br />
+              <span className="text-cyan-600 italic">
+                BOOKING ENGINES.
+              </span>
+            </h1>
+            <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed">
+              Transform your travel agency with automated booking workflows, stunning itinerary pages, and targeted traveler lead funnels.
+            </p>
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Link
+                href="/company/contact"
+                className="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-700 text-white font-bold text-sm px-8 py-4 rounded-full shadow-lg shadow-cyan-600/30 transition-all hover:scale-105"
+              >
+                BUILD TRAVEL PLATFORM <ArrowUpRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-[#111] border-t border-[#2a2a2a] text-center">
-        <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">Start Taking Direct Bookings Today</h2>
-          <p className="text-gray-400 text-xs mb-8">Cut out high OTA commissions and build your own profitable direct travel booking platform.</p>
+      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-200">
+        <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <p className="text-xs font-mono text-cyan-700 tracking-widest uppercase font-bold">FEATURES</p>
+          <h2 className="text-4xl font-black tracking-tight uppercase text-slate-900">EVERYTHING YOUR TRAVEL AGENCY NEEDS TO SCALE</h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {features.map((item, idx) => {
+            const Icon = item.icon;
+            return (
+              <div key={idx} className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-cyan-500 transition-all space-y-4 shadow-md">
+                <div className="w-12 h-12 rounded-xl bg-cyan-50 border border-cyan-200 flex items-center justify-center text-cyan-600">
+                  <Icon className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900">{item.title}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed font-light">{item.desc}</p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="py-20 text-center bg-slate-50">
+        <div className="max-w-3xl mx-auto px-4 space-y-6">
+          <h2 className="text-4xl font-black uppercase text-slate-900">READY TO INCREASE TOUR BOOKINGS?</h2>
+          <p className="text-slate-600 text-sm font-light">Get in touch with Digitacurve to upgrade your travel portal today.</p>
           <Link
-            href="/pricing"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-sky-500 to-blue-500 text-white font-bold text-xs hover:from-sky-400 hover:to-blue-400 transition-all shadow-lg"
+            href="/company/contact"
+            className="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-700 text-white font-bold text-sm px-9 py-4 rounded-full shadow-lg shadow-cyan-600/30 transition-all hover:scale-105"
           >
-            Explore Travel Growth Packages <ArrowRight size={14} />
+            GET STARTED NOW <ArrowUpRight className="w-4 h-4" />
           </Link>
         </div>
       </section>
-    </main>
-  )
+    </div>
+  );
 }
