@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N7823KZG');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insights & Blogs | Digitacurve - Performance Marketing Agency</title>
+  <meta name="description" content="Explore actionable guides, performance marketing playbooks, Google & Meta Ads strategies, and conversion rate optimization insights from Digitacurve.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --yellow: #2463EB;
+      --yellow-soft: #fcf8a5;
+      --ink: #111111;
+      --ink-soft: #222222;
+      --gray: #666666;
+      --gray-light: #999999;
+      --paper: #ffffff;
+      --paper-soft: #f5f5f3;
+      --line: #e7e6e1;
+      --r: 20px;
+      --glass-bg-light: rgba(255, 255, 255, 0.68);
+      --glass-border-light: rgba(255, 255, 255, 0.85);
+      --glass-blur: blur(18px) saturate(190%);
+      --glass-shadow: 0 16px 40px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+      background: #fafaf9;
+      color: var(--ink);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      position: relative;
+    }
+
+    /* Ambient Liquid Orbs */
+    body::before {
+      content: "";
+      position: fixed;
+      top: -120px;
+      right: -100px;
+      width: 550px;
+      height: 550px;
+      background: radial-gradient(circle, rgba(36, 99, 235, 0.22), rgba(245, 158, 11, 0.08), transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(40px);
+    }
+
+    .wrap { max-width: 1240px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+    
+    /* High-Contrast Crisp Cards & Jet Black Typography */
+    .featured-article, .blog-card, .trust-item {
+      background: #ffffff !important;
+      opacity: 1 !important;
+      border: 1px solid #dcdcd6 !important;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05) !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+    }
+
+    .featured-article h2, .blog-card h3, .blog-card h3 a {
+      color: #000000 !important;
+      font-weight: 800 !important;
+    }
+
+    .featured-article p, .blog-card p {
+      color: #111111 !important;
+      font-weight: 500 !important;
+    }
+
+    .blog-card-img, .featured-img {
+      filter: contrast(1.08) brightness(1.03) !important;
+      opacity: 1 !important;
+    }
+
+    .blog-tag {
+      background: var(--yellow) !important;
+      color: #000000 !important;
+      font-weight: 800 !important;
+    }
+
+    .blog-card div[style*="color: #888"] {
+      color: #333333 !important;
+      font-weight: 700 !important;
+    }
+    
+    /* Navigation */
+    header.nav {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(17, 17, 17, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 16px 0;
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .logo {
+      font-weight: 800; font-size: 22px; color: #fff; text-decoration: none;
+      letter-spacing: -0.02em; display: inline-flex; align-items: center; gap: 2px;
+    }
+    .logo span { color: var(--yellow); }
+    .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+    .nav-links a { color: #d1d1d1; text-decoration: none; font-size: 14.5px; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--yellow); }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px; font-weight: 700;
+      padding: 12px 24px; border-radius: 999px; text-decoration: none; transition: all 0.2s;
+    }
+    .btn-yellow { background: var(--yellow); color: #ffffff; }
+    .btn-yellow:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(36, 99, 235,0.3); }
+
+    /* Hero Section */
+    .hero-blogs {
+      background: var(--ink);
+      color: #fff;
+      padding: 80px 0 64px;
+      position: relative;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; font-size: 13px;
+      font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--yellow); margin-bottom: 16px;
+    }
+    .hero-blogs h1 {
+      font-size: clamp(36px, 4.5vw, 60px);
+      font-weight: 800; line-height: 1.1; margin-bottom: 20px;
+    }
+    .hero-blogs p {
+      font-size: 18px; color: #ccc; max-width: 720px; line-height: 1.6; margin-bottom: 36px;
+    }
+
+    /* Category Filter Pills */
+    .cat-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
+    .pill {
+      background: rgba(255,255,255,0.08); color: #e0e0e0; border: 1px solid rgba(255,255,255,0.15);
+      padding: 8px 20px; border-radius: 999px; font-size: 13.5px; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.2s;
+    }
+    .pill:hover, .pill.active { background: var(--yellow); color: #ffffff; border-color: var(--yellow); }
+
+    /* Featured Article Card */
+    .featured-article {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      margin: 64px 0 48px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.04);
+    }
+    .featured-img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; }
+    .featured-body { padding: 48px; display: flex; flex-direction: column; justify-content: space-between; }
+
+    /* Articles Grid */
+    .blogs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-bottom: 80px;
+    }
+    .blog-card {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(0,0,0,0.08); }
+    .blog-card-img { width: 100%; height: 230px; object-fit: cover; }
+    .blog-card-body { padding: 28px 24px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .blog-tag {
+      display: inline-block; background: var(--paper-soft); color: var(--ink); font-size: 12px;
+      font-weight: 700; padding: 4px 12px; border-radius: 999px; margin-bottom: 12px; align-self: flex-start;
+    }
+
+    .mobile-toggle { display: none; background: none; border: none; font-size: 24px; color: #fff; cursor: pointer; padding: 4px 8px; font-weight: 700; }
+
+    @media (max-width: 980px) {
+      .featured-article { grid-template-columns: 1fr; }
+      .featured-body { padding: 32px 24px; }
+      .blogs-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+    }
+    @media (max-width: 768px) {
+      .wrap { padding: 0 18px !important; }
+      .mobile-toggle { display: block; }
+      header.nav .nav-inner { flex-wrap: wrap; }
+      header.nav .nav-links { display: none; width: 100%; flex-direction: column; gap: 14px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 10px; }
+      header.nav.mobile-open .nav-links { display: flex; }
+      header.nav .btn { display: none; }
+      .blogs-grid { grid-template-columns: 1fr; }
+      .hero-blogs h1 { font-size: 32px !important; }
+      .hero-blogs p { font-size: 15px !important; }
+      
+    /* Trust Badges Bar */
+    .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; align-items: center; }
+    .trust-item { display: flex; gap: 16px; align-items: center; }
+    .trust-item.border-right { padding-right: 24px; border-right: 1px solid #eeeeee; }
+
+    @media (max-width: 768px) {
+      .trust-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+      .trust-item.border-right { border-right: none !important; border-bottom: 1px solid #eeeeee !important; padding-right: 0 !important; padding-bottom: 20px !important; }
+      .trust-item { padding-left: 0 !important; }
+    }
+
+      /* Footer */
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2.2fr 1fr 1fr 1.5fr;
+        gap: 40px;
+        padding-bottom: 56px;
+      }
+      @media (max-width: 768px) {
+        .footer-grid {
+          grid-template-columns: 1fr 1fr !important;
+          gap: 32px 20px !important;
+        }
+        .footer-brand {
+          grid-column: 1 / -1;
+        }
+        .footer-contact {
+          grid-column: 1 / -1;
+        }
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7823KZG"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Navigation Bar -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="index.html" class="logo">
+        DIGITACURVE<span>.</span>
+      </a>
+      <button class="mobile-toggle" aria-label="Toggle Navigation" onclick="document.querySelector('header.nav').classList.toggle('mobile-open')">&#9776;</button>
+
+      <ul class="nav-links">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#work">Case Studies</a></li>
+        <li><a href="index.html#process">Process</a></li>
+        <li><a href="blogs.html" class="active">Blogs &amp; Insights</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+      </ul>
+
+      <a href="index.html#hero-form" class="btn btn-yellow">
+        Get Strategy Call &rarr;
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-blogs">
+    <div class="wrap">
+      <div class="eyebrow">&#9670; DIGITACURVE INSIGHTS</div>
+      <h1>What&apos;s New? News, Insights &amp; Growth Playbooks</h1>
+      <p>We don&apos;t keep our performance marketing secrets hidden. Explore data-backed strategies, ad account teardowns, CRO benchmarks, and scaling guides built for scaling brands.</p>
+
+      <!-- Category Filter Pills -->
+      <div class="cat-pills">
+        <a href="#" class="pill active">All Articles</a>
+        <a href="#" class="pill">Google Ads</a>
+        <a href="#" class="pill">Meta Ads</a>
+        <a href="#" class="pill">CRO &amp; Landing Pages</a>
+        <a href="#" class="pill">Lead Generation</a>
+        <a href="#" class="pill">ROAS &amp; Analytics</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="wrap" style="padding-top: 48px; padding-bottom: 80px;">
+
+    <!-- Featured Article Card -->
+    <div class="featured-article">
+      <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Featured Growth Guide" class="featured-img">
+      
+      <div class="featured-body">
+        <div>
+          <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 16px;">
+            <span style="background: var(--yellow); color: #ffffff; font-weight: 800; font-size: 12px; padding: 5px 14px; border-radius: 999px;">FEATURED GUIDE</span>
+            <span style="color: #888; font-size: 13px; font-weight: 600;">23/07/2026 &middot; 7 min read</span>
+          </div>
+
+          <h2 style="font-size: 28px; font-weight: 800; color: var(--ink); margin-bottom: 16px; line-height: 1.25;">
+            Why the Right Marketing Partner Is the Real Growth Lever for Brands in 2026
+          </h2>
+
+          <p style="color: #555; font-size: 15px; line-height: 1.65; margin-bottom: 24px;">
+            Most brands don&apos;t fail because of weak products — they plateau because their ad budgets are treated like expenses rather than accountable growth investments. Here is how leading D2C and B2B brands structure agency partnerships to scale predictable pipeline.
+          </p>
+        </div>
+
+        <div>
+          <a href="index.html#hero-form" class="btn btn-yellow" style="display: inline-flex;">
+            Read Full Article &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Articles Grid Header -->
+    <div style="margin-bottom: 32px; display: flex; justify-content: space-between; align-items: center;">
+      <h3 style="font-size: 26px; font-weight: 800; color: var(--ink);">Latest Performance Articles</h3>
+      <span style="font-size: 14px; color: #777; font-weight: 600;">Showing 6 Articles</span>
+    </div>
+
+    <!-- Articles Grid -->
+    <div class="blogs-grid">
+
+      <!-- Blog 1 -->
+      <article class="blog-card">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Metrics That Matter" class="blog-card-img">
+        <div class="blog-card-body">
+          <div>
+            <span class="blog-tag">ANALYTICS &amp; ROAS</span>
+            <div style="font-size: 13px; color: #888; font-weight: 600; margin-bottom: 8px;">28/12/2025</div>
+            <h3 style="font-size: 18px; font-weight: 700; color: var(--ink); line-height: 1.4; margin-bottom: 12px;">
+              Measuring Success: Metrics That Matter in Digital Marketing Solutions
+            </h3>
+            <p style="font-size: 14px; color: #555; line-height: 1.6;">
+              Stop chasing vanity impressions. Discover the 5 core financial metrics — from CAC to MER — that prove actual business profitability.
+            </p>
+          </div>
+          <div style="margin-top: 20px;">
+            <a href="index.html#hero-form" style="font-weight: 700; font-size: 14px; color: var(--ink); text-decoration: none;">Read Article &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Blog 2 -->
+      <article class="blog-card">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Cross Platform Strategy" class="blog-card-img">
+        <div class="blog-card-body">
+          <div>
+            <span class="blog-tag">MEDIA STRATEGY</span>
+            <div style="font-size: 13px; color: #888; font-weight: 600; margin-bottom: 8px;">26/11/2025</div>
+            <h3 style="font-size: 18px; font-weight: 700; color: var(--ink); line-height: 1.4; margin-bottom: 12px;">
+              The Future Of Cross-Platform Strategy With A Digital Advertising Company
+            </h3>
+            <p style="font-size: 14px; color: #555; line-height: 1.6;">
+              How combining Google Search intent with Meta visual storytelling unlocks aggressive scale while maintaining target CPA.
+            </p>
+          </div>
+          <div style="margin-top: 20px;">
+            <a href="index.html#hero-form" style="font-weight: 700; font-size: 14px; color: var(--ink); text-decoration: none;">Read Article &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Blog 3 -->
+      <article class="blog-card">
+        <img src="https://images.unsplash.com/photo-1533750516457-a7f992034fec?auto=format&fit=crop&w=600&q=80" alt="Google Ads PMax vs Search" class="blog-card-img">
+        <div class="blog-card-body">
+          <div>
+            <span class="blog-tag">GOOGLE ADS</span>
+            <div style="font-size: 13px; color: #888; font-weight: 600; margin-bottom: 8px;">14/10/2025</div>
+            <h3 style="font-size: 18px; font-weight: 700; color: var(--ink); line-height: 1.4; margin-bottom: 12px;">
+              Google Ads PMax vs. Search: Where Should You Spend Your Next &#8377;1 Lakh?
+            </h3>
+            <p style="font-size: 14px; color: #555; line-height: 1.6;">
+              A side-by-side performance breakdown comparing Performance Max automation against exact-match Google Search campaigns.
+            </p>
+          </div>
+          <div style="margin-top: 20px;">
+            <a href="index.html#hero-form" style="font-weight: 700; font-size: 14px; color: var(--ink); text-decoration: none;">Read Article &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Blog 4 -->
+      <article class="blog-card">
+        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80" alt="Deconstruct Case Teardown" class="blog-card-img">
+        <div class="blog-card-body">
+          <div>
+            <span class="blog-tag">CASE TEARDOWN</span>
+            <div style="font-size: 13px; color: #888; font-weight: 600; margin-bottom: 8px;">02/09/2025</div>
+            <h3 style="font-size: 18px; font-weight: 700; color: var(--ink); line-height: 1.4; margin-bottom: 12px;">
+              How We Scaled Deconstruct Skincare to 5x+ ROAS Across Meta &amp; Google
+            </h3>
+            <p style="font-size: 14px; color: #555; line-height: 1.6;">
+              Deep-dive into hero SKU positioning, offer testing, and server-side CAPI integration that tripled monthly revenue.
+            </p>
+          </div>
+          <div style="margin-top: 20px;">
+            <a href="index.html#hero-form" style="font-weight: 700; font-size: 14px; color: var(--ink); text-decoration: none;">Read Article &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Blog 5 -->
+      <article class="blog-card">
+        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80" alt="CRO Checklist" class="blog-card-img">
+        <div class="blog-card-body">
+          <div>
+            <span class="blog-tag">LANDING PAGE CRO</span>
+            <div style="font-size: 13px; color: #888; font-weight: 600; margin-bottom: 8px;">18/08/2025</div>
+            <h3 style="font-size: 18px; font-weight: 700; color: var(--ink); line-height: 1.4; margin-bottom: 12px;">
+              The 8-Step CRO Checklist That Doubled Our Real Estate Client&apos;s Lead Conversion
+            </h3>
+            <p style="font-size: 14px; color: #555; line-height: 1.6;">
+              Learn how multi-step qualification forms and mobile-first speed optimizations slashed cost per qualified lead by 48%.
+            </p>
+          </div>
+          <div style="margin-top: 20px;">
+            <a href="index.html#hero-form" style="font-weight: 700; font-size: 14px; color: var(--ink); text-decoration: none;">Read Article &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Blog 6 -->
+      <article class="blog-card">
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80" alt="AI Advertising" class="blog-card-img">
+        <div class="blog-card-body">
+          <div>
+            <span class="blog-tag">AI &amp; AUTOMATION</span>
+            <div style="font-size: 13px; color: #888; font-weight: 600; margin-bottom: 8px;">05/07/2025</div>
+            <h3 style="font-size: 18px; font-weight: 700; color: var(--ink); line-height: 1.4; margin-bottom: 12px;">
+              Leveraging AI Tools in 2026 for Rapid Ad Creative Testing &amp; Copy Generation
+            </h3>
+            <p style="font-size: 14px; color: #555; line-height: 1.6;">
+              How our media buyers generate 50+ high-converting video hooks and creative variations weekly using AI workflows.
+            </p>
+          </div>
+          <div style="margin-top: 20px;">
+            <a href="index.html#hero-form" style="font-weight: 700; font-size: 14px; color: var(--ink); text-decoration: none;">Read Article &rarr;</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- CTA Banner -->
+    <div style="background: var(--yellow); border-radius: 24px; padding: 52px 48px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; box-shadow: 0 16px 40px rgba(0,0,0,0.06);">
+      <div>
+        <h2 style="font-size: clamp(28px, 3.2vw, 40px); font-weight: 800; color: var(--ink); margin-bottom: 8px;">
+          Want to turn your ad spend into predictable growth?
+        </h2>
+        <p style="font-size: 16px; color: #222; margin: 0;">
+          Get a customized performance audit and ROI projection built around your business numbers.
+        </p>
+      </div>
+      <div>
+        <a href="index.html#hero-form" class="btn" style="background: var(--ink); color: #ffffff; font-weight: 700; font-size: 15px; padding: 14px 32px; border-radius: 999px;">
+          Claim Free Growth Audit &rarr;
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- TRUST BADGES & AWARDS ROW -->
+  <section style="background: #ffffff; border-top: 1px solid #e7e6e1; border-bottom: 1px solid #e7e6e1; padding: 36px 0;">
+    <div class="wrap">
+      <div class="trust-grid">
+        
+        <!-- Badge 1: Award -->
+        <div class="trust-item border-right">
+          <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--yellow); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0;">🏆</div>
+          <div>
+            <div style="font-size: 12.5px; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: 0.04em;">Latest Award</div>
+            <div style="font-size: 16px; font-weight: 800; color: var(--ink); margin-top: 2px;">Best Marketing Campaign 2020</div>
+          </div>
+        </div>
+
+        <!-- Badge 2: Partners -->
+        <div class="trust-item border-right" style="padding-left: 12px;">
+          <div>
+            <div style="font-size: 12.5px; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px;">Recognised Partner</div>
+            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+              <div style="background: #f5f5f3; border-radius: 8px; padding: 8px 14px; font-weight: 700; color: #4285F4; font-size: 13.5px; display: inline-flex; align-items: center; gap: 6px; border: 1px solid #e7e6e1;">
+                <span style="font-weight: 800; color: #4285F4;">Google</span> Partner
+              </div>
+              <div style="background: #f5f5f3; border-radius: 8px; padding: 8px 14px; font-weight: 700; color: #0668E1; font-size: 13.5px; display: inline-flex; align-items: center; gap: 6px; border: 1px solid #e7e6e1;">
+                <span style="font-weight: 800; color: #0668E1;">&infin; Meta</span> Business Partner
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Badge 3: Google Reviews -->
+        <div class="trust-item" style="padding-left: 12px;">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: #ffffff; border: 1px solid #e7e6e1; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800; color: #4285F4; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">G</div>
+          <div>
+            <div style="font-size: 12.5px; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: 0.04em;">Rated By Clients</div>
+            <div style="font-size: 16px; font-weight: 800; color: var(--ink); margin-top: 2px;">India&apos;s leading Digital Agency</div>
+            <div style="color: #f59e0b; font-size: 13.5px; font-weight: 600;">
+              &#9733;&#9733;&#9733;&#9733;&#9733; <span style="color: #666; font-weight: 400;">50+ reviews</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHITE FOOTER SECTION -->
+  <footer style="background: #ffffff; color: var(--ink); padding-top: 64px;">
+    <div class="wrap">
+      
+      <!-- Footer Columns -->
+      <div class="footer-grid">
+        
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <div style="font-size: 24px; font-weight: 800; color: var(--ink); margin-bottom: 16px; letter-spacing: -0.02em;">
+            DIGITACURVE<span style="color: var(--yellow);">.</span>
+          </div>
+          <p style="color: #555; font-size: 14.5px; line-height: 1.65; margin-bottom: 24px; max-width: 380px;">
+            An integrated performance marketing and digital growth agency. An award-winning, full-stack team building creative and growth-driven solutions for brands across the world.
+          </p>
+
+          <div style="font-weight: 700; font-size: 14px; color: var(--ink); margin-bottom: 12px;">Follow Us</div>
+          <div style="display: flex; gap: 10px;">
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" style="width: 40px; height: 40px; border-radius: 50%; background: #f5f5f3; color: var(--ink); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13.5px; text-decoration: none; border: 1px solid #e7e6e1;">in</a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram" style="width: 40px; height: 40px; border-radius: 50%; background: #f5f5f3; color: var(--ink); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13.5px; text-decoration: none; border: 1px solid #e7e6e1;">ig</a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook" style="width: 40px; height: 40px; border-radius: 50%; background: #f5f5f3; color: var(--ink); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13.5px; text-decoration: none; border: 1px solid #e7e6e1;">fb</a>
+            <a href="https://youtube.com" target="_blank" aria-label="YouTube" style="width: 40px; height: 40px; border-radius: 50%; background: #f5f5f3; color: var(--ink); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13.5px; text-decoration: none; border: 1px solid #e7e6e1;">yt</a>
+          </div>
+        </div>
+
+        <!-- Explore Links -->
+        <div class="footer-explore">
+          <h4 style="font-size: 16px; font-weight: 800; color: var(--ink); margin: 0 0 20px 0;">Explore</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; font-size: 14.5px;">
+            <li><a href="index.html#services" style="color: #555; text-decoration: none;">Google Ads</a></li>
+            <li><a href="index.html#services" style="color: #555; text-decoration: none;">Meta Ads</a></li>
+            <li><a href="index.html#services" style="color: #555; text-decoration: none;">Performance Marketing</a></li>
+            <li><a href="index.html#work" style="color: #555; text-decoration: none;">Case Studies</a></li>
+            <li><a href="index.html#partner" style="color: #555; text-decoration: none;">Our Clients</a></li>
+          </ul>
+        </div>
+
+        <!-- Company Links -->
+        <div class="footer-company">
+          <h4 style="font-size: 16px; font-weight: 800; color: var(--ink); margin: 0 0 20px 0;">Company</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; font-size: 14.5px;">
+            <li><a href="index.html#services" style="color: #555; text-decoration: none;">Industries We Serve</a></li>
+            <li><a href="index.html#partner" style="color: #555; text-decoration: none;">Who We Are</a></li>
+            <li><a href="index.html#hero-form" style="color: #555; text-decoration: none;">Careers</a></li>
+            <li><a href="blogs.html" style="color: #555; text-decoration: none;">Insights &amp; Blogs</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-contact">
+          <h4 style="font-size: 16px; font-weight: 800; color: var(--ink); margin: 0 0 20px 0;">Contact</h4>
+          <div style="display: flex; flex-direction: column; gap: 12px; font-size: 14.5px; color: #555;">
+            <div><strong style="color: var(--ink);">Phone:</strong> <a href="tel:+917572094201" style="color: inherit; text-decoration: none;">+91 75720 94201</a></div>
+            <div><strong style="color: var(--ink);">Email:</strong> hello@digitacurve.com</div>
+            <div style="line-height: 1.5; margin-top: 4px;">
+              <strong style="color: var(--ink);">Address:</strong><br>
+              Digitacurve Growth Hub, Cyber City, Phase 3, Udyog Vihar, Gurugram - 122002, Haryana, India
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="border-top: 1px solid #eeeeee; padding: 20px 0; display: flex; gap: 24px; flex-wrap: wrap; font-size: 13.5px;">
+        <a href="index.html#faq" style="color: #666; text-decoration: none; font-weight: 500;">FAQs</a>
+        <a href="privacy.html" style="color: #666; text-decoration: none; font-weight: 500;">Privacy Policy</a>
+        <a href="terms.html" style="color: #666; text-decoration: none; font-weight: 500;">Cookie Preferences</a>
+        <a href="terms.html" style="color: #666; text-decoration: none; font-weight: 500;">Terms &amp; Conditions</a>
+      </div>
+
+    </div>
+
+    <div style="background: #f9f9f8; border-top: 1px solid #eeeeee; padding: 18px 0; font-size: 13px; color: #666;">
+      <div class="wrap" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <div>Copyright &copy; 2012-2026 Digitacurve Growth Agency Pvt. Ltd. All rights reserved.</div>
+        <div style="font-style: italic; font-weight: 600; color: var(--ink);">Digitacurve - Turn Ad Spend Into Growth</div>
+        <div style="font-size: 12px; letter-spacing: 0.05em; font-weight: 600; color: #888;">GURUGRAM &middot; NEW DELHI &middot; MUMBAI &middot; BANGALORE &middot; SINGAPORE</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

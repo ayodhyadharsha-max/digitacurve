@@ -1,17 +1,3 @@
 {
-  "cleanUrls": false,
-  "routes": [
-    {
-      "src": "/googlee0f549c8d1a8a1cd.html",
-      "dest": "/googlee0f549c8d1a8a1cd.html"
-    },
-    {
-      "src": "/googleWbnglHYC1zWfihaNiEeyOMTupfOh3iHF8h8tKPa07II.html",
-      "dest": "/googleWbnglHYC1zWfihaNiEeyOMTupfOh3iHF8h8tKPa07II.html"
-    },
-    {
-      "src": "/WbnglHYC1zWfihaNiEeyOMTupfOh3iHF8h8tKPa07II.html",
-      "dest": "/WbnglHYC1zWfihaNiEeyOMTupfOh3iHF8h8tKPa07II.html"
-    }
-  ]
+  "cleanUrls": false
 }
