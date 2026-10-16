@@ -1470,6 +1470,177 @@
       display: flex;
     }
 
+  
+    /* SPECIALIZED SERVICES & CHANNELS SECTION */
+    .channel-section {
+      background: #fafaf8;
+      border-top: 1px solid #e7e6e1;
+      padding: 90px 0;
+      position: relative;
+    }
+    .channel-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .channel-card {
+      background: #ffffff;
+      border: 1px solid #e7e6e1;
+      border-radius: 22px;
+      padding: 34px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+      position: relative;
+      scroll-margin-top: 100px;
+    }
+    .channel-card:hover {
+      transform: translateY(-4px);
+      border-color: #2463EB;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.07);
+    }
+    .channel-card.sitelink-card-active {
+      border-color: #2463EB !important;
+      box-shadow: 0 0 0 3px rgba(36, 99, 235, 0.25), 0 16px 40px rgba(0, 0, 0, 0.08) !important;
+      transform: translateY(-4px) !important;
+    }
+    .channel-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .channel-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: #eff6ff;
+      color: #2463EB;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      border: 1px solid rgba(36, 99, 235, 0.15);
+      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+    }
+    .channel-card:hover .channel-icon-box {
+      transform: scale(1.06);
+      background: #2463EB;
+      color: #ffffff;
+    }
+    .channel-badge {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #2463EB;
+      background: rgba(36, 99, 235, 0.08);
+      padding: 5px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(36, 99, 235, 0.12);
+    }
+    .channel-title {
+      font-size: 21px;
+      font-weight: 800;
+      color: #111827;
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+    .channel-desc {
+      font-size: 14px;
+      color: #555555;
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+    .channel-points {
+      list-style: none;
+      margin: 0 0 28px 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+    .channel-points li {
+      font-size: 13.5px;
+      color: #222222;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.45;
+      font-weight: 500;
+    }
+    .channel-points li i {
+      color: #2463EB;
+      font-size: 14px;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+    .channel-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 13px 20px;
+      background: #111111;
+      color: #ffffff !important;
+      font-weight: 700;
+      font-size: 14px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 1px solid #111111;
+      margin-top: auto;
+      letter-spacing: -0.01em;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .channel-btn:hover {
+      background: #2463EB;
+      border-color: #2463EB;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(36, 99, 235, 0.35);
+    }
+    .channel-card.full-span {
+      grid-column: 1 / -1;
+      max-width: 760px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    @media (max-width: 1024px) {
+      .channel-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .channel-card.full-span {
+        grid-column: 1 / -1;
+        max-width: 100%;
+      }
+    }
+    @media (max-width: 640px) {
+      .channel-section {
+        padding: 60px 0;
+      }
+      .channel-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .channel-card {
+        padding: 26px 20px;
+        border-radius: 18px;
+      }
+      .channel-title {
+        font-size: 19px;
+      }
+      .channel-desc {
+        font-size: 13.5px;
+      }
+      .channel-points li {
+        font-size: 13px;
+      }
+    }
+
   </style>
 
   <!-- JSON-LD Schemas -->
@@ -1607,7 +1778,7 @@
 
             <!-- Selected Package Notification Banner -->
             <div id="form-selected-plan-badge" style="display: none; background: #fffde7; border: 1.5px solid var(--yellow); padding: 9px 14px; border-radius: 12px; font-size: 13px; font-weight: 700; color: #111; margin-bottom: 12px; align-items: center; justify-content: space-between;">
-              <span style="display: inline-flex; align-items: center; gap: 6px;">🎯 Selected Plan: <strong id="form-selected-plan-text" style="color: #000;"></strong></span>
+              <span style="display: inline-flex; align-items: center; gap: 6px;">🎯 Selected Service / Plan: <strong id="form-selected-plan-text" style="color: #000;"></strong></span>
               <span style="font-size: 11px; color: #777; cursor: pointer; text-decoration: underline;" onclick="document.getElementById('form-selected-plan-badge').style.display='none'; document.getElementById('selected-plan-input').value='General Inquiry';">Clear</span>
             </div>
 
@@ -2102,6 +2273,187 @@
       </div>
     </div>
   </section>
+
+  <!-- SPECIALIZED SERVICES & CHANNELS SECTION -->
+  <section class="section channel-section" id="growth-solutions">
+    <div class="wrap">
+      <div class="section-head" style="text-align: center; max-width: 840px; margin: 0 auto 36px auto;">
+        <div class="eyebrow" style="justify-content: center;"><span class="hex"></span> SPECIALIZED GROWTH CAPABILITIES</div>
+        <h2 style="font-size: 42px; font-weight: 800; margin: 12px 0 16px; color: var(--ink); letter-spacing: -0.02em;">
+          Dedicated Services Engineered For Growth.
+        </h2>
+        <p style="color: var(--gray); font-size: 16.5px; line-height: 1.6;">
+          Need a specific channel, high-converting creative production, or full-funnel organic authority? Choose your dedicated service or combine them for maximum scale.
+        </p>
+      </div>
+
+      <div class="channel-grid">
+        
+        <!-- 1. Google Ads -->
+        <div class="channel-card" id="google-ads" data-service="Google Ads Management">
+          <div>
+            <div class="channel-card-top">
+              <div class="channel-icon-box">
+                <i class="fab fa-google"></i>
+              </div>
+              <span class="channel-badge">High-Intent PPC</span>
+            </div>
+            <h3 class="channel-title">Google Ads</h3>
+            <p class="channel-desc">Capture ready-to-buy customers at the precise moment they search for your solutions. Engineered for maximum ROAS and zero wasted ad spend.</p>
+            <ul class="channel-points">
+              <li><i class="fas fa-check-circle"></i> Search, Shopping & Performance Max (PMax)</li>
+              <li><i class="fas fa-check-circle"></i> Strict Exact Match & Negative Keyword Sculpting</li>
+              <li><i class="fas fa-check-circle"></i> High Quality Score Boost (Lower CPC, Higher CTR)</li>
+              <li><i class="fas fa-check-circle"></i> Offline Conversion Tracking & Server-Side GA4</li>
+            </ul>
+          </div>
+          <a href="/performance-marketing/get-started" class="channel-btn" onclick="selectServiceCard('Google Ads Management', 'google-ads'); return false;">
+            Contact Us &rarr;
+          </a>
+        </div>
+
+        <!-- 2. Meta Ads -->
+        <div class="channel-card" id="meta-ads" data-service="Meta Ads (Facebook & Instagram)">
+          <div>
+            <div class="channel-card-top">
+              <div class="channel-icon-box">
+                <i class="fab fa-facebook-f"></i>
+              </div>
+              <span class="channel-badge">Acquisition & Scale</span>
+            </div>
+            <h3 class="channel-title">Meta Ads</h3>
+            <p class="channel-desc">Turn social attention into profitable revenue with creative-first Facebook and Instagram ad funnels, Advantage+ broad scaling, and high-converting retargeting.</p>
+            <ul class="channel-points">
+              <li><i class="fas fa-check-circle"></i> Advantage+ Sales & Lead Generation Funnels</li>
+              <li><i class="fas fa-check-circle"></i> Rapid Creative & UGC Angle Split Testing</li>
+              <li><i class="fas fa-check-circle"></i> Direct WhatsApp & Fast-Loading Landing Pages</li>
+              <li><i class="fas fa-check-circle"></i> Server-Side Meta Conversions API (CAPI) Pixel</li>
+            </ul>
+          </div>
+          <a href="/performance-marketing/get-started" class="channel-btn" onclick="selectServiceCard('Meta Ads (Facebook & Instagram)', 'meta-ads'); return false;">
+            Contact Us &rarr;
+          </a>
+        </div>
+
+        <!-- 3. Video Editor -->
+        <div class="channel-card" id="video-editor" data-service="Video Editing & Ad Creatives">
+          <div>
+            <div class="channel-card-top">
+              <div class="channel-icon-box">
+                <i class="fas fa-video"></i>
+              </div>
+              <span class="channel-badge">High-ROAS Creatives</span>
+            </div>
+            <h3 class="channel-title">Video Editor</h3>
+            <p class="channel-desc">Stop the scroll and skyrocket click-through rates with direct-response video ads, viral Reels/Shorts, kinetic captions, and high-impact UGC product edits.</p>
+            <ul class="channel-points">
+              <li><i class="fas fa-check-circle"></i> 3-Second Scroll-Stopping Hook Optimization</li>
+              <li><i class="fas fa-check-circle"></i> Direct-Response Video Ads (Reels, Shorts, TikTok)</li>
+              <li><i class="fas fa-check-circle"></i> UGC Product Reviews & Testimonial Video Cuts</li>
+              <li><i class="fas fa-check-circle"></i> Motion Graphics, Sound Design & Dynamic Captions</li>
+            </ul>
+          </div>
+          <a href="/performance-marketing/get-started" class="channel-btn" onclick="selectServiceCard('Video Editing & Ad Creatives', 'video-editor'); return false;">
+            Contact Us &rarr;
+          </a>
+        </div>
+
+        <!-- 4. SEO + AEO + GEO -->
+        <div class="channel-card" id="seo-aeo-geo" data-service="SEO + AEO + GEO Growth">
+          <div>
+            <div class="channel-card-top">
+              <div class="channel-icon-box">
+                <i class="fas fa-robot"></i>
+              </div>
+              <span class="channel-badge">AI Search & Rank #1</span>
+            </div>
+            <h3 class="channel-title">SEO + AEO + GEO</h3>
+            <p class="channel-desc">Rank #1 on Google and secure high-authority brand recommendations across AI answer engines including ChatGPT Search, Perplexity AI, and Google Gemini.</p>
+            <ul class="channel-points">
+              <li><i class="fas fa-check-circle"></i> Google Rank #1 Technical, On-Page & Schema Markup</li>
+              <li><i class="fas fa-check-circle"></i> Generative Engine Optimization (GEO) Citations</li>
+              <li><i class="fas fa-check-circle"></i> Answer Engine Optimization (AEO) for AI Engines</li>
+              <li><i class="fas fa-check-circle"></i> High-Authority Niche Backlinks & Core Web Vitals</li>
+            </ul>
+          </div>
+          <a href="/performance-marketing/get-started" class="channel-btn" onclick="selectServiceCard('SEO + AEO + GEO Growth', 'seo-aeo-geo'); return false;">
+            Contact Us &rarr;
+          </a>
+        </div>
+
+        <!-- 5. Content Writer -->
+        <div class="channel-card" id="content-writer" data-service="Content Writing & Sales Copy">
+          <div>
+            <div class="channel-card-top">
+              <div class="channel-icon-box">
+                <i class="fas fa-pen-nib"></i>
+              </div>
+              <span class="channel-badge">Conversion Copywriting</span>
+            </div>
+            <h3 class="channel-title">Content Writer</h3>
+            <p class="channel-desc">Persuasive, data-backed conversion copywriting that educates, builds authority, and compels high-intent visitors to take immediate action.</p>
+            <ul class="channel-points">
+              <li><i class="fas fa-check-circle"></i> High-Converting Ad Headlines, Hooks & Copy</li>
+              <li><i class="fas fa-check-circle"></i> Sales Page & Landing Page Persuasive Copy</li>
+              <li><i class="fas fa-check-circle"></i> Authoritative Long-Form SEO & GEO Blog Articles</li>
+              <li><i class="fas fa-check-circle"></i> Automated Email Marketing Sequences & Drips</li>
+            </ul>
+          </div>
+          <a href="/performance-marketing/get-started" class="channel-btn" onclick="selectServiceCard('Content Writing & Sales Copy', 'content-writer'); return false;">
+            Contact Us &rarr;
+          </a>
+        </div>
+
+        <!-- 6. LinkedIn + YouTube Management -->
+        <div class="channel-card" id="linkedin-youtube" data-service="LinkedIn + YouTube Management">
+          <div>
+            <div class="channel-card-top">
+              <div class="channel-icon-box">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <span class="channel-badge">B2B & Authority</span>
+            </div>
+            <h3 class="channel-title">LinkedIn + YouTube</h3>
+            <p class="channel-desc">Build founder authority, high-ticket B2B pipeline, and compounding search equity through strategic executive LinkedIn posting and YouTube channel distribution.</p>
+            <ul class="channel-points">
+              <li><i class="fas fa-check-circle"></i> Executive & Founder Personal Branding Strategy</li>
+              <li><i class="fas fa-check-circle"></i> B2B Decision-Maker Inbound Pipeline Generation</li>
+              <li><i class="fas fa-check-circle"></i> YouTube Video SEO, High-CTR Thumbnails & Titles</li>
+              <li><i class="fas fa-check-circle"></i> Long-Form Video to Multi-Platform Short Form Cuts</li>
+            </ul>
+          </div>
+          <a href="/performance-marketing/get-started" class="channel-btn" onclick="selectServiceCard('LinkedIn + YouTube Management', 'linkedin-youtube'); return false;">
+            Contact Us &rarr;
+          </a>
+        </div>
+
+        <!-- 7. Social Media Management -->
+        <div class="channel-card full-span" id="social-media-management" data-service="Social Media Management">
+          <div>
+            <div class="channel-card-top">
+              <div class="channel-icon-box">
+                <i class="fas fa-share-alt"></i>
+              </div>
+              <span class="channel-badge">Brand & Community</span>
+            </div>
+            <h3 class="channel-title">Social Media Management</h3>
+            <p class="channel-desc">End-to-end social media presence management. Monthly high-converting content calendars, eye-catching carousels, viral aesthetics, and active community engagement.</p>
+            <ul class="channel-points">
+              <li><i class="fas fa-check-circle"></i> Monthly Multi-Platform Strategy & Content Calendar</li>
+              <li><i class="fas fa-check-circle"></i> High-Impact Visual Graphics, Carousels & Motion Reels</li>
+              <li><i class="fas fa-check-circle"></i> Daily DM Routing, Comment Engagement & Community Growth</li>
+              <li><i class="fas fa-check-circle"></i> Comprehensive Monthly Reach, ROAS & Follower Reports</li>
+            </ul>
+          </div>
+          <a href="/performance-marketing/get-started" class="channel-btn" onclick="selectServiceCard('Social Media Management', 'social-media-management'); return false;">
+            Contact Us &rarr;
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
 
   <!-- SPEND THAT RETURNS (CASE STUDIES GRID FROM REFERENCE) -->
   <section class="section" id="spend-returns" style="padding-top: 90px;">
@@ -3335,6 +3687,7 @@
   <script>
     // Clean URL & Section Routing Engine (No '#' in URLs)
     const sectionRoutes = {
+      'hero': 'hero',
       'services': 'services',
       'process': 'process',
       'results': 'results',
@@ -3347,7 +3700,23 @@
       'audit': 'hero-form',
       'essential-performance': 'essential-performance',
       'scale-accelerator': 'scale-accelerator',
-      'enterprise-custom': 'enterprise-custom'
+      'enterprise-custom': 'enterprise-custom',
+      'growth-solutions': 'growth-solutions',
+      'capabilities': 'growth-solutions',
+      'google-ads': 'google-ads',
+      'meta-ads': 'meta-ads',
+      'video-editor': 'video-editor',
+      'video-editing': 'video-editor',
+      'seo-aeo-geo': 'seo-aeo-geo',
+      'seo': 'seo-aeo-geo',
+      'content-writer': 'content-writer',
+      'content-writing': 'content-writer',
+      'linkedin-youtube': 'linkedin-youtube',
+      'linkedin': 'linkedin-youtube',
+      'youtube': 'linkedin-youtube',
+      'social-media-management': 'social-media-management',
+      'social-media': 'social-media-management',
+      'smm': 'social-media-management'
     };
 
     function navigateToSection(targetKey, updateUrl = true) {
@@ -3364,9 +3733,12 @@
       // Smooth scroll into view
       targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-      // Highlight if sitelink pricing card
+      // Highlight if sitelink pricing or channel card
       if (['essential-performance', 'scale-accelerator', 'enterprise-custom'].includes(targetKey)) {
-        document.querySelectorAll('.pricing-card').forEach(c => c.classList.remove('sitelink-card-active'));
+        document.querySelectorAll('.pricing-card, .channel-card').forEach(c => c.classList.remove('sitelink-card-active'));
+        targetEl.classList.add('sitelink-card-active');
+      } else if (['google-ads', 'meta-ads', 'video-editor', 'video-editing', 'seo-aeo-geo', 'seo', 'content-writer', 'content-writing', 'linkedin-youtube', 'social-media-management', 'social-media', 'smm'].includes(targetKey) || targetEl.classList.contains('channel-card')) {
+        document.querySelectorAll('.pricing-card, .channel-card').forEach(c => c.classList.remove('sitelink-card-active'));
         targetEl.classList.add('sitelink-card-active');
       }
 
@@ -3386,6 +3758,19 @@
       return true;
     }
 
+    function setFormService(serviceName) {
+      const planInput = document.getElementById('selected-plan-input');
+      if (planInput) {
+        planInput.value = serviceName;
+      }
+      const badge = document.getElementById('form-selected-plan-badge');
+      const badgeText = document.getElementById('form-selected-plan-text');
+      if (badge && badgeText) {
+        badgeText.textContent = serviceName;
+        badge.style.display = 'flex';
+      }
+    }
+
     // Handle plan selection from card CTA buttons
     function selectPricingPlan(planName) {
       if (window.dataLayer) {
@@ -3395,19 +3780,33 @@
         });
       }
 
-      // Update hidden input in form
-      const planInput = document.getElementById('selected-plan-input');
-      if (planInput) {
-        planInput.value = planName;
+      setFormService(planName);
+
+      // Navigate to form with clean URL
+      navigateToSection('get-started', true);
+
+      // Focus form input
+      const formEl = document.getElementById('hero-form');
+      if (formEl) {
+        formEl.classList.add('form-highlight-pulse');
+        setTimeout(() => {
+          formEl.classList.remove('form-highlight-pulse');
+          const nameInput = formEl.querySelector('input[name="name"]');
+          if (nameInput) nameInput.focus();
+        }, 600);
+      }
+    }
+
+    // Handle service card selection from Contact Us CTA buttons
+    function selectServiceCard(serviceName, sitelinkKey) {
+      if (window.dataLayer) {
+        window.dataLayer.push({
+          'event': 'service_card_select',
+          'service': serviceName
+        });
       }
 
-      // Show selection badge in form
-      const badge = document.getElementById('form-selected-plan-badge');
-      const badgeText = document.getElementById('form-selected-plan-text');
-      if (badge && badgeText) {
-        badgeText.textContent = planName;
-        badge.style.display = 'flex';
-      }
+      setFormService(serviceName);
 
       // Navigate to form with clean URL
       navigateToSection('get-started', true);
@@ -3456,7 +3855,7 @@
       let matchedKey = null;
 
       for (const key of Object.keys(sectionRoutes)) {
-        if (fullPath.endsWith('/' + key) || fullPath.includes('/' + key + '/') || hash === key || search.includes('plan=' + key)) {
+        if (fullPath.endsWith('/' + key) || fullPath.includes('/' + key + '/') || hash === key || search.includes('plan=' + key) || search.includes('service=' + key)) {
           matchedKey = key;
           break;
         }
@@ -3466,6 +3865,14 @@
         if (fullPath.includes('essential') || hash.includes('essential') || fullPath.includes('29999')) matchedKey = 'essential-performance';
         else if (fullPath.includes('scale') || hash.includes('scale') || fullPath.includes('49999')) matchedKey = 'scale-accelerator';
         else if (fullPath.includes('enterprise') || hash.includes('enterprise') || fullPath.includes('custom')) matchedKey = 'enterprise-custom';
+        else if (fullPath.includes('google-ads') || hash.includes('google-ads') || fullPath.endsWith('/google') || hash === 'google') matchedKey = 'google-ads';
+        else if (fullPath.includes('meta-ads') || hash.includes('meta-ads') || fullPath.endsWith('/meta') || hash === 'meta' || fullPath.includes('facebook')) matchedKey = 'meta-ads';
+        else if (fullPath.includes('video-editor') || fullPath.includes('video-editing') || hash.includes('video')) matchedKey = 'video-editor';
+        else if (fullPath.includes('seo-aeo-geo') || fullPath.includes('/seo') || hash.includes('seo') || hash.includes('aeo') || hash.includes('geo')) matchedKey = 'seo-aeo-geo';
+        else if (fullPath.includes('content-writer') || fullPath.includes('content-writing') || hash.includes('content') || hash.includes('writer')) matchedKey = 'content-writer';
+        else if (fullPath.includes('linkedin-youtube') || fullPath.includes('linkedin') || fullPath.includes('youtube') || hash.includes('linkedin')) matchedKey = 'linkedin-youtube';
+        else if (fullPath.includes('social-media') || fullPath.includes('social') || hash.includes('social') || hash.includes('smm')) matchedKey = 'social-media-management';
+        else if (fullPath.includes('growth-solution') || fullPath.includes('capabilities')) matchedKey = 'growth-solutions';
         else if (fullPath.includes('service') || hash.includes('service')) matchedKey = 'services';
         else if (fullPath.includes('process') || hash.includes('process')) matchedKey = 'process';
         else if (fullPath.includes('price') || hash.includes('price')) matchedKey = 'pricing';
@@ -3478,34 +3885,27 @@
           window.history.replaceState({ section: matchedKey }, '', `${basePath}/${matchedKey}`);
         }
 
-        // Pre-fill plan if sitelink pricing card
+        // Pre-fill plan or service
         if (matchedKey === 'essential-performance') {
-          const planInput = document.getElementById('selected-plan-input');
-          if (planInput) planInput.value = 'Essential Performance (₹29,999/mo)';
-          const badge = document.getElementById('form-selected-plan-badge');
-          const badgeText = document.getElementById('form-selected-plan-text');
-          if (badge && badgeText) {
-            badgeText.textContent = 'Essential Performance (₹29,999/mo)';
-            badge.style.display = 'flex';
-          }
+          setFormService('Essential Performance (₹29,999/mo)');
         } else if (matchedKey === 'scale-accelerator') {
-          const planInput = document.getElementById('selected-plan-input');
-          if (planInput) planInput.value = 'Scale Accelerator (₹49,999/mo)';
-          const badge = document.getElementById('form-selected-plan-badge');
-          const badgeText = document.getElementById('form-selected-plan-text');
-          if (badge && badgeText) {
-            badgeText.textContent = 'Scale Accelerator (₹49,999/mo)';
-            badge.style.display = 'flex';
-          }
+          setFormService('Scale Accelerator (₹49,999/mo)');
         } else if (matchedKey === 'enterprise-custom') {
-          const planInput = document.getElementById('selected-plan-input');
-          if (planInput) planInput.value = 'Enterprise Custom Plan';
-          const badge = document.getElementById('form-selected-plan-badge');
-          const badgeText = document.getElementById('form-selected-plan-text');
-          if (badge && badgeText) {
-            badgeText.textContent = 'Enterprise Custom Plan';
-            badge.style.display = 'flex';
-          }
+          setFormService('Enterprise Custom Plan');
+        } else if (matchedKey === 'google-ads') {
+          setFormService('Google Ads Management');
+        } else if (matchedKey === 'meta-ads') {
+          setFormService('Meta Ads (Facebook & Instagram)');
+        } else if (['video-editor', 'video-editing'].includes(matchedKey)) {
+          setFormService('Video Editing & Ad Creatives');
+        } else if (['seo-aeo-geo', 'seo'].includes(matchedKey)) {
+          setFormService('SEO + AEO + GEO Growth');
+        } else if (['content-writer', 'content-writing'].includes(matchedKey)) {
+          setFormService('Content Writing & Sales Copy');
+        } else if (['linkedin-youtube', 'linkedin', 'youtube'].includes(matchedKey)) {
+          setFormService('LinkedIn + YouTube Management');
+        } else if (['social-media-management', 'social-media', 'smm'].includes(matchedKey)) {
+          setFormService('Social Media Management');
         }
 
         setTimeout(() => {
