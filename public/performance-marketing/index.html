@@ -1609,35 +1609,138 @@
       width: 100%;
       margin: 0 auto;
     }
-    @media (max-width: 1024px) {
+    @media (min-width: 769px) {
       .channel-grid {
-        grid-template-columns: repeat(2, 1fr);
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 24px !important;
+      }
+      .channel-pills-wrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+        margin-bottom: 30px;
+      }
+      .channel-pills-wrap .svc-pills-row {
+        display: contents;
+      }
+      #channel-dots, #channel-progress {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 1024px) and (min-width: 769px) {
+      .channel-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
       }
       .channel-card.full-span {
         grid-column: 1 / -1;
         max-width: 100%;
       }
     }
-    @media (max-width: 640px) {
+
+    /* Mobile Phone: Exact Same Compact Touch Slider as 'Paid Media Built Around Your Numbers' */
+    @media (max-width: 768px) {
       .channel-section {
-        padding: 60px 0;
+        padding: 56px 0 !important;
       }
-      .channel-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
+      .channel-pills-wrap {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        overflow: visible !important;
+        margin-bottom: 22px !important;
+        padding-bottom: 0 !important;
       }
-      .channel-card {
-        padding: 26px 20px;
-        border-radius: 18px;
+      .channel-pills-wrap .svc-pills-row {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: 6px !important;
+        width: 100% !important;
+        overflow: visible !important;
+        justify-content: space-between !important;
       }
-      .channel-title {
-        font-size: 19px;
+      #growth-solutions .channel-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 12px !important;
+        padding: 4px 18px 20px 18px !important;
+        margin-left: -18px !important;
+        margin-right: -18px !important;
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+        -webkit-overflow-scrolling: touch !important;
       }
-      .channel-desc {
-        font-size: 13.5px;
+      #growth-solutions .channel-grid::-webkit-scrollbar {
+        display: none !important;
       }
-      .channel-points li {
-        font-size: 13px;
+      #growth-solutions .channel-grid .channel-card,
+      #growth-solutions .channel-grid .channel-card.full-span {
+        flex: 0 0 74% !important;
+        min-width: 200px !important;
+        max-width: 245px !important;
+        padding: 18px 14px !important;
+        border-radius: 18px !important;
+        scroll-snap-align: start !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+      }
+      #growth-solutions .channel-card-top {
+        margin-bottom: 10px !important;
+      }
+      #growth-solutions .channel-icon-box {
+        width: 36px !important;
+        height: 36px !important;
+        border-radius: 10px !important;
+        font-size: 16px !important;
+      }
+      #growth-solutions .channel-badge {
+        font-size: 9.5px !important;
+        padding: 3px 8px !important;
+      }
+      #growth-solutions .channel-title {
+        font-size: 16px !important;
+        line-height: 1.25 !important;
+        margin-bottom: 6px !important;
+      }
+      #growth-solutions .channel-desc {
+        font-size: 12px !important;
+        line-height: 1.45 !important;
+        margin-bottom: 12px !important;
+        color: #4b5563 !important;
+      }
+      #growth-solutions .channel-points {
+        margin: 0 0 14px 0 !important;
+        gap: 7px !important;
+      }
+      #growth-solutions .channel-points li {
+        font-size: 11.5px !important;
+        line-height: 1.35 !important;
+        gap: 6px !important;
+      }
+      #growth-solutions .channel-points li i {
+        font-size: 12px !important;
+        margin-top: 2px !important;
+      }
+      #growth-solutions .channel-btn {
+        padding: 10px 14px !important;
+        font-size: 12.5px !important;
+        border-radius: 10px !important;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .channel-pills-wrap .svc-pills-row {
+        gap: 4px !important;
+      }
+      .channel-pills-wrap .svc-pill {
+        font-size: 9.5px !important;
+        padding: 5px 6px !important;
       }
     }
 
@@ -2277,14 +2380,30 @@
   <!-- SPECIALIZED SERVICES & CHANNELS SECTION -->
   <section class="section channel-section" id="growth-solutions">
     <div class="wrap">
-      <div class="section-head" style="text-align: center; max-width: 840px; margin: 0 auto 36px auto;">
+      <div class="section-head" style="text-align: center; max-width: 840px; margin: 0 auto 28px auto;">
         <div class="eyebrow" style="justify-content: center;"><span class="hex"></span> SPECIALIZED GROWTH CAPABILITIES</div>
-        <h2 style="font-size: 42px; font-weight: 800; margin: 12px 0 16px; color: var(--ink); letter-spacing: -0.02em;">
+        <h2 style="font-size: clamp(28px, 4vw, 42px); font-weight: 800; margin: 10px 0 14px; color: var(--ink); letter-spacing: -0.02em;">
           Dedicated Services Engineered For Growth.
         </h2>
-        <p style="color: var(--gray); font-size: 16.5px; line-height: 1.6;">
+        <p style="color: var(--gray); font-size: 16px; line-height: 1.6;">
           Need a specific channel, high-converting creative production, or full-funnel organic authority? Choose your dedicated service or combine them for maximum scale.
         </p>
+      </div>
+
+      <!-- Interactive Quick Category Pills (2 Clean Lines on Mobile, Never Slider) -->
+      <div class="svc-pills-wrap channel-pills-wrap">
+        <div class="svc-pills-row">
+          <button class="svc-pill active" onclick="jumpToChannel(0, this)">All</button>
+          <button class="svc-pill" onclick="jumpToChannel(0, this)">Google Ads</button>
+          <button class="svc-pill" onclick="jumpToChannel(1, this)">Meta Ads</button>
+          <button class="svc-pill" onclick="jumpToChannel(2, this)">Video Editor</button>
+        </div>
+        <div class="svc-pills-row">
+          <button class="svc-pill" onclick="jumpToChannel(3, this)">SEO + AEO</button>
+          <button class="svc-pill" onclick="jumpToChannel(4, this)">Content</button>
+          <button class="svc-pill" onclick="jumpToChannel(5, this)">LinkedIn + YT</button>
+          <button class="svc-pill" onclick="jumpToChannel(6, this)">Social Media</button>
+        </div>
       </div>
 
       <div class="channel-grid">
@@ -2450,6 +2569,22 @@
           </a>
         </div>
 
+      </div>
+
+      <!-- Slide Indicator Dots (7 Dots) -->
+      <div class="svc-dots-bar" id="channel-dots" style="margin-top: 18px;">
+        <span class="svc-dot active" onclick="jumpToChannel(0)"></span>
+        <span class="svc-dot" onclick="jumpToChannel(1)"></span>
+        <span class="svc-dot" onclick="jumpToChannel(2)"></span>
+        <span class="svc-dot" onclick="jumpToChannel(3)"></span>
+        <span class="svc-dot" onclick="jumpToChannel(4)"></span>
+        <span class="svc-dot" onclick="jumpToChannel(5)"></span>
+        <span class="svc-dot" onclick="jumpToChannel(6)"></span>
+      </div>
+
+      <!-- Mobile Scroll Progress Indicator -->
+      <div class="mobile-scroll-bar">
+        <div class="mobile-scroll-progress" id="channel-progress"></div>
       </div>
     </div>
   </section>
@@ -3730,6 +3865,17 @@
       if (targetKey === 'scale-accelerator' && typeof jumpToPricing === 'function') jumpToPricing(1);
       if (targetKey === 'enterprise-custom' && typeof jumpToPricing === 'function') jumpToPricing(2);
 
+      // Handle channel mobile slider snapping
+      if (typeof jumpToChannel === 'function') {
+        const cMap = {
+          'google-ads': 0, 'meta-ads': 1, 'video-editor': 2, 'video-editing': 2,
+          'seo-aeo-geo': 3, 'seo': 3, 'content-writer': 4, 'content-writing': 4,
+          'linkedin-youtube': 5, 'linkedin': 5, 'youtube': 5,
+          'social-media-management': 6, 'social-media': 6, 'smm': 6
+        };
+        if (cMap[targetKey] !== undefined) jumpToChannel(cMap[targetKey]);
+      }
+
       // Smooth scroll into view
       targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
@@ -3921,6 +4067,21 @@
     }
     window.addEventListener('popstate', checkCurrentRoute);
 
+    function jumpToChannel(index, btn) {
+      const grid = document.querySelector('#growth-solutions .channel-grid');
+      const cards = grid ? grid.querySelectorAll('.channel-card') : [];
+      if (cards[index]) {
+        const targetLeft = cards[index].offsetLeft - grid.offsetLeft - 18;
+        grid.scrollTo({ left: targetLeft, behavior: 'smooth' });
+      }
+      if (btn) {
+        document.querySelectorAll('.channel-pills-wrap .svc-pill').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+      }
+      const dots = document.querySelectorAll('#channel-dots .svc-dot');
+      dots.forEach((d, i) => d.classList.toggle('active', i === index));
+    }
+
     function togglePricingFeatures(btn) {
       const parent = btn.closest('.pricing-dropdown-wrap');
       const moreFeatures = parent.querySelector('.pricing-dropdown-features');
@@ -3948,6 +4109,34 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+            const channelGrid = document.querySelector('#growth-solutions .channel-grid');
+      const channelProgressBar = document.getElementById('channel-progress');
+      const channelDots = document.querySelectorAll('#channel-dots .svc-dot');
+
+      if (channelGrid) {
+        channelGrid.addEventListener('scroll', function() {
+          const cards = channelGrid.querySelectorAll('.channel-card');
+          const maxScroll = channelGrid.scrollWidth - channelGrid.clientWidth;
+          
+          if (maxScroll > 0 && channelProgressBar) {
+            const pct = Math.min(100, Math.max(15, (channelGrid.scrollLeft / maxScroll) * 100));
+            channelProgressBar.style.width = pct + '%';
+          }
+
+          let activeIndex = 0;
+          cards.forEach((card, idx) => {
+            const cardLeft = card.offsetLeft - channelGrid.offsetLeft;
+            if (channelGrid.scrollLeft >= cardLeft - 60) {
+              activeIndex = idx;
+            }
+          });
+
+          channelDots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === activeIndex);
+          });
+        }, { passive: true });
+      }
+
       const pricingGrid = document.querySelector('#pricing .pricing-grid');
       const pricingDots = document.querySelectorAll('#pricing-dots .pricing-dot');
       if (pricingGrid && pricingDots.length > 0) {
