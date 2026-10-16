@@ -201,16 +201,21 @@
 
     /* Liquid Glass Pills */
     .svc-pill, .pill {
-      background: rgba(255, 255, 255, 0.65) !important;
-      backdrop-filter: blur(12px) !important;
-      -webkit-backdrop-filter: blur(12px) !important;
-      border: 1px solid rgba(255, 255, 255, 0.85) !important;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03), inset 0 1px 1px rgba(255, 255, 255, 0.9) !important;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid #dcdcd6;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+      color: #111827;
+      cursor: pointer;
+      transition: all 0.2s ease;
     }
+    .svc-pill:hover, .pill:hover,
     .svc-pill.active, .pill.active {
       background: var(--yellow) !important;
       border-color: var(--yellow) !important;
       color: #ffffff !important;
+      font-weight: 700 !important;
       box-shadow: 0 6px 20px rgba(36, 99, 235, 0.35) !important;
     }
     .nav .row { display: flex; align-items: center; justify-content: space-between; height: 74px; }
@@ -419,10 +424,11 @@
       font-family: inherit;
     }
     .svc-pill.active, .svc-pill:hover {
-      background: var(--yellow);
-      border-color: var(--yellow);
-      color: #ffffff;
-      font-weight: 700;
+      background: var(--yellow) !important;
+      border-color: var(--yellow) !important;
+      color: #ffffff !important;
+      font-weight: 700 !important;
+      box-shadow: 0 4px 14px rgba(36, 99, 235, 0.3) !important;
     }
     .svc-dots-bar {
       display: flex;
