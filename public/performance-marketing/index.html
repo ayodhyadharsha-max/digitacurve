@@ -1549,6 +1549,42 @@
       margin-bottom: 10px;
       letter-spacing: -0.01em;
     }
+        .channel-price-tag {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 6px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 6px 12px;
+      margin: 4px 0 14px 0;
+      width: fit-content;
+    }
+    .channel-price-tag .price-prefix {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #64748b;
+    }
+    .channel-price-tag .price-val {
+      font-size: 20px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.02em;
+    }
+    .channel-price-tag .price-val .curr {
+      font-size: 14px;
+      font-weight: 700;
+      color: #2463EB;
+      margin-right: 1px;
+    }
+    .channel-price-tag .price-sub {
+      font-size: 12px;
+      font-weight: 600;
+      color: #64748b;
+    }
+
     .channel-desc {
       font-size: 14px;
       color: #555555;
@@ -1708,7 +1744,43 @@
         line-height: 1.25 !important;
         margin-bottom: 6px !important;
       }
-      #growth-solutions .channel-desc {
+      #growth-solutions     .channel-price-tag {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 6px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 6px 12px;
+      margin: 4px 0 14px 0;
+      width: fit-content;
+    }
+    .channel-price-tag .price-prefix {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #64748b;
+    }
+    .channel-price-tag .price-val {
+      font-size: 20px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.02em;
+    }
+    .channel-price-tag .price-val .curr {
+      font-size: 14px;
+      font-weight: 700;
+      color: #2463EB;
+      margin-right: 1px;
+    }
+    .channel-price-tag .price-sub {
+      font-size: 12px;
+      font-weight: 600;
+      color: #64748b;
+    }
+
+    .channel-desc {
         font-size: 12px !important;
         line-height: 1.45 !important;
         margin-bottom: 12px !important;
@@ -2418,6 +2490,11 @@
               <span class="channel-badge">High-Intent PPC</span>
             </div>
             <h3 class="channel-title">Google Ads</h3>
+            <div class="channel-price-tag">
+              <span class="price-prefix">Starts at</span>
+              <span class="price-val"><span class="curr">₹</span>9,999</span>
+              <span class="price-sub">/month</span>
+            </div>
             <p class="channel-desc">Capture ready-to-buy customers at the precise moment they search for your solutions. Engineered for maximum ROAS and zero wasted ad spend.</p>
             <ul class="channel-points">
               <li><i class="fas fa-check-circle"></i> Search, Shopping & Performance Max (PMax)</li>
@@ -2426,7 +2503,7 @@
               <li><i class="fas fa-check-circle"></i> Offline Conversion Tracking & Server-Side GA4</li>
             </ul>
           </div>
-          <a href="/performance-marketing/get-started" class="channel-btn" onclick="selectServiceCard('Google Ads Management', 'google-ads'); return false;">
+          <a href="/performance-marketing/get-started" class="channel-btn" onclick="selectServiceCard('Google Ads (Starts at ₹9,999/mo)', 'google-ads'); return false;">
             Contact Us &rarr;
           </a>
         </div>
@@ -2441,6 +2518,11 @@
               <span class="channel-badge">Acquisition & Scale</span>
             </div>
             <h3 class="channel-title">Meta Ads</h3>
+            <div class="channel-price-tag">
+              <span class="price-prefix">Starts at</span>
+              <span class="price-val"><span class="curr">₹</span>9,999</span>
+              <span class="price-sub">/month</span>
+            </div>
             <p class="channel-desc">Turn social attention into profitable revenue with creative-first Facebook and Instagram ad funnels, Advantage+ broad scaling, and high-converting retargeting.</p>
             <ul class="channel-points">
               <li><i class="fas fa-check-circle"></i> Advantage+ Sales & Lead Generation Funnels</li>
@@ -2449,7 +2531,7 @@
               <li><i class="fas fa-check-circle"></i> Server-Side Meta Conversions API (CAPI) Pixel</li>
             </ul>
           </div>
-          <a href="/performance-marketing/get-started" class="channel-btn" onclick="selectServiceCard('Meta Ads (Facebook & Instagram)', 'meta-ads'); return false;">
+          <a href="/performance-marketing/get-started" class="channel-btn" onclick="selectServiceCard('Meta Ads (Starts at ₹9,999/mo)', 'meta-ads'); return false;">
             Contact Us &rarr;
           </a>
         </div>
@@ -2464,6 +2546,11 @@
               <span class="channel-badge">High-ROAS Creatives</span>
             </div>
             <h3 class="channel-title">Video Editor</h3>
+            <div class="channel-price-tag">
+              <span class="price-prefix">Starts at</span>
+              <span class="price-val"><span class="curr">₹</span>8,999</span>
+              <span class="price-sub">/month</span>
+            </div>
             <p class="channel-desc">Stop the scroll and skyrocket click-through rates with direct-response video ads, viral Reels/Shorts, kinetic captions, and high-impact UGC product edits.</p>
             <ul class="channel-points">
               <li><i class="fas fa-check-circle"></i> 3-Second Scroll-Stopping Hook Optimization</li>
@@ -2472,7 +2559,7 @@
               <li><i class="fas fa-check-circle"></i> Motion Graphics, Sound Design & Dynamic Captions</li>
             </ul>
           </div>
-          <a href="/performance-marketing/get-started" class="channel-btn" onclick="selectServiceCard('Video Editing & Ad Creatives', 'video-editor'); return false;">
+          <a href="/performance-marketing/get-started" class="channel-btn" onclick="selectServiceCard('Video Editing (Starts at ₹8,999/mo)', 'video-editor'); return false;">
             Contact Us &rarr;
           </a>
         </div>
@@ -2487,6 +2574,11 @@
               <span class="channel-badge">AI Search & Rank #1</span>
             </div>
             <h3 class="channel-title">SEO + AEO + GEO</h3>
+            <div class="channel-price-tag">
+              <span class="price-prefix">Starts at</span>
+              <span class="price-val"><span class="curr">₹</span>12,999</span>
+              <span class="price-sub">/month</span>
+            </div>
             <p class="channel-desc">Rank #1 on Google and secure high-authority brand recommendations across AI answer engines including ChatGPT Search, Perplexity AI, and Google Gemini.</p>
             <ul class="channel-points">
               <li><i class="fas fa-check-circle"></i> Google Rank #1 Technical, On-Page & Schema Markup</li>
@@ -2495,7 +2587,7 @@
               <li><i class="fas fa-check-circle"></i> High-Authority Niche Backlinks & Core Web Vitals</li>
             </ul>
           </div>
-          <a href="/performance-marketing/get-started" class="channel-btn" onclick="selectServiceCard('SEO + AEO + GEO Growth', 'seo-aeo-geo'); return false;">
+          <a href="/performance-marketing/get-started" class="channel-btn" onclick="selectServiceCard('SEO + AEO + GEO (Starts at ₹12,999/mo)', 'seo-aeo-geo'); return false;">
             Contact Us &rarr;
           </a>
         </div>
@@ -2510,6 +2602,11 @@
               <span class="channel-badge">Conversion Copywriting</span>
             </div>
             <h3 class="channel-title">Content Writer</h3>
+            <div class="channel-price-tag">
+              <span class="price-prefix">Starts at</span>
+              <span class="price-val"><span class="curr">₹</span>7,999</span>
+              <span class="price-sub">/month</span>
+            </div>
             <p class="channel-desc">Persuasive, data-backed conversion copywriting that educates, builds authority, and compels high-intent visitors to take immediate action.</p>
             <ul class="channel-points">
               <li><i class="fas fa-check-circle"></i> High-Converting Ad Headlines, Hooks & Copy</li>
@@ -2518,7 +2615,7 @@
               <li><i class="fas fa-check-circle"></i> Automated Email Marketing Sequences & Drips</li>
             </ul>
           </div>
-          <a href="/performance-marketing/get-started" class="channel-btn" onclick="selectServiceCard('Content Writing & Sales Copy', 'content-writer'); return false;">
+          <a href="/performance-marketing/get-started" class="channel-btn" onclick="selectServiceCard('Content Writing (Starts at ₹7,999/mo)', 'content-writer'); return false;">
             Contact Us &rarr;
           </a>
         </div>
@@ -2533,6 +2630,11 @@
               <span class="channel-badge">B2B & Authority</span>
             </div>
             <h3 class="channel-title">LinkedIn + YouTube</h3>
+            <div class="channel-price-tag">
+              <span class="price-prefix">Starts at</span>
+              <span class="price-val"><span class="curr">₹</span>14,999</span>
+              <span class="price-sub">/month</span>
+            </div>
             <p class="channel-desc">Build founder authority, high-ticket B2B pipeline, and compounding search equity through strategic executive LinkedIn posting and YouTube channel distribution.</p>
             <ul class="channel-points">
               <li><i class="fas fa-check-circle"></i> Executive & Founder Personal Branding Strategy</li>
@@ -2541,7 +2643,7 @@
               <li><i class="fas fa-check-circle"></i> Long-Form Video to Multi-Platform Short Form Cuts</li>
             </ul>
           </div>
-          <a href="/performance-marketing/get-started" class="channel-btn" onclick="selectServiceCard('LinkedIn + YouTube Management', 'linkedin-youtube'); return false;">
+          <a href="/performance-marketing/get-started" class="channel-btn" onclick="selectServiceCard('LinkedIn + YouTube (Starts at ₹14,999/mo)', 'linkedin-youtube'); return false;">
             Contact Us &rarr;
           </a>
         </div>
@@ -2556,6 +2658,11 @@
               <span class="channel-badge">Brand & Community</span>
             </div>
             <h3 class="channel-title">Social Media Management</h3>
+            <div class="channel-price-tag">
+              <span class="price-prefix">Starts at</span>
+              <span class="price-val"><span class="curr">₹</span>11,999</span>
+              <span class="price-sub">/month</span>
+            </div>
             <p class="channel-desc">End-to-end social media presence management. Monthly high-converting content calendars, eye-catching carousels, viral aesthetics, and active community engagement.</p>
             <ul class="channel-points">
               <li><i class="fas fa-check-circle"></i> Monthly Multi-Platform Strategy & Content Calendar</li>
@@ -2564,7 +2671,7 @@
               <li><i class="fas fa-check-circle"></i> Comprehensive Monthly Reach, ROAS & Follower Reports</li>
             </ul>
           </div>
-          <a href="/performance-marketing/get-started" class="channel-btn" onclick="selectServiceCard('Social Media Management', 'social-media-management'); return false;">
+          <a href="/performance-marketing/get-started" class="channel-btn" onclick="selectServiceCard('Social Media Management (Starts at ₹11,999/mo)', 'social-media-management'); return false;">
             Contact Us &rarr;
           </a>
         </div>
@@ -4039,19 +4146,19 @@
         } else if (matchedKey === 'enterprise-custom') {
           setFormService('Enterprise Custom Plan');
         } else if (matchedKey === 'google-ads') {
-          setFormService('Google Ads Management');
+          setFormService('Google Ads (Starts at ₹9,999/mo)');
         } else if (matchedKey === 'meta-ads') {
-          setFormService('Meta Ads (Facebook & Instagram)');
+          setFormService('Meta Ads (Starts at ₹9,999/mo)');
         } else if (['video-editor', 'video-editing'].includes(matchedKey)) {
-          setFormService('Video Editing & Ad Creatives');
+          setFormService('Video Editing (Starts at ₹8,999/mo)');
         } else if (['seo-aeo-geo', 'seo'].includes(matchedKey)) {
-          setFormService('SEO + AEO + GEO Growth');
+          setFormService('SEO + AEO + GEO (Starts at ₹12,999/mo)');
         } else if (['content-writer', 'content-writing'].includes(matchedKey)) {
-          setFormService('Content Writing & Sales Copy');
+          setFormService('Content Writing (Starts at ₹7,999/mo)');
         } else if (['linkedin-youtube', 'linkedin', 'youtube'].includes(matchedKey)) {
-          setFormService('LinkedIn + YouTube Management');
+          setFormService('LinkedIn + YouTube (Starts at ₹14,999/mo)');
         } else if (['social-media-management', 'social-media', 'smm'].includes(matchedKey)) {
-          setFormService('Social Media Management');
+          setFormService('Social Media Management (Starts at ₹11,999/mo)');
         }
 
         setTimeout(() => {
