@@ -172,3 +172,11 @@
 .animate-liquid-float-slow {
   animation: liquidFloat 24s ease-in-out infinite reverse;
 }
+
+/* Safe Marquee Hover Pause: only activates on desktop mouse hover, prevents mobile touch freeze */
+@media (hover: hover) and (pointer: fine) {
+  .hover-pause:hover {
+    animation-play-state: paused !important;
+  }
+}
+

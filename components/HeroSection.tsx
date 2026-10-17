@@ -50,21 +50,47 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-[90vh] bg-[#030712] overflow-hidden flex items-center py-8 lg:py-16">
-      {/* Background / Right-Side Video Container (digitacurve.mov / digitacurve.mp4) */}
+      {/* Background / Right-Side Video Container (digitacurve.mp4 with zero-delay faststart) */}
       <div className="absolute top-0 right-0 w-full lg:w-[58%] h-full z-0 overflow-hidden pointer-events-none">
         <video
+          id="hero-bg-video"
           ref={videoRef}
+          src="/media/digitacurve.mp4"
           autoPlay
           muted
           loop
           playsInline
           controls={false}
           preload="auto"
+          poster="/media/digitacurve-poster.jpg"
+          onLoadedData={(e) => {
+            e.currentTarget.play().catch(() => {});
+          }}
+          onCanPlay={(e) => {
+            e.currentTarget.play().catch(() => {});
+          }}
           className="w-full h-full object-cover opacity-90 lg:opacity-100 pointer-events-none select-none"
         >
           <source src="/media/digitacurve.mp4" type="video/mp4" />
-          <source src="/media/digitacurve.mov" type="video/quicktime" />
         </video>
+
+        {/* Zero-delay instant autoplay bootstrap script (executes before React hydration) */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var v = document.getElementById('hero-bg-video');
+                if (v) {
+                  v.muted = true;
+                  v.defaultMuted = true;
+                  v.playsInline = true;
+                  var p = v.play();
+                  if (p !== undefined) { p.catch(function() {}); }
+                }
+              })();
+            `,
+          }}
+        />
 
         {/* Blueprint Radar Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-[#030712] via-[#030712]/40 lg:via-transparent to-transparent z-10 pointer-events-none" />

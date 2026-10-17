@@ -147,16 +147,23 @@ export default function LivingStudio() {
           <div className="p-4 relative flex-1 min-h-[300px] pointer-events-none flex items-center justify-center bg-slate-900/60">
             <video
               ref={videoRef}
+              src="/media/digitacurve.mp4"
               autoPlay
               muted
               loop
               playsInline
               controls={false}
               preload="auto"
+              poster="/media/digitacurve-poster.jpg"
+              onLoadedData={(e) => {
+                e.currentTarget.play().catch(() => {});
+              }}
+              onCanPlay={(e) => {
+                e.currentTarget.play().catch(() => {});
+              }}
               className="w-full h-full object-contain rounded-xl border border-blue-900/40 pointer-events-none select-none max-h-[360px]"
             >
               <source src="/media/digitacurve.mp4" type="video/mp4" />
-              <source src="/media/digitacurve.mov" type="video/quicktime" />
             </video>
           </div>
           <div className="p-4 bg-slate-900 flex justify-between items-center text-[10px] font-mono text-slate-400 border-t border-slate-800">

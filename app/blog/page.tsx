@@ -11,6 +11,38 @@ export const metadata = {
 
 const blogPosts = [
   {
+    slug: 'programmatic-seo-nextjs-app-router-directory-scale-2026',
+    title: 'Programmatic SEO & Scalable Dynamic Routing in Next.js 15: Building 10,000+ Indexable Landing Pages in 2026',
+    category: 'Programmatic SEO',
+    date: 'Oct 15, 2026',
+    readTime: '9 min read',
+    excerpt: 'How enterprise tech brands and multi-location directories scale organic search visibility with Next.js 15 Incremental Static Regeneration (ISR), automated OpenGraph image generation, and programmatic schema graphs.',
+  },
+  {
+    slug: 'ai-agentic-lead-generation-whatsapp-crm-automation-2026',
+    title: 'AI Agentic Lead Generation & Intelligent WhatsApp CRM Systems 2026: Converting Traffic at 35%+ Conversion Rate',
+    category: 'AI Lead Systems',
+    date: 'Oct 15, 2026',
+    readTime: '8 min read',
+    excerpt: 'A tactical engineering blueprint for service enterprises and real estate groups to combine Next.js lead capture with autonomous AI pre-qualification agents and real-time WhatsApp CRM routing.',
+  },
+  {
+    slug: 'healthcare-hospital-clinic-local-seo-patient-funnel-2026',
+    title: 'Healthcare & Hospital Digital Marketing Playbook 2026: HIPAA/ABDM-Compliant Patient Booking & Local Maps SEO',
+    category: 'Healthcare Growth',
+    date: 'Oct 14, 2026',
+    readTime: '8 min read',
+    excerpt: 'How hospitals, multi-specialty clinics, and healthcare networks in Noida and Delhi NCR dominate Google Maps 3-pack rankings while building frictionless, ABDM-compliant patient appointment systems.',
+  },
+  {
+    slug: 'real-estate-luxury-proptech-web-app-seo-noida-gurgaon-2026',
+    title: 'Luxury Real Estate & PropTech Web Development 2026: High-Ticket Lead Funnels for Noida, Gurgaon & UAE Investors',
+    category: 'Real Estate PropTech',
+    date: 'Oct 13, 2026',
+    readTime: '8 min read',
+    excerpt: 'The exact architectural framework top luxury developers use to capture NRI and domestic investors using interactive 3D floor plans, sub-second payment calculators, and hyper-targeted PPC funnels.',
+  },
+  {
     slug: 'generative-engine-optimization-chatgpt-search-perplexity-gemini-2026',
     title: 'Generative Engine Optimization (GEO) & Answer Engine Playbook 2026: How to Rank #1 on ChatGPT Search, Perplexity & Gemini',
     category: 'GEO & AI Search',

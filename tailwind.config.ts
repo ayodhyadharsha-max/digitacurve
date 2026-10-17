@@ -27,8 +27,10 @@ const config: Config = {
         display: ["var(--font-space)", "sans-serif"],
       },
       animation: {
-        marquee: "marquee 35s linear infinite",
-        "marquee-reverse": "marquee-reverse 35s linear infinite",
+        marquee: "marquee 65s linear infinite",
+        "marquee-reverse": "marquee-reverse 65s linear infinite",
+        "marquee-slow": "marquee 85s linear infinite",
+        "marquee-slow-reverse": "marquee-reverse 85s linear infinite",
         pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
       keyframes: {
