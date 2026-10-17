@@ -173,10 +173,50 @@
   animation: liquidFloat 24s ease-in-out infinite reverse;
 }
 
+/* Seamless Infinite Marquee Animations */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 60s linear infinite !important;
+  will-change: transform;
+}
+
+.animate-marquee-slow {
+  animation: marquee 80s linear infinite !important;
+  will-change: transform;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 60s linear infinite !important;
+  will-change: transform;
+}
+
+.animate-marquee-slow-reverse {
+  animation: marquee-reverse 80s linear infinite !important;
+  will-change: transform;
+}
+
 /* Safe Marquee Hover Pause: only activates on desktop mouse hover, prevents mobile touch freeze */
 @media (hover: hover) and (pointer: fine) {
   .hover-pause:hover {
-    animation-play-state: paused !important;
+    animation-play-state: paused;
   }
 }
+
 

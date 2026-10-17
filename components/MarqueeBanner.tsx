@@ -14,7 +14,7 @@ export default function MarqueeBanner() {
 
   return (
     <div className="w-full bg-blue-600 text-white py-4 overflow-hidden shadow-lg shadow-blue-600/20 font-mono text-xs md:text-sm font-bold tracking-widest uppercase border-y border-blue-400/30">
-      <div className="flex w-max animate-marquee space-x-8">
+      <div className="flex w-max animate-marquee space-x-8" style={{ animation: 'marquee 35s linear infinite' }}>
         {[...items, ...items, ...items, ...items].map((item, idx) => (
           <div key={idx} className="flex items-center gap-8 whitespace-nowrap">
             <span>{item}</span>
